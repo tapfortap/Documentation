@@ -1,4 +1,4 @@
-# Documentation #
+# Integrating Tap for Tap #
 
 ## [Getting Started](http://tapfortap.github.com/GettingStarted) ##
 New to Tap for Tap? This guide will give you a rundown on how to set up your first app on Tap for Tap.
@@ -16,22 +16,31 @@ Step-by-step instructions for implementing iOS SDK using XCode.
 Using Tap for Tap as a plugin for another development platform?  We have many covered.
 *This is coming soon!*
 
-## Help Videos ##
-Videos showing SDK implementation and using the Tap for Tap interface.
+## Mediation Layers ##
+Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
 *This is coming soon!*
 
-## F.A.Q. ##
-Have questions? Check out answers to our most frequently asked questions.
+# Helpful Information #
+
+## Help Videos ##
+Videos showing SDK implementation and using the Tap for Tap interface.
 *This is coming soon!*
 
 ## Creative Guidelines ##
 Improve your performance on Tap for Tap by following these creative guidelines.
 *This is coming soon!*
 
-## Mediation Layers ##
-Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
+## Ad Units ##
+Learn about the types of ads Tap for Tap uses to promote your app.
 *This is coming soon!*
 
+## Country Tiers ##
+Learn about the types of ads Tap for Tap uses to promote your app.
+*This is coming soon!*
+
+## F.A.Q. ##
+Have questions? Check out answers to our most frequently asked questions.
+*This is coming soon!*
 
 ----------
 
