@@ -16,21 +16,19 @@ If your project doesn't have a libs folder create one and copy TapForTap.jar int
 
 In Eclipse, right-click on your project in the Package Explorer then click `Properties`.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-01.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-01.png?raw=true)
 
 In the properties window click `Java Build Path` on the left then click `Add JARs...` on the right.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-02.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-02.png?raw=true)
 
 Navigate to the `TapForTap.jar` file you copied into your project earlier then click `OK`.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-03.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/eclipse-03.png?raw=true)
 
 Make sure that the checkbox to export the library is checked on the `Order and Export` tab
 
-![help image](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png)
-![help image](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png "Logo Title Text 1")
-![help image](https://github.com/tapfortap/Documentation/blob/master/images/idea-01.png?raw=true "")
+![help image](http://github.com/tapfortap/Documentation/master/images/eclipse-04.png?raw=true)
 
 Click `OK` to leave the properties window.
 
@@ -39,21 +37,21 @@ Click `OK` to leave the properties window.
 
 In IDEA open your Project Structure via the File menu, File → Project Structure.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/idea-01.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/idea-01.png?raw=true)
 
 Select `Libraries` under `Project Settings` on the left. Add a new Java library by clicking the plus icon up top, selecting Java, and then selecting `TapForTap.jar` in your `lib` or `libs` folder.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/idea-02.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/idea-02.png?raw=true)
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/idea-03.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/idea-03.png?raw=true)
 
 IDEA will ask you to select which module to add it to and in most cases you can click OK to add it to the module selected by default.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/idea-04.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/idea-04.png?raw=true)
 
 Then click `OK` to leave the properties window.
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/idea-05.png)
+![](http://github.com/tapfortap/Documentation/blob/master/images/idea-05.png?raw=true)
 
 
 ## Step 2 - Add permissions and activity to AndroidManifest.xml ##
@@ -65,6 +63,38 @@ Then click `OK` to leave the properties window.
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
+Note: We use READ_PHONE_STATE and ACCESS_WIFI_STATE to uniquely identify devices. You can choose to omit these permissions if you don't want to use them.
+
+Note: We use WRITE_EXTERNAL_STORAGE to cache images to reduce data transferred over the network and improve performance. You can omit this permission if you don't want to use it.
+
+Finally, add the following activity to `AndroidManifest.xml` under the <application> tag:
+
+```xml
+<activity android:name="com.tapfortap.TapForTapActivity"/>
+```
+
+## Step 3 - Initialize Tap for Tap when your app launches. ##
+
+This goes in the activity in which you want to display ads. Note that we started using an account-wide API key in version 2 instead of individual app IDs. Your API key is available on the [account page](http://tapfortap.com/developer#account").
+
+```Java
+// Import TapForTap
+import com.tapfortap.TapForTap;
+
+// Initialize Tap for Tap
+public class MyActivity extends Activity {
+  @Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// Substitute your real API key here
+		TapForTap.initialize(this, "YOUR API KEY");
+		// ...
+	}
+}
+```
+
+
+
 
 
 
