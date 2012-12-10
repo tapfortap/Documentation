@@ -32,3 +32,14 @@ Improve your performance on Tap for Tap by following these creative guidelines.
 Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
 *This is coming soon!*
 
+
+## Support
+Things don't always go according to plan. If you hit a snag somewhere and need a
+hand don't hesitate to get in touch with us at
+[support@tapfortap.com](mailto:support@tapfortap.com) or on Twitter where we go
+by the swanky handle [@tapfortap](https://twitter.com/tapfortap).
+
+## License
+Licensed under the terms of the MIT License.
+
+Copyright &copy; 2012 Tap for Tap Promotions Inc.
