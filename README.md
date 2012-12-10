@@ -3,7 +3,7 @@
 ## [Getting Started](http://tapfortap.github.com/GettingStarted) ##
 New to Tap for Tap? This guide will give you a rundown on how to set up your first app on Tap for Tap.
 
-## [Download our SDK](https://github.com/tapfortap/Documentation/archive/master.zip) ##
+## [Download our SDK](https://github.com/tapfortap/Documentation/zipball/master) ##
 Click here to download our SDK for implementation.
 
 ## [Android Implementation](http://tapfortap.github.com/Android) ##
