@@ -1,6 +1,6 @@
 # Documentation #
 
-## [Getting Started]() ##
+## [Getting Started](http://tapfortap.github.com/GettingStarted) ##
 New to Tap for Tap? This guide will give you a rundown on how to set up your first app on Tap for Tap.
 
 ## [Download our SDK](https://github.com/tapfortap/Documentation/archive/master.zip) ##
