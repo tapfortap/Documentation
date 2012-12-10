@@ -28,7 +28,9 @@ Navigate to the `TapForTap.jar` file you copied into your project earlier then c
 
 Make sure that the checkbox to export the library is checked on the `Order and Export` tab
 
-![](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png)
+![help image](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png)
+![help image](http://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png "Logo Title Text 1")
+![help image](https://github.com/tapfortap/Documentation/blob/master/images/idea-01.png?raw=true "")
 
 Click `OK` to leave the properties window.
 
@@ -56,12 +58,13 @@ Then click `OK` to leave the properties window.
 
 ## Step 2 - Add permissions and activity to AndroidManifest.xml ##
 
-`
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-`
+```
+
 
 
