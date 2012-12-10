@@ -12,7 +12,7 @@ If you are not displaying Tap for Tap ads then you only need to follow steps 1 -
 
 If your project doesn't have a libs folder create one and copy TapForTap.jar into it.
 
-## Step 1 using Eclipse ##
+## Step 1 Using Eclipse ##
 
 In Eclipse, right-click on your project in the Package Explorer then click `Properties`.
 
@@ -33,7 +33,7 @@ Make sure that the checkbox to export the library is checked on the `Order and E
 Click `OK` to leave the properties window.
 
 
-## Step 1 using IntelliJ IDEA ##
+## Step 1 Using IntelliJ IDEA ##
 
 In IDEA open your Project Structure via the File menu, File → Project Structure.
 
