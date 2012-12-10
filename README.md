@@ -20,6 +20,8 @@ Using Tap for Tap as a plugin for another development platform?  We have many co
 Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
 *This is coming soon!*
 
+----------
+
 # Helpful Information #
 
 ## Help Videos ##
