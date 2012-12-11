@@ -30,9 +30,8 @@ Videos showing SDK implementation and using the Tap for Tap interface.
 Improve your performance on Tap for Tap by following these creative guidelines.
 *This is coming soon!*
 
-## Ad Units ##
+## [Ad Units](http://tapfortap.github.com/AdUnits) ##
 Learn about the types of ads Tap for Tap uses to promote your app.
-*This is coming soon!*
 
 ## Country Tiers ##
 Learn about the types of ads Tap for Tap uses to promote your app.
