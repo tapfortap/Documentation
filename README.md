@@ -17,7 +17,6 @@ Using Tap for Tap as a plugin for another development platform?  We have many co
 
 ## [Mediation Layers](http://tapfortap.github.com/Mediation) ##
 Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
-*This is coming soon!*
 
 ___
 ======
@@ -36,9 +35,8 @@ Learn about the types of ads Tap for Tap uses to promote your app.
 ## [Country Tiers](http://tapfortap.github.com/CountryTiers) ##
 Learn about the types of ads Tap for Tap uses to promote your app.
 
-## F.A.Q. ##
+## [F.A.Q.](http://tapfortap.github.com/FAQ) ##
 Have questions? Check out answers to our most frequently asked questions.
-*This is coming soon!*
 
 ___
 ======
