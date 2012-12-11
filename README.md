@@ -12,10 +12,10 @@ Step-by-step instructions for implementing the Android SDK using Eclipse or Inte
 ## [iOS Implementation](http://tapfortap.github.com/iOS) ##
 Step-by-step instructions for implementing iOS SDK using XCode.
 
-## Supported Plugins ##
+## [Supported Plugins](http://tapfortap.github.com/Plugins) ##
 Using Tap for Tap as a plugin for another development platform?  We have many covered.
 
-## Mediation Layers ##
+## [Mediation Layers](http://tapfortap.github.com/Mediation) ##
 Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
 *This is coming soon!*
 
