@@ -33,9 +33,8 @@ Improve your performance on Tap for Tap by following these creative guidelines.
 ## [Ad Units](http://tapfortap.github.com/AdUnits) ##
 Learn about the types of ads Tap for Tap uses to promote your app.
 
-## Country Tiers ##
+## [Country Tiers](http://tapfortap.github.com/CountryTiers) ##
 Learn about the types of ads Tap for Tap uses to promote your app.
-*This is coming soon!*
 
 ## F.A.Q. ##
 Have questions? Check out answers to our most frequently asked questions.
