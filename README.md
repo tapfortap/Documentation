@@ -7,10 +7,10 @@ New to Tap for Tap? This guide will give you a rundown on how to set up your fir
 Click here to download our SDK for implementation.
 
 ## [Android Implementation](http://tapfortap.github.com/Android) ##
-Step-by-step instructions for implementing the Android SDK using Eclipse or IntelliJ IDEA.
+Step-by-step instructions for implementing the Android SDK using Eclipse or IntelliJ IDEA
 
 ## [iOS Implementation](http://tapfortap.github.com/iOS) ##
-Step-by-step instructions for implementing iOS SDK using XCode.
+Step-by-step instructions for implementing the iOS SDK using XCode
 
 ## [Supported Plugins](http://tapfortap.github.com/Plugins) ##
 Using Tap for Tap as a plugin for another development platform?  We have many covered.
@@ -43,7 +43,7 @@ ___
 # Footer #
 
 ### *Support* ###
-Things don't always go according to plan. If you hit a snag somewhere and need a hand don't hesitate to get in touch with us at [support@tapfortap.com](mailto:support@tapfortap.com) or on Zendesk [here](https://tapfortap.zendesk.com/anonymous_requests/new).
+Things don't always go according to plan. If you hit a snag somewhere and need a hand, don't hesitate to get in touch with us at [support@tapfortap.com](mailto:support@tapfortap.com) or on Zendesk [here](https://tapfortap.zendesk.com/anonymous_requests/new).
 
 ### *License* ###
 Licensed under the terms of the MIT License.
