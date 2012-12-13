@@ -16,7 +16,7 @@ Step-by-step instructions for implementing the iOS SDK using XCode
 Using Tap for Tap as a plugin for another development platform?  We have many covered.
 
 ## [Mediation Layers](http://tapfortap.github.com/Mediation) ##
-Using Tap for Tap with AdMod or AdWhirl? Check out this documentation.
+Using Tap for Tap with AdMob or AdWhirl? Check out this documentation.
 
 ___
 ======
