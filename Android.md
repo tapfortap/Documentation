@@ -1,27 +1,27 @@
 # Android - SDK Implementation #
 
-## Current Version ##
-**2.1.0** - [See Changelog](/AndroidChangelog)
+##  Current Version ##
+**2.1.0** - [See Changelog](AndroidChangelog)
 
 Supports Android 2.1 and up (API level 7)
 
-## General Information ##
+##  General Information ##
 
 Integrating Tap for Tap into your app is usually really easy. Add our library, `TapForTap.jar`, to your Android project, call `TapForTap.initialize()` when your app starts, and then add a `com.tapfortap.AdView` to your layout or display an interstitial or app wall (if you are showing ads in that app). That's it!
 
 If you are not displaying Tap for Tap ads then you only need to follow steps 1 - 3. Call `TapForTap.initialize(Activity, "YOUR API KEY")` once when your app starts up, in the `onCreate` method of your main activity.
 
-## Video Walkthrough ##
+##  Video Walkthrough ##
 
 Watch [a video that shows how to implement Tap for Tap](http://www.youtube.com/watch?feature=player_embedded&v=xDj16PJ5WQk&hg=1) from start to finish.
 
 # Instructions #
 
-## Step 1 - Add TapForTap.jar to your project ##
+##  Step 1 - Add TapForTap.jar to your project ##
 
 If your project doesn't have a libs folder create one and copy TapForTap.jar into it.
 
-## Step 1 using Eclipse ##
+##  Step 1 using Eclipse ##
 
 In Eclipse, right-click on your project in the Package Explorer then click `Properties`.
 
@@ -42,7 +42,7 @@ Make sure that the checkbox to export the library is checked on the `Order and E
 Click `OK` to leave the properties window.
 
 
-## Step 1 using IntelliJ IDEA ##
+##  Step 1 using IntelliJ IDEA ##
 
 In IDEA open your Project Structure via the File menu, File ? Project Structure.
 
@@ -63,7 +63,7 @@ Then click `OK` to leave the properties window.
 ![](https://raw.github.com/tapfortap/Documentation/master/images/idea-05.png)
 
 
-## Step 2 - Add permissions and activity to AndroidManifest.xml ##
+##  Step 2 - Add permissions and activity to AndroidManifest.xml ##
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -82,7 +82,7 @@ Finally, add the following activity to `AndroidManifest.xml` under the <applicat
 <activity android:name="com.tapfortap.TapForTapActivity"/>
 ```
 
-## Step 3 - Initialize Tap for Tap when your app launches. ##
+##  Step 3 - Initialize Tap for Tap when your app launches. ##
 
 This goes in the activity in which you want to display ads. Note that we started using an account-wide API key in version 2 instead of individual app IDs. Your API key is available on the [account page](http://tapfortap.com/developer#account").
 
@@ -102,9 +102,9 @@ public class MyActivity extends Activity {
 }
 ```
 
-## Step 4 - 4. Display a banner, interstitial, or app wall. ##
+##  Step 4 - 4. Display a banner, interstitial, or app wall. ##
 
-### Banner ###
+## # Banner ###
 
 ```xml
 <activity android:name="com.tapfortap.TapForTapActivity"/>
@@ -123,7 +123,7 @@ adView.setLayoutParams(myLayoutParams);
 myLayout.addView(adView);
 ```
 
-### Interstitial ###
+## # Interstitial ###
 
 Inside an activity simply use the `Interstitial` class like this:
 
@@ -137,7 +137,7 @@ Interstitial.show(this);
 
 You only have to prepare it the first time on startup, each time it is shown the next one is automatically prepared for you
 
-### App Wall ###
+## # App Wall ###
 
 Inside an activity simply use the `AppWall` class like this:
 
@@ -153,7 +153,7 @@ You only have to prepare it the first time on startup, each time it is shown the
 
 Congratulations! You should now be up and running. Run the app and then [Login](http://tapfortap.com/login) to check to make sure that it worked.
 
-## Step 5 - Send info about your users (optional). ##
+##  Step 5 - Send info about your users (optional). ##
 
 If you have information about your users that your privacy policy allows you to share with us, you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. We accept year of birth, gender, location, and the account ID of user's on your system.
 
@@ -166,13 +166,13 @@ TapForTap.setUserAccountId(<accountId>);
 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization](monetization) program passing this information can greatly increase your revenue.
 
 # Example Code #
 
 Some example code is included to help get you started. Take a look in the example folder to see exactly how it's done.
 
-## API Documentation ##
+##  API Documentation ##
 
 To take action when ads are loaded or fail to load you can set a listener on `AdView` objects and the `Interstitial` and `AppWall` classes. AdView listeners implement the `AdViewListener` interface which specifies three methods:
 

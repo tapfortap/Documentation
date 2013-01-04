@@ -2,19 +2,19 @@
 
 Want to use Tap for Tap with PhoneGap? We got you covered on Android and iOS.
 
-## Installation
+##  Installation
 If you don't have the plugins yet then [download it here](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip).
 
 Installing the Tap for Tap plugin is super easy. We'll guide you through it.
 This isn't a PhoneGap tutorial so we assume that you have a PhoneGap project
 (or projects) already set up and working.
 
-### Android
+## # Android
 1. Download our [Android SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-Android-SDK.zip) and find
 the file `TapForTap.jar` included therein. You'll need this file in the next
 step.
 
-2. Download the [PhoneGap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and peek inside the `Android` folder and put 
+2. Download the [PhoneGap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and peek inside the `Android` folder and put
 `TapForTapPhoneGapPlugin.jar` in your project's `libs` folder, alongside `cordova-2.x.x.jar`.
 Put `TapForTap.jar` from step 1 to your `libs` folder as well.
 
@@ -32,7 +32,7 @@ Put `TapForTap.jar` from step 1 to your `libs` folder as well.
 That's it! Unless you're integrating Tap for Tap into an iOS app as well you
 can skip down to **Usage**.
 
-### iOS
+## # iOS
 1. Download our [iOS SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and find the
 folder `TapForTap` included therein. Add it to your project by following
 [Step 1 and 2 of the iOS instructions](http://tapfortap.com/developer#documentation).
@@ -44,13 +44,13 @@ project in the `Plugins` folder provided by PhoneGap.
 3. Put `tapfortap.js` in your `www` folder, alongside `phonegap-2.x.x.js`
 or `cordova-2.x.x.js`.
 
-4. Under `Supporting Files` open `Cordova.plist`. In the  `Plugins` dictionary 
-add the key `TapForTap` with value `TapForTapPhoneGapPlugin`. In the 
+4. Under `Supporting Files` open `Cordova.plist`. In the  `Plugins` dictionary
+add the key `TapForTap` with value `TapForTapPhoneGapPlugin`. In the
 `ExternalHosts` array add a '*'. This allows TapForTap to talk to our servers and fetch ads from our CDN.
 
 That's it! Now you're ready to use Tap for Tap in your app.
 
-## Usage
+##  Usage
 First up include the Tap for Tap JavaScript module, this goes directly after
 the similar line that includes `phonegap/cordova-2.x.x.js`:
 
@@ -80,14 +80,14 @@ document.addEventListener('deviceready', function() {
 
 Congratulations, you are done. We said it was easy!
 
-## API Documentation
+##  API Documentation
 The JavaScript API lets you create, position, and remove Tap for Tap ad views. You
 can also pass in optional info about your users to help us with targetting. Please
 make sure your privacy policy allows this before giving us their personal information.
 
-#### initializeWithApiKey(apiKey)
+## ## initializeWithApiKey(apiKey)
 This method needs to be called before you can use any of the other API calls.
-This method initializes your app with the TapForTap so we can begin serving 
+This method initializes your app with the TapForTap so we can begin serving
 you ads.
 
 Usage:
@@ -98,7 +98,7 @@ var apiKey = 'My API key from my TapForTap account';
 TapForTap.initializeWithApiKey(apiKey);
 ```
 
-#### createAdView([options])
+## ## createAdView([options])
 Create and display an ad view.
 
 The options object itself is optional, and supports these optional properties:
@@ -126,7 +126,7 @@ TapForTap.createAdView({
 });
 ```
 
-#### loadAds()
+## ## loadAds()
 Loads and displays Tap for Tap ads. Call this once after creating the ad view.
 
 Usage:
@@ -136,7 +136,7 @@ Usage:
 TapForTap.loadAds();
 ```
 
-#### moveAdView([options])
+## ## moveAdView([options])
 This animates the ad view to a new location on screen. `options` is optional
 and can contain the following properties:
 
@@ -150,7 +150,7 @@ Usage:
 TapForTap.moveAdView({ y: 0 });
 ```
 
-#### removeAdView()
+## ## removeAdView()
 Removes the ad view from the screen and stops loading ads.
 
 Usage:
@@ -160,8 +160,8 @@ Usage:
 TapForTap.removeAdView();
 ```
 
-#### prepareInterstitial()
-This prepares the interstial ad type. This method only needs to be called once, 
+## ## prepareInterstitial()
+This prepares the interstial ad type. This method only needs to be called once,
 after the interstitial is shown we automatically prepare another one for you.
 
 Usage:
@@ -171,7 +171,7 @@ Usage:
 TapForTap.prepareInsterstitial();
 ```
 
-#### showInterstitial()
+## ## showInterstitial()
 This shows an interstitial ad. Remember that you must call prepareInterstital() once
 before calling showInterstitial(). Afterwards you only need to call showInterstial()
 to show a new interstitial ad.
@@ -195,8 +195,8 @@ TapForTap.showInterstitial();
 TapForTap.showInterstital();
 ```
 
-#### prepareAppWall()
-This prepares the app wall ad type. This method only needs to be called once, 
+## ## prepareAppWall()
+This prepares the app wall ad type. This method only needs to be called once,
 after the app wall is shown we automatically prepare another one for you.
 
 Usage:
@@ -206,7 +206,7 @@ Usage:
 TapForTap.prepareAppWall();
 ```
 
-#### showAppWall()
+## ## showAppWall()
 This shows an app wall ad. Remember that you must call prepareAppWall() once
 before calling showAppWall(). Afterwards you only need to call showAppWall()
 to show a new app wall ad.

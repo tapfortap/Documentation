@@ -2,14 +2,14 @@
 
 Want to use Tap for Tap with Adobe Air? We got you covered on Android and iOS (+ iPhone simulator).
 
-## Preamble
+##  Preamble
 This Application Native Extension was built using Adobe Air 3.5 SDK.
 
-### Minimum Requirements
-#### Android
+## # Minimum Requirements
+## ## Android
   - None
 
-#### iPhone
+## ## iPhone
   - An OS X machine running Lion (10.7)
   - iOS 6.0 SDK
 
@@ -17,19 +17,19 @@ Note that the iPhone app cannot be built on a Windows machine using the Adobe Fl
 The iOS SDK included with Adobe Flex is too old.
 
 
-## Setup
+##  Setup
 If you don't have the native extension yet then head over to the [Download It Here](https://github.com/tapfortap/Documentation/raw/master/downloads/AdobeAir/tapfortap.ane).
 
-Installing the Tap for Tap native extension is easy. This isn't an Adobe Air 
+Installing the Tap for Tap native extension is easy. This isn't an Adobe Air
 or Adobe Flash Builder tutorial so we assume that you have a Flex Mobile project
 already set up and working. All you need to do is add the `tapfortap.ane` file to
 your project. If you do not know how to add a native extension there is a brief
 explanation below
 
 
-### Flash Builder 4.6
+## # Flash Builder 4.6
 
-#### Adding the Native Extension to the Project
+## ## Adding the Native Extension to the Project
 
 1. Right click on your project and select properties.
 2. Click `Flex Build Path` in the left hand list.
@@ -37,9 +37,9 @@ explanation below
 4. Click the `Add ANE...` button on the right hand side
 5. Browse to where you downloaded the Tap for Tap native extenion abd select `tapfortap.ane` and open it
 
-#### Setup Building for iOS
+## ## Setup Building for iOS
 
-Remember that building for iPhone requires iOS SDK 6 (i.e. it must be built 
+Remember that building for iPhone requires iOS SDK 6 (i.e. it must be built
 on a machine running at least OS X Lion 10.7)
 
 1. Right click on your project and select properties.
@@ -51,7 +51,7 @@ on a machine running at least OS X Lion 10.7)
 7. Check the box under the `Package` column
 8. Add the path to the iPhone 6 SDK
 
-#### Setup Building for Android
+## ## Setup Building for Android
 1. Right click on your project and select properties.
 2. Expand `Flex Build Packaging` on the left hand menu
 3. Click on `Google Android` on the left hand menu
@@ -68,19 +68,19 @@ on a machine running at least OS X Lion 10.7)
 10. Include the TapForTap activity in the `app.xml`
   - `<activity android:name="com.tapfortap.TapForTapActivity"/>`
 
-### Setup building with the Command Line or Ant
+## # Setup building with the Command Line or Ant
 1. Add the option `-extDir` givint it the path to the folder to where `tapfortap.ane` is located.
 
 Congratulations, you are done. You should now be able to call into the Tap for Tap library
 and begin displaying ads.
 
-## API Documentation
+##  API Documentation
 The ActionScript API lets you create and remove Tap for Tap ad views,
 interstitals and app walls and set various optional information about your users
 to help us with targetting. Please make sure your privacy policy allows this
 before giving us their personal information.
 
-#### Preamble
+## ## Preamble
 The first thing you will need to do before using any of the Tap for Tap API's is
 to get a context to the Tap for Tap native extension. The instance is implemented
 as a singleton.
@@ -90,9 +90,9 @@ as a singleton.
 var tft: TapForTap = TapForTap.instance;
 ```
 
-#### initializeWithApiKey(apiKey: String): void
+## ## initializeWithApiKey(apiKey: String): void
 This method needs to be called before you can use any of the other API calls.
-This method initializes your app with the TapForTap so we can begin serving 
+This method initializes your app with the TapForTap so we can begin serving
 you ads.
 
 Usage:
@@ -106,23 +106,23 @@ var apiKey: String = 'My API key from my TapForTap account';
 tft.initializeWithApiKey(apiKey);
 ```
 
-#### createAdView(displayAtTop: Boolean): void
+## ## createAdView(displayAtTop: Boolean): void
 Create and display an ad view banner at the top or bottom of the display.
 
-##### Displaying Banner Ads
+## ### Displaying Banner Ads
 
-###### iPhone
-On iOS, banner ads are 50 points tall so at lest 50 points 
+## #### iPhone
+On iOS, banner ads are 50 points tall so at lest 50 points
 must be left free at the top or bottom of the view depending on where
 the ad is shown. Only one banner ad can be displayed at a time.
 
-###### Android
+## #### Android
 On Android, banner ads are `(50 * screen.density)` pixels tall so at
 lest `(50 * screen.density)` pixels must be left free at the top or bottom
-of the view depending on where the ad is shown. Only one banner ad can 
+of the view depending on where the ad is shown. Only one banner ad can
 be displayed at a time.
 
-###### Notes
+## #### Notes
 On both platforms, when an orientation change occurs the banner
 ad should be removed and recreated.
 
@@ -144,7 +144,7 @@ tft.removeAdView();
 tft.createAdView(true);
 ```
 
-#### removeAdView(): void
+## ## removeAdView(): void
 Removes the ad view banner from the bottom screen and stops loading ads.
 
 Usage:
@@ -157,8 +157,8 @@ var tft: TapForTap = TapForTap.instance;
 tft.removeAdView();
 ```
 
-#### prepareInterstitial(): void
-This prepares the interstial ad type. This method only needs to be called once, 
+## ## prepareInterstitial(): void
+This prepares the interstial ad type. This method only needs to be called once,
 after the interstitial is shown we automatically prepare another one for you.
 
 Usage:
@@ -171,7 +171,7 @@ var tft: TapForTap = TapForTap.instance;
 tft.prepareInsterstitial();
 ```
 
-#### showInterstitial(): void
+## ## showInterstitial(): void
 This shows an interstitial ad. Remember that you must call prepareInterstital() once
 before calling showInterstitial(). Afterwards you only need to call showInterstial()
 to show a new interstitial ad.
@@ -197,8 +197,8 @@ TapForTap.showInterstitial();
 tft.showInterstital();
 ```
 
-#### prepareAppWall(): void
-This prepares the app wall ad type. This method only needs to be called once, 
+## ## prepareAppWall(): void
+This prepares the app wall ad type. This method only needs to be called once,
 after the app wall is shown we automatically prepare another one for you.
 
 Usage:
@@ -211,7 +211,7 @@ var tft: TapForTap = TapForTap.instance;
 tft.prepareAppWall();
 ```
 
-#### showAppWall(): void
+## ## showAppWall(): void
 This shows an app wall ad. Remember that you must call prepareAppWall() once
 before calling showAppWall(). Afterwards you only need to call showAppWall()
 to show a new app wall ad.
@@ -238,7 +238,7 @@ tft.showAppWall();
 tft.showwAppWall();
 ```
 
-#### setYearOfBirth(yearOfBirth: int): void
+## ## setYearOfBirth(yearOfBirth: int): void
 Sets the user's year of birth.
 
 Usage:
@@ -251,7 +251,7 @@ var tft: TapForTap = TapForTap.instance;
 tft.setYearOfBirth(1990);
 ```
 
-#### setGender(gender: int): void
+## ## setGender(gender: int): void
 Set the user's gender. There are static constants provided in the TapForTap API.
   - TapForTap.GENDER_MALE
   - TapForTap.GENDER_FEMALE
@@ -268,7 +268,7 @@ tft.setGender(TapForTap.GENDER_MALE);
 
 ```
 
-#### setLocation(latitude: Number, longitude: Number): void
+## ## setLocation(latitude: Number, longitude: Number): void
 Sets the user's location in terms of latitiude and longitude.
 
 Usage:
@@ -281,8 +281,8 @@ var tft: TapForTap = TapForTap.instance;
 tft.setLocation(111.1, 222.2);
 ```
 
-#### setUserAccountId(userAccountId: String): void
-Sets the user account id. This is a custom id that can be 
+## ## setUserAccountId(userAccountId: String): void
+Sets the user account id. This is a custom id that can be
 set to anything.
 
 Usage:

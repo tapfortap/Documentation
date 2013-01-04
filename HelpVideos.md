@@ -1,12 +1,12 @@
 #Help Videos
 
-##Android Walkthrough
+## Android Walkthrough
 
 This video shows the implementation of the Android SDK using either Eclipse or IntelliJ IDEA and the Tap for Tap interface.
 
 [![Android Video](http://img.youtube.com/vi/xDj16PJ5WQk/0.jpg)](http://www.youtube.com/watch?feature=player_embedded&v=xDj16PJ5WQk&hg=1)
 
-##iOS Walkthrough
+## iOS Walkthrough
 
 This video shows the implementation of the iOS SDK using Xcode and the Tap for Tap interface.
 
