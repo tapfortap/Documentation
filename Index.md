@@ -14,7 +14,7 @@
 
 ##Supported Plugins
 
-[Appcelerator Titanium](/AppceleratorTitanium)  -  [Adobe Air](/AdobeAir)  -  [PhoneGap](/PhoneGap)  -  [Unity3D](/Unity)
+[Adobe Air](/AdobeAir)  -  [PhoneGap](/PhoneGap)  -  [Unity3D](/Unity)
 
 ##Mediation Layers
 
