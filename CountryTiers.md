@@ -14,8 +14,8 @@ When you setup your campaign, you can select which countries you'd like to targe
 
 # Tier #1 #
 
-## # Tier Credits: 40 ###
-## # Tier Targetting Cost: 20 ###
+### Tier Credits: 40 ###
+### Tier Targetting Cost: 20 ###
 
 - AU  Australia
 - CA	Canada
@@ -29,8 +29,8 @@ When you setup your campaign, you can select which countries you'd like to targe
 
 # Tier #2 #
 
-## # Tier Credits: 30 ###
-## # Tier Targetting Cost: 15 ###
+### Tier Credits: 30 ###
+### Tier Targetting Cost: 15 ###
 
 - AE	United Arab Emirates
 - AT	Austria
@@ -59,8 +59,8 @@ When you setup your campaign, you can select which countries you'd like to targe
 
 # Tier #3 #
 
-## # Tier Credits: 20 ###
-## # Tier Targetting Cost: 10 ###
+### Tier Credits: 20 ###
+### Tier Targetting Cost: 10 ###
 
 - BD	Bangladesh
 - BE	Belgium
@@ -123,8 +123,8 @@ When you setup your campaign, you can select which countries you'd like to targe
 
 # Tier #4 #
 
-## # Tier Credits: 10 ###
-## # Tier Targetting Cost: 5 ###
+### Tier Credits: 10 ###
+### Tier Targetting Cost: 5 ###
 
 - AD	Andorra
 - AF	Afghanistan

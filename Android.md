@@ -104,7 +104,7 @@ public class MyActivity extends Activity {
 
 ##  Step 4 - 4. Display a banner, interstitial, or app wall. ##
 
-## # Banner ###
+### Banner ###
 
 ```xml
 <activity android:name="com.tapfortap.TapForTapActivity"/>
@@ -123,7 +123,7 @@ adView.setLayoutParams(myLayoutParams);
 myLayout.addView(adView);
 ```
 
-## # Interstitial ###
+### Interstitial ###
 
 Inside an activity simply use the `Interstitial` class like this:
 
@@ -137,7 +137,7 @@ Interstitial.show(this);
 
 You only have to prepare it the first time on startup, each time it is shown the next one is automatically prepared for you
 
-## # App Wall ###
+### App Wall ###
 
 Inside an activity simply use the `AppWall` class like this:
 

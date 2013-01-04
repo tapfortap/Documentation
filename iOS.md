@@ -64,7 +64,7 @@ Import `TapForTap.h` in your app delegate and call our check in method.
 
 ##  Step 4: Display a banner, interstitial, or app wall. ##
 
-## # Banner ###
+### Banner ###
 
 In the view controllers in wich you would like to display ads, in your `viewDidLoad` method create a `TapForTapAdView` and add it to your view.
 
@@ -93,7 +93,7 @@ TapForTapAdViewDelegate has one required method, `rootViewController`, and some 
 - (UIViewController *) rootViewController { return self; }
 ```
 
-## # Interstitial ###
+### Interstitial ###
 
 ```objective-c
 // In viewDidLoad
@@ -103,7 +103,7 @@ TapForTapAdViewDelegate has one required method, `rootViewController`, and some 
 [TapForTapInterstitial showWithRootViewController: self]; // or possibly self.navigationController
 ```
 
-## # App Wall ###
+### App Wall ###
 
 ```objective-c
 // In viewDidLoad

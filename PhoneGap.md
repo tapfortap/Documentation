@@ -9,7 +9,7 @@ Installing the Tap for Tap plugin is super easy. We'll guide you through it.
 This isn't a PhoneGap tutorial so we assume that you have a PhoneGap project
 (or projects) already set up and working.
 
-## # Android
+### Android
 1. Download our [Android SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-Android-SDK.zip) and find
 the file `TapForTap.jar` included therein. You'll need this file in the next
 step.
@@ -32,7 +32,7 @@ Put `TapForTap.jar` from step 1 to your `libs` folder as well.
 That's it! Unless you're integrating Tap for Tap into an iOS app as well you
 can skip down to **Usage**.
 
-## # iOS
+### iOS
 1. Download our [iOS SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and find the
 folder `TapForTap` included therein. Add it to your project by following
 [Step 1 and 2 of the iOS instructions](http://tapfortap.com/developer#documentation).
@@ -85,7 +85,7 @@ The JavaScript API lets you create, position, and remove Tap for Tap ad views. Y
 can also pass in optional info about your users to help us with targetting. Please
 make sure your privacy policy allows this before giving us their personal information.
 
-## ## initializeWithApiKey(apiKey)
+#### initializeWithApiKey(apiKey)
 This method needs to be called before you can use any of the other API calls.
 This method initializes your app with the TapForTap so we can begin serving
 you ads.
@@ -98,7 +98,7 @@ var apiKey = 'My API key from my TapForTap account';
 TapForTap.initializeWithApiKey(apiKey);
 ```
 
-## ## createAdView([options])
+#### createAdView([options])
 Create and display an ad view.
 
 The options object itself is optional, and supports these optional properties:
@@ -126,7 +126,7 @@ TapForTap.createAdView({
 });
 ```
 
-## ## loadAds()
+#### loadAds()
 Loads and displays Tap for Tap ads. Call this once after creating the ad view.
 
 Usage:
@@ -136,7 +136,7 @@ Usage:
 TapForTap.loadAds();
 ```
 
-## ## moveAdView([options])
+#### moveAdView([options])
 This animates the ad view to a new location on screen. `options` is optional
 and can contain the following properties:
 
@@ -150,7 +150,7 @@ Usage:
 TapForTap.moveAdView({ y: 0 });
 ```
 
-## ## removeAdView()
+#### removeAdView()
 Removes the ad view from the screen and stops loading ads.
 
 Usage:
@@ -160,7 +160,7 @@ Usage:
 TapForTap.removeAdView();
 ```
 
-## ## prepareInterstitial()
+#### prepareInterstitial()
 This prepares the interstial ad type. This method only needs to be called once,
 after the interstitial is shown we automatically prepare another one for you.
 
@@ -171,7 +171,7 @@ Usage:
 TapForTap.prepareInsterstitial();
 ```
 
-## ## showInterstitial()
+#### showInterstitial()
 This shows an interstitial ad. Remember that you must call prepareInterstital() once
 before calling showInterstitial(). Afterwards you only need to call showInterstial()
 to show a new interstitial ad.
@@ -195,7 +195,7 @@ TapForTap.showInterstitial();
 TapForTap.showInterstital();
 ```
 
-## ## prepareAppWall()
+#### prepareAppWall()
 This prepares the app wall ad type. This method only needs to be called once,
 after the app wall is shown we automatically prepare another one for you.
 
@@ -206,7 +206,7 @@ Usage:
 TapForTap.prepareAppWall();
 ```
 
-## ## showAppWall()
+#### showAppWall()
 This shows an app wall ad. Remember that you must call prepareAppWall() once
 before calling showAppWall(). Afterwards you only need to call showAppWall()
 to show a new app wall ad.
