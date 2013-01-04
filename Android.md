@@ -166,6 +166,8 @@ TapForTap.setUserAccountId(<accountId>);
 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
+**Note:** If you are using Tap for Tap's [monetization](/monetization) program passing this information can greatly increase your revenue.
+
 # Example Code #
 
 Some example code is included to help get you started. Take a look in the example folder to see exactly how it's done.
