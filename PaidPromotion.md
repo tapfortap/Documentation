@@ -10,7 +10,7 @@ Once you have Tap for Tap properly integrated into your app you can opt in to ou
 
 Tap for Tap uses a competitive bid system, so the more you pay the more traffic you receive. We also take into account the performance of your app (TTR/CR*) and the quality of your app (user ratings/Tap exchange participation).
 
-bid-example.png
+![Example Bid Interface](https://raw.github.com/tapfortap/Documentation/master/images/bid-example.png)
 
 * TTR: Tap through rate, CR: Conversion rate
 
@@ -18,7 +18,7 @@ bid-example.png
 
 ![Example Banners](https://raw.github.com/tapfortap/Documentation/master/images/custom.png)
 
-The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our banner and creative guidelines.
+The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our [banner and creative guidelines](/CreativeGuidelines).
 
 ##Paid Promotion Types
 
@@ -26,9 +26,9 @@ The banners for promoting your app are the same for the paid promotion and tap e
 
 **CPC:** Cost per click. Pay every time a user taps your app’s ad to engage with your app.
 
-**CPM:** Cost per thousand impressions. Pay for every 1000 times your ad is seen. Coming Soon
+**CPM:** Cost per thousand impressions. Pay for every 1000 times your ad is seen.
 
-paid-promotion-program.png
+![Program Selection](https://raw.github.com/tapfortap/Documentation/master/images/paid-promotion-program.png)
 
 ##Picking a Type
 
@@ -38,14 +38,17 @@ If your app is not a free one, we do not allow for CPI. Paid apps can have very 
 
 ##Country Targeting
 
-There are benefits and disadvantages to using country targeting. You can chose to target countries you want to promote to, this uses the same settings as the Tap Exchange.  If you do target countries, the minimum cost to targeting can vary, based on that country tier the country is in.  We want to make sure our developers are earning revenue proportional to the quality and paid promotion competitiveness of the traffic their app provides. If you do not wish to use our country targeting, the minimum cost to doing to is significantly lower but you will receive traffic from all countries on the Tap for Tap network.
+There are benefits and disadvantages to using country targeting. You can chose to target countries you want to promote to, this uses the same settings as the Tap Exchange.  If you do target countries, the minimum cost to targeting can vary, based on that [country tier](/CountryTiers) the country is in.  We want to make sure our developers are earning revenue proportional to the quality and paid promotion competitiveness of the traffic their app provides. If you do not wish to use our country targeting, the minimum cost to doing to is significantly lower but you will receive traffic from all countries on the Tap for Tap network.
 
 ##Spend Limit
 
 The daily spend limit can ensure you don’t spend all your balance at once. We have a minimum limitation if you wish to use our program ($10). If you leave this option blank it will not use a spend limit.
 
-daily-limit.png
+![Daily Spend Limit](https://raw.github.com/tapfortap/Documentation/master/images/daily-limit.png)
 
-If you are using our monetization program as well as paying for promotion we recommend you do not use a spend limit so all of your revenue can contribute to growing your app.
-Reporting
+If you are using our [monetization program](/Monetization) as well as paying for promotion we recommend you do not use a spend limit so all of your revenue can contribute to growing your app.
+
+##Reporting
+
+Coming Soon
 
