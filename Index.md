@@ -1,14 +1,14 @@
-#Tap for Tap Documentation Portal
+# Tap for Tap Documentation Portal
 
-##New to Tap for Tap?
+## New to Tap for Tap?
 
 [Getting Started Guide](/GettingStarted)
 
-##Tap for Tap Programs
+##Tap for Tap Programs##
 
 [Tap Exchange](/TapExchange)  -  [Paid Promotion](/PaidPromotion)  -  [Monetization](/Monetization)
 
-##Platform Implementation
+## Platform Implementation ##
 
 [Android Documentation](/Android)  -  [iOS Documentation](/iOS)
 
