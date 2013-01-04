@@ -1,4 +1,4 @@
-#Tap for Tap - Monetization
+# Tap for Tap - Monetization
 
 Tap for Tap allows you to split your traffic into two parts, the tap exchange and monetization.
 

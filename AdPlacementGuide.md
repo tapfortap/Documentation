@@ -1,4 +1,4 @@
-#Tap for Tap - Ad Placement Guidelines
+# Tap for Tap - Ad Placement Guidelines
 
 You can improve the performance of your ad placements by following these tips.
 

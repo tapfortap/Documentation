@@ -1,4 +1,4 @@
-#MoPub
+# MoPub
 
 To use Tap for Tap with MoPub:
 

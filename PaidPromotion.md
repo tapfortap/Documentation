@@ -1,4 +1,4 @@
-#Tap for Tap - Paid Promotion
+# Tap for Tap - Paid Promotion
 
 Paid promotion allows you to buy traffic for your app and get more users.  We require that you have our SDK implemented and your app added to Tap for Tap before proceeding.  For more information on how to do this, see our [guide to getting started](/documentation/GettingStarted).
 

@@ -1,4 +1,4 @@
-#Tap For Tap - Tap Exchange
+# Tap For Tap - Tap Exchange
 
 Tap for Tap allows you to choose how you’d like to be compensated for the ads that you show.
 

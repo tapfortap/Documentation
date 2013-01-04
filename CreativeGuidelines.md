@@ -1,4 +1,4 @@
-#Tap for Tap - Creative Guidelines
+# Tap for Tap - Creative Guidelines
 
 ## Ad Units
 
