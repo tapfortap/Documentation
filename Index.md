@@ -2,32 +2,32 @@
 
 ##  New to Tap for Tap?
 
-[Getting Started Guide](GettingStarted)
+[Getting Started Guide](/documentation/GettingStarted)
 
 ##  Tap for Tap Programs
 
-[Tap Exchange](TapExchange)  -  [Paid Promotion](PaidPromotion)  -  [Monetization](Monetization)
+[Tap Exchange](/documentation/TapExchange)  -  [Paid Promotion](/documentation/PaidPromotion)  -  [Monetization](/documentation/Monetization)
 
 ##  Platform Implementation
 
-[Android Documentation](Android)  -  [iOS Documentation](iOS)
+[Android Documentation](/documentation/Android)  -  [iOS Documentation](/documentation/iOS)
 
 ##  Supported Plugins
 
-[Adobe Air](AdobeAir)  -  [PhoneGap](PhoneGap)  -  [Unity3D](Unity)
+[Adobe Air](/documentation/AdobeAir)  -  [PhoneGap](/documentation/PhoneGap)  -  [Unity3D](/documentation/Unity)
 
 ##  Mediation Layers
 
-[AdMob](AdMob)  -  [AdWhirl](AdWhirl)  -  [MoPub](MoPub)
+[AdMob](/documentation/AdMob)  -  [AdWhirl](/documentation/AdWhirl)  -  [MoPub](/documentation/MoPub)
 
 ##  Improving Performance
 
-[Creative Guidelines](CreativeGuidelines)  -  [Ad Placement Guide](AdPlacementGuide)
+[Creative Guidelines](/documentation/CreativeGuidelines)  -  [Ad Placement Guide](/documentation/AdPlacementGuide)
 
 ##  Inside Tap for Tap
 
-[Ad Units](AdUnits)  -  [Country Tiers](CountryTiers)
+[Ad Units](/documentation/AdUnits)  -  [Country Tiers](/documentation/CountryTiers)
 
 ##  More Help
 
-[Frequently Asked Questions](FAQ)  -  [Glossary](Glossary)  -  [Help Videos](HelpVideos)
+[Frequently Asked Questions](/documentation/FAQ)  -  [Glossary](/documentation/Glossary)  -  [Help Videos](/documentation/HelpVideos)

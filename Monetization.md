@@ -14,11 +14,11 @@ You can move the slider more to the left if you want to focus on users, or move 
 
 ## Performance
 
-You will receive a certain amount of revenue depending on a few factors. The main factor would be where your users are located.  Tap for Tap groups countries into [tiers](CountryTiers) which helps determine how well they should perform. Tier 1 countries generally make a lot more revenue than tier 4. You can also take [steps](AdPlacementGuide) to improve the performance of your ads to ensure proper placement and visibility.
+You will receive a certain amount of revenue depending on a few factors. The main factor would be where your users are located.  Tap for Tap groups countries into [tiers](/documentation/CountryTiers) which helps determine how well they should perform. Tier 1 countries generally make a lot more revenue than tier 4. You can also take [steps](/documentation/AdPlacementGuide) to improve the performance of your ads to ensure proper placement and visibility.
 
 ## 100% Fill Rate
 
-A unique feature of Tap for Tap is we will always fall back on a [tap exchange](TapExchange) ad if we cannot find a good revenue generating ad to place.  This allows you to always benefit from placing a Tap for Tap ad.
+A unique feature of Tap for Tap is we will always fall back on a [tap exchange](/documentation/TapExchange) ad if we cannot find a good revenue generating ad to place.  This allows you to always benefit from placing a Tap for Tap ad.
 
 ## Demographics
 

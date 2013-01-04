@@ -8,7 +8,7 @@ Whether on the tap exchange or monetization, the placement of your ad units play
 
 ## Ad Units
 
-To learn more about what kind of banners you can make and how the banners are displayed, check out our [ad units](AdUnits) documentation.
+To learn more about what kind of banners you can make and how the banners are displayed, check out our [ad units](/documentation/AdUnits) documentation.
 
 
 ## Full Size Banner
@@ -35,4 +35,4 @@ You have the option to show the app wall in the same way as an interstitial, tho
 
 ## Creative Guidelines
 
-If you have questions about how to best create your banners see our [creative guidelines](CreativeGuidelines).
+If you have questions about how to best create your banners see our [creative guidelines](/documentation/CreativeGuidelines).

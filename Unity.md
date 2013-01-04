@@ -77,8 +77,8 @@ Usage:
 
 #### public static void CreateAdView(TapForTapVerticalAlignment vertical, TapForTapHorizontalAlignment horizontal)
 Create a banner ad view of width 320dp and height 50dp at the desired screen location.
-- **[TapForTapVerticalAlignment](#TapForTapVerticalAlignment)** is an enum that has the following values : TOP, CENTER, BOTTOM.
-- **[TapForTapHorizontalAlignment](TapForTapHorizontalAlignment)** is an enum that has the following values : LEFT, CENTER, RIGHT.
+- **[TapForTapVerticalAlignment](/documentation/#TapForTapVerticalAlignment)** is an enum that has the following values : TOP, CENTER, BOTTOM.
+- **[TapForTapHorizontalAlignment](/documentation/TapForTapHorizontalAlignment)** is an enum that has the following values : LEFT, CENTER, RIGHT.
 
 By combining a vertical and horizontal alignment you can place an advertisement in
 one of 9 places. A `*` denotes a location where an ad can be placed on the screen.
@@ -165,7 +165,7 @@ Usage:
 #### public static void SetGender(TapForTapGender gender)
 Sets the gender of the user. This is sent along with
 ad requests and helps with matching.
-- [TapForTapGender](#TapForTapGender) is an enume that has the following values: MALE, FEMALE, NONE.
+- [TapForTapGender](/documentation/#TapForTapGender) is an enume that has the following values: MALE, FEMALE, NONE.
 
 Usage:
 
@@ -198,7 +198,7 @@ Usage:
 ```
 
 #### public static void setAdViewListener(ITapForTapAdView listener)
-Sets the listener that will receive the AdView callbacks. See [IAdViewListener](#IAdViewListener)
+Sets the listener that will receive the AdView callbacks. See [IAdViewListener](/documentation/#IAdViewListener)
 for more details and available callback methods.
 
 Usage:
@@ -229,7 +229,7 @@ Usage:
 ```
 
 #### public static void setAppWallListener(ITapForTapAppWall listener)
-Sets the listener that will receive the AppWall callbacks. See [IAppWallListener](#IAppWallListener)
+Sets the listener that will receive the AppWall callbacks. See [IAppWallListener](/documentation/#IAppWallListener)
 for more details and available callback methods.
 
 Usage:
@@ -250,7 +250,7 @@ Usage:
 ```
 
 #### public static void setInterstitiallListener(ITapForTapInterstitial listener)
-Sets the listener that will receive the Interstitial callbacks. See [IInterstitialListener](#IInterstitialListener)
+Sets the listener that will receive the Interstitial callbacks. See [IInterstitialListener](/documentation/#IInterstitialListener)
 for more details and available callback methods.
 
 Usage:
