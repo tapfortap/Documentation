@@ -1,14 +1,14 @@
 #Tap for Tap Documentation Portal
 
-###New to Tap for Tap?
+##New to Tap for Tap?
 
 [Getting Started Guide](/GettingStarted)
 
-###Tap for Tap Programs
+##Tap for Tap Programs
 
 [Tap Exchange](/TapExchange)  -  [Paid Promotion](/PaidPromotion)  -  [Monetization](/Monetization)
 
-###Platform Implementation
+##Platform Implementation
 
 [Android Documentation](/Android)  -  [iOS Documentation](/iOS)
 
@@ -20,14 +20,14 @@
 
 [AdMob](/AdMob)  -  [AdWhirl](/AdWhirl)  -  [MoPub](/MoPub)
 
-###Improving Performance
+##Improving Performance
 
 [Creative Guidelines](/CreativeGuidelines)  -  [Ad Placement Guide](/AdPlacementGuide)
 
-###Inside Tap for Tap
+##Inside Tap for Tap
 
 [Ad Units](/AdUnits)  -  [Country Tiers](/CountryTiers)
 
-###More Help
+##More Help
 
 [Frequently Asked Questions](/FAQ)  -  [Glossary](/Glossary)  -  [Help Videos](/HelpVideos)
