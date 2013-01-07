@@ -95,7 +95,7 @@ one of 9 places. A `*` denotes a location where an ad can be placed on the scree
 
 Usage:
 
-```C#
+```Cs
   // Create an AdView at the bottom center of the screen
   TapForTap.CreateAdView(TapForTapVerticalAlignment.BOTTOM, TapForTapHorizontalAlignment.CENTER)
 ```
@@ -105,7 +105,7 @@ Remove any AdView that is currently being displayed.
 
 Usage:
 
-```C#
+```Cs
   // Remove the currently displayed AdView
   TapForTap.RemoveAdView();
 ```
@@ -116,7 +116,7 @@ After the interstitial is shown we automatically prepare another one.
 
 Usage:
 
-```C#
+```Cs
   // Prepare an interstitial
   TapForTap.PrepareInterstitial();
 ```
