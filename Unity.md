@@ -82,6 +82,7 @@ Create a banner ad view of width 320dp and height 50dp at the desired screen loc
 
 By combining a vertical and horizontal alignment you can place an advertisement in
 one of 9 places. A `*` denotes a location where an ad can be placed on the screen.
+
 <pre>
 -----------
 |*   *   *|
@@ -94,7 +95,7 @@ one of 9 places. A `*` denotes a location where an ad can be placed on the scree
 
 Usage:
 
-```cs
+```C#
   // Create an AdView at the bottom center of the screen
   TapForTap.CreateAdView(TapForTapVerticalAlignment.BOTTOM, TapForTapHorizontalAlignment.CENTER)
 ```
@@ -104,7 +105,7 @@ Remove any AdView that is currently being displayed.
 
 Usage:
 
-```cs
+```C#
   // Remove the currently displayed AdView
   TapForTap.RemoveAdView();
 ```
@@ -115,7 +116,7 @@ After the interstitial is shown we automatically prepare another one.
 
 Usage:
 
-```cs
+```C#
   // Prepare an interstitial
   TapForTap.PrepareInterstitial();
 ```
