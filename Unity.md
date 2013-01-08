@@ -72,7 +72,7 @@ which can be found by logging into Tap for Tap and clicking the account button.
 
 Usage:
 
-```cs
+```c#
   // Initialize Tap for Tap with my API key
   TapForTap.initialize("MY API KEY");
 ```
@@ -98,7 +98,7 @@ one of 9 places. A `*` denotes a location where an ad can be placed on the scree
 
 Usage:
 
-```Cs
+```c#
   // Create an AdView at the bottom center of the screen
   TapForTap.CreateAdView(TapForTapVerticalAlignment.BOTTOM, TapForTapHorizontalAlignment.CENTER)
 ```
@@ -108,7 +108,7 @@ Remove any AdView that is currently being displayed.
 
 Usage:
 
-```Cs
+```c#
   // Remove the currently displayed AdView
   TapForTap.RemoveAdView();
 ```
@@ -119,7 +119,7 @@ After the interstitial is shown we automatically prepare another one.
 
 Usage:
 
-```Cs
+```c#
   // Prepare an interstitial
   TapForTap.PrepareInterstitial();
 ```
@@ -129,7 +129,7 @@ Shows an interstitial ad.
 
 Usage:
 
-```cs
+```c#
   // Show an insterstitial
   TapForTap.ShowInterstitial();
 ```
@@ -140,7 +140,7 @@ After the app wall is shown we automatically prepare another one.
 
 Usage:
 
-```cs
+```c#
   // Prepare an app wall
   TapForTap.PrepareAppWall();
 ```
@@ -150,7 +150,7 @@ Show an app wall ad.
 
 Usage:
 
-```cs
+```c#
   // Show an app wal
   TapForTap.ShowAppWall();
 ```
@@ -161,7 +161,7 @@ ad requests and helps with matching.
 
 Usage:
 
-```cs
+```c#
   // Set the birth year to 1990
   TapForTap.SetYearOfBirth(1990);
 ```
@@ -173,7 +173,7 @@ Sets the gender of the user. This is sent along with ad requests and helps with 
 
 Usage:
 
-```cs
+```c#
   // Set the Gender to male
   TapForTap.SetGender(TapForTapGender.MALE);
 ```
@@ -186,7 +186,7 @@ Sets the user's location This is sent along with ad requests.
 
 Usage:
 
-```cs
+```c#
   // Set the location (Around Brentwood Bay Vancouver Island)
   TapForTap.SetLocation(48.571155273059546, -123.45268249511719);
 ```
@@ -197,7 +197,7 @@ ad requests and helps with matching.
 
 Usage:
 
-```cs
+```c#
   TapForTap.SetUserAccountId("My custom user account ID that I use");
 ```
 
@@ -207,7 +207,7 @@ for more details and available callback methods.
 
 Usage:
 
-```cs
+```c#
   // MyAdViewListener.cs
   public class MyAdViewListener : ITapForTapAdView
   {
@@ -238,7 +238,7 @@ for more details and available callback methods.
 
 Usage:
 
-```cs
+```c#
   // MyAppWallListener.cs
   public class MyAppWallListener : ITapForTapAppWall
   {
@@ -259,7 +259,7 @@ for more details and available callback methods.
 
 Usage:
 
-```cs
+```c#
   // MyInterstitialListener.cs
   public class MyInterstitialListener : ITapForTapInterstitial
   {
