@@ -273,7 +273,7 @@ Usage:
   TapForTap.setInterstitiallListener(myInterstitialListener);
 ```
 
-### <a name="IAdViewListener"/>IAdViewListener
+### <a name="IAdViewListener">IAdViewListener</a>
 An interface used to receive callbacks when the status of an AdView has changed.
 - **void OnTapAd(void)**
   - called when a user taps on an ad
@@ -288,25 +288,25 @@ An interface used to receive callbacks when the status of an app wall has change
 - **void OnDismiss(void)**
   - Called when the app wall is dismissed
 
-### <a name="IInterstitialListener"/>IInterstitialListener
+### <a name="IInterstitialListener">IInterstitialListener</a>
 An interface used to receive callbacks when the status of an interstitial has changed.
 
 - **void OnDismiss(void)**
   - Called when the interstitial is dismissed
 
-### <a name="TapForTapGender"/>TapForTapGender
+### <a name="TapForTapGender">TapForTapGender</a>
 An enum used for setting the user's gender. Available value:
 - MALE
 - FEMALE
 - NONE
 
-### <a name="TapForTapHorizontalAlignment"/>TapForTapHorizontalAlignment
+### <a name="TapForTapHorizontalAlignment">TapForTapHorizontalAlignment</a>
 An enum used for determining the horizontal placement of an ad view. Available value:
 - LEFT
 - CENTER
 - RIGHT
 
-### <a name="TapForTapVerticalAlignment"/>TapForTapVerticalAlignment
+### <a name="TapForTapVerticalAlignment">TapForTapVerticalAlignment</a>
 An enum used for determining the vertical placement of an ad view. Available value:
 - TOP
 - CENTER
