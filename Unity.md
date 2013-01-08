@@ -17,7 +17,7 @@ This Unity plugin was built and tested against Unity 3.5.
 ##  Integration
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
 assume that you have a Unity project already set up and working. The first thing you
-need to do is import the TapForTap.unitypackage into your app (Note: if you are using
+need to do is import the TapForTap.unitypackage into your app (**Note**: If you are using
 javascript you will need to move the TapForTap folder from assets/ to plugins/
 in order to be able to call the TapForTap API's. This will be fixed in the next release). 
 Then follow the steps below for configuring iOS and Android.
@@ -37,20 +37,20 @@ In the project explorer on the left side of Xcode 4:
 ### Configuring Tap for Tap for Android
 A few additions need to be made to Unity's AndroidManifest.xml. If you do not
 have a custom manifest Unity recommends to create your own under the `Assets/Plugins/Android `folder ([Unity docs](http://docs.unity3d.com/Documentation/Manual/PluginsForAndroid.html)).
-Or you can edit the default manifest at
-`/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer` for Mac OSX
- and `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml` for Windows.
+Or you can edit the default manifest at:
+Mac OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer` 
+Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
 
-1. Add the following permissions to the AndroidManifest.xml
-  `<uses-permission android:name="android.permission.INTERNET" />`
-  `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`
-  `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
-  `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`
-  `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`
-2. Include the TapForTap activity in the AndroidManifest.xml
+1. Add the following permissions to the AndroidManifest.xml  
+  `<uses-permission android:name="android.permission.INTERNET" />`  
+  `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`  
+  `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`  
+  `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`  
+  `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`  
+2. Include the TapForTap activity in the AndroidManifest.xml  
   `<activity android:name="com.tapfortap.TapForTapActivity"/>`
 3. Change the following line in the AndroidManifest.xml, setting the value to true. This makes it
-   so that you can click on the banner ads (otherwise Unity swallows the click event)
+   so that you can click on the banner ads (otherwise Unity swallows the click event)  
    `<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />`
 
 Congratulations, you are done. You should now be able to call into the Tap for Tap library
@@ -79,6 +79,7 @@ Usage:
 
 #### public static void CreateAdView(TapForTapVerticalAlignment vertical, TapForTapHorizontalAlignment horizontal)
 Create a banner ad view of width 320dp and height 50dp at the desired screen location.
+
 - **[TapForTapVerticalAlignment](#TapForTapVerticalAlignment)** is an enum that has the following values : TOP, CENTER, BOTTOM.
 - **[TapForTapHorizontalAlignment](#TapForTapHorizontalAlignment)** is an enum that has the following values : LEFT, CENTER, RIGHT.
 
@@ -166,8 +167,8 @@ Usage:
 ```
 
 #### public static void SetGender(TapForTapGender gender)
-Sets the gender of the user. This is sent along with
-ad requests and helps with matching.
+Sets the gender of the user. This is sent along with ad requests and helps with matching.
+
 - [TapForTapGender](#TapForTapGender) is an enume that has the following values: MALE, FEMALE, NONE.
 
 Usage:
@@ -275,6 +276,7 @@ Usage:
 
 ### <a name="IAdViewListener">IAdViewListener</a>
 An interface used to receive callbacks when the status of an AdView has changed.
+
 - **void OnTapAd(void)**
   - called when a user taps on an ad
 - **void OnReceiveAd(void)**
@@ -296,18 +298,21 @@ An interface used to receive callbacks when the status of an interstitial has ch
 
 ### <a name="TapForTapGender">TapForTapGender</a>
 An enum used for setting the user's gender. Available value:
+
 - MALE
 - FEMALE
 - NONE
 
 ### <a name="TapForTapHorizontalAlignment">TapForTapHorizontalAlignment</a>
 An enum used for determining the horizontal placement of an ad view. Available value:
+
 - LEFT
 - CENTER
 - RIGHT
 
 ### <a name="TapForTapVerticalAlignment">TapForTapVerticalAlignment</a>
 An enum used for determining the vertical placement of an ad view. Available value:
+
 - TOP
 - CENTER
 - BOTTOM
