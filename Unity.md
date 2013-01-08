@@ -17,8 +17,10 @@ This Unity plugin was built and tested against Unity 3.5.
 ##  Integration
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
 assume that you have a Unity project already set up and working. The first thing you
-need to do is import the TapForTap.unitypackage into your app. Then follow the steps
-below for configuring iOS and Android.
+need to do is import the TapForTap.unitypackage into your app (Note: if you are using
+javascript you will need to move the TapForTap folder from assets/ to plugins/
+in order to be able to call the TapForTap API's. This will be fixed in the next release). 
+Then follow the steps below for configuring iOS and Android.
 
 ### Configuring Tap for Tap for iOS
 When Xcode loads you will need to add the AdSupport framework to your build target.
