@@ -86,7 +86,7 @@ Finally, add the following activity to `AndroidManifest.xml` under the <applicat
 
 This goes in the activity in which you want to display ads. Note that we started using an account-wide API key in version 2 instead of individual app IDs. Your API key is available on the [account page](http://tapfortap.com/developer#account).
 
-```Java
+```java
 // Import TapForTap
 import com.tapfortap.TapForTap;
 
@@ -111,7 +111,7 @@ public class MyActivity extends Activity {
 ```
 If you don't use XML but instead lay out your views with code then it will look something like this:
 
-```Java
+```java
 AdView adView = new AdView(this);
 // Optionally specify layout params.
 DisplayMetrics metrics = getResources().getDisplayMetrics();
@@ -127,7 +127,7 @@ myLayout.addView(adView);
 
 Inside an activity simply use the `Interstitial` class like this:
 
-```Java
+```java
 // In onCreate
 Interstitial.prepare(this);
 
@@ -141,7 +141,7 @@ You only have to prepare it the first time on startup, each time it is shown the
 
 Inside an activity simply use the `AppWall` class like this:
 
-```Java
+```java
 // In onCreate
 AppWall.prepare(this);
 
@@ -157,7 +157,7 @@ Congratulations! You should now be up and running. Run the app and then [Login](
 
 If you have information about your users that your privacy policy allows you to share with us, you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. We accept year of birth, gender, location, and the account ID of user's on your system.
 
-```Java
+```java
 TapForTap.setGender(<MALE or FEMALE>);
 TapForTap.setYearOfBirth(<year>);
 TapForTap.setLocation(<location>);
@@ -176,7 +176,7 @@ Some example code is included to help get you started. Take a look in the exampl
 
 To take action when ads are loaded or fail to load you can set a listener on `AdView` objects and the `Interstitial` and `AppWall` classes. AdView listeners implement the `AdViewListener` interface which specifies three methods:
 
-```Java
+```java
 public void onReceiveAd()
 public void onFailToReceiveAd(String reason)
 public void onTapAd()
@@ -184,7 +184,7 @@ public void onTapAd()
 
 You can use an anonymous class to set the listener without defining a concrete class, like so:
 
-```Java
+```java
 adView.setListener(new AdViewListener() {
 	public void onReceiveAd() {
 		Log.d("MyActivity", "Tap for Tap ad received");
@@ -202,7 +202,7 @@ adView.setListener(new AdViewListener() {
 
 If you use your activity as the `AdViewListener` be sure to set the listener to `null` in `onDestroy` otherwise there will be a cycle and your app will leak memory.
 
-```Java
+```java
 @Override
 protected void onDestroy() {
 	adView.setListener(null);
@@ -212,13 +212,13 @@ protected void onDestroy() {
 
 Interstitial and AppWall listeners implement the identical `InterstitialListener` and `AppWallListener` interfaces which specify a single method:
 
-```Java
+```java
 public void onDismiss()
 ```
 
 You can use an anonymous class to set the listener without defining a concrete class, like so:
 
-```Java
+```java
 Interstitial.setListener(new InterstitialListener() {
 	public void onDismiss() {
 		Log.d("MyActivity", "Tap for Tap interstitial dismissed");
@@ -227,7 +227,7 @@ Interstitial.setListener(new InterstitialListener() {
 
 Or for app walls:
 
-```Java
+```java
 AppWall.setListener(new AppWallListener() {
 	public void onDismiss() {
 		Log.d("MyActivity", "Tap for Tap app wall dismissed");
