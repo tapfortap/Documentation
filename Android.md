@@ -84,7 +84,7 @@ Finally, add the following activity to `AndroidManifest.xml` under the <applicat
 
 ##  Step 3 - Initialize Tap for Tap when your app launches. ##
 
-This goes in the activity in which you want to display ads. Note that we started using an account-wide API key in version 2 instead of individual app IDs. Your API key is available on the [account page](http://tapfortap.com/developer#account").
+This goes in the activity in which you want to display ads. Note that we started using an account-wide API key in version 2 instead of individual app IDs. Your API key is available on the [account page](http://tapfortap.com/developer#account).
 
 ```Java
 // Import TapForTap
