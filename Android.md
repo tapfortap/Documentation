@@ -106,8 +106,13 @@ public class MyActivity extends Activity {
 
 ### Banner ###
 
-```xml
-<activity android:name="com.tapfortap.TapForTapActivity"/>
+```xml                    
+<com.tapfortap.AdView 
+    android:id="@+id/ad_view"
+    android:layout_height="50dip"
+    android:layout_width="320dip"
+    android:layout_gravity="bottom"
+  />
 ```
 If you don't use XML but instead lay out your views with code then it will look something like this:
 
