@@ -1,5 +1,10 @@
 # iOS Changelog
 
+## 2.1.1 / 2013-01-14 
+
+  * Fix an issue where interstitials and app walls may show repeatedly
+  * TapForTapAdMobBanner now release delegate properly
+
 ##  2.1.0 / 2012-11-15
 
 - Add app wall & interstitial delegates that get notified on dismissal
