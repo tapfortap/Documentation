@@ -1,6 +1,6 @@
 # Android Changelog
 
-### 2.1.1 / 2013-01-14 
+## 2.1.1 / 2013-01-14 
 
   * Respect gravity setting on AdView
   * Remove dependency on Activity in TapForTap.initialize
