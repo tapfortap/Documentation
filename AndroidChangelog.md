@@ -1,5 +1,16 @@
 # Android Changelog
 
+### 2.1.1 / 2013-01-14 
+
+  * Respect gravity setting on AdView
+  * Remove dependency on Activity in TapForTap.initialize
+  * Removed AppWall and Interstitial dependency on Activity (uses ApplicationContext)
+  * Remove AdView dependency on Activity (uses ApplicationContext)
+  * Fix a crash when going to the app wall from the pitch page
+  * Fix a potential crash in AppWall and Interstitial if the API is used in an undocumented way
+  * Fix an issue where interstitials and app walls may show repeatedly
+  * Various minor bug fixes
+
 ##  2.1.0 / 2012-11-15
 
 - Include TapForTap.jar in TapForTapAdMob.jar
