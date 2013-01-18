@@ -33,7 +33,7 @@ That's it! Unless you're integrating Tap for Tap into an iOS app as well you
 can skip down to **Usage**.
 
 ### iOS
-1. Download our [iOS SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and find the
+1. Download our [iOS SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-iOS-SDK.zip) and find the
 folder `TapForTap` included therein. Add it to your project by following
 [Step 1 and 2 of the iOS instructions](http://tapfortap.com/developer#documentation).
 
