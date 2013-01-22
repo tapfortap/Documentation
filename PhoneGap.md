@@ -41,8 +41,12 @@ That's it! Unless you're integrating Tap for Tap into an iOS app as well you
 can skip down to **Usage**.
 
 ### iOS
-1. Download the [PhoneGap SDK](https://github.com/tapfortap/PhoneGap/raw/master/TapForTap-PhoneGap.zip) and look inside the iOS folder and add `TapForTapPhoneGapPlugin.h` and `TapForTapPhoneGapPlugin.m` to your
-project in the `Plugins` folder provided by PhoneGap.
+1. Download the [PhoneGap SDK](https://github.com/tapfortap/PhoneGap/raw/master/TapForTap-PhoneGap.zip) and look inside the iOS folder.  
+    1. Add `TapForTapPhoneGapPlugin.h` and `TapForTapPhoneGapPlugin.m` to your project in the `Plugins` folder provided by PhoneGap.
+    2. Add the TapForTap folder to your project by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
+    3. Add the SystemConfiguration framework and the AdSupport framework. (See [Tap for tap iOS Documentation](http://tapfortap.com/documentation/iOS) step 2 for more details).
+
+
 
 3. Put `tapfortap.js` in the `www` folder, alongside `cordova-2.x.x.js`.
 
@@ -64,7 +68,7 @@ project in the `Plugins` folder provided by PhoneGap.
         <access origin=".*"/>
         ```
 
-That's it! Now you're ready to use Tap for Tap in your app.
+That's it! Now you're ready to use Tap for Tap in your app.  
 
 ##  Usage
 First up include the Tap for Tap JavaScript module, this goes directly after
