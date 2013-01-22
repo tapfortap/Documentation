@@ -177,8 +177,9 @@ TapForTap.removeAdView();
 ```
 
 #### prepareInterstitial()
-This prepares the interstial ad type. This method only needs to be called once,
-after the interstitial is shown we automatically prepare another one for you.
+This prepares the interstitial ad type. This method will pre-fetch an interstitial so when
+showInterstitial() is called, the interstitial is shown with no delay. This is only useful for preparing
+the very first interstitial. showInterstitial() automatically prepares the next interstitial.
 
 Usage:
 
@@ -188,9 +189,7 @@ TapForTap.prepareInsterstitial();
 ```
 
 #### showInterstitial()
-This shows an interstitial ad. Remember that you must call prepareInterstital() once
-before calling showInterstitial(). Afterwards you only need to call showInterstial()
-to show a new interstitial ad.
+This shows an interstitial ad. Calling showing automatically prepares the next interstital, so you do not need to call prepare again.
 
 Usage:
 
@@ -212,8 +211,9 @@ TapForTap.showInterstital();
 ```
 
 #### prepareAppWall()
-This prepares the app wall ad type. This method only needs to be called once,
-after the app wall is shown we automatically prepare another one for you.
+This prepares the app wall ad type. This method will pre-fetch an app wall so when
+showAppWall() is called, the app wall is shown with no delay. This is only useful for preparing
+the very first app wall. showAppWall() automatically prepares the next app wall.
 
 Usage:
 
@@ -223,9 +223,7 @@ TapForTap.prepareAppWall();
 ```
 
 #### showAppWall()
-This shows an app wall ad. Remember that you must call prepareAppWall() once
-before calling showAppWall(). Afterwards you only need to call showAppWall()
-to show a new app wall ad.
+This shows an app wall ad. Calling showing automatically prepares the next app wall, so you do not need to call prepare again.
 
 Usage:
 
