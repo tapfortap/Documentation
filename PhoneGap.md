@@ -3,25 +3,33 @@
 Want to use Tap for Tap with PhoneGap? We got you covered on Android and iOS.
 
 ##  Installation
-If you don't have the plugins yet then [download it here](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip).
+If you don't have the plugins yet then [download it here](https://github.com/tapfortap/PhoneGap/raw/master/downloads/TapForTap-PhoneGap.zip).
 
 Installing the Tap for Tap plugin is super easy. We'll guide you through it.
 This isn't a PhoneGap tutorial so we assume that you have a PhoneGap project
 (or projects) already set up and working.
 
 ### Android
-1. Download our [Android SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-Android-SDK.zip) and find
-the file `TapForTap.jar` included therein. You'll need this file in the next
-step.
-
-2. Download the [PhoneGap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-PhoneGap.zip) and peek inside the `Android` folder and put
+1. Download the [PhoneGap SDK](https://github.com/tapfortap/TapForTap/raw/master/downloads/TapForTap-PhoneGap.zip) and peek inside the `Android` folder and put
 `TapForTapPhoneGapPlugin.jar` in your project's `libs` folder, alongside `cordova-2.x.x.jar`.
-Put `TapForTap.jar` from step 1 to your `libs` folder as well.
 
-3. Now add Tap for Tap to your project by following [Steps 1 and 2 of our SDK instructions](http://tapfortap.com/developer#documentation).
+2. Add the following permissions to `AndroidManifest.xml`
 
-4. Now go ahead and put `tapfortap.js` in `assets/www` alongside
-`cordova-2.x.x.js`.
+```xml
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
+3. Add the following activiry to `AndroidManifest.xml`
+
+```xml
+  <activity android:name="com.tapfortap.TapForTapActivity"/>
+```
+
+4. Put `tapfortap.js` in the `assets/www` folder alongside `cordova-2.x.x.js`.
 
 5. Open `res/xml/plugins.xml` and add this line:
 
@@ -33,20 +41,28 @@ That's it! Unless you're integrating Tap for Tap into an iOS app as well you
 can skip down to **Usage**.
 
 ### iOS
-1. Download our [iOS SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-iOS-SDK.zip) and find the
-folder `TapForTap` included therein. Add it to your project by following
-[Step 1 and 2 of the iOS instructions](http://tapfortap.com/developer#documentation).
-
-2. Download the [PhoneGap SDK](https://github.com/tapfortap/PhoneGap/downloads) and look inside the iOS foler
-and add `TapForTapPhoneGapPlugin.h` and `TapForTapPhoneGapPlugin.m` to your
+1. Download the [PhoneGap SDK](https://github.com/tapfortap/PhoneGap/raw/master/downloads/TapForTap-PhoneGap.zip) and look inside the iOS folder and add `TapForTapPhoneGapPlugin.h` and `TapForTapPhoneGapPlugin.m` to your
 project in the `Plugins` folder provided by PhoneGap.
 
-3. Put `tapfortap.js` in your `www` folder, alongside `phonegap-2.x.x.js`
-or `cordova-2.x.x.js`.
+3. Put `tapfortap.js` in the `www` folder, alongside `cordova-2.x.x.js`.
 
-4. Under `Supporting Files` open `Cordova.plist`. In the  `Plugins` dictionary
-add the key `TapForTap` with value `TapForTapPhoneGapPlugin`. In the
-`ExternalHosts` array add a '*'. This allows TapForTap to talk to our servers and fetch ads from our CDN.
+4. To register the TapForTap Plugin with PhoneGap
+    1. PhoneGap 2.0  
+        Under `Supporting Files` open `Cordova.plist`. In the `Plugins` dictionary
+        ad the key `TapForTap` with value `TapForTapPhoneGapPlugin`. In the
+        `ExternalHosts` array add a '*'. This allows TapForTap to talk to our servers and fetch ads from our CDN.
+    2. PhoneGap 2.3  
+        Open up config.xml and add the following line under the `<plugins>` tag
+
+        ```xml
+        <plugin name="TapForTap" value="TapForTapPhoneGapPlugin"/>
+        ```
+
+        And the following line under the `<cordova>` tag
+
+        ```xml
+        <access origin=".*"/>
+        ```
 
 That's it! Now you're ready to use Tap for Tap in your app.
 
@@ -64,7 +80,7 @@ Second, and lastly, create an ad view and tell it to load ads, like so:
 document.addEventListener('deviceready', function() {
 
   var apiKey = '<YOUR API KEY>';
-  TapForTap.initializeWithApiKey(apiKey);
+  TapForTap.initializeWithAPIKey(apiKey);
   TapForTap.createAdView({}, function() {
     TapForTap.loadAds(function() {
       // successfully loaded ads
