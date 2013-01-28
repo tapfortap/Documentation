@@ -10,7 +10,7 @@ Tap for Tap is a service that allows you to grow your app's userbase for free wi
 
 ##  Download SDK
 
-In order for your app to communicate with Tap for Tap, you need to download our SDK [here](https://github.com/tapfortap/Documentation/zipball/master) and integrate it into your app.  If you are using one of our supported plugins (Unity 3D, Phonegap, etc.), download the SDK package for the corresponding plugin [here](/documentation/). Please familiarize yourself with the .ZIP file contents.
+In order for your app to communicate with Tap for Tap, you need to download our SDK [here](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-SDK.zip) and integrate it into your app.  If you are using one of our supported plugins (Unity 3D, Phonegap, etc.), download the SDK package for the corresponding plugin [here](/documentation/). Please familiarize yourself with the .ZIP file contents.
 
 ##  SDK Implementation
 
