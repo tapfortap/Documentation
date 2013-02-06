@@ -46,8 +46,6 @@ can skip down to **Usage**.
     2. Add the TapForTap folder to your project by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
     3. Add the SystemConfiguration framework and the AdSupport framework. (See [Tap for tap iOS Documentation](http://tapfortap.com/documentation/iOS) step 2 for more details).
 
-
-
 3. Put `tapfortap.js` in the `www` folder, alongside `cordova-2.x.x.js`.
 
 4. To register the TapForTap Plugin with PhoneGap
@@ -60,12 +58,10 @@ can skip down to **Usage**.
 
         ```xml
         <plugin name="TapForTap" value="TapForTapPhoneGapPlugin"/>
-        ```
-
-        And the following line under the `<cordova>` tag
-
+        ```  
+        and the following line under the `<cordova>` tag  
         ```xml
-        <access origin=".*"/>
+        <access origin=".*"/>  
         ```
 
 That's it! Now you're ready to use Tap for Tap in your app.  
