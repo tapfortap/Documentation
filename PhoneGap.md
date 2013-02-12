@@ -56,13 +56,14 @@ can skip down to **Usage**.
     2. PhoneGap 2.3  
         Open up config.xml and add the following line under the `<plugins>` tag
 
-        ```xml
-        <plugin name="TapForTap" value="TapForTapPhoneGapPlugin"/>
-        ```  
-        and the following line under the `<cordova>` tag  
-        ```xml
-        <access origin=".*"/>  
-        ```
+```xml
+<plugin name="TapForTap" value="TapForTapPhoneGapPlugin"/>
+```  
+
+and the following line under the `<cordova>` tag  
+```xml
+<access origin=".*"/>  
+```
 
 That's it! Now you're ready to use Tap for Tap in your app.  
 
