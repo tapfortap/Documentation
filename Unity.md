@@ -3,7 +3,7 @@
 Want to use Tap for Tap with Unity? We got you covered on Android and iOS.
 
 ##  Preamble
-This Unity plugin was built and tested against Unity 3.5.
+This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 
 ### Minimum Requirements
 
