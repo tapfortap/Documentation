@@ -12,7 +12,8 @@ This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 
 #### iPhone
 - An OS X machine running Lion (10.7)
-- iOS 6.0 SDK
+- iOS 6.0 SDK to build as we use the AdSupport framework
+- Support iOS target platform 4.3 and up
 
 ##  Integration
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
