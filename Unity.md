@@ -16,6 +16,8 @@ This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 - Support iOS target platform 4.3 and up
 
 ##  Integration
+If you don't have the plugin yet then [download the Unity plugin here](https://github.com/tapfortap/Unity/raw/master/TapForTap-Unity.unitypackage).
+
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
 assume that you have a Unity project already set up and working. The first thing you
 need to do is import the TapForTap.unitypackage into your app 
