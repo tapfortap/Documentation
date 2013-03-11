@@ -1,5 +1,12 @@
 # iOS Changelog
 
+## 2.2.0 / 2013-03-11 
+
+  * Added in caching for interstitials/app-walls
+  * Add close call to AppWall/Interstitial
+  * Add a failedToDownload for app-walls and interstitials
+  * Add ability for interstitial ads to hide the menu bar.
+
 ## 2.1.1 / 2013-01-14 
 
   * Fix an issue where interstitials and app walls may show repeatedly
