@@ -121,15 +121,15 @@ Usage:
 
 #### setGender(Gender as Int)
 Sets the gender of the user. This is sent along with ad requests and helps with matching the best ads for your app.
-MALE = 0
-FEMALE = 1;
-NONE = -1;
+- MALE = 0
+- FEMALE = 1
+- NONE = -1
 
 Usage:
 
 ```vbnet 
   'Set the gender to male
-  tft.setGender(0);
+  tft.setGender(0)
 ```
 
 #### setYearOfBirth(YearOfBirth as Int)
@@ -139,7 +139,7 @@ Usage:
 
 ```vbnet 
   'Set the year of birth to 1984
-  tft.setYearOfBirth(1984);
+  tft.setYearOfBirth(1984)
 ```
 
 ### TapForTapAdview
@@ -219,7 +219,7 @@ Usage:
 
 ```vbnet
   'Prepare the insterstial ad
-  interstitial.prepare();
+  interstitial.prepare()
 ```
 
 #### show()
@@ -228,7 +228,7 @@ This shows an interstitial ad. Calling showing automatically prepares the next i
 Usage:
 
 ```vbnet
-  interstitial.show();
+  interstitial.show()
 ```
 
 #### setEventHandler
@@ -267,7 +267,7 @@ Usage:
 
 ```vbnet
   'Prepare the insterstial ad
-  appwall.prepare();
+  appwall.prepare()
 ```
 
 #### show()
@@ -276,7 +276,7 @@ This shows an appwall ad. Calling showing automatically prepares the next inters
 Usage:
 
 ```vbnet
-  appwall.show();
+  appwall.show()
 ```
 
 #### setEventHandler
