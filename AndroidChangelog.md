@@ -1,3 +1,8 @@
+### 2.2.0 / 2013-03-11
+
+  * Added in caching for interstitials/app-walls
+  * Add a failedToDownload for app-walls and interstitials
+
 
 ### 2.1.2 / 2013-02-05 
 
