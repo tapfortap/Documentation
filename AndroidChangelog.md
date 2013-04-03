@@ -1,8 +1,18 @@
-### 2.2.0 / 2013-03-11
 
-  * Added in caching for interstitials/app-walls
-  * Add a failedToDownload for app-walls and interstitials
+2.3.0 / 2013-04-03 
 
+  * Earning can now be paused from the web interface
+  * Added new events to app wall and interstitial
+    * onShow
+    * onReceiveAd
+  * AdView's can now be buffered by calling setBuffer(true). This allows you to hide the adView until an ad has been downloaded.
+  * Upgraded AdMob to 6.3.1
+  * Added support for AdMob interstitial mediation
+
+### 2.2.0 / 2013-03-11 
+
+  * Cache AppWall/Interstitial ad. Results is smoother displaying of full screen ads.
+  * Add onFail to interstital and app-wall
 
 ### 2.1.2 / 2013-02-05 
 
