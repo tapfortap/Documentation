@@ -1,5 +1,4 @@
-
-2.3.0 / 2013-04-03 
+### 2.3.0 / 2013-04-03 
 
   * Earning can now be paused from the web interface
   * Added new events to app wall and interstitial
