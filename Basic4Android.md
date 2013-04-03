@@ -17,7 +17,7 @@ Installing the Tap for Tap plugin is super easy. We'll guide you through it. Thi
 
 See Basic4Android's [how to edit the manifest](http://www.basic4ppc.com/android/wiki/index.php/Manifest_Editor) for more details.
 
-```
+```vbnet
   'TapForTap Permissions
   AddApplicationText (
     AddPermission (android.permission.INTERNET)
@@ -44,6 +44,7 @@ That's it! Now you're ready to use Tap for Tap in your app.
 ##  Usage
 
 1. Add the following to Activity_Create:
+
 ```vbnet
 Sub Activity_Create(FirstTime As Boolean)
   ' Initialize Tap for Tap
@@ -66,9 +67,10 @@ Sub Activity_Create(FirstTime As Boolean)
   'Add the AdView to the actvities layout
   Activity.AddView(adview, left, 100%y - 50dip, adWidth, adHeight)
 End Sub
-```vbnet
+```
 
 2. Add the following subroutines to listen to the events produced by the adview
+
 ```vbnet
   Sub AdViewEventHandler_ReceiveAd
     Log("AdViewEventHandler_ReceiveAd")
@@ -81,7 +83,7 @@ End Sub
   Sub AdViewEventHandler_TapAd
     Log("AdViewEventHandler_TapAd")
   End Sub
-```vbnet
+```
 
 Congratulations, you are done.
 
