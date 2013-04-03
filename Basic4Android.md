@@ -15,26 +15,26 @@ Installing the Tap for Tap plugin is super easy. We'll guide you through it. Thi
 2. Add the following permissions to the `AndroidManifest.xml`
   - See Basic4Android's [how to edit the manifest](http://www.basic4ppc.com/android/wiki/index.php/Manifest_Editor) for more details.
 
-  ```vbnet
-      'TapForTap Permissions
-      AddApplicationText (
-        AddPermission (android.permission.INTERNET)
-        AddPermission (android.permission.READ_PHONE_STATE)
-        AddPermission (android.permission.ACCESS_NETWORK_STATE)
-        AddPermission (android.permission.ACCESS_WIFI_STATE)
-        AddPermission (android.permission.WRITE_EXTERNAL_STORAGE)
-      )
-      'End TapForTap Permissions
-  ```
+```vbnet
+  'TapForTap Permissions
+  AddApplicationText (
+    AddPermission (android.permission.INTERNET)
+    AddPermission (android.permission.READ_PHONE_STATE)
+    AddPermission (android.permission.ACCESS_NETWORK_STATE)
+    AddPermission (android.permission.ACCESS_WIFI_STATE)
+    AddPermission (android.permission.WRITE_EXTERNAL_STORAGE)
+  )
+  'End TapForTap Permissions
+```
 3. Add the `TapForTapActivity` to `AndroidManifest.xml`
 
-  ```vbnet
-    'TapForTap
-    AddApplicationText(
-      <activity android:name="com.tapfortap.TapForTapActivity"/>
-    )
-    'End of TapForTap
-  ```
+```vbnet
+  'TapForTap
+  AddApplicationText(
+  <activity android:name="com.tapfortap.TapForTapActivity"/>
+  )
+  'End of TapForTap
+```
 
 That's it! Now you're ready to use Tap for Tap in your app.  
 
@@ -42,30 +42,30 @@ That's it! Now you're ready to use Tap for Tap in your app.
 
 1. Add the following to `Activity_Create`:
 
-  ```vbnet
-    Sub Activity_Create(FirstTime As Boolean)
-      ' Initialize Tap for Tap
-      Dim tftApiKey As String = "My Tap for Tap API key"
-      Dim tft As TapForTap
-      tft.initialize(tftApiKey)
-    
-      'Create an AdView
-      Dim adview As TapForTapAdView
-      adview.initialize()
-    
-      'Set the AdViews event handler
-      adview.setEventHandler("AdViewEventHandler")
-    
-      'Calculate the x and y coordinate to center the AdView
-      Dim adHeight = 50dip
-      'Maintain the correct aspect ratio so ads look good
-      Dim adWidth As Int = adHeight * 320/50 
-      Dim left As Int = (GetDeviceLayoutValues.Width - adWidth) / 2 
-    
-      'Add the AdView to the actvities layout
-      Activity.AddView(adview, left, 100%y - 50dip, adWidth, adHeight)
-    End Sub
-  ```
+```vbnet
+  Sub Activity_Create(FirstTime As Boolean)
+    'Initialize Tap for Tap
+    Dim tftApiKey As String = "My Tap for Tap API key"
+    Dim tft As TapForTap
+    tft.initialize(tftApiKey)
+  
+    'Create an AdView
+    Dim adview As TapForTapAdView
+    adview.initialize()
+  
+    'Set the AdViews event handler
+    adview.setEventHandler("AdViewEventHandler")
+  
+    'Calculate the x and y coordinate to center the AdView
+    Dim adHeight = 50dip
+    'Maintain the correct aspect ratio so ads look good
+    Dim adWidth As Int = adHeight * 320/50 
+    Dim left As Int = (GetDeviceLayoutValues.Width - adWidth) / 2 
+  
+    'Add the AdView to the actvities layout
+    Activity.AddView(adview, left, 100%y - 50dip, adWidth, adHeight)
+  End Sub
+```
 2. Add the following subroutines to listen to the events produced by the adview
 
   ```vbnet
