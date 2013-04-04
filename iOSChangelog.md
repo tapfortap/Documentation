@@ -1,3 +1,8 @@
+
+### 2.3.1 / 2013-04-04 
+
+  * Fixed not being able to show app wall regression 
+
 ### 2.3.0 / 2013-04-03 
 
   * Earning can now be turned off from the web interface
