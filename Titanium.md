@@ -18,13 +18,18 @@ The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't 
 Install the Tap for Tap module as you would [install](http://docs.appcelerator.com/titanium/latest/#!/guide/Using_a_Module) any other Titanium module.
 
 ## API Documentation
-The JavaScript API lets you create, place Tap for Tap adViews, show interstitials and show various optional information about your users to help with targetting. Please make sure your privacy policy allows this
-before providing any personal information.
+The JavaScript API lets you:
+ - create and place Tap for Tap adViews
+ - show interstitials 
+ - show app walls and 
+ - provide various optional information about your users to help with ad targetting. 
+
+Please make sure your privacy policy allows this before providing any personal information.
 
 ### Tap for Tap API
 
 #### Creating the Tap for Tap module
-The main Tap for Tap module is held in com.tapfortap.ti. All proxy clases are made from an instance of the module.
+The main Tap for Tap module is held in `com.tapfortap.ti`. All proxy clases are created from an instance of the module.
 
 Usage:
 
@@ -34,7 +39,7 @@ var tftModule = require('com.tapfortap.ti');
 ```
 
 #### The TapForTap proxy
-The TapForTap proxy contains the Tap for Tap methos initialization and for providing additional information about your users.
+The TapForTap proxy contains the Tap for Tap methods required for initializing Tap for Tap and for providing additional information about your users.
 
 Usage
 ```js
@@ -46,12 +51,13 @@ var tft = tftModule.createTapForTap();
 Tap for Tap must be initialized before any other calls into Tap for Tap can be made. The only argument is your API key which can be found in your account.
 
 Usage:
+```js
 // Initialize Tap for Tap
 tft.initializeWithApiKey("YOUR API KEY");
+```
 
 #### setYearOfBirth(int yearOfBirth)
-Sets the user's year of birth. This is sent along with
-ad requests and helps with matching.
+Sets the user's year of birth. This is sent along with ad requests and helps with matching.
 
 Usage:
 
@@ -62,9 +68,10 @@ Usage:
 
 #### setGender(int gender)
 Sets the gender of the user. This is sent along with ad requests and helps with matching.
-MALE = 0
-FEMALE = 1;
-NONE = -1;
+
+- `MALE = 0`
+- `FEMALE = `
+- `NONE = -1`
 
 Usage:
 
@@ -76,8 +83,8 @@ Usage:
 #### setLocation(double latitude, double longitude)
 Sets the user's location This is sent along with ad requests.
 
-- **latitide** The latitude of the user
-- **longitude** The longitude of the user
+- `latitide` The latitude of the user
+- `longitude` The longitude of the user
 
 Usage:
 
@@ -87,8 +94,7 @@ Usage:
 ```
 
 #### setUserAccountId(String userAccountId)
-Sets a custom account id that you can use for your app. This is sent along with
-ad requests and helps with matching.
+Sets a custom account id that you can use for your app. This is sent along with ad requests and helps with matching.
 
 Usage:
 
@@ -113,7 +119,7 @@ tftModule.createAdView( {
 
 ##### AdView Events
 
-The AdView sends three events
+The AdView provides three events
 
 - receive
   - When an ad has been downloaded
@@ -171,7 +177,7 @@ tftinterstitial.show();
 ```
 
 ##### Interstitial Events
-The interstital supports one event called 'dismiss'. This event is fired when the interstitial ad is closed.
+The interstital supports one event called `dismiss`. This event is fired when the interstitial ad is closed.
 
 Usage:
 
@@ -215,7 +221,7 @@ tftAppWall.show();
 ```
 
 ##### AppWall Events
-The app wall supports one event called 'dismiss'. This event is fired when the app wall ad is closed.
+The app wall supports one event called `dismiss`. This event is fired when the app wall ad is closed.
 
 Usage:
 
