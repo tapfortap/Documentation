@@ -167,8 +167,8 @@ Usage:
 // Get a reference to the Tap for Tap context
 var tft: TapForTap = TapForTap.instance;
 
-// Prepare the insterstial ad type
-tft.prepareInsterstitial();
+// Prepare the interstial ad type
+tft.prepareInterstitial();
 ```
 
 #### showInterstitial(): void
@@ -194,7 +194,7 @@ TapForTap.showInterstitial();
 
 // show another interstital ad (Note that we do not need to call
 // prepareInterstitial() again)
-tft.showInterstital();
+tft.showInterstitial();
 ```
 
 #### prepareAppWall(): void
@@ -235,7 +235,7 @@ tft.showAppWall();
 
 // show another app wall ad (Note that we do not need to call
 // prepareAppWall() again)
-tft.showwAppWall();
+tft.showAppWall();
 ```
 
 #### setYearOfBirth(yearOfBirth: int): void
