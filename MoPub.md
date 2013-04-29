@@ -8,7 +8,7 @@ To use Tap for Tap with MoPub:
 
 Here are some examples on how to use a MoPub custom event called tapForTapCustomEvent:
 
-## Using CustomEvents
+## Using Custom Events
 
 [Tap for Tap MobPub Android Example](https://gist.github.com/jwyseu/5434805)
 
