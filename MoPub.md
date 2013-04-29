@@ -8,6 +8,12 @@ To use Tap for Tap with MoPub:
 
 Here are some examples on how to use a MoPub custom event called tapForTapCustomEvent:
 
+## Using CustomEvents
+
+[Tap for Tap MobPub Android Example](https://gist.github.com/jwyseu/5434805)
+
+## Using Custom Methods (Deprecated)
+
 [Tap for Tap MoPub Android Example](https://gist.github.com/4290335)
 
 [Tap for Tap MoPub iOS Example](https://gist.github.com/4290326)
