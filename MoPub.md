@@ -12,7 +12,7 @@ Here are some examples on how to use a MoPub custom event called tapForTapCustom
 
 [Tap for Tap MobPub Android Example](https://gist.github.com/jwyseu/5434805)
 
-## Using Custom Methods (Deprecated)
+## Using Custom Methods
 
 [Tap for Tap MoPub Android Example](https://gist.github.com/4290335)
 
