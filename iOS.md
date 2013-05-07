@@ -2,7 +2,7 @@
 
 
 ##  Current Version ##
-**2.1.1** - [See Changelog](/documentation/iOSChangelog)
+**2.3.1** - [See Changelog](/documentation/iOSChangelog)
 
 Supports iOS 4.3 and up on ARMv7 (iPhone 3GS and up, iPad 2 and up, iPod touch 3rd generation and up)
 

@@ -1,9 +1,9 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**2.1.1** - [See Changelog](/documentation/AndroidChangelog)
+**2.3.0** - [See Changelog](/documentation/AndroidChangelog)
 
-Supports Android 2.1 and up (API level 7)
+Supports Android 2.2 and up (API level 7)
 
 ##  General Information ##
 

@@ -8,7 +8,7 @@ The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't 
 ### Minimum Requirements
 
 #### Android
-- 2.1.0 and up
+- 2.2.0 and up
 
 #### iPhone
 - And OSX machine running at least Lion (10.7)
