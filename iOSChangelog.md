@@ -1,3 +1,6 @@
+### 2.3.2 / 2013-05-09 
+
+   * Fix linker conflict with Millennial Multimedia SDK
 
 ### 2.3.1 / 2013-04-04 
 
