@@ -17,6 +17,8 @@ The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't 
 ## Integration
 Install the Tap for Tap module as you would [install](http://docs.appcelerator.com/titanium/latest/#!/guide/Using_a_Module) any other Titanium module.
 
+Watch a [video](https://www.youtube.com/watch?v=soczKbhJFh0&feature=youtu.be) that shows how to integrate Tap for Tap from start to finish.
+
 ## API Documentation
 The JavaScript API lets you:
  - create and place Tap for Tap adViews
