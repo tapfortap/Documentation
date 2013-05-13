@@ -14,21 +14,21 @@ Getting the best performance from your banners is very important. If you achieve
 
 Don’t have banners for your app? You can create great looking banners with our banner generation system. No profanities allowed! Note: This is required before being able to add custom banners.
 
-## Line 1 - One Sentence
+## Theme
+
+The color theme of the generated banner. There are three choices: light, dark and app icon colors.  Check out all three and choose the one that you think makes your banner look the best.
+
+## Description
 
 You have one sentence to convey a strong message on what your app is about. Use actionable words if possible like “create ringtones” or “play now”. Note: This is limited to **32** characters.
 
-## Line 2 - App Name
+## App Name
 
-Let people know the name of your apop, limited to **20** characters.
+Let people know the name of your app. Note: This is limited to **20** characters.
 
 ## App Price
 
 The price of your app will automatically be placed in the banner for you.
-
-## Description
-
-Here you have more room to more accurately describe your app.  Pitch your app to potential users as quick as possible.  This will be placed on the pitch page ad unit, and potentially will greatly increase your conversion rate. Note: This is limited to **250** characters.
 
 ## Custom Banners
 

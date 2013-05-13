@@ -19,7 +19,3 @@ Interstitials are usually the highest performing unit on ad networks. Best pract
 ![Example App Wall](https://raw.github.com/tapfortap/Documentation/master/images/appwall.png)
 
 App Walls are a popular ad type that allows you to integrate a "More Apps" button anywhere within the design of your app. Once tapped, this unit will launch an app wall containing ads for other apps on our exchange. App walls are perceived by users as an app discovery feature, rather than an ad, so app walls can be used on any kind of app, including paid apps.
-
-## Pitch pages
-
-Pitch pages offer the ability to show a page where users will be directed after tapping an ad, instead of going directly to the App Store or Google Play. This page gives developers the opportunity to pre-sell their apps to users. Pitch pages can improve install rates by as much as 50%.
