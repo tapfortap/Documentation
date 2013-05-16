@@ -3,7 +3,7 @@
 ##  Current Version ##
 **2.3.0** - [See Changelog](/documentation/AndroidChangelog)
 
-Supports Android 2.2 and up (API level 7)
+Supports Android 2.2 and up (API level 8)
 
 ##  General Information ##
 
