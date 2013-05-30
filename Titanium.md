@@ -3,7 +3,7 @@
 Want to use Tap for Tap with Titanium? We got you covered on both Android and iOS.
 
 ## Preamble
-The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't have plugin yet then [download it here](https://github.com/tapfortap/Titanium/raw/master/release/TapForTap-Titanium-1.0.0.zip).
+The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't have plugin yet then [download it here](https://github.com/tapfortap/Titanium/raw/master/release/TapForTap-Titanium-1.1.0.zip).
 
 ### Minimum Requirements
 
