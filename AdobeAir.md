@@ -86,6 +86,8 @@ to get a context to the Tap for Tap native extension. The instance is implemente
 as a singleton.
 
 ```javascript
+// Import the Tap for Tap library
+import com.tapfortap.ane.*;
 // Get a reference to the Tap for Tap context
 var tft: TapForTap = TapForTap.instance;
 ```
