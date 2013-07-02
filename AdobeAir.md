@@ -187,7 +187,7 @@ var tft: TapForTap = TapForTap.instance;
 tft.prepareInterstitial();
 
 // show an interstitial ad
-TapForTap.showInterstitial();
+tft.showInterstitial();
 
 // do some neat app stuff
   .
