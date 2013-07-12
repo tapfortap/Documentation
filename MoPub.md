@@ -3,17 +3,24 @@
 To use Tap for Tap with MoPub:
 
 1. Download the [Tap for Tap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-SDK.zip)
-2. Integrate our SDK into your app [iOS](http://tapfortap.github.com/iOS), [Android](http://tapfortap.github.com/Android/) - You just need to follow the steps required to get your app to build with Tap for Tap
-3. Create a MoPub custom event [iOS](https://github.com/mopub/mopub-client/wiki/CustomEventsIOS), [Android](https://github.com/mopub/mopub-client/wiki/CustomEventsAndroid)
+2. Integrate the SDK into your app, following the steps to get your app to build with Tap for Tap.
+  - [iOS documentation](http://tapfortap.com/documentation/iOS)
+  - [Android documentation](http://tapfortap.com/documentation/Android)
+3. Create a MoPub custom event 
+  - [iOS documentation](https://github.com/mopub/mopub-ios-sdk/wiki/Custom-Events)
+  - [Android documentation](https://github.com/mopub/mopub-android-sdk/wiki/Custom-Events)
+4. Add the [custom event](http://help.mopub.com/customer/portal/articles/988568-setting-up-a-custom-native-network-campaign) to your MoPub console. 
 
-Here are some examples on how to use a MoPub custom event called tapForTapCustomEvent:
+Here are some examples implementations on MoPub custom events.
 
 ## Using Custom Events
 
-[Tap for Tap MobPub Android Example](https://gist.github.com/jwyseu/5434805)
+[Android Example](https://gist.github.com/jwyseu/5434805)
 
-## Using Custom Methods
+[iOS Example](https://gist.github.com/pjlaird/5913782)
 
-[Tap for Tap MoPub Android Example](https://gist.github.com/4290335)
+## Using Custom Methods (MoPub has deprecated custom methods)
 
-[Tap for Tap MoPub iOS Example](https://gist.github.com/4290326)
+[Android Example](https://gist.github.com/4290335)
+
+[iOS Example](https://gist.github.com/4290326)
