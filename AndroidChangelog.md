@@ -1,3 +1,10 @@
+
+### 2.3.1 / 2013-07-18 
+  * If prepare with a listener is called more than once, the listener is properly set subsequent time.
+  * Add more try/catch around calls that can throw OOM exceptions.
+  * Use private executor for http requests to stop thread contention with AsyncTask.
+  * Fix failing to have user_external_storage permission causing Interstitial/AppWal from failing to load.
+
 ### 2.3.0 / 2013-04-03 
 
   * Earning can now be paused from the web interface

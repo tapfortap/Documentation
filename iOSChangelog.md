@@ -1,10 +1,15 @@
+### 2.3.3 / 2013-07-18
+  * If initializeWithDelegate is called more than once, delegates are now set properly on subsequent calls
+  * Interstitial/AppWall ads are now properly cached
+  * Implement back-off in a better way for failed banner requests
+  * Scale banners up if necessary
+
 ### 2.3.2 / 2013-05-09 
+  * Rename MM*.* to TFT*.* to fix conflict with Millennial multimedia
 
-   * Fix linker conflict with Millennial Multimedia SDK
+### 2.3.1 / 2013-04-04
 
-### 2.3.1 / 2013-04-04 
-
-  * Fixed not being able to show app wall regression 
+  * Fixed not being able to show app wall regression
 
 ### 2.3.0 / 2013-04-03 
 
