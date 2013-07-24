@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**2.3.0** - [See Changelog](/documentation/AndroidChangelog)
+**2.3.0** - [See Changelog](/doc/AndroidChangelog)
 
 Supports Android 2.2 and up (API level 8)
 
@@ -171,7 +171,7 @@ TapForTap.setUserAccountId(<accountId>);
 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/documentation/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
 
 # Example Code #
 

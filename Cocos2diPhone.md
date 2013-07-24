@@ -3,7 +3,7 @@
 To use Tap for Tap with Cocos2d-iPhone:
 
 1. Download the [Tap for Tap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-iOS-SDK.zip)
-2. [Integrate](http://tapfortap.com/documentation/iOS) the SDK into your app 
+2. [Integrate](http://tapfortap.com/doc/iOS) the SDK into your app
 
 ## For Cocos2d-iPhone 2.x:
 
