@@ -43,7 +43,7 @@ ___
 # Footer #
 
 ### *Support* ###
-Things don't always go according to plan. If you hit a snag somewhere and need a hand, don't hesitate to get in touch with us at [support@tapfortap.com](/documentation/mailto:support@tapfortap.com) or on Zendesk [here](https://tapfortap.zendesk.com/anonymous_requests/new).
+Things don't always go according to plan. If you hit a snag somewhere and need a hand, don't hesitate to get in touch with us at [support@tapfortap.com](/doc/mailto:support@tapfortap.com) or on Zendesk [here](https://tapfortap.zendesk.com/anonymous_requests/new).
 
 ### *License* ###
 Licensed under the terms of the MIT License.
