@@ -132,3 +132,35 @@ Causes a new ad to be downloaded and shown aproximately every 60 seconds.
 #### public void disbleAutoRollover()
 
 Stops ads a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowinAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
+
+## BannerAdListener
+
+### public void bannerAdOnReceive(BannerAd bannerAd)
+
+Called when the BannerAds receives a new ad.
+
+**Parameters**
+
+  - _bannerAd_ - The banner ad which received a new ad.
+
+---
+
+### public void bannerAdOnFail(BannerAd bannerAd, String message, Throwable throwable)
+
+Called when the BannerAd fails to download or show a new ad.
+
+**Parameters**
+
+  - _bannerAd_ - The banner ad which failed
+  - _message_ - The summary of the reason for the failure
+  - _throwable_ - The exception that caused the failure.
+
+---
+
+###public void bannerAdOnTap(BannerAd bannerAd)
+
+Called when a user taps on an ad.
+
+**Parameters**
+
+  - _bannerAd_ - The banner ad which was tapped.
