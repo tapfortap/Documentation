@@ -10,7 +10,7 @@ Your account wide revenue preference setting determines how much of your traffic
 
 ![Revenue Preference Slider](https://raw.github.com/tapfortap/Documentation/master/images/slider-balance.png)
 
-You can move the slider more to the left if you want to focus on users, or move the slider more to the right for more focus on making money.
+You can move the slider more to the left if you want to focus on users, or move the slider more to the right for more focus on making money.  We recommend a split of 20% Get Users and 80% Make Money for optimal performance
 
 ## Performance
 
@@ -31,10 +31,3 @@ Over time Tap for Tap rotates numerous apps and ads on your monetization traffic
 ## Fraudulent Traffic
 
 Tap for Tap takes protecting its developers and advertisers seriously. We have a zero tolerance policy for fraud.  We have seen everything from generating fake impressions and taps, to installing apps from ads to increase revenue. If you are found to generate fraudulent traffic payments will be withheld and legal action might be pursued.
-
-## Reporting
-Coming Soon..
-
-## Beta
-
-The Tap for Tap monetization program is still in beta.  We are confident our performance will be as good as a dedicated revenue service, we are aiming to be much better.
