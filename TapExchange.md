@@ -51,5 +51,7 @@ If you spend time ensuring quality ad placements and performance you will genera
 
 ## Reporting
 
-Coming Soon
+On the Tap Exchange this breaks down as Earned and Spent metrics. Earned impressions, taps and credits come from the the ads you show as a publisher on Tap for Tap. If you show 1000 impressions of Tap Exchange ads, get 10 taps on the ads in your app (from a tier 1 country) it means you've "Earned" 400 credits.
+
+Spent metrics indicate what Tap for Tap has given you as an advertiser when you spend your tap credits. If you spend your 400 tap credits, we'll show impressions of an ad for your app as many times as it takes for you to get 400 taps credits' worth of taps from new users. Spent Installs refers to the number of new installs those taps have generated.
 
