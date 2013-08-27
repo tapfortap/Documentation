@@ -20,7 +20,7 @@ Your account wide revenue preference setting determines how much of your traffic
 
 ![Balance and Monetization Priority](https://raw.github.com/tapfortap/Documentation/master/images/slider-balance.png)
 
-You can move the slider more to the left if you want to focus on users, or move the slider more to the right for more focus on making money. If your app is new, or if you want to focus on growth, we recommend moving the slider more left to prioritize showing tap exchange ads.
+You can move the slider more to the left if you want to focus on users, or move the slider more to the right for more focus on making money. If your app is new, or if you want to focus on growth, we recommend moving the slider more left to prioritize showing tap exchange ads. We recommend a split of 20% Get Users and 80% Make Money for optimal performance.  This will allow you to have a constant flow of new users from the Tap Exchange while using 80% of your inventory to monetize those users.
 
 ## Exchange Tap Credits
 
