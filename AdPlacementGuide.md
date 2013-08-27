@@ -4,7 +4,7 @@ You can improve the performance of your ad placements by following these tips.
 
 ## Performance
 
-Whether on the tap exchange or monetization, the placement of your ad units play a key role in the success of your app. If you are on the tap exchange your will receive ads that have a higher likelihood of generating your tap credits, and your ads will be places on better apps. On the monetization side, you will stand a better chance of converting users and making money.
+Whether on the tap exchange or monetization, the placement of your ad units play a key role in the success of your app. If you are on the tap exchange your will receive ads that have a higher likelihood of generating your tap credits, and your ads will be places on better apps. On the monetization side, you will stand a better chance of converting users and making money.  The interstitial ad unit has the highest eCPM and we recommend that all app developers use them.
 
 ## Ad Units
 
