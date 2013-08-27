@@ -43,7 +43,7 @@ There is an extra tap credit cost with targeting countries. You can see what the
 Tap for Taps goal is to ensure developers are receiving the same value they send to other developers. When you gain tap credits by sending taps, we examine a lot of information about that tap to ensure you will get the same value back. Some aspects we look at are:
 
 - User demographics like language and location
-- [Ad unit](/doc/Ad Unit) type and placement
+- [Ad unit](/doc/AdUnits) type and placement
 - Information about the app (quality rating and category)
 - Overall performance of the users seeing and tapping on ads displayed in your app.
 
