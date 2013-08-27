@@ -1,4 +1,4 @@
-AdWhirl is on the way out and [AdMob](/doc/AdMob) mediation is on the way in. If you still use AdWhirl we have you covered!
+AdWhirl is on the way out and [AdMob](AdMob) mediation is on the way in. If you still use AdWhirl we have you covered!
 After integrating AdWhirl [Android](https://www.adwhirl.com/doc/android/AdWhirlAndroidSDKSetup.html),
 [iOS](https://www.adwhirl.com/doc/ios/AdWhirliOSSDKSetup.html))
 you just need to set up a [custom event](http://code.google.com/p/adwhirl/wiki/CustomEvents)

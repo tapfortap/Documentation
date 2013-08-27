@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**2.3.2** - [See Changelog](/doc/AndroidChangelog)
+**2.3.2** - [See Changelog](AndroidChangelog)
 
 Supports Android 2.2 and up (API level 8)
 
@@ -106,8 +106,8 @@ public class MyActivity extends Activity {
 
 ### Banner ###
 
-```xml                    
-<com.tapfortap.AdView 
+```xml
+<com.tapfortap.AdView
     android:id="@+id/ad_view"
     android:layout_height="50dip"
     android:layout_width="320dip"
@@ -171,7 +171,7 @@ TapForTap.setUserAccountId(<accountId>);
 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization](Monetization) program passing this information can greatly increase your revenue.
 
 # Example Code #
 

@@ -1,7 +1,7 @@
 # iOS - SDK Implementation #
 
 ##  Current Version ##
-**2.3.3** - [See Changelog](/doc/iOSChangelog)
+**2.3.3** - [See Changelog](iOSChangelog)
 
 Supports iOS 4.3 and up on ARMv7 (iPhone 3GS and up, iPad 2 and up, iPod touch 3rd generation and up)
 
@@ -128,7 +128,7 @@ If you have information about your users that your privacy policy allows you to 
 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization](Monetization) program passing this information can greatly increase your revenue.
 
 # Example Code #
 

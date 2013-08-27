@@ -4,17 +4,17 @@ Get users and make money by integrating the Tap for Tap SDK.  This guide will ex
 
 ##  Account Setup
 
-Tap for Tap is a service that allows you to grow your app's userbase for free with the [Tap Exchange](/doc/TapExchange) and/or to make money with your app using [Monetization](/doc/Monetization). You can set the balance between user-growth and money-making at any time in your Tap for Tap developer account.
+Tap for Tap is a service that allows you to grow your app's userbase for free with the [Tap Exchange](TapExchange) and/or to make money with your app using [Monetization](Monetization). You can set the balance between user-growth and money-making at any time in your Tap for Tap developer account.
 
 ![Balance and Monetization Priority](https://raw.github.com/tapfortap/Documentation/master/images/slider-balance.png)
 
 ##  Download SDK
 
-In order for your app to communicate with Tap for Tap, you need to download our SDK [here](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-SDK.zip) and integrate it into your app.  If you are using one of our supported plugins (Unity 3D, Phonegap, etc.), download the SDK package for the corresponding plugin [here](/doc/). Please familiarize yourself with the .ZIP file contents.
+In order for your app to communicate with Tap for Tap, you need to download our SDK [here](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-SDK.zip) and integrate it into your app.  If you are using one of our supported plugins (Unity 3D, Phonegap, etc.), download the SDK package for the corresponding plugin [here](). Please familiarize yourself with the .ZIP file contents.
 
 ##  SDK Implementation
 
-It is quick and easy to implement Tap for Tap's SDK into your app. Follow our documentation step-by-step for native [Android](/doc/Android) or native [iOS](/doc/iOS) integration. You will need to obtain your account-wide API Key used by our SDK. You can find it at the top of your Tap for Tap account page. If you are using one of our supported plugins, please follow the documentation for that specific plugin. For additional help, you can follow our SDK implementation videos for native [Android](http://www.youtube.com/watch?v=xDj16PJ5WQk&hd=1), native [iOS](http://www.youtube.com/watch?v=LS7DEvITf7Y&hd=1), and other non-native plugins as they become available.
+It is quick and easy to implement Tap for Tap's SDK into your app. Follow our documentation step-by-step for native [Android](Android) or native [iOS](iOS) integration. You will need to obtain your account-wide API Key used by our SDK. You can find it at the top of your Tap for Tap account page. If you are using one of our supported plugins, please follow the documentation for that specific plugin. For additional help, you can follow our SDK implementation videos for native [Android](http://www.youtube.com/watch?v=xDj16PJ5WQk&hd=1), native [iOS](http://www.youtube.com/watch?v=LS7DEvITf7Y&hd=1), and other non-native plugins as they become available.
 
 ##  Trigger Initialize
 
@@ -22,7 +22,7 @@ Once the Tap for Tap SDK is correctly installed, please open your app. The first
 
 ##  Place Ad Units (Optional)
 
-If you wish to generate traffic in your app so you can get users (tap credits) and/or make money, you need to place [ad units](/doc/AdUnits) in your app. If you only wish to promote your app on the [Tap Exchange](/doc/TapExchange) (by spending tap credits) or using [Paid Promotion](/doc/PaidPromotion) (by spending money), you are not required to place ad units in your app.
+If you wish to generate traffic in your app so you can get users (tap credits) and/or make money, you need to place [ad units](AdUnits) in your app. If you only wish to promote your app on the [Tap Exchange](TapExchange) (by spending tap credits) or using [Paid Promotion](PaidPromotion) (by spending money), you are not required to place ad units in your app.
 
 ##  Log In to Tap for Tap
 
@@ -38,19 +38,19 @@ You need to add creatives for your app so you can start promoting. First, you mu
 
 ##  Start Promoting on the Tap Exchange (Optional)
 
-Once properly configured, you will be able to earn tap credits with the [Tap Exchange](/doc/TapExchange) for promoting community apps.  Your tap credits will automatically spend the same value as you earn.  If you have multiple apps, you can prioritize how much promotion each app spends by adjusting the “spend priority” setting under each app.
+Once properly configured, you will be able to earn tap credits with the [Tap Exchange](TapExchange) for promoting community apps.  Your tap credits will automatically spend the same value as you earn.  If you have multiple apps, you can prioritize how much promotion each app spends by adjusting the “spend priority” setting under each app.
 
 ##  Make Money (Optional)
 
-You can set your app to display both Tap Exchange ads AND revenue-generating ads.  You can prioritize the percentage of revenue-generating ads to Tap Exchange ads on the developer interface. When making money with our [Monetization Program](/doc/Monetization), we will increment your balance when it makes money. Every month you will have the opportunity to cash out, or you can chose to spend that money on our [Paid Promotion Program](/doc/PaidPromotion).
+You can set your app to display both Tap Exchange ads AND revenue-generating ads.  You can prioritize the percentage of revenue-generating ads to Tap Exchange ads on the developer interface. When making money with our [Monetization Program](Monetization), we will increment your balance when it makes money. Every month you will have the opportunity to cash out, or you can chose to spend that money on our [Paid Promotion Program](PaidPromotion).
 
 ##  Paid Promotion (Optional)
 
-You can add money to your account balance or earn money with our [Monetization Program](/doc/Monetization) to buy more promotion for your app.  You have three ways to buy traffic based on what is important to you:
+You can add money to your account balance or earn money with our [Monetization Program](Monetization) to buy more promotion for your app.  You have three ways to buy traffic based on what is important to you:
 
 1. Banner Creative Impression
 2. Banner Creative Tap
 3. App User Installation
 
-[Paid Promotion](/doc/PaidPromotion) allows you to grow your app's userbase much faster.
+[Paid Promotion](PaidPromotion) allows you to grow your app's userbase much faster.
 

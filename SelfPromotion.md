@@ -4,13 +4,13 @@ If you have more than one app you can use Tap for Tap to cross promote within yo
 
 ## SDK Implementation
 
-To take park in the tap exchange, you must integrate our SDK. For more information on how to do this, see our [guide to getting started](/doc/GettingStarted).
+To take park in the tap exchange, you must integrate our SDK. For more information on how to do this, see our [guide to getting started](GettingStarted).
 
 ## Promotion Banners
 
 ![Example Banners](https://raw.github.com/tapfortap/Documentation/master/images/generated.png)
 
-The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our [banner and creative guidelines](/doc/CreativeGuidelines).
+The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our [banner and creative guidelines](CreativeGuidelines).
 
 ## Self vs. External Preference
 

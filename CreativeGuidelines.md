@@ -2,7 +2,7 @@
 
 ## Ad Units
 
-To learn more about what kind of banners you can make and how the banners are displayed, check out our [ad units](/doc/AdUnits) documentation.
+To learn more about what kind of banners you can make and how the banners are displayed, check out our [ad units](AdUnits) documentation.
 
 ## Performance
 
@@ -42,4 +42,4 @@ In early 2013 you will be able to upload multiple custom banners and weight them
 
 ## Ad Placement
 
-If you have questions about how to best place Tap for Tap ads for best performance check out our [ad placement guide](/doc/AdPlacementGuide).
+If you have questions about how to best place Tap for Tap ads for best performance check out our [ad placement guide](AdPlacementGuide).
