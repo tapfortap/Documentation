@@ -44,7 +44,7 @@ Enables test mode. Test mode causes Tap for Tap to disable spending and earning 
 
 #### public static void disableTestMode()
 
-Disables test mode. See [enableTestMode](public-static-void-enableTestMode) for more details.
+Disables test mode. See [enableTestMode](#public-static-void-enableTestMode) for more details.
 
 ---
 
@@ -56,7 +56,7 @@ Stops Tap for Tap from being able to download and show ads. This can be useful i
 
 #### public static void enableTapForTap()
 
-Allows Tap for Tap to download and show ads. See [disableTapForTap](public-static-void-disableTapForTap) for more details.
+Allows Tap for Tap to download and show ads. See [disableTapForTap](#public-static-void-disableTapForTap) for more details.
 
 ---
 
