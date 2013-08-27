@@ -32,11 +32,11 @@ Tap for Tap is available for iOS and Android platforms.
 
 ### Do you support tablets? What about tablet only apps?
 
-Our ad units work for mobile apps viewed on a tablet device, however, we are not fully optimized, so we will show a single centralized banner. The look isn't ideal. We are working on this component and will let you know as soon as it's ready. Tap for Tap does not support tablet only apps. We are hoping to integrate this feature down the road.
+Yes, our ad unit’s work for mobile apps viewed on a tablet device.   Interstitials look great and they have the best eCPM out of all ad units so we recommend that you use them.  Banners will still look small and the look isn't ideal. We are working on adding banners sizes that fit on tablets this component and it will be release in V3.1 will let you know as soon as it's ready. 
 
 ### What are the different banner sizes? Where can I select these?
 
-We offer a banner (320x50), interstitial (300x250) and an app wall. More information about these ad units can be found here. For custom uploaded banners, we require 2x bigger dimensions to compensate for retina display, so 320x50 becomes 640x100 and 300x250 becomes 600x500.
+We offer a banner (640x100), interstitial (640x960 Portrait and 960x640 Landscape) and an app wall. More information about these ad units can be found here. 
 
 ### Are you able to integrate with other ad mediation layers (I.E Admob/iAds)?
 
@@ -52,11 +52,11 @@ This is exactly what Tap for Tap was designed for. Many developers are using thi
 
 ### Does Tap for Tap support Unity/Titanium/Corona/Game Salad/Phone Gap?
 
-We currently support only IOS and Android Native Platforms. Instructions for integration with these platforms can be found here. Our devs are hard at work to bring a variety of plugins to our network. If you'd like to request a plugin please contact developersupport@tapfortap.com and we'll make sure to do our best to accommodate you.
+We currently supportIOS and Android Native Platforms.  We also have plugins for Adobe Air • Basic4Android • Cocos 2d • Corona SDK • Appcelerator Titanium • PhoneGap and Unity 3D. Our devs are hard at work to bring a variety of plugins to our network. If you'd like to request a plugin please contact developersupport@tapfortap.com and we'll make sure to do our best to accommodate you.
 
 ### Do Tap for Tap ads automatically refresh?
 
-Yes, Tap for Taps ads automatically refresh anywhere from 30 seconds to 2 mins.
+Yes, Tap for Taps ads automatically refresh every 60 seconds
 
 ### What is your fill rate?
 
