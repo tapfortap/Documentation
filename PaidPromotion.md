@@ -50,5 +50,5 @@ If you are using our [monetization program](/doc/Monetization) as well as paying
 
 ## Reporting
 
-Coming Soon
+Paid Promotion and Monetization reporting is fairly straightforward. For Paid Promotion we report on how many impressions, taps and installs you've purchased from our network and the Monetization reports show you how many impressions of ads you've shown, how many taps you've generated, how many installs, and how much revenue you've earned from your traffic.
 
