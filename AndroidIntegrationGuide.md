@@ -80,12 +80,12 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 
 ### Why TapForTap Requires the Permissions it does
 
-INTERNET: Required to download ads.
-READ\_PHONE\_STATE: Required to do conversion tracking and work with monetization partners
-ACCESS\_NETWORK\_STATE: Required to check network status in order to help the SDK be smarter about network requests
-ACCESS\_WIFI\_STATE: Required to check network status in order to help the SDK be smarter about network 
+- _INTERNET_: Required to download ads.
+- _READ\_PHONE\_STATE_: Required to do conversion tracking and work with monetization partners
+- _ACCESS\_NETWORK\_STATE_: Required to check network status in order to help the SDK be smarter about network requests
+- _ACCESS\_WIFI\_STATE_: Required to check network status in order to help the SDK be smarter about network 
 requests and to help with conversion tracking.
-WRITE\_EXTERNAL\_STORAGE: Required to cache ads locally on the phone. This greatly improves 
+- _WRITE\_EXTERNAL\_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
 performance and reduces network traffic and radio usage (which mostly in increasing battery life). 
 TapForTap is capped at 10MB of disk space.
 
@@ -100,11 +100,7 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
 ```
 
 ## Step 5 - Display Ads
-
-### Step 5a - Display a Banner
-To display a banner ad, add a `com.tapfortap.bannerAd` to a layout.
-
-For example, adding a banner Ad to a `RelativeLayout` 
+Adding a banner Ad to a `RelativeLayout` 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
