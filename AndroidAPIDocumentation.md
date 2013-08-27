@@ -349,3 +349,51 @@ Returns whether or not an appWall is ready to show.
 
   - _boolean_ - `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
 
+## AppWallAdListener
+
+
+### public void appWallAdOnReceive(AppWallAd ad)
+
+Called when a new ad is received and is ready to be shown.
+
+**Parameters**
+
+  - _ad_ - The AppWallAd which received a new ad.
+
+---
+
+### public void appWallAdOnFail(AppWallAd ad, String message, Throwable throwable)
+
+Called when an ad fails to load. An explicit call to load is required to get the next ad.
+
+**Parameters**
+
+  - _ad_ - The AppWallAd which received a new ad.
+  - _message_ - A summary of the error.
+  - _throwable_ - The exception that caused the error.
+
+---
+
+### public void appWallAdOnShow(AppWallAd ad)
+
+The appWall ad was shown to the user.
+
+**Parameters**
+
+  - _ad_ - The AppWallAd which received a new ad.
+
+---
+
+### public void appWallAdOnTap(AppWallAd ad)
+
+The user tapped on the appWall ad.
+
+The user dismissed the appWall ad.
+
+**Parameters**
+
+  - _ad_ - The AppWallAd which received a new ad.
+
+---
+
+### public void appWallAdOnDismiss(AppWallAd ad)
