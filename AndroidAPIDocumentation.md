@@ -251,3 +251,49 @@ Returns whether or not an interstitial is ready to show.
 
   - _boolean_ - `true` if an interstitial is ready to show. `false` if an interstitial ad is not ready to show.
 
+## InterstitialAdListener
+
+### public void interstitialAdOnReceive(InterstitialAd ad)
+
+Called when a new ad is received and is ready to be shown.
+
+**Parameters**
+
+  - _ad_ - The InterstitialAd which received a new ad.
+
+---
+
+### public void interstitialAdOnFail(InterstitialAd ad, String message, Throwable throwable)
+
+Called when an ad fails to load. An explicit call to load is required to get the next ad.
+
+**Parameters**
+
+  - _ad_ - The InterstitialAd which received a new ad.
+
+---
+
+### public void interstitialAdOnShow(InterstitialAd ad)
+
+The interstitial ad was shown to the user.
+
+**Parameters**
+
+  - _ad_ - The InterstitialAd which received a new ad.
+
+---
+
+### public void interstitialAdOnTap(InterstitialAd ad)
+
+The user tapped on the interstitial ad.
+
+The user dismissed the interstitial ad.
+
+**Parameters**
+
+  - _ad_ - The InterstitialAd which received a new ad.
+
+---
+
+### public void interstitialAdOnDismiss(InterstitialAd ad)
+
