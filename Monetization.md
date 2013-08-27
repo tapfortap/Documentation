@@ -31,3 +31,7 @@ Over time Tap for Tap rotates numerous apps and ads on your monetization traffic
 ## Fraudulent Traffic
 
 Tap for Tap takes protecting its developers and advertisers seriously. We have a zero tolerance policy for fraud.  We have seen everything from generating fake impressions and taps, to installing apps from ads to increase revenue. If you are found to generate fraudulent traffic payments will be withheld and legal action might be pursued.
+
+## Reporting
+
+Paid Promotion and Monetization reporting is fairly straightforward. For Paid Promotion we report on how many impressions, taps and installs you've purchased from our network and the Monetization reports show you how many impressions of ads you've shown, how many taps you've generated, how many installs, and how much revenue you've earned from your traffic.
