@@ -297,3 +297,55 @@ The user dismissed the interstitial ad.
 
 ### public void interstitialAdOnDismiss(InterstitialAd ad)
 
+## AppWallAd
+
+### public static AppWallAd createAndLoad(Context context)
+
+Creates and starts loading an appWall
+
+**Parameters**
+
+  - _context_ - An Android context.
+
+**Return Value**
+
+  - _AppWallAd_ - A new instance of AppWallAd.
+
+---
+
+### public static AppWallAd createAndLoad(Context context, final AppWallAdListener appWallAdListener)
+
+Creates and starts loading an appWall with the provided listener.
+
+**Parameters**
+
+  - _context_ - An Android context.
+  - listener_ - A listener.
+
+**Return Value**
+
+  - _AppWallAd_ - A new instance of AppWallAd.
+
+---
+
+## Instance Methods
+### public void show()
+
+Causes an appWall ad to be shown, a new appWall to be loaded. This will launch a new [FullScreenAdActivity]()
+
+---
+
+### public void load()
+
+Causes a new appWall to be loaded.
+
+---
+
+### public boolean isReadyToShow()
+
+Returns whether or not an appWall is ready to show.
+
+**Return Value**
+
+  - _boolean_ - `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
+
