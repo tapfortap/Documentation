@@ -69,3 +69,11 @@ You can position tap for tap anywhere you'd like in your app. With our variety o
 ### What currency does Tap for Tap use?
 
 Tap for Tap uses the USD currency, which is displayed as your balance, and used for all incoming and outgoing transfers.
+
+### Why am I showing Tap Exchange ads when I have 100% monetization selected, or vice versa?
+
+If you have 100% monetization selected, you still might show a Tap Exchange ad, if we don’t have a monetization ad to show for that impression. It could be because the impression is from a region that we don’t have advertiser demand in. If you’d prefer that Tap for Tap not show any Tap Exchange ads when we don’t have a monetization ad to show, you can select this setting in your Account Settings.
+
+### Why do I have clicks, but no revenue earned on the Monetization network?
+
+Most of Tap for Tap’s advertisers work on a CPI basis, so this is why you might have taps showing in your statistics but no revenue. 
