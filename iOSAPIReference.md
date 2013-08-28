@@ -184,7 +184,7 @@ Called when a user taps on an ad.
 
   - _bannerAd_ - The BannerAd that was tapped.
   
-## InterstitialAd
+## TapForTapInterstitialAd
 
 ### Overview
 
@@ -285,15 +285,15 @@ The user tapped on the interstitial ad.
 
 ---
 
-#### public (void)interstitialAdOnDismiss(InterstitialAd ad)
+#### - (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitialAd *)ad;
 
 The user dismissed the interstitial ad.
 
 **Parameters**
 
-  - _ad_ - The InterstitialAd which received a new ad.
+  - _ad_ - The TapForTapInterstitialAd which received a new ad.
 
-## AppWallAd
+## TapForTapAppWallAd
 
 ### Overview
 
@@ -301,61 +301,51 @@ This class is responsible for downloading and showing appWall ads.
 
 ### Special Considerations
 
-Always be sure that an appWall is ready to be shown by either using the callbacks or by using the isReadyToShow method. 
-Failure to do so may cause and ad to be shown at unexpected or undersireable times due to network connectivity.
+Always be sure that an appWall is ready to be shown by either using the callbacks or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times due to network connectivity.
 
 ### Methods
 
-#### + AppWallAd createAndLoad(Context context)
+#### + (TapForTapAppWallAd *)createAndLoad;
 
 Creates and starts loading an appWall
 
-**Parameters**
-
-  - _context_ - An Android context.
-
 **Return Value**
 
-  - _AppWallAd_ - A new instance of AppWallAd.
+  - TapForTapAppWallAd - A new instance of AppWallAd.
 
 ---
 
-#### + AppWallAd createAndLoad(Context context, final AppWallAdListener appWallAdListener)
+#### + (TapForTapAppWallAd *)createAndLoadWithDelegate:(id<TapForTapAppWallAdDelegate>) delegate;
 
 Creates and starts loading an appWall with the provided listener.
 
 **Parameters**
 
-  - _context_ - An Android context.
-  - listener_ - A listener.
+  - _delegate_ - A delegate.
 
 **Return Value**
 
-  - _AppWallAd_ - A new instance of AppWallAd.
+  - _TapForTapAppWallAd_ - A new instance of AppWallAd.
 
 ---
 
-#### public (void)show
+#### - (void)show
 
-Causes an appWall ad to be shown, a new appWall to be loaded. This will launch a new [FullScreenAdActivity]
+Causes an appWall ad to be shown and a new appWall to be loaded. This will push a new view controller.
 
 ---
 
-#### public (void)load
+#### - (void)load
 
 Causes a new appWall to be loaded.
 
 ---
 
-#### public boolean isReadyToShow
+#### BOOL readyToShow
 
-Returns whether or not an appWall is ready to show.
+`true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
 
-**Return Value**
-
-  - _boolean_ - `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
-
-## AppWallAdListener
+## TapForTapAppWallAdDelegate
 
 ### Overview
 
@@ -363,7 +353,7 @@ This interface provides callback methods into the lifecycle of the appWall ad.
 
 ### Methods
 
-#### public (void)appWallAdOnReceive(AppWallAd ad)
+#### - (void)tapForTapAppWallDidReceiveAd:(TapForTapAppWallAd *)ad;
 
 Called when a new ad is received and is ready to be shown.
 
@@ -373,43 +363,41 @@ Called when a new ad is received and is ready to be shown.
 
 ---
 
-#### public (void)appWallAdOnFail(AppWallAd ad, :(NSString *) message, Throwable throwable)
+#### - (void)tapForTapAppWall:(TapForTapAppWallAd *)ad didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
   - _ad_ - The AppWallAd which received a new ad.
-  - _message_ - A summary of the error.
-  - _throwable_ - The exception that caused the error.
+  - _reason_ - The reason why the ad failed.
 
 ---
 
-#### public (void)appWallAdOnShow(AppWallAd ad)
+#### - (void)tapForTapAppWallDidShow:(TapForTapAppWallAd *)ad;
 
 The appWall ad was shown to the user.
 
 **Parameters**
 
-  - _ad_ - The AppWallAd which received a new ad.
+  - _ad_ - The TapForTApAppWallAd which received a new ad.
 
 ---
 
-#### public (void)appWallAdOnTap(AppWallAd ad)
+#### - (void)tapForTapAppWallWasTapped:(TapForTapAppWallAd *)ad;
 
 The user tapped on the appWall ad.
 
 **Parameters**
 
-  - _ad_ - The AppWallAd which received a new ad.
+  - _ad_ - The TapForTapAppWallAd which received a new ad.
 
 ---
 
-#### public (void)appWallAdOnDismiss(AppWallAd ad)
+#### - (void)tapForTapAppWallWasDismissed:(TapForTapAppWallAd *)ad;
 
 The user dismissed the appWall ad.
 
 **Parameters**
 
-  - _ad_ - The AppWallAd which received a new ad.
-
+  - _ad_ - The TapForTapAppWallAd which received a new ad.
