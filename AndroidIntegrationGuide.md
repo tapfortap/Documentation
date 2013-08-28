@@ -88,7 +88,7 @@ requests and to help with conversion tracking.
 performance and reduces network traffic and radio usage (which mostly in increasing battery life). 
 TapForTap is capped at 10MB of disk space.
 
-## Step 4 - Add the Activity to Your AndroidManifest.cml
+## Step 4 - Add the Activity to Your AndroidManifest.xml
 
 Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
 
