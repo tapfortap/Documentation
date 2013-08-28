@@ -7,7 +7,7 @@ Supports Android 2.2 and up (API level 8)
 
 ##  General Information ##
 
-Integrating Tap for Tap into your app is usually really easy. Add our library, `TapForTap.jar`, to your Android project, call `TapForTap.initialize()` when your app starts, and then add a `com.tapfortap.BannerAd` to your layout or display an interstitial or app wall (if you are showing ads in that app). That's it!
+Integrating Tap for Tap into your app is usually really easy. Follow the steps below to get started.
 
 # Instructions #
 
@@ -96,7 +96,7 @@ Add the following activity tou your AndroidManifest.xml
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 ```
 
-## Step 4 - Enable Test Mode
+## Step 5 - Enable Test Mode
 Test mode stops your app from consuming real impressions. This is useful while you are developing your app. Make sure to disable test mode before submitting your app to the play store. 
 
 To enable test mode add the following meta data tag to your AndroidManifest.xml. 
@@ -106,7 +106,7 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
         android:value="true"/>
 ```
 
-## Step 5 - Display Ads
+## Step 6 - Display Ads
 Adding a banner Ad to a `RelativeLayout` 
 
 ```html
@@ -126,7 +126,7 @@ Adding a banner Ad to a `RelativeLayout`
 
 ```
 
-## Step 6 - Send Optional Information About Your Users
+## Step 7 - Send Optional Information About Your Users
 If you have information about your users that your privacy policy allows you to share with us, 
 you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. 
 We accept year of birth, gender, location, and the account ID of user's on your system.
@@ -137,54 +137,6 @@ TapForTap.setYearOfBirth(<year>);
 TapForTap.setLocation(<location>);
 TapForTap.setUserAccountId(<accountId>);
 ```
-
-## API Documentation
-
-### Interstitial ###
-
-Inside an activity simply use the `Interstitial` class like this:
-
-```java
-// In onCreate
-Interstitial.prepare(this);
-
-// Later when you want to display the interstitial
-Interstitial.show(this);
-```
-
-You only have to prepare it the first time on startup, each time it is shown the next one is automatically prepared for you
-
-### App Wall ###
-
-Inside an activity simply use the `AppWall` class like this:
-
-```java
-// In onCreate
-AppWall.prepare(this);
-
-// Later when you want to display the app wall
-AppWall.show(this);
-```
-
-You only have to prepare it the first time on startup, each time it is shown the next one is automatically prepared for you.
-
-Congratulations! You should now be up and running. Run the app and then [Login](http://tapfortap.com/login) to check to make sure that it worked.
-
-##  Step 5 - Send info about your users (optional). ##
-
-If you have information about your users that your privacy policy allows you to share with us, you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. We accept year of birth, gender, location, and the account ID of user's on your system.
-
-```java
-TapForTap.setGender(<MALE or FEMALE>);
-TapForTap.setYearOfBirth(<year>);
-TapForTap.setLocation(<location>);
-TapForTap.setUserAccountId(<accountId>);
-```
-
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
 **Note:** If you are using Tap for Tap's [monetization](/doc/Monetization) program passing this information can greatly increase your revenue.
-
-# Example Code #
-
-Some example code is included to help get you started. Take a look in the example folder to see exactly how it's done.
