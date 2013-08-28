@@ -129,33 +129,3 @@ If you have information about your users that your privacy policy allows you to 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
 **Note:** If you are using Tap for Tap's [monetization](/doc/Monetization) program passing this information can greatly increase your revenue.
-
-# Example Code #
-
-Some example code is included to help get you started. Take a look in the `example` folder to see exactly how it's done.
-
-##  API Documentation ##
-
-To take action when ads are loaded or fail to load you can set the `delegate` property of `TapForTapAdView` objects, and also on the `TapForTapInterstitial` and `TapForTapAppWall` classes. Ad view delegates implement the `TapForTapAdViewDelegate` protocol which has one required and three optional methods:
-
-```objective-c
-// Required
-- (UIViewController *) rootViewController;
-
-// Optional
-- (void) tapForTapAdViewDidReceiveAd: (TapForTapAdView *)adView;
-- (void) tapForTapAdView: (TapForTapAdView *)adView didFailToReceiveAd: (NSString *)reason;
-- (void) tapForTapAdViewWasTapped: (TapForTapAdView *)adView;
-```
-
-Interstitial delegates implement the `TapForTapInterstitialDelegate` protocol which has one required method:
-
-```objective-c
-- (void) tapForTapInterstitialWasDismissed;
-```
-
-App wall delegates implement the `TapForTapAppWallDelegate` protocol which has one required method:
-
-```objective-c
-- (void) tapForTapAppWallWasDismissed;
-```

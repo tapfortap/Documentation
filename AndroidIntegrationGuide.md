@@ -7,9 +7,7 @@ Supports Android 2.2 and up (API level 8)
 
 ##  General Information ##
 
-Integrating Tap for Tap into your app is usually really easy. Add our library, `TapForTap.jar`, to your Android project, call `TapForTap.initialize()` when your app starts, and then add a `com.tapfortap.AdView` to your layout or display an interstitial or app wall (if you are showing ads in that app). That's it!
-
-If you are not displaying Tap for Tap ads then you only need to follow steps 1 - 3. Call `TapForTap.initialize(Activity, "YOUR API KEY")` once when your app starts up, in the `onCreate` method of your main activity.
+Integrating Tap for Tap into your app is usually really easy. Add our library, `TapForTap.jar`, to your Android project, call `TapForTap.initialize()` when your app starts, and then add a `com.tapfortap.BannerAd` to your layout or display an interstitial or app wall (if you are showing ads in that app). That's it!
 
 # Instructions #
 
@@ -89,6 +87,14 @@ requests and to help with conversion tracking.
 - _WRITE\_EXTERNAL\_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
 performance and reduces network traffic and radio usage (which mostly in increasing battery life). 
 TapForTap is capped at 10MB of disk space.
+
+## Step 4 - Add the Activity to Your AndroidManifest.cml
+
+Add the following activity tou your AndroidManifest.xml
+
+```html
+    <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+```
 
 ## Step 4 - Enable Test Mode
 Test mode stops your app from consuming real impressions. This is useful while you are developing your app. Make sure to disable test mode before submitting your app to the play store. 

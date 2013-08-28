@@ -1,3 +1,6 @@
+### 3.0.0 / 2013-8-28
+  * 
+
 ### 2.3.3 / 2013-07-18
   * If initializeWithDelegate is called more than once, delegates are now set properly on subsequent calls
   * Interstitial/AppWall ads are now properly cached

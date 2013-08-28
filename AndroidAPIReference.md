@@ -15,7 +15,7 @@ If the Tap for Tap API key is set in the `AndroidManifest.xml` there is no need 
 
 ### Methods
 
-#### public static initializeWithApiKey(String apiKey)
+#### public static void initializeWithApiKey(String apiKey)
 
 Initializes Tap for Tap with the provided API key.
 
