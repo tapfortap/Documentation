@@ -34,7 +34,7 @@ Initializes Tap for Tap with the provided API key and listener.
   - _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
   - _listener_ - A listener for handling the callbacks.
 
-***
+---
 
 #### public static void enableTestMode()
 
@@ -139,7 +139,7 @@ Causes ads to start being downloaded and shown.
 
 ---
 
-### public void stopShowingAds()
+#### public void stopShowingAds()
 
 Causes ads to stop being downloaded and shown.
 
@@ -296,8 +296,6 @@ The interstitial ad was shown to the user.
 
 The user tapped on the interstitial ad.
 
-The user dismissed the interstitial ad.
-
 **Parameters**
 
   - _ad_ - The InterstitialAd which received a new ad.
@@ -305,6 +303,12 @@ The user dismissed the interstitial ad.
 ---
 
 #### public void interstitialAdOnDismiss(InterstitialAd ad)
+
+The user dismissed the interstitial ad.
+
+**Parameters**
+
+  - _ad_ - The InterstitialAd which received a new ad.
 
 ## AppWallAd
 
