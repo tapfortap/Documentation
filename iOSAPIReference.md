@@ -44,7 +44,7 @@ Enables test mode. Test mode causes Tap for Tap to disable spending and earning 
 
 #### + (void)disableTestMode
 
-Disables test mode. See [enableTestMode](#public-static-void-enabletestmode) for more details.
+Disables test mode. See enableTestMode for more details.
 
 ---
 
@@ -56,7 +56,7 @@ Stops Tap for Tap from being able to download and show ads. This can be useful i
 
 #### + (void)enableTapForTap
 
-Allows Tap for Tap to download and show ads. See [disableTapForTap](#public-static-void-disabletapfortap) for more details.
+Allows Tap for Tap to download and show ads. See disableTapForTap for more details.
 
 ---
 
@@ -119,16 +119,6 @@ Creates a new BannerAd and begins downloading and showing ads.
 
   - _TapForTapBannerAd_ - a new instance of a BannerAd
 
-#### public (void)setBannerAdListener(BannerAdListener bannerAdListener)
-
-Sets a listener on the BannerAds. This should only be used if the BannerAd is decalared in a layout it is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory methods [createAndShow(context, bannerAdListener)](public-static-BannerAd-createAndShowContext-context-BannerAdListener-bannerAdListener)  
-
-**Parameters**
-
-  - _bannerAdListener_ - An listener
-
----
-
 #### - (void)startShowingAds
 
 Causes ads to start being downloaded and shown.
@@ -143,7 +133,7 @@ Causes ads to stop being downloaded and shown.
 
 #### @propert autoRollover
 
-If set to YES, causes a new ad to be downloaded and shown aproximately every 60 seconds. If set to NO only a call to [startShowinAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
+If set to YES, causes a new ad to be downloaded and shown aproximately every 60 seconds. If set to NO only a call to startShowinAds will cause a new ad to be downloaded and show.
 
 ---
 
