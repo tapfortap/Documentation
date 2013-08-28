@@ -58,7 +58,7 @@ Then click `OK` to leave the properties window.
 
 
 ## Step 2 - Add Your API Key to Your AndroidManifest.xml
-Add the following meta data tag to your AndroidManifest.xml, replacing `MY\_API_KEY` with your Tap for Tap 
+Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap 
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
 ```html
@@ -90,7 +90,7 @@ TapForTap is capped at 10MB of disk space.
 
 ## Step 4 - Add the Activity to Your AndroidManifest.cml
 
-Add the following activity tou your AndroidManifest.xml
+Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
 
 ```html
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
