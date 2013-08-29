@@ -81,6 +81,7 @@ For banners your view controller needs to implement the `TapForTapBannerAdDelega
 	// If you do not use ARC then release the adView.
 	// [adView release];
 } 
+```
 
 ##  Step 5 - Send Optional Info About Your Users. ##
 
