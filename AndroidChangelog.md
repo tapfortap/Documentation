@@ -2,7 +2,7 @@
   * 
 
 ### 2.3.2 / 2013-07-24
-  * Fix not  being able to load new interstitial/appwalls if they failed to download.
+  * Fix not being able to load new interstitial/appwalls if they failed to download.
 
 ### 2.3.1 / 2013-07-18 
   * If prepare with a listener is called more than once, the listener is properly set subsequent time.
