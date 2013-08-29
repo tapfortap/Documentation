@@ -1,5 +1,7 @@
 ### 3.0.0 / 2013-08-28
-  * 
+  * Introduced new Interstitial and App Wall assets
+  * Added a new event to App Wall / Interstial
+    * onTap
 
 ### 2.3.2 / 2013-07-24
   * Fix not being able to load new interstitial/appwalls if they failed to download.
