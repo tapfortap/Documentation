@@ -1,19 +1,15 @@
 # iOS - SDK Implementation #
 
 ##  Current Version ##
-**2.3.3** - [See Changelog](/doc/iOSChangelog)
+**3.0.0** - [See Changelog](/doc/iOSChangelog)
 
-Supports iOS 4.3 and up on ARMv7 (iPhone 3GS and up, iPad 2 and up, iPod touch 3rd generation and up)
+Supports iOS 5.0 and up.
 
 ##  General Information ##
 
-Integrating Tap for Tap into your app is usually really easy. Add our library, `libTapForTap.a`, to your iOS project, add required frameworks, initialize with your API key, and then add a `TapForTapAdView` to your view hierarchy or display an interstitial or app wall. That's it!
+Integrating Tap for Tap into your app is usually really easy. Add our library, `libTapForTap.a`, to your iOS project, add required frameworks, initialize with your API key, and then add a `TapForTapBannerAd` to your view hierarchy or display an interstitial or app wall. That's it!
 
 If you are not displaying TapForTap ads then you only need to call `+[TapForTap initializeWithAPIKey: @"YOUR API KEY"]` once when your app starts up, typically in the `application:didFinishLaunchingWithOptions:` method of your app delegate.
-
-##  Video Walkthrough ##
-
-Watch a video that shows how to implement Tap for Tap from start to finish [here](http://www.youtube.com/watch?feature=player_embedded&v=LS7DEvITf7Y&hd=1).
 
 # Instructions #
 
@@ -65,11 +61,9 @@ Import `TapForTap.h` in your app delegate and call our check in method.
 
 ### Banner ###
 
-In the view controllers in wich you would like to display ads, in your `viewDidLoad` method create a `TapForTapAdView` and add it to your view.
+In the view controllers in wich you would like to display ads, in your `viewDidLoad` method create a `TapForTapBannerAd` and add it to your view.
 
-For banners your view controller needs to implement the `TapForTapAdViewDelegate` protocol in the header file, e.g. @interface MyViewController <TapForTapAdViewDelegate>
-
-TapForTapAdViewDelegate has one required method, `rootViewController`, and some optional methods to be notified about ads loading, being tapped, etc. Usually you can just `return self` in `rootViewController`.
+For banners your view controller needs to implement the `TapForTapBannerAdDelegate` protocol in the header file, e.g. @interface MyViewController <TapForTapBannerAdDelegate>
 
 ```objective-c
 // Be sure to import TapForTap.h
@@ -81,39 +75,12 @@ TapForTapAdViewDelegate has one required method, `rootViewController`, and some 
 
 	// Show a banner at the bottom of this view, 320x50 points
 	CGFloat y = self.view.frame.size.height - 50.0;
-	TapForTapAdView *adView = [[TapForTapAdView alloc] initWithFrame: CGRectMake(0, y, 320, 50) delegate: self];
+	TapForTapBannerAd *bannerAd = [[TapForTapAdView alloc] initWithFrame: CGRectMake(0, y, 320, 50) delegate: self];
 	[self.view addSubview: adView];
 
 	// If you do not use ARC then release the adView.
 	// [adView release];
-}
-
-// Implement the required method of the TapForTapAdViewDelegate protocol.
-- (UIViewController *) rootViewController { return self; }
-```
-
-### Interstitial ###
-
-```objective-c
-// In viewDidLoad
-[TapForTapInterstitial prepare];
-
-// Later when you want to display the interstitial
-[TapForTapInterstitial showWithRootViewController: self]; // or possibly self.navigationController
-```
-
-### App Wall ###
-
-```objective-c
-// In viewDidLoad
-[TapForTapAppWall prepare];
-
-// Later when you want to display the app wall
-[TapForTapAppWall showWithRootViewController: self]; // or possibly self.navigationController
-```
-
-**Congratulations!** You should now be up and running. Run the app and then check [tapfortap.com/developer](http://tapfortap.com/developer) to make sure that it worked.
-
+} 
 
 ##  Step 5 - Send info about your users (optional). ##
 
