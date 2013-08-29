@@ -13,13 +13,13 @@ If you are not displaying TapForTap ads then you only need to call `+[TapForTap 
 
 # Instructions #
 
-##  Step 1: Add Tap for Tap to your project. ##
+##  Step 1: Add Tap for Tap to Your Project. ##
 
 Add the `TapForTap` folder to your project by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
 
 ![](https://raw.github.com/tapfortap/Documentation/master/images/xcode-01.png)
 
-##  Step 2: Add required frameworks ##
+##  Step 2: Add Required Frameworks ##
 
 We use SystemConfiguration.framework and AdSupport.framework so you will need to link these frameworks.
 
@@ -40,7 +40,7 @@ In the project explorer on the left side of Xcode 4:
 
 Repeat the above steps for AdSupport.framework.
 
-##  Step 3: Initialize Tap for Tap when your app launches. ##
+##  Step 3: Initialize Tap for Tap When Your App Launches. ##
 
 Import `TapForTap.h` in your app delegate and call our check in method.
 
@@ -57,7 +57,7 @@ Import `TapForTap.h` in your app delegate and call our check in method.
 }
 ```
 
-##  Step 4: Display a banner, interstitial, or app wall. ##
+##  Step 4: Display a Banner, Interstitial, or App Wall. ##
 
 ### Banner ###
 
@@ -82,7 +82,7 @@ For banners your view controller needs to implement the `TapForTapBannerAdDelega
 	// [adView release];
 } 
 
-##  Step 5 - Send info about your users (optional). ##
+##  Step 5 - Send Optional Info About Your Users. ##
 
 If you have information about your users that your privacy policy allows you to share with us, you can help us better target ads by passing it along. Just set the info on `TapForTap`. We accept year of birth, gender, location, and user account IDs on your system.
 
