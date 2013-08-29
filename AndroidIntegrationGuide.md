@@ -124,7 +124,6 @@ Adding a banner Ad to a `RelativeLayout`
         android:layout_centerHorizontal="true"
     />
 </RelativeLayout>
-
 ```
 
 ## Step 7 - Send Optional Information About Your Users
