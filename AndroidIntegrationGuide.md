@@ -80,11 +80,11 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 ### Why TapForTap Requires the Permissions it does
 
 - _INTERNET_: Required to download ads.
-- _READ\_PHONE\_STATE_: Required to do conversion tracking and work with monetization partners
-- _ACCESS\_NETWORK\_STATE_: Required to check network status in order to help the SDK be smarter about network requests
-- _ACCESS\_WIFI\_STATE_: Required to check network status in order to help the SDK be smarter about network 
+- _READ_PHONE_STATE_: Required to do conversion tracking and work with monetization partners
+- _ACCESS_NETWORK_STATE_: Required to check network status in order to help the SDK be smarter about network requests
+- _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network 
 requests and to help with conversion tracking.
-- _WRITE\_EXTERNAL\_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
+- _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
 performance and reduces network traffic and radio usage (which mostly in increasing battery life). 
 TapForTap is capped at 10MB of disk space.
 
