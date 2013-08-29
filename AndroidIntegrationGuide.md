@@ -61,7 +61,7 @@ Then click `OK` to leave the properties window.
 Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap 
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
-```XML
+```xml
     <meta-data
         android:name="com.tapfortap.API_KEY"
         android:value="MY_API_KEY"/>
@@ -69,7 +69,7 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 
 ## Step 3 - Add Permissions to Your AndroidManifest.xml
 
-```XML
+```xml
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -92,7 +92,7 @@ TapForTap is capped at 10MB of disk space.
 
 Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
 
-```XML
+```xml
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 ```
 
@@ -101,7 +101,7 @@ Test mode stops your app from consuming real impressions. This is useful while y
 
 To enable test mode add the following meta data tag to your AndroidManifest.xml. 
 
-```XML
+```xml
     <meta-data
         android:name="com.tapfortap.TEST_MODE"
         android:value="true"/>
@@ -110,7 +110,7 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
 ## Step 6 - Display Ads
 Adding a banner Ad to a `RelativeLayout` 
 
-```XML
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
