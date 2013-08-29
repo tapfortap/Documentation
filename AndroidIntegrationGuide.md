@@ -77,11 +77,11 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
-### Why TapForTap Requires the Permissions it does
+### Why TapForTap Requires the Permissions It Does
 
 - _INTERNET_: Required to download ads.
-- _READ_PHONE_STATE_: Required to do conversion tracking and work with monetization partners
-- _ACCESS_NETWORK_STATE_: Required to check network status in order to help the SDK be smarter about network requests
+- _READ_PHONE_STATE_: Required to do conversion tracking and work with monetization partners.
+- _ACCESS_NETWORK_STATE_: Required to check network status in order to help the SDK be smarter about network requests.
 - _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network 
 requests and to help with conversion tracking.
 - _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
@@ -97,7 +97,8 @@ Add the following activity to your AndroidManifest.xml. This enables showing ful
 ```
 
 ## Step 5 - Enable Test Mode
-Test mode stops your app from consuming real impressions. This is useful while you are developing your app. Make sure to disable test mode before submitting your app to the play store. 
+Test mode stops your app from consuming real impressions. This is useful while you are developing your app. 
+Make sure to disable test mode before submitting your app to the play store. 
 
 To enable test mode add the following meta data tag to your AndroidManifest.xml. 
 
