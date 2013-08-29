@@ -1,25 +1,25 @@
 # iOS - SDK Implementation #
 
-##  Current Version ##
+##  Current Version
 **3.0.0** - [See Changelog](/doc/iOSChangelog)
 
 Supports iOS 5.0 and up.
 
-##  General Information ##
+##  General Information
 
 Integrating Tap for Tap into your app is usually really easy. Add our library, `libTapForTap.a`, to your iOS project, add required frameworks, initialize with your API key, and then add a `TapForTapBannerAd` to your view hierarchy or display an interstitial or app wall. That's it!
 
 If you are not displaying TapForTap ads then you only need to call `+[TapForTap initializeWithAPIKey: @"YOUR API KEY"]` once when your app starts up, typically in the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
-# Instructions #
+# Instructions
 
-##  Step 1: Add Tap for Tap to Your Project. ##
+##  Step 1: Add Tap for Tap to Your Project.
 
 Add the `TapForTap` folder to your project by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
 
 ![](https://raw.github.com/tapfortap/Documentation/master/images/xcode-01.png)
 
-##  Step 2: Add Required Frameworks ##
+##  Step 2: Add Required Frameworks
 
 We use SystemConfiguration.framework and AdSupport.framework so you will need to link these frameworks.
 
@@ -57,9 +57,9 @@ Import `TapForTap.h` in your app delegate and call our check in method.
 }
 ```
 
-##  Step 4: Display a Banner, Interstitial, or App Wall. ##
+##  Step 4: Display a Banner, Interstitial, or App Wall.
 
-### Banner ###
+### Banner
 
 In the view controllers in wich you would like to display ads, in your `viewDidLoad` method create a `TapForTapBannerAd` and add it to your view.
 
@@ -83,7 +83,7 @@ For banners your view controller needs to implement the `TapForTapBannerAdDelega
 } 
 ```
 
-##  Step 5 - Send Optional Info About Your Users. ##
+##  Step 5 - Send Optional Info About Your Users.
 
 If you have information about your users that your privacy policy allows you to share with us, you can help us better target ads by passing it along. Just set the info on `TapForTap`. We accept year of birth, gender, location, and user account IDs on your system.
 
