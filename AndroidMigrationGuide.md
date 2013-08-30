@@ -12,6 +12,12 @@ initialize anymore, the SDK will handle that itself the first time you request a
     android:value="MY_API_KEY"/>
 ```
 
+If you do not want to add your API key to your AndroidManifest.xml you can still call
+
+```java
+TapForTap.initialize(String apiKey)
+```
+
 ## BannerAd
 
 The AdView class has been change to BannerAd to better reflect what the class is. A BannerAd can still be
