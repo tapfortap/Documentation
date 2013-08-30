@@ -10,13 +10,18 @@ initialize anymore, the SDK will handle that itself the first time you request a
 key = TapForTapApiKey
 type = String
 value = "YOUR_API_KEY"
-</plist>
 ```
 
 ## BannerAd
 
-The AdView class has been change to BannerAd to better reflect what the class is. A BannerAd can still be
+The TapForTapAdView class has been change to TapForTapBannerAd to better reflect what the class is. A BannerAd can still be
 declared in a layout file using `com.tapfortap.BannerAd'. 
+
+The name of the delegate has also been changed to TapForTapBannerAdDelegate, and the delegate methods are now:
+
+  * - (void)tapForTapBannerAdDidReceiveAd:(TapForTapBannerAd *)bannerAd;
+  * - (void)tapForTapBannerAd:(TapForTapBannerAd *)bannerAd didFail:(NSString *)reason;
+  * - (void)tapForTapBannerAdWasTapped:(TapForTapBannerAd *)bannerAd;
 
 ## Interstitial/App Wall (ie FullScreenAds)
 
