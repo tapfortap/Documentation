@@ -42,7 +42,7 @@ Repeat the above steps for AdSupport.framework.
 
 ##  Step 3: Initialize Tap for Tap When Your App Launches. ##
 
-Import `TapForTap.h` in your app delegate and call our check in method.
+Import `TapForTap.h` in your app delegate and call our initialize method.
 
 ```objective-c
 # import "TapForTap.h"
