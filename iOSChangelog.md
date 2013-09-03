@@ -1,5 +1,10 @@
-### 3.0.0 / 2013-8-28
-  * 
+### 3.0.1 / 2013-09-03
+  * Rework of the API. Minor semantic changes from 2.x. The most notable being that AppWall/Interstitial are no longer accessed via class methods.
+  * Introduced new Interstitial and App Wall assets
+    * Both are now anmiated
+    * Both have transparent backgrounds
+  * Added a new event to App Wall / Interstial
+    * onTap
 
 ### 2.3.3 / 2013-07-18
   * If initializeWithDelegate is called more than once, delegates are now set properly on subsequent calls
