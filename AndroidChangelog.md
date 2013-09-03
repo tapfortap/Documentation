@@ -1,5 +1,8 @@
-### 3.0.0 / 2013-08-28
+### 3.0.1 / 2013-09-03
+  * Rework of the API. Minor semantic changes from 2.x. The most notable being that AppWall/Interstitial are no longer accessed via satic methods.
   * Introduced new Interstitial and App Wall assets
+    * Both are now anmiated
+    * Both have transparent backgrounds
   * Added a new event to App Wall / Interstial
     * onTap
 
