@@ -1,6 +1,6 @@
 # iOS API Reference
 
-## TapForTap
+## TFTTapForTap
 
 ### Overview
 
@@ -66,7 +66,7 @@ Sets the user's year of birth to be passed along when requesting an ad. This hel
 
 ---
 
-#### + (void)setGender:(TapForTapGender)gender;
+#### + (void)setGender:(TFTGender)gender;
 
 Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
 
@@ -82,7 +82,7 @@ Sets the user's location to be passed along when requesting an ad. This helps Ta
 
 Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
 
-## TapForTapBanner
+## TFTBanner
 
 ### Overview
 
@@ -92,7 +92,7 @@ The Banner will stop downloading and showing new ads if the view is not visible 
 
 ### Methods
 
-#### + (TapForTapBanner *)bannerWithFrame:(CGRect)frame;
+#### + (TFTBanner *)bannerWithFrame:(CGRect)frame;
 
 Creates a new Banner and begins downloading and showing ads.
 
@@ -102,11 +102,11 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Return Value**
 
-  - _TapForTapBanner_ - a new instance of a TapForTapBanner
+  - _TFTBanner_ - a new instance of a TFTBanner
 
 ---
 
-#### + (TapForTapBanner *)bannerWithFrame:(CGRect)frame delegate:(id<TapForTapBannerDelegate>)delegate;
+#### + (TFTBanner *)bannerWithFrame:(CGRect)frame delegate:(id<TFTBannerDelegate>)delegate;
 
 Creates a new Banner and begins downloading and showing ads.
 
@@ -117,7 +117,7 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Return Value**
 
-  - _TapForTapBanner_ - a new instance of a Banner
+  - _TFTBanner_ - a new instance of a Banner
 
 #### - (void)startShowingAds
 
@@ -137,15 +137,15 @@ If set to YES, causes a new ad to be downloaded and shown aproximately every 60 
 
 ---
 
-## TapForTapBannerDelegate
+## TFTBannerDelegate
 
 ### Overview
 
-This interface provides callback methods into the current status of the TapForTapBanner.
+This interface provides callback methods into the current status of the TFTBanner.
 
 ### Methods
 
-#### - (void)tapForTapBannerDidReceive:(TapForTapBanner *)banne;
+#### - (void)tapForTapBannerDidReceive:(TFTBanner *)banne;
 
 Called when the Banner receives a new ad.
 
@@ -155,7 +155,7 @@ Called when the Banner receives a new ad.
 
 ---
 
-#### - (void)tapForTapBanner:(TapForTapBanner *)banner didFail:(NSString *)reason;
+#### - (void)tapForTapBanner:(TFTBanner *)banner didFail:(NSString *)reason;
 
 Called when the Banner fails to download or show a new ad.
 
@@ -166,7 +166,7 @@ Called when the Banner fails to download or show a new ad.
 
 ---
 
-#### - (void)tapForTapBannerWasTapped:(TapForTapBanner *)banner;
+#### - (void)tapForTapBannerWasTapped:(TFTBanner *)banner;
 
 Called when a user taps on an ad.
 
@@ -174,7 +174,7 @@ Called when a user taps on an ad.
 
   - _banner_ - The Banner that was tapped.
   
-## TapForTapInterstitial
+## TFTInterstitial
 
 ### Overview
 
@@ -186,17 +186,17 @@ Always be sure that an interstitial is ready to be shown by either using the cal
 
 ### Methods
 
-#### + (TapForTapInterstitial *)interstitial;
+#### + (TFTInterstitial *)interstitial;
 
 Creates and starts loading an interstitial
 
 **Return Value**
 
-  - TapForTapInterstitial - A new instance of Interstitial.
+  - TFTInterstitial - A new instance of Interstitial.
 
 ---
 
-#### + (TapForTapInterstitial *)interstialWithDelegate:(id<TapForTapInterstitialDelegate>) delegate;
+#### + (TFTInterstitial *)interstialWithDelegate:(id<TFTInterstitialDelegate>) delegate;
 
 Creates and starts loading an interstitial with the provided listener.
 
@@ -206,7 +206,7 @@ Creates and starts loading an interstitial with the provided listener.
 
 **Return Value**
 
-  - _TapForTapInterstitial_ - A new instance of Interstitial.
+  - _TFTInterstitial_ - A new instance of Interstitial.
 
 ---
 
@@ -226,7 +226,7 @@ Causes a new interstitial to be loaded.
 
 `true` if an interstitial is ready to show. `false` if an interstitial ad is not ready to show.
 
-## TapForTapInterstitialDelegate
+## TFTInterstitialDelegate
 
 ### Overview
 
@@ -234,7 +234,7 @@ This interface provides callback methods into the lifecycle of the interstitial 
 
 ### Methods
 
-#### - (void)tapForTapInterstitialDidReceiv:(TapForTapInterstitial *)interstitial;
+#### - (void)tapForTapInterstitialDidReceiv:(TFTInterstitial *)interstitial;
 
 Called when a new ad is received and is ready to be shown.
 
@@ -244,7 +244,7 @@ Called when a new ad is received and is ready to be shown.
 
 ---
 
-#### - (void)tapForTapInterstitial:(TapForTapInterstitial *)interstitial didFail:(NSString *)reason;
+#### - (void)tapForTapInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
@@ -255,7 +255,7 @@ Called when an ad fails to load. An explicit call to load is required to get the
 
 ---
 
-#### - (void)tapForTapInterstitialDidShow:(TapForTapInterstitial *)interstitial;
+#### - (void)tapForTapInterstitialDidShow:(TFTInterstitial *)interstitial;
 
 The interstitial ad was shown to the user.
 
@@ -265,25 +265,25 @@ The interstitial ad was shown to the user.
 
 ---
 
-#### - (void)tapForTapInterstitialWasTapped:(TapForTapInterstitial *)interstitial;
+#### - (void)tapForTapInterstitialWasTapped:(TFTInterstitial *)interstitial;
 
 The user tapped on the interstitial ad.
 
 **Parameters**
 
-  - _interstitial_ - The TapForTapInterstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial which received a new ad.
 
 ---
 
-#### - (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitial *)interstitial;
+#### - (void)tapForTapInterstitialWasDismissed:(TFTInterstitial *)interstitial;
 
 The user dismissed the interstitial ad.
 
 **Parameters**
 
-  - _interstitial_ - The TapForTapInterstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial which received a new ad.
 
-## TapForTapAppWall
+## TFTAppWall
 
 ### Overview
 
@@ -295,17 +295,17 @@ Always be sure that an appWall is ready to be shown by either using the callback
 
 ### Methods
 
-#### + (TapForTapAppWall *)appWall;
+#### + (TFTAppWall *)appWall;
 
 Creates and starts loading an appWall
 
 **Return Value**
 
-  - TapForTapAppWall - A new instance of AppWall.
+  - TFTAppWall - A new instance of AppWall.
 
 ---
 
-#### + (TapForTapAppWall *)appWallWithDelegate:(id<TapForTapAppWallDelegate>) delegate;
+#### + (TFTAppWall *)appWallWithDelegate:(id<TFTAppWallDelegate>) delegate;
 
 Creates and starts loading an appWall with the provided listener.
 
@@ -315,7 +315,7 @@ Creates and starts loading an appWall with the provided listener.
 
 **Return Value**
 
-  - _TapForTapAppWall_ - A new instance of AppWall.
+  - _TFTAppWall_ - A new instance of AppWall.
 
 ---
 
@@ -335,7 +335,7 @@ Causes a new appWall to be loaded.
 
 `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
 
-## TapForTapAppWallDelegate
+## TFTAppWallDelegate
 
 ### Overview
 
@@ -343,7 +343,7 @@ This interface provides callback methods into the lifecycle of the appWall ad.
 
 ### Methods
 
-#### - (void)tapForTapAppWallDidReceive:(TapForTapAppWall *)appWall;
+#### - (void)tapForTapAppWallDidReceive:(TFTAppWall *)appWall;
 
 Called when a new ad is received and is ready to be shown.
 
@@ -353,7 +353,7 @@ Called when a new ad is received and is ready to be shown.
 
 ---
 
-#### - (void)tapForTapAppWall:(TapForTapAppWall *)appWall didFail:(NSString *)reason;
+#### - (void)tapForTapAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
@@ -364,7 +364,7 @@ Called when an ad fails to load. An explicit call to load is required to get the
 
 ---
 
-#### - (void)tapForTapAppWallDidShow:(TapForTapAppWall *)appWall;
+#### - (void)tapForTapAppWallDidShow:(TFTAppWall *)appWall;
 
 The appWall ad was shown to the user.
 
@@ -374,20 +374,20 @@ The appWall ad was shown to the user.
 
 ---
 
-#### - (void)tapForTapAppWallWasTapped:(TapForTapAppWall *)appWall;
+#### - (void)tapForTapAppWallWasTapped:(TFTAppWall *)appWall;
 
 The user tapped on the appWall ad.
 
 **Parameters**
 
-  - _appWall_ - The TapForTapAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall which received a new ad.
 
 ---
 
-#### - (void)tapForTapAppWallWasDismissed:(TapForTapAppWall *)appWall;
+#### - (void)tapForTapAppWallWasDismissed:(TFTAppWall *)appWall;
 
 The user dismissed the appWall ad.
 
 **Parameters**
 
-  - _appWall_ - The TapForTapAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall which received a new ad.

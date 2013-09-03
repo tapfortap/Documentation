@@ -58,6 +58,7 @@ Then click `OK` to leave the properties window.
 
 
 ## Step 2 - Add Your API Key to Your AndroidManifest.xml
+
 Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap 
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
@@ -68,6 +69,8 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 ```
 
 ## Step 3 - Add Permissions to Your AndroidManifest.xml
+
+Add the following permissions to your AndroidManifest.xml
 
 ```xml
     <uses-permission android:name="android.permission.INTERNET" />
@@ -85,10 +88,9 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 - _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network 
 requests and to help with conversion tracking.
 - _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
-performance and reduces network traffic and radio usage (which mostly in increasing battery life). 
-TapForTap is capped at 10MB of disk space.
+performance and reduces network traffic and radio usage. TapForTap is capped at 10MB of disk space.
 
-## Step 4 - Add the Activity to Your AndroidManifest.xml
+## Step 4 - Add the FullScreenAdActivity to Your AndroidManifest.xml
 
 Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
 
@@ -97,7 +99,8 @@ Add the following activity to your AndroidManifest.xml. This enables showing ful
 ```
 
 ## Step 5 - Enable Test Mode
-Test mode stops your app from consuming real impressions. This is useful while you are developing your app. 
+
+Test mode stops your app from spending real impressions. This is useful while you are developing your app. 
 Make sure to disable test mode before submitting your app to the play store. 
 
 To enable test mode add the following meta data tag to your AndroidManifest.xml. 
@@ -109,7 +112,7 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
 ```
 
 ## Step 6 - Display Ads
-Adding a banner Ad to a `RelativeLayout` 
+Adding a banner to a `RelativeLayout` 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,8 +120,8 @@ Adding a banner Ad to a `RelativeLayout`
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.tapfortap.BannerAd
-        android:id="@+id/banner_ad"
+    <com.tapfortap.Banner
+        android:id="@+id/banner"
         android:layout_width="320dip"
         android:layout_height="50dip"
         android:layout_alignParentTop="true"
