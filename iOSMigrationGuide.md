@@ -12,18 +12,60 @@ type = String
 value = "YOUR_API_KEY"
 ```
 
-## BannerAd
+## Class Name Changes
 
-The TapForTapAdView class has been change to TapForTapBannerAd to better reflect what the class is. A BannerAd can still be
-declared in a layout file using `com.tapfortap.BannerAd'. 
+- TapForTap -> TFTTapForTap
+- TapForTapAdView -> TFTBanner
+- TapForTapInterstitial -> TFTInterstitial
+- TaForTapAppWall -> TFTAppWall
 
-The name of the delegate has also been changed to TapForTapBannerAdDelegate, and the delegate methods are now:
+## TFTBanner
 
-  * - (void)tapForTapBannerAdDidReceiveAd:(TapForTapBannerAd *)bannerAd;
-  * - (void)tapForTapBannerAd:(TapForTapBannerAd *)bannerAd didFail:(NSString *)reason;
-  * - (void)tapForTapBannerAdWasTapped:(TapForTapBannerAd *)bannerAd;
+Two new factory methods were introduced. These will create a new intance of TFTBanner and start showing ads.
+
+```obj-c
+- (TFTBanner *) banner;
+- (TFTBanner *) bannerWithDelegate(id<TFTBannerDelegate>)delegate;
+```
+
+The name of the delegate has also been changed to TFTBannerDelegate, and the delegate methods are now:
+
+```obj-c
+- (void)tftBannerDidReceiveAd:(TFTBanner *)banner;
+- (void)tftBanner:(tftBanner *)banner didFail:(NSString *)reason;
+- (void)tftBannerWasTapped:(TFTBanner *)banner;
+``` 
 
 ## Interstitial/App Wall (ie FullScreenAds)
 
-FullScreen ads are no longer interacted with using static methods. You must get a new full screen ad instance by
-using their respective factory methods.
+Interstitials and App Walls share the same interface. The only difference beings the names.
+
+FullScreen ads are no longer interacted with using class methods. You must get a new full screen ad instance by
+using one of the respective factory methods.
+
+```objc
+- (TFTInterstitial *) interstitial
+- (TFTInterstitial *) interstitialWithDelegate:(id<TFTInterstitialDelegate>)delegate;
+
+- (TFTInterstitial *) appWall
+- (TFTInterstitial *) appWallWithDelegate:(id<TFTAppWallDelegate>)delegate;
+```
+
+The delegates have also been update and are now called TFTInterstitialDelegate and TFTAppWallDelegate. They have the
+same callbacks as in 2.x with more consistent naming and an wasTapped callback was added.
+
+```obj-c
+- (void)tftInterstitialDidReceiveAd:(TFTInterstitial *)interstitial;
+- (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
+- (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial;
+- (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial;
+- (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial;
+
+- (void)tftAppWallDidReceiveAd:(TFTAppWall *)appWall;
+- (void)tftAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason;
+- (void)tftAppWallDidShow:(TFTAppWall *)appWall;
+- (void)tftAppWallWasTapped:(TFTAppWall *)appWall;
+- (void)tftAppWallWasDismissed:(TFTAppWall *)appWall;
+```
+
+
