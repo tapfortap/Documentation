@@ -90,7 +90,7 @@ This class is responsible for showing banner ads.
 
 ### Special Considerations
 
-Do not use any of the public constructors. They are only avaible in order to allow the View to be decalred inside layout files. Only use the probided constructor methods when instantiating a bannerAd programatically.
+Do not use any of the public constructors. They are only avaible in order to allow the View to be decalred inside layout files. Only use the probided constructor methods when instantiating a banner programatically.
 
 The Banner will stop downloading and showing new ads if the view is not visible or the screen is off.
 
@@ -110,26 +110,26 @@ Creates a new Banner and begins downloading and showing ads.
 
 ---
 
-#### public static Banner createAndShow(Context context, BannerListener bannerAdListener)
+#### public static Banner createAndShow(Context context, BannerListener bannerListener)
 
 Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
   - _context_ - An Android context
-  - _bannerAdListener_ - A listener
+  - _bannerListener_ - A listener
 
 **Return Value**
 
   - _Banner_ - a new instance of a Banner
 
-#### public void setBannerListener(BannerListener bannerAdListener)
+#### public void setBannerListener(BannerListener bannerListener)
 
-Sets a listener on the Banners. This should only be used if the Banner is decalared in a layout it is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory methods [createAndShow(context, bannerAdListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerAdListener)  
+Sets a listener on the Banners. This should only be used if the Banner is decalared in a layout it is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory methods [createAndShow(context, bannerListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerListener)  
 
 **Parameters**
 
-  - _bannerAdListener_ - An listener
+  - _bannerListener_ - An listener
 
 ---
 
@@ -163,35 +163,35 @@ This interface provides callback methods into the current status of the Banner.
 
 ### Methods
 
-#### public void bannerAdOnReceive(Banner bannerAd)
+#### public void bannerOnReceive(Banner banner)
 
 Called when the Banners receives a new ad.
 
 **Parameters**
 
-  - _bannerAd_ - The Banner that received a new ad.
+  - _banner_ - The Banner that received a new ad.
 
 ---
 
-#### public void bannerAdOnFail(Banner bannerAd, String reason, Throwable throwable)
+#### public void bannerOnFail(Banner banner, String reason, Throwable throwable)
 
 Called when the Banner fails to download or show a new ad.
 
 **Parameters**
 
-  - _bannerAd_ - The Banner that failed.
-  - _reason_ - A summary of the reason for the failure.
+  - _banner_ - The Banner that failed.
+  - _reason_ - The reason for the error.
   - _throwable_ - The exception that caused the failure.
 
 ---
 
-#### public void bannerAdOnTap(Banner bannerAd)
+#### public void bannerOnTap(Banner banner)
 
 Called when a user taps on an ad.
 
 **Parameters**
 
-  - _bannerAd_ - The Banner that was tapped.
+  - _banner_ - The Banner that was tapped.
   
 ## Interstitial
 
@@ -219,7 +219,7 @@ Creates and starts loading an interstitial
 
 ---
 
-#### public static Interstitial create(Context context, final InterstitialListener interstitialAdListener)
+#### public static Interstitial create(Context context, final InterstitialListener interstitialListener)
 
 Creates and starts loading an interstitial with the provided listener.
 
@@ -268,7 +268,7 @@ This interface provides callback methods into the lifecycle of the interstitial 
 
 ### Methods
 
-#### public void interstitialAdOnReceive(Interstitial ad)
+#### public void interstitialOnReceive(Interstitial ad)
 
 Called when a new ad is received and is ready to be shown.
 
@@ -278,7 +278,7 @@ Called when a new ad is received and is ready to be shown.
 
 ---
 
-#### public void interstitialAdOnFail(Interstitial interstitial, String reason, Throwable throwable)
+#### public void interstitialOnFail(Interstitial interstitial, String reason, Throwable throwable)
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
@@ -288,7 +288,7 @@ Called when an ad fails to load. An explicit call to load is required to get the
 
 ---
 
-#### public void interstitialAdOnShow(Interstitial interstitial)
+#### public void interstitialOnShow(Interstitial interstitial)
 
 The interstitial ad was shown to the user.
 
@@ -298,7 +298,7 @@ The interstitial ad was shown to the user.
 
 ---
 
-#### public void interstitialAdOnTap(Interstitial interstitial)
+#### public void interstitialOnTap(Interstitial interstitial)
 
 The user tapped on the interstitial ad.
 
@@ -308,7 +308,7 @@ The user tapped on the interstitial ad.
 
 ---
 
-#### public void interstitialAdOnDismiss(Interstitial interstitial)
+#### public void interstitialOnDismiss(Interstitial interstitial)
 
 The user dismissed the interstitial ad.
 
