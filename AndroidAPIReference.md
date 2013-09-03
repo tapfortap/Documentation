@@ -236,7 +236,13 @@ Creates and starts loading an interstitial with the provided listener.
 
 #### public void show()
 
-Causes an interstitial ad to be shown, a new interstitial to be loaded. This will launch a new [FullScreenAdActivity]()
+Causes an interstitial ad to be shown. This will launch a new [FullScreenAdActivity]()
+
+---
+
+#### public void showAndLoad()
+
+Causes an interstitial ad to be shown and a new one will start to load. This will launch a new [FullScreenAdActivity]()
 
 ---
 
@@ -349,6 +355,12 @@ Creates and starts loading an appWall with the provided listener.
 **Return Value**
 
   - _AppWall_ - A new instance of AppWall.
+
+---
+
+#### public void show()
+
+Causes an appWall ad to be shown This will launch a new [FullScreenAdActivity]()
 
 ---
 
