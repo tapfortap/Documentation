@@ -82,19 +82,19 @@ Sets the user's location to be passed along when requesting an ad. This helps Ta
 
 Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
 
-## TapForTapBannerAd
+## TapForTapBanner
 
 ### Overview
 
 This class is responsible for showing banner ads.
 
-The BannerAd will stop downloading and showing new ads if the view is not visible or the screen is off.
+The Banner will stop downloading and showing new ads if the view is not visible or the screen is off.
 
 ### Methods
 
-#### + (TapForTapBannerAd *)createAndShowAdWithFrame:(CGRect)frame;
+#### + (TapForTapBanner *)bannerWithFrame:(CGRect)frame;
 
-Creates a new BannerAd and begins downloading and showing ads.
+Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
@@ -102,13 +102,13 @@ Creates a new BannerAd and begins downloading and showing ads.
 
 **Return Value**
 
-  - _TapForTapBannerAd_ - a new instance of a TapForTapBannerAd
+  - _TapForTapBanner_ - a new instance of a TapForTapBanner
 
 ---
 
-#### + (TapForTapBannerAd *)createAndShowAdWithFrame:(CGRect)frame delegate:(id<TapForTapBannerAdDelegate>)delegate;
+#### + (TapForTapBanner *)bannerWithFrame:(CGRect)frame delegate:(id<TapForTapBannerDelegate>)delegate;
 
-Creates a new BannerAd and begins downloading and showing ads.
+Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
@@ -117,7 +117,7 @@ Creates a new BannerAd and begins downloading and showing ads.
 
 **Return Value**
 
-  - _TapForTapBannerAd_ - a new instance of a BannerAd
+  - _TapForTapBanner_ - a new instance of a Banner
 
 #### - (void)startShowingAds
 
@@ -137,44 +137,44 @@ If set to YES, causes a new ad to be downloaded and shown aproximately every 60 
 
 ---
 
-## TapForTapBannerAdDelegate
+## TapForTapBannerDelegate
 
 ### Overview
 
-This interface provides callback methods into the current status of the TapForTapBannerAd.
+This interface provides callback methods into the current status of the TapForTapBanner.
 
 ### Methods
 
-#### - (void)tapForTapBannerAdDidReceiveAd:(TapForTapBannerAd *)bannerAd;
+#### - (void)tapForTapBannerDidReceive:(TapForTapBanner *)banne;
 
-Called when the BannerAd receives a new ad.
+Called when the Banner receives a new ad.
 
 **Parameters**
 
-  - _bannerAd_ - The BannerAd that received a new ad.
+  - _banner_ - The Banner that received a new ad.
 
 ---
 
-#### - (void)tapForTapBannerAd:(TapForTapBannerAd *)bannerAd didFail:(NSString *)reason;
+#### - (void)tapForTapBanner:(TapForTapBanner *)banner didFail:(NSString *)reason;
 
-Called when the BannerAd fails to download or show a new ad.
+Called when the Banner fails to download or show a new ad.
 
 **Parameters**
 
-  - _bannerAd_ - The BannerAd that failed.
+  - _banner_ - The Banner that failed.
   - reason_ - A summary of the reason for the failure.
 
 ---
 
-#### - (void)tapForTapBannerAdWasTapped:(TapForTapBannerAd *)bannerAd;
+#### - (void)tapForTapBannerWasTapped:(TapForTapBanner *)banner;
 
 Called when a user taps on an ad.
 
 **Parameters**
 
-  - _bannerAd_ - The BannerAd that was tapped.
+  - _banner_ - The Banner that was tapped.
   
-## TapForTapInterstitialAd
+## TapForTapInterstitial
 
 ### Overview
 
@@ -186,17 +186,17 @@ Always be sure that an interstitial is ready to be shown by either using the cal
 
 ### Methods
 
-#### + (TapForTapInterstitialAd *)createAndLoad;
+#### + (TapForTapInterstitial *)interstitial;
 
 Creates and starts loading an interstitial
 
 **Return Value**
 
-  - TapForTapInterstitialAd - A new instance of InterstitialAd.
+  - TapForTapInterstitial - A new instance of Interstitial.
 
 ---
 
-#### + (TapForTapInterstitialAd *)createAndLoadWithDelegate:(id<TapForTapInterstitialAdDelegate>) delegate;
+#### + (TapForTapInterstitial *)interstialWithDelegate:(id<TapForTapInterstitialDelegate>) delegate;
 
 Creates and starts loading an interstitial with the provided listener.
 
@@ -206,7 +206,7 @@ Creates and starts loading an interstitial with the provided listener.
 
 **Return Value**
 
-  - _TapForTapInterstitialAd_ - A new instance of InterstitialAd.
+  - _TapForTapInterstitial_ - A new instance of Interstitial.
 
 ---
 
@@ -226,7 +226,7 @@ Causes a new interstitial to be loaded.
 
 `true` if an interstitial is ready to show. `false` if an interstitial ad is not ready to show.
 
-## TapForTapInterstitialAdDelegate
+## TapForTapInterstitialDelegate
 
 ### Overview
 
@@ -234,56 +234,56 @@ This interface provides callback methods into the lifecycle of the interstitial 
 
 ### Methods
 
-#### - (void)tapForTapInterstitialDidReceiveAd:(TapForTapInterstitialAd *)ad;
+#### - (void)tapForTapInterstitialDidReceiv:(TapForTapInterstitial *)interstitial;
 
 Called when a new ad is received and is ready to be shown.
 
 **Parameters**
 
-  - _ad_ - The InterstitialAd which received a new ad.
+  - _interstitial_ - The Interstitial which received a new ad.
 
 ---
 
-#### - (void)tapForTapInterstitial:(TapForTapInterstitialAd *)ad didFail:(NSString *)reason;
+#### - (void)tapForTapInterstitial:(TapForTapInterstitial *)interstitial didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _ad_ - The InterstitialAd which received a new ad.
+  - _interstitial_ - The Interstitial which received a new ad.
   - _reason_ - The reason why the ad failed.
 
 ---
 
-#### - (void)tapForTapInterstitialDidShow:(TapForTapInterstitialAd *)ad;
+#### - (void)tapForTapInterstitialDidShow:(TapForTapInterstitial *)interstitial;
 
 The interstitial ad was shown to the user.
 
 **Parameters**
 
-  - _ad_ - The TapForTApInterstitialAd which received a new ad.
+  - _interstitial_ - The TapForTApInterstitial which received a new ad.
 
 ---
 
-#### - (void)tapForTapInterstitialWasTapped:(TapForTapInterstitialAd *)ad;
+#### - (void)tapForTapInterstitialWasTapped:(TapForTapInterstitial *)interstitial;
 
 The user tapped on the interstitial ad.
 
 **Parameters**
 
-  - _ad_ - The TapForTapInterstitialAd which received a new ad.
+  - _interstitial_ - The TapForTapInterstitial which received a new ad.
 
 ---
 
-#### - (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitialAd *)ad;
+#### - (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitial *)interstitial;
 
 The user dismissed the interstitial ad.
 
 **Parameters**
 
-  - _ad_ - The TapForTapInterstitialAd which received a new ad.
+  - _interstitial_ - The TapForTapInterstitial which received a new ad.
 
-## TapForTapAppWallAd
+## TapForTapAppWall
 
 ### Overview
 
@@ -295,17 +295,17 @@ Always be sure that an appWall is ready to be shown by either using the callback
 
 ### Methods
 
-#### + (TapForTapAppWallAd *)createAndLoad;
+#### + (TapForTapAppWall *)appWall;
 
 Creates and starts loading an appWall
 
 **Return Value**
 
-  - TapForTapAppWallAd - A new instance of AppWallAd.
+  - TapForTapAppWall - A new instance of AppWall.
 
 ---
 
-#### + (TapForTapAppWallAd *)createAndLoadWithDelegate:(id<TapForTapAppWallAdDelegate>) delegate;
+#### + (TapForTapAppWall *)appWallWithDelegate:(id<TapForTapAppWallDelegate>) delegate;
 
 Creates and starts loading an appWall with the provided listener.
 
@@ -315,7 +315,7 @@ Creates and starts loading an appWall with the provided listener.
 
 **Return Value**
 
-  - _TapForTapAppWallAd_ - A new instance of AppWallAd.
+  - _TapForTapAppWall_ - A new instance of AppWall.
 
 ---
 
@@ -335,7 +335,7 @@ Causes a new appWall to be loaded.
 
 `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
 
-## TapForTapAppWallAdDelegate
+## TapForTapAppWallDelegate
 
 ### Overview
 
@@ -343,51 +343,51 @@ This interface provides callback methods into the lifecycle of the appWall ad.
 
 ### Methods
 
-#### - (void)tapForTapAppWallDidReceiveAd:(TapForTapAppWallAd *)ad;
+#### - (void)tapForTapAppWallDidReceive:(TapForTapAppWall *)appWall;
 
 Called when a new ad is received and is ready to be shown.
 
 **Parameters**
 
-  - _ad_ - The AppWallAd which received a new ad.
+  - _appWall_ - The AppWall which received a new ad.
 
 ---
 
-#### - (void)tapForTapAppWall:(TapForTapAppWallAd *)ad didFail:(NSString *)reason;
+#### - (void)tapForTapAppWall:(TapForTapAppWall *)appWall didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _ad_ - The AppWallAd which received a new ad.
+  - _appWall_ - The AppWall which received a new ad.
   - _reason_ - The reason why the ad failed.
 
 ---
 
-#### - (void)tapForTapAppWallDidShow:(TapForTapAppWallAd *)ad;
+#### - (void)tapForTapAppWallDidShow:(TapForTapAppWall *)appWall;
 
 The appWall ad was shown to the user.
 
 **Parameters**
 
-  - _ad_ - The TapForTApAppWallAd which received a new ad.
+  - _appWall_ - The TapForTApAppWall which received a new ad.
 
 ---
 
-#### - (void)tapForTapAppWallWasTapped:(TapForTapAppWallAd *)ad;
+#### - (void)tapForTapAppWallWasTapped:(TapForTapAppWall *)appWall;
 
 The user tapped on the appWall ad.
 
 **Parameters**
 
-  - _ad_ - The TapForTapAppWallAd which received a new ad.
+  - _appWall_ - The TapForTapAppWall which received a new ad.
 
 ---
 
-#### - (void)tapForTapAppWallWasDismissed:(TapForTapAppWallAd *)ad;
+#### - (void)tapForTapAppWallWasDismissed:(TapForTapAppWall *)appWall;
 
 The user dismissed the appWall ad.
 
 **Parameters**
 
-  - _ad_ - The TapForTapAppWallAd which received a new ad.
+  - _appWall_ - The TapForTapAppWall which received a new ad.
