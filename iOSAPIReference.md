@@ -6,12 +6,13 @@
 
 This is the SDK's main class. It provides methods to:
 
-  - initialize Tap For Tap so ads can begin to be served
-  - set meta data about users to better ads can be served
+  - Initialize Tap For Tap so ads can begin to be served
+  - Set meta data about users to better ads can be served
 
 ### Special Considerations
 
-If the Tap for Tap API key is set in the `info.plist` there is no need to call any of the initialize methods as Tap for Tap will initialize itself.
+If the Tap for Tap API key is set in the `info.plist` there is no need to call any of the initialize methods as
+Tap for Tap will initialize itself.
 
 ### Methods
 
@@ -27,18 +28,21 @@ Initializes Tap for Tap with the provided API key.
 
 ### + (void)initializeWithAPIKey:(NSString *)apiKey completion:(TFTInitializationRequestHandler)handler;
 
-Initializes Tap for Tap with the provided API key and listener.
+Initializes Tap for Tap with the provided API key and block.
 
 **Parameters**
 
   - _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
-  - handler - A block for handling the callback.
+  - _handler_ - A block for handling the result of the initialization.
 
 ---
 
 #### + (void)enableTestMode
 
-Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app. This is useful for when you are developing your app and want to test with the SDK integrated without wasting impressions and clicks for your app. **Don't forget** to disable test mode before you release your app to the play store.
+Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app. 
+This is useful for when you are developing your app and want to test with the SDK integrated 
+without wasting impressions and clicks for your app. **Don't forget** to disable test mode before 
+you release your app to the App Store.
 
 ---
 
@@ -50,7 +54,8 @@ Disables test mode. See enableTestMode for more details.
 
 #### + (void)disableTapForTap
 
-Stops Tap for Tap from being able to download and show ads. This can be useful if you offer a paid version of your app that removes ads.
+Stops Tap for Tap from being able to download and show ads. This can be useful if you offer
+a paid version of your app that removes ads.
 
 ---
 
@@ -62,33 +67,37 @@ Allows Tap for Tap to download and show ads. See disableTapForTap for more detai
 
 #### + (void)setYearOfBirth:(NSUInteger)yearOfBirth;
 
-Sets the user's year of birth to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's year of birth to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### + (void)setGender:(TFTGender)gender;
 
-Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### + (void)setLocation:(CLLocation *)location;
 
-Sets the user's location to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's location to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### + (void)setUserAccountId:(NSString *)userAccountId;
 
-Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer
+can assign to your users. This helps Tap for Tap to provide the best ad for this user.
 
 ## TFTBanner
 
 ### Overview
 
-This class is responsible for showing banner ads.
+This class is responsible for showing banners.
 
-The Banner will stop downloading and showing new ads if the view is not visible or the screen is off.
+The banner will stop downloading and showing new ads if the view is not visible or the screen is off.
 
 ### Methods
 
@@ -98,26 +107,26 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
-  - frame - The frame for the view
+  - _frame_ - The frame for the view.
 
 **Return Value**
 
-  - _TFTBanner_ - a new instance of a TFTBanner
+  - _TFTBanner_ - A new instance of a TFTBanner.
 
 ---
 
 #### + (TFTBanner *)bannerWithFrame:(CGRect)frame delegate:(id<TFTBannerDelegate>)delegate;
 
-Creates a new Banner and begins downloading and showing ads.
+Creates a new Banner and begins downloading and showing ads with the provided delegate.
 
 **Parameters**
 
-  - frame - The frame for the view
-  - delegate - A delegate to handle the callbacks
+  - _frame_ - The frame for the view.
+  - _delegate_ - A delegate to handle the callbacks.
 
 **Return Value**
 
-  - _TFTBanner_ - a new instance of a Banner
+  - _TFTBanner_ - A new instance of a Banner.
 
 #### - (void)startShowingAds
 
@@ -133,7 +142,7 @@ Causes ads to stop being downloaded and shown.
 
 #### @propert autoRollover
 
-If set to YES, causes a new ad to be downloaded and shown aproximately every 60 seconds. If set to NO only a call to startShowinAds will cause a new ad to be downloaded and show.
+If set to YES, a new ad to be downloaded and shown aproximately every 60 seconds. If set to NO, only a call to startShowinAds will cause a new ad to be downloaded and show.
 
 ---
 
@@ -141,48 +150,50 @@ If set to YES, causes a new ad to be downloaded and shown aproximately every 60 
 
 ### Overview
 
-This interface provides callback methods into the current status of the TFTBanner.
+This interface provides delegate methods that are called during the lifecycle of the banner.
 
 ### Methods
 
-#### - (void)tapForTapBannerDidReceive:(TFTBanner *)banne;
+#### - (void)tftBannerDidReceiveAd:(TFTBanner *)banne;
 
-Called when the Banner receives a new ad.
+Called when the banner receives a new ad.
 
 **Parameters**
 
-  - _banner_ - The Banner that received a new ad.
+  - _banner_ - The TFTBanner that received a new ad.
 
 ---
 
-#### - (void)tapForTapBanner:(TFTBanner *)banner didFail:(NSString *)reason;
+#### - (void)tftBanner:(TFTBanner *)banner didFail:(NSString *)reason;
 
-Called when the Banner fails to download or show a new ad.
+Called when the banner fails to download or show a new ad.
 
 **Parameters**
 
-  - _banner_ - The Banner that failed.
-  - reason_ - A summary of the reason for the failure.
+  - _banner_ - The TFTBanner that failed.
+  - _reason_ - The reason for the failure.
 
 ---
 
-#### - (void)tapForTapBannerWasTapped:(TFTBanner *)banner;
+#### - (void)tftBannerWasTapped:(TFTBanner *)banner;
 
-Called when a user taps on an ad.
+Called when a user taps on the banner.
 
 **Parameters**
 
-  - _banner_ - The Banner that was tapped.
+  - _banner_ - The TFTBanner that was tapped.
   
 ## TFTInterstitial
 
 ### Overview
 
-This class is responsible for downloading and showing interstitial ads.
+This class is responsible for downloading and showing interstitials.
 
 ### Special Considerations
 
-Always be sure that an interstitial is ready to be shown by either using the callbacks or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times due to network connectivity.
+Always be sure that an interstitial is ready to be shown by either using the delegate methods
+or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or 
+undersireable times due to network connectivity.
 
 ### Methods
 
@@ -192,13 +203,13 @@ Creates and starts loading an interstitial
 
 **Return Value**
 
-  - TFTInterstitial - A new instance of Interstitial.
+  - _TFTInterstitial_ - A new instance of Interstitial.
 
 ---
 
 #### + (TFTInterstitial *)interstialWithDelegate:(id<TFTInterstitialDelegate>) delegate;
 
-Creates and starts loading an interstitial with the provided listener.
+Creates and instance of TFTInterstitial and starts loading an interstitial with the provided delegate.
 
 **Parameters**
 
@@ -210,9 +221,16 @@ Creates and starts loading an interstitial with the provided listener.
 
 ---
 
-#### - (void)show
+#### - (void)showWithViewController:(UIViewController *)viewController
 
-Causes an interstitial ad to be shown and a new interstitial to be loaded. This will push a new view controller.
+Causes an interstitial ad to be shown. This will push a new view controller ontop of the current one to show the ad.
+
+---
+
+#### - (void)showAndLoadWithViewController:(UIViewController *)viewController
+
+Causes an interstitial to be shown and a new interstitial to be loaded. This will push a view controller 
+new ontop of the current one to show the Ad.
 
 ---
 
@@ -224,19 +242,19 @@ Causes a new interstitial to be loaded.
 
 #### BOOL readyToShow
 
-`true` if an interstitial is ready to show. `false` if an interstitial ad is not ready to show.
+`true` if an interstitial is ready to show. `false` if an interstitial is not ready to show.
 
 ## TFTInterstitialDelegate
 
 ### Overview
 
-This interface provides callback methods into the lifecycle of the interstitial ad.
+This protocol provides delegate methods that are called during the lifecycle of the interstitial.
 
 ### Methods
 
-#### - (void)tapForTapInterstitialDidReceiv:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialDidReceive:(TFTInterstitial *)interstitial;
 
-Called when a new ad is received and is ready to be shown.
+Called when a new interstitial is received and is ready to be shown.
 
 **Parameters**
 
@@ -244,7 +262,7 @@ Called when a new ad is received and is ready to be shown.
 
 ---
 
-#### - (void)tapForTapInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
+#### - (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
 
 Called when an ad fails to load. An explicit call to load is required to get the next ad.
 
@@ -255,19 +273,9 @@ Called when an ad fails to load. An explicit call to load is required to get the
 
 ---
 
-#### - (void)tapForTapInterstitialDidShow:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial;
 
-The interstitial ad was shown to the user.
-
-**Parameters**
-
-  - _interstitial_ - The TapForTApInterstitial which received a new ad.
-
----
-
-#### - (void)tapForTapInterstitialWasTapped:(TFTInterstitial *)interstitial;
-
-The user tapped on the interstitial ad.
+Called when the interstitial ad was sucessfully shown to the user.
 
 **Parameters**
 
@@ -275,9 +283,19 @@ The user tapped on the interstitial ad.
 
 ---
 
-#### - (void)tapForTapInterstitialWasDismissed:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial;
 
-The user dismissed the interstitial ad.
+Called when the user taps the interstitial
+
+**Parameters**
+
+  - _interstitial_ - The TFTInterstitial which received a new ad.
+
+---
+
+#### - (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial;
+
+Called when the user dismissed the interstitial
 
 **Parameters**
 
@@ -287,27 +305,29 @@ The user dismissed the interstitial ad.
 
 ### Overview
 
-This class is responsible for downloading and showing appWall ads.
+This class is responsible for downloading and showing app walls.
 
 ### Special Considerations
 
-Always be sure that an appWall is ready to be shown by either using the callbacks or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times due to network connectivity.
+Always be sure that an app wall is ready to be shown by either using the callbacks or by using the 
+isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable 
+times due to network latency.
 
 ### Methods
 
 #### + (TFTAppWall *)appWall;
 
-Creates and starts loading an appWall
+Creates and starts loading an app wall
 
 **Return Value**
 
-  - TFTAppWall - A new instance of AppWall.
+  - _TFTAppWall_ - A new instance of TFTAppWall.
 
 ---
 
 #### + (TFTAppWall *)appWallWithDelegate:(id<TFTAppWallDelegate>) delegate;
 
-Creates and starts loading an appWall with the provided listener.
+Creates a new instance of TFTAppWall and starts loading an app wall using the provided delgate.
 
 **Parameters**
 
@@ -315,68 +335,44 @@ Creates and starts loading an appWall with the provided listener.
 
 **Return Value**
 
-  - _TFTAppWall_ - A new instance of AppWall.
+  - _TFTAppWall_ - A new instance of TFTAppWall.
 
 ---
 
-#### - (void)show
+#### - (void)showWithViewController:(UIViewController *)viewController
 
-Causes an appWall ad to be shown and a new appWall to be loaded. This will push a new view controller.
+Causes an app wall to be shown. This will push a new view controller ontop of the current one to show the ad.
+
+---
+
+#### - (void)showAndLoadWithViewController:(UIViewController *)viewController
+
+Causes an app wall to be shown and a new app wall to be loaded. This will push a view controller 
+new ontop of the current one to show the Ad.
 
 ---
 
 #### - (void)load
 
-Causes a new appWall to be loaded.
+Causes a new app wall to be loaded.
 
 ---
 
 #### BOOL readyToShow
 
-`true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
+`true` if an app wall is ready to show. `false` if an app wall ad is not ready to show.
 
 ## TFTAppWallDelegate
 
 ### Overview
 
-This interface provides callback methods into the lifecycle of the appWall ad.
+This protocol provides delegate methods that are called during the lifecycle of the app wall.
 
 ### Methods
 
-#### - (void)tapForTapAppWallDidReceive:(TFTAppWall *)appWall;
+#### - (void)tftAppWallDidReceive:(TFTAppWall *)appWall;
 
 Called when a new ad is received and is ready to be shown.
-
-**Parameters**
-
-  - _appWall_ - The AppWall which received a new ad.
-
----
-
-#### - (void)tapForTapAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason;
-
-Called when an ad fails to load. An explicit call to load is required to get the next ad.
-
-**Parameters**
-
-  - _appWall_ - The AppWall which received a new ad.
-  - _reason_ - The reason why the ad failed.
-
----
-
-#### - (void)tapForTapAppWallDidShow:(TFTAppWall *)appWall;
-
-The appWall ad was shown to the user.
-
-**Parameters**
-
-  - _appWall_ - The TapForTApAppWall which received a new ad.
-
----
-
-#### - (void)tapForTapAppWallWasTapped:(TFTAppWall *)appWall;
-
-The user tapped on the appWall ad.
 
 **Parameters**
 
@@ -384,9 +380,40 @@ The user tapped on the appWall ad.
 
 ---
 
-#### - (void)tapForTapAppWallWasDismissed:(TFTAppWall *)appWall;
+#### - (void)tftAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason;
 
-The user dismissed the appWall ad.
+Called when an ad fails to load. An explicit call to load is required to get the next ad.
+
+**Parameters**
+
+  - _appWall_ - The TFTAppWall which received a new ad.
+  - _reason_ - The reason why the ad failed.
+
+---
+
+#### - (void)tftAppWallDidShow:(TFTAppWall *)appWall;
+
+Called when the app wall is sucessfully shown to the user
+
+**Parameters**
+
+  - _appWall_ - The TFTAppWall which received a new ad.
+
+---
+
+#### - (void)tftAppWallWasTapped:(TFTAppWall *)appWall;
+
+Called when the user taps on an ad in the app wall.
+
+**Parameters**
+
+  - _appWall_ - The TFTAppWall which received a new ad.
+
+---
+
+#### - (void)tftAppWallWasDismissed:(TFTAppWall *)appWall;
+
+Called when the user dismissed the app wall.
 
 **Parameters**
 
