@@ -39,7 +39,10 @@ Initializes Tap for Tap with the provided API key and listener.
 
 #### public static void enableTestMode()
 
-Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app. This is useful for when you are developing your app and want to test with the SDK integrated without wasting impressions and clicks for your app. **Don't forget** to disable test mode before you release your app to the play store.
+Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app. 
+This is useful for when you are developing your app and want to test with the SDK integrated 
+without wasting impressions and clicks for your app. **Don't forget** to disable test mode before 
+you release your app to Google Play.
 
 ---
 
@@ -51,7 +54,8 @@ Disables test mode. See [enableTestMode](#public-static-void-enabletestmode) for
 
 #### public static void disableTapForTap()
 
-Stops Tap for Tap from being able to download and show ads. This can be useful if you offer a paid version of your app that removes ads.
+Stops Tap for Tap from being able to download and show ads. This can be useful if you offer a 
+paid version of your app that removes ads.
 
 ---
 
@@ -63,57 +67,63 @@ Allows Tap for Tap to download and show ads. See [disableTapForTap](#public-stat
 
 #### public static void setYearOfBirth(int yearOfBirth)
 
-Sets the user's year of birth to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's year of birth to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### public static void setGender(TapForTapGender gender)
 
-Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### public static void setLocation(android.location.Location location)
 
-Sets the user's location to be passed along when requesting an ad. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's location to be passed along when requesting an ad. This helps Tap for Tap to provide
+the best ad for this user.
 
 ---
 
 #### public static void setUserAccountId(String userAccountId)
 
-Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
+Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the 
+developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
 
 ## Banner
 
 ### Overview
 
-This class is responsible for showing banner ads.
+This class is responsible for showing banners.
 
 ### Special Considerations
 
-Do not use any of the public constructors. They are only avaible in order to allow the View to be decalred inside layout files. Only use the probided constructor methods when instantiating a banner programatically.
+Do not use any of the public constructors as doing so may cause crashes. They are only avaible in order to allow
+the banners to be decalred inside layout files. Only use the provided constructor methods when instantiating 
+a banner programatically.
 
-The Banner will stop downloading and showing new ads if the view is not visible or the screen is off.
+The banner will stop downloading and showing new ads if the view is not visible or the screen is off.
 
 ### Methods
 
-#### public static Banner createAndShow(Context context)
+#### public static Banner create(Context context)
 
-Creates a new Banner and begins downloading and showing ads.
+Creates a new banner and begins downloading and showing ads.
 
 **Parameters**
 
-  - _context_ - An Android context (application context is acceptable).
+  - _context_ - An Android context.
 
 **Return Value**
 
-  - _Banner_ - a new instance of a Banner.
+  - _Banner_ - A new instance of a Banner.
 
 ---
 
-#### public static Banner createAndShow(Context context, BannerListener bannerListener)
+#### public static Banner create(Context context, BannerListener bannerListener)
 
-Creates a new Banner and begins downloading and showing ads.
+Creates a new banner and begins downloading and showing ads with the provided listener.
 
 **Parameters**
 
@@ -122,15 +132,17 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Return Value**
 
-  - _Banner_ - a new instance of a Banner
+  - _Banner_ - A new instance of a Banner
 
 #### public void setBannerListener(BannerListener bannerListener)
 
-Sets a listener on the Banners. This should only be used if the Banner is decalared in a layout it is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory methods [createAndShow(context, bannerListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerListener)  
+Sets a listener on the banner. This should only be used if the banner is decalared in a layout 
+and is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory 
+method [createAndShow(context, bannerListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerListener)  
 
 **Parameters**
 
-  - _bannerListener_ - An listener.
+  - _bannerListener_ - A listener.
 
 ---
 
@@ -160,13 +172,13 @@ Stops a new ad from being downloaded and show approximately every 60 seconds. On
 
 ### Overview
 
-This interface provides callback methods into the current status of the Banner.
+This interface provides callback methods into the current lifecykce of the banner.
 
 ### Methods
 
 #### public void bannerOnReceive(Banner banner)
 
-Called when the Banners receives a new ad.
+Called when the banner receives a new ad.
 
 **Parameters**
 
@@ -176,19 +188,19 @@ Called when the Banners receives a new ad.
 
 #### public void bannerOnFail(Banner banner, String reason, Throwable throwable)
 
-Called when the Banner fails to download or show a new ad.
+Called when the banner fails to download or show a new ad.
 
 **Parameters**
 
   - _banner_ - The Banner that failed.
-  - _reason_ - The reason for the error.
+  - _reason_ - The reason for the failure.
   - _throwable_ - The exception that caused the failure.
 
 ---
 
 #### public void bannerOnTap(Banner banner)
 
-Called when a user taps on an ad.
+Called when a user taps on a banner.
 
 **Parameters**
 
@@ -198,17 +210,19 @@ Called when a user taps on an ad.
 
 ### Overview
 
-This class is responsible for downloading and showing interstitial ads.
+This class is responsible for downloading and showing interstitials.
 
 ### Special Considerations
 
-Always be sure that an interstitial is ready to be shown by either using the callbacks or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times due to network connectivity.
+Always be sure that an interstitial is ready to be shown by either using the listeners or by using the
+isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times 
+due to network connectivity.
 
 ### Methods
 
 #### public static Interstitial create(Context context)
 
-Creates and starts loading an interstitial
+Creates and starts loading an interstitial.
 
 **Parameters**
 
@@ -269,70 +283,72 @@ This interface provides callback methods into the lifecycle of the interstitial 
 
 ### Methods
 
-#### public void interstitialOnReceive(Interstitial ad)
+#### public void interstitialOnReceive(Interstitial interstitial)
 
 Called when a new ad is received and is ready to be shown.
 
 **Parameters**
 
-  - _ad_ - The Interstitial which received a new ad.
+  - _interstitial_ - The Interstitial which received a new ad.
 
 ---
 
 #### public void interstitialOnFail(Interstitial interstitial, String reason, Throwable throwable)
 
-Called when an ad fails to load. An explicit call to load is required to get the next ad.
+Called when an interstitial fails to load or show an ad. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The Interstitial that failed to receive or shown an ad.
+  - _reason_ - The reason for the failure.
+  - _throwable_ - The exception that caused the failure.
 
 ---
 
 #### public void interstitialOnShow(Interstitial interstitial)
 
-The interstitial ad was shown to the user.
+Called when the interstitial was shown to the user.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The Interstitial that showed the ad.
 
 ---
 
 #### public void interstitialOnTap(Interstitial interstitial)
 
-The user tapped on the interstitial ad.
+Called when the user taps on the interstitial.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The Interstitial that the user tapped on.
 
 ---
 
 #### public void interstitialOnDismiss(Interstitial interstitial)
 
-The user dismissed the interstitial ad.
+Called when the user dismisses the interstitial.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The Interstitial that was dismissed.
 
 ## AppWall
 
 ### Overview
 
-This class is responsible for downloading and showing appWall ads.
+This class is responsible for downloading and showing app walls.
 
 ### Special Considerations
 
-Always be sure that an appWall is ready to be shown by either using the callbacks or by using the isReadyToShow method. 
-Failure to do so may cause and ad to be shown at unexpected or undersireable times due to network connectivity.
+Always be sure that an app wall is ready to be shown by either using the callbacks or by using the isReadyToShow method. 
+Failure to do so may cause an app wall to be shown at unexpected or undersireable times due to network connectivity.
 
 ### Methods
 
 #### public static AppWall create(Context context)
 
-Creates and starts loading an appWall
+Creates a new instance of AppWall and starts loading an app wall.
 
 **Parameters**
 
@@ -344,9 +360,9 @@ Creates and starts loading an appWall
 
 ---
 
-#### public static AppWall create(Context context, final AppWallListener appWallAdListener)
+#### public static AppWall create(Context context, final AppWallListener appWalListener)
 
-Creates and starts loading an appWall with the provided listener.
+Creates a new instance of AppWall and starts loading an app wall with the provided listener.
 
 **Parameters**
 
@@ -361,63 +377,41 @@ Creates and starts loading an appWall with the provided listener.
 
 #### public void show()
 
-Causes an appWall ad to be shown This will launch a new [FullScreenAdActivity]().
+Causes an app wall ad to be shown. This will launch a new [FullScreenAdActivity]().
 
 ---
 
 #### public void show()
 
-Causes an appWall ad to be shown, a new appWall to be loaded. This will launch a new [FullScreenAdActivity]().
+Causes an app wall ad to be shown and new app wall to be loaded. This will launch a new [FullScreenAdActivity]().
 
 ---
 
 #### public void load()
 
-Causes a new appWall to be loaded.
+Causes a new app wall to be loaded.
 
 ---
 
 #### public boolean isReadyToShow()
 
-Returns whether or not an appWall is ready to show.
+Returns whether or not an app wall is ready to show.
 
 **Return Value**
 
-  - _boolean_ - `true` if an appWall is ready to show. `false` if an appWall ad is not ready to show.
+  - _boolean_ - `true` if an app wall is ready to show. `false` if an app wall is not ready to show.
 
 ## AppWallListener
 
 ### Overview
 
-This interface provides callback methods into the lifecycle of the appWall ad.
+This interface provides callback methods into the lifecycle of the app wall.
 
 ### Methods
 
-#### public void appWallAdOnReceive(AppWall appWall)
+#### public void appWallOnReceive(AppWall appWall)
 
-Called when a new ad is received and is ready to be shown.
-
-**Parameters**
-
-  - _appWall_ - The AppWall which received a new ad.
-
----
-
-#### public void appWallAdOnFail(AppWall appWall, String reason, Throwable throwable)
-
-Called when an ad fails to load. An explicit call to load is required to get the next ad.
-
-**Parameters**
-
-  - _appWall_ - The AppWall which received a new ad.
-  - _reason_ - The reason for the error.
-  - _throwable_ - The exception that caused the error.
-
----
-
-#### public void appWallAdOnShow(AppWall appWall)
-
-The appWall ad was shown to the user.
+Called when an app wall receives a new ad and is ready to be shown.
 
 **Parameters**
 
@@ -425,21 +419,43 @@ The appWall ad was shown to the user.
 
 ---
 
-#### public void appWallAdOnTap(AppWall appWall)
+#### public void appWallOnFail(AppWall appWall, String reason, Throwable throwable)
 
-The user tapped on the appWall ad.
+Called when an app wall fails to load or show an ad. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _appWall_ - The AppWall which received a new ad.
+  - _appWall_ - The AppWall which failed to receive or show an ad.
+  - _reason_ - The reason for the failured.
+  - _throwable_ - The exception that caused the failure.
 
 ---
 
-#### public void appWallAdOnDismiss(AppWall appWall)
+#### public void appWallOnShow(AppWall appWall)
 
-The user dismissed the appWall ad.
+Called when the app wall is sucessfully shown to the user.
 
 **Parameters**
 
-  - _appWall_ - The AppWall which received a new ad.
+  - _appWall_ - The AppWall which showed the ad.
+
+---
+
+#### public void appWallOnTap(AppWall appWall)
+
+Called when the user tapped on an ad in the app wall.
+
+**Parameters**
+
+  - _appWall_ - The AppWall which the user tapped on.
+
+---
+
+#### public void appWallOnDismiss(AppWall appWall)
+
+Called when the user dismisses the app wall.
+
+**Parameters**
+
+  - _appWall_ - The AppWall that was dismissed.
 
