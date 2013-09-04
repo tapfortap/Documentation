@@ -1,9 +1,16 @@
 # iOS 2.x -> 3.x Migration Guide
 
+## Class Name Changes
+
+- TapForTap -> TFTTapForTap
+- TapForTapAdView -> TFTBanner
+- TapForTapInterstitial -> TFTInterstitial
+- TaForTapAppWall -> TFTAppWall
+
 ## Initialization
 
 There is a new way to initialize your app with TapForTap. Simply add the following key value pair to your 
-info.plist, the `MY_API_KEY` with your accounts API key. There is no need to call explicitly call
+info.plist while replacing `MY_API_KEY` with your account's API key. There is no need to explicitly call
 initialize anymore, the SDK will handle that itself the first time you request an ad.
 
 ```xml
@@ -11,13 +18,6 @@ key = TapForTapApiKey
 type = String
 value = "YOUR_API_KEY"
 ```
-
-## Class Name Changes
-
-- TapForTap -> TFTTapForTap
-- TapForTapAdView -> TFTBanner
-- TapForTapInterstitial -> TFTInterstitial
-- TaForTapAppWall -> TFTAppWall
 
 ## TFTBanner
 
@@ -38,7 +38,7 @@ The name of the delegate has also been changed to TFTBannerDelegate, and the del
 
 ## Interstitial/App Wall (ie FullScreenAds)
 
-Interstitials and App Walls share the same interface. The only difference beings the names.
+Interstitials and App Walls share the same interface. The only difference betweeen the two is the names.
 
 FullScreen ads are no longer interacted with using class methods. You must get a new full screen ad instance by
 using one of the respective factory methods.
