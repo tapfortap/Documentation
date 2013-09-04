@@ -203,7 +203,7 @@ Creates and starts loading an interstitial
 
 **Return Value**
 
-  - _TFTInterstitial_ - A new instance of Interstitial.
+  - _TFTInterstitial_ - A new instance of TFTInterstitial.
 
 ---
 
@@ -217,7 +217,7 @@ Creates and instance of TFTInterstitial and starts loading an interstitial with 
 
 **Return Value**
 
-  - _TFTInterstitial_ - A new instance of Interstitial.
+  - _TFTInterstitial_ - A new instance of TFTInterstitial.
 
 ---
 
@@ -254,52 +254,52 @@ This protocol provides delegate methods that are called during the lifecycle of 
 
 #### - (void)tftInterstitialDidReceive:(TFTInterstitial *)interstitial;
 
-Called when a new interstitial is received and is ready to be shown.
+Called when the interstitial receives a new ad and is ready to be shown.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial which received a new ad.
 
 ---
 
 #### - (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
 
-Called when an ad fails to load. An explicit call to load is required to get the next ad.
+Called when the interstitial fails to load or show an ad. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _interstitial_ - The Interstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial that failed to load or show the ad.
   - _reason_ - The reason why the ad failed.
 
 ---
 
 #### - (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial;
 
-Called when the interstitial ad was sucessfully shown to the user.
+Called when the interstitial sucessfully shows an ad to the user.
 
 **Parameters**
 
-  - _interstitial_ - The TFTInterstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial that showed an ad.
 
 ---
 
 #### - (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial;
 
-Called when the user taps the interstitial
+Called when the user taps the interstitial.
 
 **Parameters**
 
-  - _interstitial_ - The TFTInterstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial that was tapped.
 
 ---
 
 #### - (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial;
 
-Called when the user dismissed the interstitial
+Called when the user dismissed the interstitial.
 
 **Parameters**
 
-  - _interstitial_ - The TFTInterstitial which received a new ad.
+  - _interstitial_ - The TFTInterstitial that was dismissed.
 
 ## TFTAppWall
 
@@ -317,7 +317,7 @@ times due to network latency.
 
 #### + (TFTAppWall *)appWall;
 
-Creates and starts loading an app wall
+Creates and starts loading an app wall.
 
 **Return Value**
 
@@ -372,32 +372,32 @@ This protocol provides delegate methods that are called during the lifecycle of 
 
 #### - (void)tftAppWallDidReceive:(TFTAppWall *)appWall;
 
-Called when a new ad is received and is ready to be shown.
+Called when the app wall ads loads receives a new ad and is ready to be shown.
 
 **Parameters**
 
-  - _appWall_ - The TFTAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall that received a new ad.
 
 ---
 
 #### - (void)tftAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason;
 
-Called when an ad fails to load. An explicit call to load is required to get the next ad.
+Called when the app wall fails to load or show an ad. An explicit call to load is required to get the next ad.
 
 **Parameters**
 
-  - _appWall_ - The TFTAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall that failed to load or show the ad.
   - _reason_ - The reason why the ad failed.
 
 ---
 
 #### - (void)tftAppWallDidShow:(TFTAppWall *)appWall;
 
-Called when the app wall is sucessfully shown to the user
+Called when the app wall is sucessfully shown to the user.
 
 **Parameters**
 
-  - _appWall_ - The TFTAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall that showed a new ad.
 
 ---
 
@@ -407,7 +407,7 @@ Called when the user taps on an ad in the app wall.
 
 **Parameters**
 
-  - _appWall_ - The TFTAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall that was tapped.
 
 ---
 
@@ -417,4 +417,4 @@ Called when the user dismissed the app wall.
 
 **Parameters**
 
-  - _appWall_ - The TFTAppWall which received a new ad.
+  - _appWall_ - The TFTAppWall that was dismissed.
