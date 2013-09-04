@@ -6,12 +6,13 @@
 
 This is the SDK's main class. It provides methods to:
 
-  - initialize Tap For Tap so ads can begin to be served
-  - set meta data about users to better ads can be served
+  - Initialize Tap For Tap so ads can begin to be served
+  - Set meta data about users to better ads can be served
 
 ### Special Considerations
 
-If the Tap for Tap API key is set in the `AndroidManifest.xml` there is no need to call any of the initialize methods as Tap for Tap will initialize itself.
+If the Tap for Tap API key is set in the `AndroidManifest.xml` there is no need to call any of the initialize
+methods as Tap for Tap will initialize itself.
 
 ### Methods
 
@@ -102,11 +103,11 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
-  - _context_ - An Android context (application context is acceptable)
+  - _context_ - An Android context (application context is acceptable).
 
 **Return Value**
 
-  - _Banner_ - a new instance of a Banner
+  - _Banner_ - a new instance of a Banner.
 
 ---
 
@@ -116,8 +117,8 @@ Creates a new Banner and begins downloading and showing ads.
 
 **Parameters**
 
-  - _context_ - An Android context
-  - _bannerListener_ - A listener
+  - _context_ - An Android context.
+  - _bannerListener_ - A listener.
 
 **Return Value**
 
@@ -129,7 +130,7 @@ Sets a listener on the Banners. This should only be used if the Banner is decala
 
 **Parameters**
 
-  - _bannerListener_ - An listener
+  - _bannerListener_ - An listener.
 
 ---
 
@@ -226,7 +227,7 @@ Creates and starts loading an interstitial with the provided listener.
 **Parameters**
 
   - _context_ - An Android context.
-  - listener_ - A listener.
+  - _listener_ - A listener.
 
 **Return Value**
 
@@ -236,13 +237,13 @@ Creates and starts loading an interstitial with the provided listener.
 
 #### public void show()
 
-Causes an interstitial ad to be shown. This will launch a new [FullScreenAdActivity]()
+Causes an interstitial ad to be shown. This will launch a new [FullScreenAdActivity]().
 
 ---
 
 #### public void showAndLoad()
 
-Causes an interstitial ad to be shown and a new one will start to load. This will launch a new [FullScreenAdActivity]()
+Causes an interstitial ad to be shown and a new one will start to load. This will launch a new [FullScreenAdActivity]().
 
 ---
 
@@ -350,7 +351,7 @@ Creates and starts loading an appWall with the provided listener.
 **Parameters**
 
   - _context_ - An Android context.
-  - listener_ - A listener.
+  - _listener_ - A listener.
 
 **Return Value**
 
@@ -360,13 +361,13 @@ Creates and starts loading an appWall with the provided listener.
 
 #### public void show()
 
-Causes an appWall ad to be shown This will launch a new [FullScreenAdActivity]()
+Causes an appWall ad to be shown This will launch a new [FullScreenAdActivity]().
 
 ---
 
 #### public void show()
 
-Causes an appWall ad to be shown, a new appWall to be loaded. This will launch a new [FullScreenAdActivity]()
+Causes an appWall ad to be shown, a new appWall to be loaded. This will launch a new [FullScreenAdActivity]().
 
 ---
 
