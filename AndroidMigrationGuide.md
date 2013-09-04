@@ -6,7 +6,7 @@ AdView -> Banner
 ## Initialization
 
 There is a new way to initialize your app with TapForTap. Simply add the following meta-data tag to your 
-AndroidManifest.xml, replacing the `MY_API_KEY` with your accounts API key. There is no need to call explicitly call
+AndroidManifest.xml, replacing `MY_API_KEY` with your account's API key. There is no need to explicitly call
 initialize anymore, the SDK will handle that itself the first time you request an ad.
 
 ```xml
