@@ -19,6 +19,12 @@ type = String
 value = "YOUR_API_KEY"
 ```
 
+If you do not want to put your API key in the info.plist then you can still use the old initialize method.
+
+```obj-c
++ (void)initializeWithApiKey:(NSString *)apiKey
+```
+
 ## TFTBanner
 
 Two new factory methods were introduced. These will create a new intance of TFTBanner and start showing ads.
@@ -67,5 +73,6 @@ same callbacks as in 2.x with more consistent naming and an wasTapped callback w
 - (void)tftAppWallWasTapped:(TFTAppWall *)appWall;
 - (void)tftAppWallWasDismissed:(TFTAppWall *)appWall;
 ```
-
+FullScreenAds are shown by calling either `showWithViewController:` or `showAndLoadWithViewController:` (this behaves like the old 2.x show) and ads can be
+loaded using `load`
 
