@@ -1,4 +1,4 @@
-### 3.0.1 / 2013-09-03
+### 3.0.2 / 2013-09-03
   * Rework of the API. Minor semantic changes from 2.x. The most notable being that AppWall/Interstitial are no longer accessed via static methods.
   * Introduced new Interstitial and App Wall assets
     * Both are now anmiated
