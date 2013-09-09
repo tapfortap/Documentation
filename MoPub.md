@@ -15,12 +15,6 @@ Here are some examples implementations on MoPub custom events.
 
 ## Using Custom Events
 
-[Android Example](https://gist.github.com/jwyseu/5434805)
+[Android Example](https://gist.github.com/pjlaird/6502734)
 
-[iOS Example](https://gist.github.com/pjlaird/5913782)
-
-## Using Custom Methods (MoPub has deprecated custom methods)
-
-[Android Example](https://gist.github.com/4290335)
-
-[iOS Example](https://gist.github.com/4290326)
+[iOS Example](https://gist.github.com/pjlaird/6502787)
