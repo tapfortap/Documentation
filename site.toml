@@ -1,0 +1,116 @@
+title = "Documentation"
+
+[nav.new-to-tft]
+title = "New to Tap for Tap?"
+
+  [nav.new-to-tft.getting-started]
+  title = "Getting Started Guide"
+  url = "getting-started"
+
+[nav.tft-programs]
+title = "Tap for Tap Programs"
+
+  [nav.tft-programs.tapx]
+  title = "Tap Exchange"
+  url = "tap-exchange"
+
+  [nav.tft-programs.paidpromo]
+  title = "Paid Promotion"
+  url = "paid-promotion"
+
+  [nav.tft-programs.monetization]
+  title = "Monetization"
+  url = "monetization"
+
+  [nav.tft-programs.selfpromo]
+  title = "Self Promotion"
+  url = "self-promotion"
+
+[nav.android]
+title = "Android"
+
+  [nav.android.integration]
+  title = "Integration Guide"
+  url = "android/integration"
+
+  [nav.android.api]
+  title = "API Reference"
+  url = "android/api"
+
+  [nav.android.changelog]
+  title = "SDK Changelog"
+  url = "android/changelog"
+
+  [nav.android.migration]
+  title = "SDK Migration Guide"
+  url = "android/migration"
+
+[nav.ios]
+title = "iOS"
+
+  [nav.ios.integration]
+  title = "Integration Guide"
+  url = "ios/integration"
+
+  [nav.ios.api]
+  title = "API Reference"
+  url = "ios/api"
+
+  [nav.ios.changelog]
+  title = "SDK Changelog"
+  url = "ios/changelog"
+
+  [nav.ios.migration]
+  title = "SDK Migration Guide"
+  url = "ios/migration"
+
+[nav.plugins]
+title = "Supported Plugins"
+
+  [nav.plugins.coming-soon]
+  title = "Coming Soon"
+  url = false
+
+[nav.mediation]
+title = "Mediation Layers"
+
+  [nav.mediation.admob]
+  title = "AdMob"
+  url = "mediation/admob"
+
+[nav.performance]
+title = "Improving Performance"
+
+  [nav.performance.creatives]
+  title = "Creative Guidelines"
+  url = "performance/creatives"
+
+  [nav.performance.placement]
+  title = "Ad Placement Guide"
+  url = "performance/placement"
+
+[nav.inside-tft]
+title = "Inside Tap for Tap"
+
+  [nav.inside-tft.ad-units]
+  title = "Ad Units"
+  url = "ad-units"
+
+  [nav.inside-tft.country-tiers]
+  title = "Country Tiers"
+  url = "country-tiers"
+
+[nav.help]
+title = "More Help"
+
+  [nav.help.faq]
+  title = "Frequently Asked Questions"
+  url = "help/faq"
+
+  [nav.help.videos]
+  title = "Instructional Videos"
+  url = "help/videos"
+
+  [nav.help.glossary]
+  title = "Glossary"
+  url = "help/glossary"

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title><%= page.title %> | <%= site.title %> | Tap for Tap</title>
+</head>
+
+<body>
+  <h1><%= site.title %></h1>
+  <h2><%= page.title %></h2>
+  <div class="nav" style="width: 40%; float: left; padding: 0.3em; border-right: solid 1px #aaa">
+    <pre><%== JSON.pretty_generate(site.nav) %></pre>
+  </div>
+  <div class="content">
+    <%== content_for_layout %>
+  </div>
+</body>
+
+</html>
