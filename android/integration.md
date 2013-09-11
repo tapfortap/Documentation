@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**3.0.0** - [See Changelog](/doc/AndroidChangelog)
+**3.0.3** - [See Changelog](/doc/AndroidChangelog)
 
 Supports Android 2.2 and up (API level 8)
 
@@ -96,6 +96,12 @@ Add the following activity to your AndroidManifest.xml. This enables showing ful
 
 ```xml
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+```
+
+If your app hides the status bar add `.FullScreen` to the end.
+
+```xml
+    <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.FullScreen"/>
 ```
 
 ## Step 5 - Enable Test Mode
