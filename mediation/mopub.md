@@ -13,14 +13,14 @@ To use Tap for Tap with MoPub:
 
 Here are some examples implementations on MoPub custom events.
 
-## Using Custom Events
+## Custom Events
 
-[Android Example](https://gist.github.com/jwyseu/5434805)
+[Android Custom Events](https://gist.github.com/pjlaird/6502734)
 
-[iOS Example](https://gist.github.com/pjlaird/5913782)
+[iOS Custom Events](https://gist.github.com/pjlaird/6502787)
 
-## Using Custom Methods (MoPub has deprecated custom methods)
+## Example App
 
-[Android Example](https://gist.github.com/4290335)
+[Android Example](https://github.com/tapfortap/MoPub-Android)
 
-[iOS Example](https://gist.github.com/4290326)
+[iOS Example](https://github.com/tapfortap/MoPub-iOS)
