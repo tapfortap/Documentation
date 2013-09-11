@@ -1,5 +1,30 @@
 title = "Documentation"
 
+# true: don't serve minified code in production
+debug = false
+
+# true: serve minified code in development
+debug_minified = false
+
+minified_css = "doc.min.css"
+css = [
+  "bootstrap.min.css",
+  "bootstrap-responsive.min.css",
+  "font-awesome.min.css",
+  "global.css",
+  "doc.css"
+]
+
+minified_js = "doc.min.js"
+js = [
+  "bootstrap.min.js"
+]
+
+
+##################
+### Navigation ###
+##################
+
 [nav.new-to-tft]
 title = "New to Tap for Tap?"
 
