@@ -6,7 +6,7 @@ you just need to set up a [custom event](https://support.google.com/admob/bin/an
 
 ## Android
 - Download the TapForTap SDK.
-- Follow the [Android Integration Guide](/doc/AndroidIntegrationGuide) but add the `TapForTapAdMob.jar` instead of `TapForTap.jar` to your project.
+- Follow the [Android Integration Guide](/doc/android/integration) but add the `TapForTapAdMob.jar` instead of `TapForTap.jar` to your project.
 - Add the `GoogleAdMobAdsSdk-x.x.x.jar` to your project.
 - Use the class name `com.tapfortap.AdMobBanner` for banner custom events.
 - Use the class name `com.tapfortap.AdMobInterstitial` for interstitial custom events.

@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**3.0.0** - [See Changelog](/doc/AndroidChangelog)
+**3.0.3** - [See Changelog](/doc/android/changelog)
 
 Supports Android 2.2 and up (API level 8)
 
@@ -98,6 +98,12 @@ Add the following activity to your AndroidManifest.xml. This enables showing ful
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 ```
 
+If your app hides the status bar add `.FullScreen` to the end.
+
+```xml
+    <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.FullScreen"/>
+```
+
 ## Step 5 - Enable Test Mode
 
 Test mode stops your app from spending real impressions. This is useful while you are developing your app. 
@@ -143,4 +149,4 @@ TapForTap.setUserAccountId(<accountId>);
 ```
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/doc/Monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
