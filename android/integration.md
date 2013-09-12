@@ -62,23 +62,23 @@ Then click `OK` to leave the properties window.
 Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap 
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
-```xml
+    ```xml
     <meta-data
         android:name="com.tapfortap.API_KEY"
         android:value="MY_API_KEY"/>
-```
+    ```
 
 ## Step 3 - Add Permissions to Your AndroidManifest.xml
 
 Add the following permissions to your AndroidManifest.xml
 
-```xml
+    ```xml
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-```
+    ```
 
 ### Why TapForTap Requires the Permissions It Does
 
@@ -94,15 +94,15 @@ performance and reduces network traffic and radio usage. TapForTap is capped at 
 
 Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
 
-```xml
+    ```xml
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-```
+    ```
 
 If your app hides the status bar add `.FullScreen` to the end.
 
-```xml
+    ```xml
     <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.FullScreen"/>
-```
+    ```
 
 ## Step 5 - Enable Test Mode
 
@@ -111,42 +111,42 @@ Make sure to disable test mode before submitting your app to the play store.
 
 To enable test mode add the following meta data tag to your AndroidManifest.xml. 
 
-```xml
+    ```xml
     <meta-data
         android:name="com.tapfortap.TEST_MODE"
         android:value="true"/>
-```
+    ```
 
 ## Step 6 - Display Ads
 Adding a banner to a `RelativeLayout` 
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.tapfortap.Banner
-        android:id="@+id/banner"
-        android:layout_width="320dip"
-        android:layout_height="50dip"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-    />
-</RelativeLayout>
-```
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+        <com.tapfortap.Banner
+            android:id="@+id/banner"
+            android:layout_width="320dip"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+        />
+    </RelativeLayout>
+    ```
 
 ## Step 7 - Send Optional Information About Your Users
 If you have information about your users that your privacy policy allows you to share with us, 
 you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. 
 We accept year of birth, gender, location, and the account ID of user's on your system.
 
-```java
-TapForTap.setGender(<MALE or FEMALE>);
-TapForTap.setYearOfBirth(<year>);
-TapForTap.setLocation(<location>);
-TapForTap.setUserAccountId(<accountId>);
-```
+    ```java
+    TapForTap.setGender(<MALE or FEMALE>);
+    TapForTap.setYearOfBirth(<year>);
+    TapForTap.setLocation(<location>);
+    TapForTap.setUserAccountId(<accountId>);
+    ```
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
 **Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
