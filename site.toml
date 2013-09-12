@@ -102,6 +102,10 @@ title = "Mediation Layers"
   [nav.mediation.admob]
   title = "AdMob"
   url = "mediation/admob"
+  
+  [nav.mediation.mopub]
+  title = "MoPub"
+  url = "mediation/mopub"
 
 [nav.performance]
 title = "Improving Performance"
