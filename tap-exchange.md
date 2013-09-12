@@ -6,13 +6,13 @@ Tap for Tap allows you to split your traffic into two parts, the tap exchange an
 
 ## SDK Implementation
 
-To take park in the tap exchange, you must integrate our SDK. For more information on how to do this, see our [guide to getting started](/doc/GettingStarted).
+To take park in the tap exchange, you must integrate our SDK. For more information on how to do this, see our [guide to getting started](/doc/getting-started).
 
 ## Promotion Banners
 
 ![Example Banners](https://raw.github.com/tapfortap/Documentation/master/images/generated.png)
 
-The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our [banner and creative guidelines](/doc/CreativeGuidelines).
+The banners for promoting your app are the same for the paid promotion and tap exchange.  To read about improving your banner performance, check out our [banner and creative guidelines](/doc/performance/creatives).
 
 ## Revenue Preference
 
@@ -28,7 +28,7 @@ Tap credits are the currency for the tap exchange.  By showing tap exchange ads 
 
 ![Value In = Value Out](https://raw.github.com/tapfortap/Documentation/master/images/give-taps-get-taps.png)
 
-You can then spend those tap credits on placing your apps’ ads on other peoples ads, until you have spend the same amount of tap credits. The amount of tap credits you receive on a tap is directly related to the country the user that tapped on the ad is from. The countries are grouped into [tiers](/doc/CountryTiers), and the tap value is assigned to that tier.
+You can then spend those tap credits on placing your apps’ ads on other peoples ads, until you have spend the same amount of tap credits. The amount of tap credits you receive on a tap is directly related to the country the user that tapped on the ad is from. The countries are grouped into [tiers](/doc/country-tiers), and the tap value is assigned to that tier.
 
 ## Country Targeting
 
@@ -43,11 +43,11 @@ There is an extra tap credit cost with targeting countries. You can see what the
 Tap for Taps goal is to ensure developers are receiving the same value they send to other developers. When you gain tap credits by sending taps, we examine a lot of information about that tap to ensure you will get the same value back. Some aspects we look at are:
 
 - User demographics like language and location
-- [Ad unit](/doc/AdUnits) type and placement
+- [Ad unit](/doc/ad-units) type and placement
 - Information about the app (quality rating and category)
 - Overall performance of the users seeing and tapping on ads displayed in your app.
 
-If you spend time ensuring quality ad placements and performance you will generally achieve better results. Trying to get more taps by placing ads in areas likely to be accidentally tapped will result in much lower quality taps being send back. To read more about how to improve ad placement performance check out our guide [here](/doc/AdPlacementGuide).
+If you spend time ensuring quality ad placements and performance you will generally achieve better results. Trying to get more taps by placing ads in areas likely to be accidentally tapped will result in much lower quality taps being send back. To read more about how to improve ad placement performance check out our guide [here](/doc/performance/placement).
 
 ## Reporting
 

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= page.title %> | <%= site.title %> | Tap for Tap</title>
+  <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+  <%== site.styles %>
+</head>
+
+<body>
+
+  <div id="header">
+    <div class="navbar navbar-inverse" style="margin-bottom:7px;">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a href="/" class="brand" style="padding:5px 25px;"><img src="/images/logo-whitex30.png" alt="Tap for Tap"></a>
+          <ul class="nav">
+            <li class="active"><a href="<%= site.root %>">Documentation</a></li>
+            <li class="hidden-phone"><a href="<%= site.root %>/getting-started">Get Started</a></li>
+            <li><a href="/sdk2/doc">SDK 2.x Documentation</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="/">Tap for Tap</a></li>
+            <li class="hidden-phone"><a href="/manage">Developer Site</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+
+      <div class="span3 hidden-phone" id="left">
+        <% site.nav.each do |_, section| %>
+          <div class="title"><%= section.title %></div>
+          <ul class="nav nav-list">
+            <% section.each do |_, item| %>
+              <% next if _ == 'title' %>
+              <li <%== page.url == item.url ? 'class="active"' : '' %>>
+                <% if item.url %>
+                  <a href="<%= item.url %>"><i class="icon-chevron-right"></i> <%= item.title %></a>
+                <% else %>
+                  <%= item.title %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+
+      <div class="span9" id="container">
+        <div class="right">
+          <div class="inner">
+            <a href="https://github.com/tapfortap/SDK/archive/master.zip" class="btn btn-primary">
+              <i class="icon-download-alt icon-white"></i> Download SDK
+            </a>
+          </div>
+        </div>
+        <div class="inner notop" style="padding: 0px 14px 14px;">
+          <div class="page">
+            <div class="inner" id="content" style="padding: 14px;">
+              <%== content_for_layout %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row-fluid -->
+  </div><!-- /.container-fluid -->
+
+  <div id="footer">
+    <div class="container footer center">
+      <table class="middle center">
+        <tr>
+          <td>
+            <div class="inner">
+              <a href="/">Home</a> &nbsp;&nbsp;
+              <a href="/terms">Terms</a> &nbsp;&nbsp;
+              <a href="/privacy">Privacy</a> &nbsp;&nbsp;
+              <a href="http://tapfortap.zendesk.com">Contact</a> &nbsp;&nbsp;
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="center">
+      <div id="legal">&copy; 2013 Tap for Tap Promotions Inc.</div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/js/libs/jquery-1.8.2.min.js"%3E%3C/script%3E'))</script>
+  <%== site.scripts %>
+
+</body>
+</html>

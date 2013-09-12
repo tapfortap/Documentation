@@ -1,0 +1,37 @@
+html{overflow:-moz-scrollbars-vertical;overflow:scroll;}
+form{margin:0px;}
+table.inline tbody,table.inline thead,table.inline tfoot,table.inline tr,table.inline td,table.inline th{border:0px !important;margin:0px !important;padding:0px !important;vertical-align:middle;}
+table.inline td input,table.inline td select,table.inline td button{margin-top:0px;margin-bottom:0px;}
+table.table-striped table.inline tbody td{background-color:transparent;}
+.fill{width:100%;}
+input.fill,textarea.fill,select.fill{width:95%;}
+.half{width:50%;}
+.quarter{width:25%;}
+.cover{position:absolute;left:0px;top:0px;right:0px;bottom:0px;width:100%;height:100%;}
+table.middle td{vertical-align:middle;}
+table.top td{vertical-align:top;}
+.right{margin-left:auto;text-align:right !important;}
+.center{text-align:center !important;}
+.center>*{text-align:left;}
+td.top{vertical-align:top !important;}
+td.middle{vertical-align:middle;}
+img.center,table.center{margin:auto;}
+img.right,table.right{margin-left:auto;}
+.page{background-color:white;}
+.ten{padding:10px;}
+.btn:not(.btn-group .btn){background-color:#eee;background-image:url(/images/gloss-button.png);background-position:center;border:2px solid rgba(170,170,170,.5);color:black;padding:4px 10px;white-space:nowrap;}
+a.btn{display:inline-block;}
+.inner{padding:8px;}
+div.notop{padding-top:0px !important;}
+span.visible-desktop{display:inline !important;}
+.italic{font-style:italic;}
+.black{color:black !important;}
+.white{color:white !important;}
+.bold{font-weight:bold;}
+@media(max-width:767px){body{padding-left:0px;padding-right:0px;}.navbar-fixed-top,.navbar-fixed-bottom,.navbar-static-top{margin:0px;}}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a{font-size:15px;}
+.capitalize{text-transform:capitalize;}
+.uppercase{text-transform:uppercase;}
+.lowercase{text-transform:lowercase;}
+.none{display:none;}
+.invisible{visibility:hidden;}
