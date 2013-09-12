@@ -2,10 +2,10 @@
 
 To use Tap for Tap with MoPub:
 
-1. Download the [Tap for Tap SDK](https://github.com/tapfortap/Documentation/raw/master/downloads/TapForTap-SDK.zip)
+1. Download the [Tap for Tap SDK](https://github.com/tapfortap/SDK/archive/master.zip)
 2. Integrate the SDK into your app, following the steps to get your app to build with Tap for Tap.
-  - [iOS documentation](http://tapfortap.com/doc/iOS)
-  - [Android documentation](http://tapfortap.com/doc/Android)
+  - [iOS documentation](http://tapfortap.com/doc/ios/integration)
+  - [Android documentation](http://tapfortap.com/doc/android/integration)
 3. Create a MoPub custom event 
   - [iOS documentation](https://github.com/mopub/mopub-ios-sdk/wiki/Custom-Events)
   - [Android documentation](https://github.com/mopub/mopub-android-sdk/wiki/Custom-Events)
