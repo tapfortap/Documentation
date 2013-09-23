@@ -1,3 +1,8 @@
+### 3.0.4 / 2013-09-16
+  * Fix intersitial/app wall callbacks not being called on UI thread
+  * Fix starting requests on UI thread on Android 2.x
+  * Various bug fixes
+
 ### 3.0.3 / 2013-09-06
   * Ad AdMob library
   * Minor fixes to support AdMob
@@ -13,13 +18,13 @@
 ### 2.3.2 / 2013-07-24
   * Fix not being able to load new interstitial/appwalls if they failed to download.
 
-### 2.3.1 / 2013-07-18 
+### 2.3.1 / 2013-07-18
   * If prepare with a listener is called more than once, the listener is properly set subsequent time.
   * Add more try/catch around calls that can throw OOM exceptions.
   * Use private executor for http requests to stop thread contention with AsyncTask.
   * Fix failing to have user_external_storage permission causing Interstitial/AppWal from failing to load.
 
-### 2.3.0 / 2013-04-03 
+### 2.3.0 / 2013-04-03
 
   * Earning can now be paused from the web interface
   * Added new events to app wall and interstitial
@@ -29,17 +34,17 @@
   * Upgraded AdMob to 6.3.1
   * Added support for AdMob interstitial mediation
 
-### 2.2.0 / 2013-03-11 
+### 2.2.0 / 2013-03-11
 
   * Cache AppWall/Interstitial ad. Results is smoother displaying of full screen ads.
   * Add onFail to interstital and app-wall
 
-### 2.1.2 / 2013-02-05 
+### 2.1.2 / 2013-02-05
 
   * Fixed determining width of Ad banner.
-  * Fixed a rare occurence of a bad URL. 
+  * Fixed a rare occurence of a bad URL.
 
-### 2.1.1 / 2013-01-14 
+### 2.1.1 / 2013-01-14
 
   * Respect gravity setting on AdView
   * Remove dependency on Activity in TapForTap.initialize
@@ -50,7 +55,7 @@
   * Fix an issue where interstitials and app walls may show repeatedly
   * Various minor bug fixes
 
-### 2.1.0 / 2012-11-15 
+### 2.1.0 / 2012-11-15
 
   * Include TapForTap.jar in TapForTapAdMob.jar
   * Add interstitial & app wall listeners with one method: void onDismiss()
@@ -67,20 +72,20 @@
   * Handle a weird edge case where AdView width/height are zero
   * AdView constructor accepts real Contexts now
 
-### 2.0.2 / 2012-10-24 
+### 2.0.2 / 2012-10-24
 
   * Remove the check for enough space to display banners
   * Add support for AdMob 6.2
   * Add interstitial and app wall to example code
   * Fix a bug where ads take a long time to load
 
-### 2.0.1 / 2012-10-16 
+### 2.0.1 / 2012-10-16
 
   * Fix two NullPointerException bugs
   * Fix a potential crashing bug when the WRITE\_EXTERNAL\_STORAGE permission is missing
   * Update example code
 
-### 2.0.0 / 2012-10-15 
+### 2.0.0 / 2012-10-15
 
   * Major new version!
   * Add interstitials
@@ -88,7 +93,7 @@
   * Banners are now full-width
   * Add apps simply by integrating the SDK
 
-### 1.1.14 / 2012-09-17 
+### 1.1.14 / 2012-09-17
 
   * Fix two bugs on Android 3+
   * Fix backwards compatibility (was broken pre-Gingerbread, API level 9)
