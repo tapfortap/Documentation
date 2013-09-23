@@ -1,7 +1,7 @@
 # iOS - SDK Implementation
 
 ##  Current Version
-**3.0.2** - [See Changelog](/doc/ios/changelog)
+**3.0.4** - [See Changelog](/doc/ios/changelog)
 
 Supports iOS 5.0 and up.
 
@@ -76,7 +76,7 @@ For banners your view controller needs to implement the `TFTBannerDelegate` prot
 
 	// If you do not use ARC then release the banner.
 	// [banner release];
-} 
+}
 ```
 
 ##  Step 5 - Send Optional Info About Your Users.

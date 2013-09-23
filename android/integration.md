@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**3.0.3** - [See Changelog](/doc/android/changelog)
+**3.0.4** - [See Changelog](/doc/android/changelog)
 
 Supports Android 2.2 and up (API level 8)
 
@@ -59,7 +59,7 @@ Then click `OK` to leave the properties window.
 
 ## Step 2 - Add Your API Key to Your AndroidManifest.xml
 
-Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap 
+Add the following meta data tag to your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
 ```xml
@@ -85,9 +85,9 @@ Add the following permissions to your AndroidManifest.xml
 - _INTERNET_: Required to download ads.
 - _READ_PHONE_STATE_: Required to do conversion tracking and work with monetization partners.
 - _ACCESS_NETWORK_STATE_: Required to check network status in order to help the SDK be smarter about network requests.
-- _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network 
+- _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network
 requests and to help with conversion tracking.
-- _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves 
+- _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves
 performance and reduces network traffic and radio usage. TapForTap is capped at 10MB of disk space.
 
 ## Step 4 - Add the FullScreenAdActivity to Your AndroidManifest.xml
@@ -106,10 +106,10 @@ If your app hides the status bar add `.FullScreen` to the end.
 
 ## Step 5 - Enable Test Mode
 
-Test mode stops your app from spending real impressions. This is useful while you are developing your app. 
-Make sure to disable test mode before submitting your app to the play store. 
+Test mode stops your app from spending real impressions. This is useful while you are developing your app.
+Make sure to disable test mode before submitting your app to the play store.
 
-To enable test mode add the following meta data tag to your AndroidManifest.xml. 
+To enable test mode add the following meta data tag to your AndroidManifest.xml.
 
 ```xml
     <meta-data
@@ -118,7 +118,7 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
 ```
 
 ## Step 6 - Display Ads
-Adding a banner to a `RelativeLayout` 
+Adding a banner to a `RelativeLayout`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -137,8 +137,8 @@ Adding a banner to a `RelativeLayout`
 ```
 
 ## Step 7 - Send Optional Information About Your Users
-If you have information about your users that your privacy policy allows you to share with us, 
-you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`. 
+If you have information about your users that your privacy policy allows you to share with us,
+you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`.
 We accept year of birth, gender, location, and the account ID of user's on your system.
 
 ```java
