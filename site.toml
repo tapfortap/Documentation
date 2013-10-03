@@ -90,11 +90,15 @@ title = "iOS"
   url = "ios/migration"
 
 [nav.plugins]
-title = "Supported Plugins"
+title = "Plugins"
 
-  [nav.plugins.coming-soon]
-  title = "Coming Soon"
-  url = false
+  [nav.plugins.adobe-air]
+  title = "Adobe Air"
+  url = "plugins/adobe-air"
+
+  [nav.plugins.corona]
+  title = "Corona SDK"
+  url = "plugins/corona"
 
 [nav.mediation]
 title = "Mediation Layers"
@@ -102,7 +106,7 @@ title = "Mediation Layers"
   [nav.mediation.admob]
   title = "AdMob"
   url = "mediation/admob"
-  
+
   [nav.mediation.mopub]
   title = "MoPub"
   url = "mediation/mopub"
