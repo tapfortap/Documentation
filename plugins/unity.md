@@ -13,7 +13,7 @@ This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 #### iPhone
 - An OS X machine running Lion (10.7)
 - iOS 6.0 SDK to build as we use the AdSupport framework
-- Support iOS target platform 4.3 and up
+- Support iOS target platform 5.0 and up
 
 ##  Integration
 If you don't have the plugin yet then [download the Unity plugin here](https://github.com/tapfortap/Unity/raw/master/release/TapForTap-Unity-1.2.0.unitypackage).
