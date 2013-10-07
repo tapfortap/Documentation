@@ -96,9 +96,21 @@ title = "Plugins"
   title = "Adobe Air"
   url = "plugins/adobe-air"
 
+  [nav.plugins.titanium]
+  title = "Appcelerator Titanium"
+  url = "plugins/titanium"
+
+  [nav.plugins.basic-4-android]
+  title = "Basic4Android"
+  url = "plugins/basic4android"
+
   [nav.plugins.corona]
   title = "Corona SDK"
   url = "plugins/corona"
+
+  [nav.plugins.unity]
+  title = "Unity 3D"
+  url = "plugins/unity"
 
 [nav.mediation]
 title = "Mediation Layers"
