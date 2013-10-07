@@ -7,7 +7,7 @@ This Application Native Extension was built using Adobe Air 3.5 SDK.
 
 ### Minimum Requirements
 #### Android
-  - None
+  - 2.2.0 and up
 
 #### iPhone
   - An OS X machine running Lion (10.7)
@@ -15,7 +15,6 @@ This Application Native Extension was built using Adobe Air 3.5 SDK.
 
 Note that the iPhone app cannot be built on a Windows machine using the Adobe Flex 4.6 SDK.
 The iOS SDK included with Adobe Flex is too old.
-
 
 ##  Setup
 If you don't have the native extension yet then [download it here](https://github.com/tapfortap/AdobeAir/raw/master/release/TapForTap-Air-1.1.0.zip).
@@ -295,4 +294,21 @@ var tft: TapForTap = TapForTap.instance;
 
 // Set the user account id
 tft.setUserAccountId("the user's account Id");
+```
+
+### setAutoScale(enabled: Boolean): void
+In Android the plugin will scale the ad according to the density of the display. This
+can cause undesireable behavour when developing aps for iOS and Android. Disabling auto
+scale will cause the plugin to treat any offsets or coordinates as raw pixels.
+
+For example, the default size for a banner is 320x50 points. So on a device with ascreen
+density of 1.5, the ad would scale to 480x75 pixels. With auto scale turned off, the ad
+would remain at 320x50 pixels.
+
+```javascript
+// Get a reference to the Tap for Tap context
+var tft: TapForTap = TapForTap.instance;
+
+// Disable auto scale
+tft.setAutoScale(false);
 ```
