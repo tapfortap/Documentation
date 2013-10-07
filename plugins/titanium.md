@@ -179,15 +179,29 @@ tftinterstitial.show();
 ```
 
 ##### Interstitial Events
-The interstital supports one event called `dismiss`. This event is fired when the interstitial ad is closed.
+The interstitial supports the following events:
 
-Usage:
+1. receive
+  - Fired when a new ad is done downloading
+2. show
+  - Fired when an ad is shown
+3. tap
+  - Fired when ad ad in the app wall is tapped
+4. dismiss
+  - Fired when the interstitial is dimsissed
+5. fail
+  - Fired when there is an error in the life cycle of the interstitial (ie. failed to download, failed to show etc...). The fail event passes along a string that explains the reason for the failure.
 
 ```js
 // Subscibe the the dismiss event
 tftInterstitial.addEventListener("dismiss", function(d) {
 	Ti.API.info("Interstitial dismissed");
 });
+
+interstitial.addEventListener("fail", function(d) {
+  Ti.API.info("Interstitial failed because: ", JSON.stringify(d, null, 2));
+});
+
 ```
 
 #### The AppWall Proxy
@@ -223,14 +237,29 @@ tftAppWall.show();
 ```
 
 ##### AppWall Events
-The app wall supports one event called `dismiss`. This event is fired when the app wall ad is closed.
+The app wall supports the following events:
+
+1. receive
+  - Fired when a new ad is done downloading
+2. show
+  - Fired when an ad is shown
+3. tap
+  - Fired when ad ad in the app wall is tapped
+4. dismiss
+  - Fired when the app wall is dimsissed
+5. fail
+  - Fired when there is an error in the life cycle of the app wall (ie. failed to download, failed to show etc...). The fail event passes along a string that explains the reason for the failure.
 
 Usage:
 
 ```js
 // Subscibe the the dismiss event
+appWall.addEventListener("receive", function(d) {
+  Ti.API.info("AppWall received");
+});
+
 tftAppWall.addEventListener("dismiss", function(d) {
-			Ti.API.info("AppWall dismissed");
+	Ti.API.info("AppWall dismissed");
 });
 ```
 
