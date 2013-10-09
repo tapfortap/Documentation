@@ -21,7 +21,7 @@ Note that the iPhone app cannot be built on a Windows machine using the Adobe Fl
 The iOS SDK included with Adobe Flex is too old.
 
 ##  Setup
-If you don't have the native extension yet then [download it here](https://github.com/tapfortap/AdobeAir/raw/master/release/TapForTap-Air-1.1.0.zip).
+If you don't have the native extension yet then [download it here](https://github.com/tapfortap/AdobeAir/raw/master/release/tapfortap.ane).
 
 Installing the Tap for Tap native extension is easy. This isn't an Adobe Air
 or Adobe Flash Builder tutorial so we assume that you have a Flex Mobile project
