@@ -2,6 +2,10 @@
 
 Want to use Tap for Tap with PhoneGap? We got you covered on Android and iOS.
 
+Help make this plugin better. Head to https://github.com/tapfortap/PhoneGap, fork the repo and submit pull requests.
+
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update PhoneGap.md
+
 ##  Installation
 If you don't have the plugins yet then [download it here](https://github.com/tapfortap/PhoneGap/raw/master/release/TapForTap-PhoneGap-1.0.0.zip).
 
