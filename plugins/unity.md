@@ -2,6 +2,10 @@
 
 Want to use Tap for Tap with Unity? We got you covered on Android and iOS.
 
+Help make this plugin better. Head to https://github.com/tapfortap/Unity, fork the repo and submit pull requests.
+
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update Unity.md
+
 ##  Preamble
 This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 
