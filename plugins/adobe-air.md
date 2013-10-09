@@ -5,6 +5,8 @@ Want to use Tap for Tap with Adobe Air? We got you covered on Android and iOS (+
 ##  Preamble
 This Application Native Extension was built using Adobe Air 3.5 SDK.
 
+Check out the source on [TapForTap's GitHub](https://github.com/tapfortap/AdobeAir) page
+
 ### Minimum Requirements
 #### Android
   - 2.2.0 and up
@@ -24,7 +26,6 @@ or Adobe Flash Builder tutorial so we assume that you have a Flex Mobile project
 already set up and working. All you need to do is add the `tapfortap.ane` file to
 your project. If you do not know how to add a native extension there is a brief
 explanation below
-
 
 ### Flash Builder 4.6
 
