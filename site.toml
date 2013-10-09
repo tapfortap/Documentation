@@ -145,12 +145,27 @@ title = "Inside Tap for Tap"
   title = "Country Tiers"
   url = "country-tiers"
 
-[nav.help]
-title = "More Help"
+[nav.faqs]
+title = "Frequently Asked Questions"
 
   [nav.help.faq]
-  title = "Frequently Asked Questions"
+  title = "General FAQ"
   url = "help/faq"
+  
+  [nav.help.account-faq]
+  title = "Account FAQ"
+  url = "help/account-faq"
+  
+  [nav.help.plugin-faq]
+  title = "Plugins FAQ"
+  url = "help/plugin-faq"
+  
+  [nav.help.sdk-faq]
+  title = "SDK FAQ"
+  url = "help/sdk-faq"
+
+[nav.help]
+title = "More Help"
 
   [nav.help.videos]
   title = "Instructional Videos"
