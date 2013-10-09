@@ -2,10 +2,12 @@
 
 Want to use Tap for Tap with Adobe Air? We got you covered on Android and iOS (+ iPhone simulator).
 
+Help make this plugin better. Head to https://github.com/tapfortap/AdobeAir, fork the repo and submit pull requests.
+
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update AdobeAir.md
+
 ##  Preamble
 This Application Native Extension was built using Adobe Air 3.5 SDK.
-
-Check out the source on [TapForTap's GitHub](https://github.com/tapfortap/AdobeAir) page
 
 ### Minimum Requirements
 #### Android
