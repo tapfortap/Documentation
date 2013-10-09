@@ -2,9 +2,12 @@
 
 Do you want to use Tap for Tap with Basic4Android? Then we got you covered.
 
-Help make this plugin better. Head to https://github.com/tapfortap/Basic4Android and clone the repo and submit pull requests.
+Help make this plugin better. Head to https://github.com/tapfortap/Basic4Android, fork the repo and submit pull requests.
 
-Help make this documentation better. Head to https://github.com/tapfortap/Documentation and update Basic4Android.md
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update Basic4Android.md
+
+### Minimum Requirements
+- Android 2.2.0 and up
 
 ##  Installation
 If you don't have the plugin yet then [download it here](https://github.com/tapfortap/Basic4Android/raw/master/release/TapForTapBasic4Android.zip).
@@ -271,14 +274,34 @@ Usage:
 #### setEventHandler
 Sets the event name for all interstitials. The interstitial fires the following 2 events:
 
-1. Dismissed()
+1. ReceiveAd()
+  - Fired when an ad is finsihed downloading.
+2. ShowAd()
+  - Fired when the ad is shown.
+3. TapAd()
+  - Fired when the user taps on the ad.
+4. Dismissed()
   - Fired when the user closes the ad
-2. FailedToReceiveAd(Reason As String)
+5. FailedToReceiveAd(Reason As String)
   - Fired when an ad fails to download
 
 You will need to create the following subroutines to receives these events. Note that you need to replace `EventName` with the string that you passed to setEventHandler.
 
 ```vbnet
+  Sub EventName_ReceiveAd
+    ...
+  End Sub
+
+  Sub EventName_ShowAd
+    ...
+  End Sub
+
+  Sub EventName_TapAd
+    ...
+  End Sub
+
+  Sub EventName_Dismissed
+
   Sub EventName_Dismissed
     ...
   End Sub
@@ -342,14 +365,32 @@ Usage:
 
 #### setEventHandler
 Sets the event name for all appwalls. The app wall fires the following 2events:
-1. Dismissed()
+1. ReceiveAd()
+  - Fired when an ad is finsihed downloading.
+2. ShowAd()
+  - Fired when the ad is shown.
+3. TapAd()
+  - Fired when the user taps on the ad.
+4. Dismissed()
   - Fired when the user closes the ad
-2. FailedToReceiveAd(Reason As String)
+5. FailedToReceiveAd(Reason As String)
   - Fired when an ad fails to download
 
 You will need to create the following subroutines to receives these events. Note that you need to replace `EventName` with the string that you passed to setEventHandler.
 
 ```vbnet
+  Sub EventName_ReceiveAd
+    ...
+  End Sub
+
+  Sub EventName_ShowAd
+    ...
+  End Sub
+
+  Sub EventName_TapAd
+    ...
+  End Sub
+
   Sub EventName_Dismissed
     ...
   End Sub

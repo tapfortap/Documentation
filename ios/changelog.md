@@ -1,3 +1,7 @@
+### 3.0.5 / 2013-10-07
+  * Fix app wall/interstitial landscape issues
+  * Add support for arm64 to library
+
 ### 3.0.4 / 2013-09-23
   * Workaround for spurious warnings about private API usage when submitting apps to the store
 
