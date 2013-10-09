@@ -42,9 +42,9 @@ In the project explorer on the left side of Xcode 4:
 ### Configuring Tap for Tap for Android
 A few additions need to be made to Unity's AndroidManifest.xml. If you do not
 have a custom manifest Unity recommends to create your own under the `Assets/Plugins/Android `folder ([Unity docs](http://docs.unity3d.com/Documentation/Manual/PluginsForAndroid.html)).
-Or you can edit the default manifest at:
-Mac OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer` 
-Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
+Or you can edit the default manifest:
+ - OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/AndroidManifest.xml` 
+ - Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
 
 1. Add the following permissions to the AndroidManifest.xml  
   `<uses-permission android:name="android.permission.INTERNET" />`  
