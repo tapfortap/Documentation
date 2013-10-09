@@ -2,9 +2,9 @@
 
 Do you want to use Tap for Tap with Basic4Android? Then we got you covered.
 
-Help make this plugin better. Head to https://github.com/tapfortap/Basic4Android and clone the repo and submit pull requests.
+Help make this plugin better. Head to https://github.com/tapfortap/Basic4Android, fork the repo and submit pull requests.
 
-Help make this documentation better. Head to https://github.com/tapfortap/Documentation and update Basic4Android.md
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update Basic4Android.md
 
 ### Minimum Requirements
 - Android 2.2.0 and up
