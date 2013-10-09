@@ -2,11 +2,11 @@
 
 ## Tap Exchange
 
-It’s all in our name: Tap for Tap. You show ads for other apps and produce a tap for another app. You earn credits for that tap and then our network will spend those credits to produce a tap on your app’s ad. 
+It’s all in our name: Tap for Tap. You show ads for other apps and produce a tap for another app. You earn credits for that tap and then our network will spend those credits to produce a tap on your app’s ad.
 
 ## Paid Promotion
 
-The practice of buying traffic to promote one’s application with the purpose of generating new users. Developers can buy installs (CPI), clicks (CPC) or impressions (CPM).
+The practice of buying traffic to promote one’s application with the purpose of generating new users. Developers can buy taps (CPC).
 
 ## Monetize/Monetization
 
@@ -46,7 +46,7 @@ A banner is a rectangular ad that promotes something within one’s app, usually
 
 ## Interstitial
 
-An interstitial is a larger banner that promotes something within one’s app, usually in between levels or elements of the content of the app. 
+An interstitial is a larger banner that promotes something within one’s app, usually in between levels or elements of the content of the app.
 
 ## Matching System
 
@@ -70,7 +70,7 @@ Tap-through rate, also referred to as CTR or click-through rate is the ratio bet
 
 ## CR
 
-Conversion rate is the ratio between taps generated and installs. 
+Conversion rate is the ratio between taps generated and installs.
 
 ## CPC
 
