@@ -1,3 +1,6 @@
+### 3.0.5 / 2013-10-07
+  * Fix intersitial/app wall landscape issues
+
 ### 3.0.4 / 2013-09-16
   * Fix intersitial/app wall callbacks not being called on UI thread
   * Fix starting requests on UI thread on Android 2.x

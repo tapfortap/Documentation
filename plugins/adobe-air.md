@@ -2,12 +2,16 @@
 
 Want to use Tap for Tap with Adobe Air? We got you covered on Android and iOS (+ iPhone simulator).
 
+Help make this plugin better. Head to https://github.com/tapfortap/AdobeAir, fork the repo and submit pull requests.
+
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update AdobeAir.md
+
 ##  Preamble
 This Application Native Extension was built using Adobe Air 3.5 SDK.
 
 ### Minimum Requirements
 #### Android
-  - None
+  - 2.2.0 and up
 
 #### iPhone
   - An OS X machine running Lion (10.7)
@@ -16,16 +20,14 @@ This Application Native Extension was built using Adobe Air 3.5 SDK.
 Note that the iPhone app cannot be built on a Windows machine using the Adobe Flex 4.6 SDK.
 The iOS SDK included with Adobe Flex is too old.
 
-
 ##  Setup
-If you don't have the native extension yet then [download it here](https://github.com/tapfortap/AdobeAir/raw/master/release/TapForTap-Air-1.1.0.zip).
+If you don't have the native extension yet then [download it here](https://github.com/tapfortap/AdobeAir/raw/master/release/tapfortap.ane).
 
 Installing the Tap for Tap native extension is easy. This isn't an Adobe Air
 or Adobe Flash Builder tutorial so we assume that you have a Flex Mobile project
 already set up and working. All you need to do is add the `tapfortap.ane` file to
 your project. If you do not know how to add a native extension there is a brief
 explanation below
-
 
 ### Flash Builder 4.6
 
@@ -295,4 +297,21 @@ var tft: TapForTap = TapForTap.instance;
 
 // Set the user account id
 tft.setUserAccountId("the user's account Id");
+```
+
+### setAutoScale(enabled: Boolean): void
+In Android the plugin will scale the ad according to the density of the display. This
+can cause undesireable behavour when developing aps for iOS and Android. Disabling auto
+scale will cause the plugin to treat any offsets or coordinates as raw pixels.
+
+For example, the default size for a banner is 320x50 points. So on a device with ascreen
+density of 1.5, the ad would scale to 480x75 pixels. With auto scale turned off, the ad
+would remain at 320x50 pixels.
+
+```javascript
+// Get a reference to the Tap for Tap context
+var tft: TapForTap = TapForTap.instance;
+
+// Disable auto scale
+tft.setAutoScale(false);
 ```

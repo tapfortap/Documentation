@@ -2,6 +2,10 @@
 
 Want to use Tap for Tap with Unity? We got you covered on Android and iOS.
 
+Help make this plugin better. Head to https://github.com/tapfortap/Unity, fork the repo and submit pull requests.
+
+Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update Unity.md
+
 ##  Preamble
 This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 
@@ -13,10 +17,10 @@ This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
 #### iPhone
 - An OS X machine running Lion (10.7)
 - iOS 6.0 SDK to build as we use the AdSupport framework
-- Support iOS target platform 4.3 and up
+- Support iOS target platform 5.0 and up
 
 ##  Integration
-If you don't have the plugin yet then [download the Unity plugin here](https://github.com/tapfortap/Unity/raw/master/release/TapForTap-Unity-1.2.0.unitypackage).
+If you don't have the plugin yet then [download the Unity plugin here](https://github.com/tapfortap/Unity/raw/master/release/TapForTap-Unity-1.3.0.unitypackage).
 
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
 assume that you have a Unity project already set up and working. The first thing you
@@ -38,9 +42,9 @@ In the project explorer on the left side of Xcode 4:
 ### Configuring Tap for Tap for Android
 A few additions need to be made to Unity's AndroidManifest.xml. If you do not
 have a custom manifest Unity recommends to create your own under the `Assets/Plugins/Android `folder ([Unity docs](http://docs.unity3d.com/Documentation/Manual/PluginsForAndroid.html)).
-Or you can edit the default manifest at:
-Mac OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer` 
-Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
+Or you can edit the default manifest:
+ - OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/AndroidManifest.xml` 
+ - Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
 
 1. Add the following permissions to the AndroidManifest.xml  
   `<uses-permission android:name="android.permission.INTERNET" />`  
