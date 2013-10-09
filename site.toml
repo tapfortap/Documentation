@@ -148,19 +148,19 @@ title = "Inside Tap for Tap"
 [nav.faqs]
 title = "Frequently Asked Questions"
 
-  [nav.help.faq]
+  [nav.faqs.faq]
   title = "General FAQ"
   url = "help/faq"
   
-  [nav.help.account-faq]
+  [nav.faqs.account-faq]
   title = "Account FAQ"
   url = "help/account-faq"
   
-  [nav.help.plugin-faq]
+  [nav.faqs.plugin-faq]
   title = "Plugins FAQ"
   url = "help/plugin-faq"
   
-  [nav.help.sdk-faq]
+  [nav.faqs.sdk-faq]
   title = "SDK FAQ"
   url = "help/sdk-faq"
 
