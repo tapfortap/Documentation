@@ -34,7 +34,7 @@ AddApplicationText (
 ```vbnet
   'TapForTap
   AddApplicationText(
-  <activity android:name="com.tapfortap.TapForTapActivity"/>
+   <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
   )
   'End of TapForTap
 ```
