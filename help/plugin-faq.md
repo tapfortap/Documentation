@@ -16,7 +16,7 @@
 - TapForTapAdMob.jar
 - libTapForTapAdMob.a
 
-#### Q. Do you support MoP:ub
+#### Q. Do you support MoPub
 **A.** Yes, visit [Mopub-Android](https://github.com/tapfortap/MoPub-Android) or [MoPub-iOS](https://github.com/tapfortap/MoPub-iOS) to view the custom events for each platform.
 
 #### Q. Is there source code for the plugins?
