@@ -1,3 +1,6 @@
+### 3.0.6 / 2013-10-11
+  * Bug fixes
+
 ### 3.0.5 / 2013-10-07
   * Fix intersitial/app wall landscape issues
 
