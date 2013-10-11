@@ -1,7 +1,5 @@
 # Account FAQ
 
-Account FAQ:
-
 #### Q. I integrated the sdk but why can I not see any ads?
 **A.** The app needs to be republished to the store and approved with Tap for Tap’s SDK integrated. Once approved the ads should appear. If not, please contact support@tapfortap.com and we will help asap.
 
