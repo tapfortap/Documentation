@@ -1,7 +1,7 @@
 # Account FAQ
 
 #### Q. I integrated the sdk but why can I not see any ads?
-**A.** The app needs to be republished to the store and approved with Tap for Tap’s SDK integrated. Once approved the ads should appear. If not, please contact support@tapfortap.com and we will help asap.
+**A.** For Android, double check that you have added all the required permissions and activities. For iOS double check that you have added the required frameworks. If you are still not able to see ads, try waiting 30 mins and try again. If you are still having problems please email support@tapfortap.com.
 
 #### Q. My app was approved by the store but I can’t see my app name in my account?
 **A.** The app name will appear once the app hits 10 unique devices (different IP addresses). We do this to ensure there are no fraudulent taps occurring. 
@@ -12,7 +12,7 @@
 #### Q. If I request a withdrawal how long until I receive the funds? is there a minimum? 
 
 #### Q. Why am I seeing clicks generated through monetization but no money?
-**A.** This is a result of you trying to monetize on a CPI offer. However, since Tap for Tap only records an install when the app is opened for the first time. You may see funds appear on a later date.
+**A.** This is a result of you trying to monetize on a CPI offer. However, since Tap for Tap only records an install when the app is opened for the first time, you may see funds appear on a later date.
 
 #### Q. What are custom ad units and why should I consider them?
 **A.** If you have your own ad units already you can upload them through the banner creation page on your account. Custom ad units are a great tool to gain exposure and are key in separating yourself from the group.
