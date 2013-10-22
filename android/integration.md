@@ -70,7 +70,7 @@ API key which can be found on the [account](https://tapfortap.com/manage/account
 
 ## Step 3 - Add Permissions to Your AndroidManifest.xml
 
-Add the following permissions to your AndroidManifest.xml
+Add the following permissions to the `<application>` tag in your AndroidManifest.xml:
 
 ```xml
     <uses-permission android:name="android.permission.INTERNET" />
