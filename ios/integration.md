@@ -1,7 +1,7 @@
 # iOS - SDK Implementation
 
 ##  Current Version
-**3.0.6** - [See Changelog](/doc/ios/changelog)
+**3.0.7** - [See Changelog](/doc/ios/changelog)
 
 Supports iOS 5.0 and up.
 

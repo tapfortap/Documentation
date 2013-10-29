@@ -1,3 +1,6 @@
+### 3.0.7 / 2013-10-29
+  * Fix interstitial and app wall not covering bottom of screen on iOS 7
+
 ### 3.0.6 / 2013-10-11
   * Bug fixes
 
