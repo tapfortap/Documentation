@@ -16,32 +16,22 @@ methods as Tap for Tap will initialize itself.
 
 ### Methods
 
-#### public static void initializeWithApiKey(String apiKey)
+#### public static void initialize(Context context, String apiKey)
 
 Initializes Tap for Tap with the provided API key.
 
 **Parameters**
 
+  - _context_ - An Android context, such as an Activity instance.
   - _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
-
----
-
-#### public static initializeWithApiKey(String apiKey, TapForTap.InitializationListener listener)
-
-Initializes Tap for Tap with the provided API key and listener.
-
-**Parameters**
-
-  - _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
-  - _listener_ - A listener for handling the callbacks.
 
 ---
 
 #### public static void enableTestMode()
 
-Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app. 
-This is useful for when you are developing your app and want to test with the SDK integrated 
-without wasting impressions and clicks for your app. **Don't forget** to disable test mode before 
+Enables test mode. Test mode causes Tap for Tap to disable spending and earning for your app.
+This is useful for when you are developing your app and want to test with the SDK integrated
+without wasting impressions and clicks for your app. **Don't forget** to disable test mode before
 you release your app to Google Play.
 
 ---
@@ -54,7 +44,7 @@ Disables test mode. See [enableTestMode](#public-static-void-enabletestmode) for
 
 #### public static void disableTapForTap()
 
-Stops Tap for Tap from being able to download and show ads. This can be useful if you offer a 
+Stops Tap for Tap from being able to download and show ads. This can be useful if you offer a
 paid version of your app that removes ads.
 
 ---
@@ -88,7 +78,7 @@ the best ad for this user.
 
 #### public static void setUserAccountId(String userAccountId)
 
-Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the 
+Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the
 developer can assign to your users. This helps Tap for Tap to provide the best ad for this user.
 
 ## Banner
@@ -100,7 +90,7 @@ This class is responsible for showing banners.
 ### Special Considerations
 
 Do not use any of the public constructors as doing so may cause crashes. They are only avaible in order to allow
-the banners to be decalred inside layout files. Only use the provided constructor methods when instantiating 
+the banners to be decalred inside layout files. Only use the provided constructor methods when instantiating
 a banner programatically.
 
 The banner will stop downloading and showing new ads if the view is not visible or the screen is off.
@@ -136,9 +126,9 @@ Creates a new banner and begins downloading and showing ads with the provided li
 
 #### public void setBannerListener(BannerListener bannerListener)
 
-Sets a listener on the banner. This should only be used if the banner is decalared in a layout 
-and is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory 
-method [createAndShow(context, bannerListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerListener)  
+Sets a listener on the banner. This should only be used if the banner is decalared in a layout
+and is retrieved using Android's `findViewBytId(int id)` method. Otherwise use the factory
+method [createAndShow(context, bannerListener)](public-static-Banner-createAndShowContext-context-BannerListener-bannerListener)
 
 **Parameters**
 
@@ -205,7 +195,7 @@ Called when a user taps on a banner.
 **Parameters**
 
   - _banner_ - The Banner that was tapped.
-  
+
 ## Interstitial
 
 ### Overview
@@ -215,7 +205,7 @@ This class is responsible for downloading and showing interstitials.
 ### Special Considerations
 
 Always be sure that an interstitial is ready to be shown by either using the listeners or by using the
-isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times 
+isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times
 due to network connectivity.
 
 ### Methods
@@ -341,7 +331,7 @@ This class is responsible for downloading and showing app walls.
 
 ### Special Considerations
 
-Always be sure that an app wall is ready to be shown by either using the callbacks or by using the isReadyToShow method. 
+Always be sure that an app wall is ready to be shown by either using the callbacks or by using the isReadyToShow method.
 Failure to do so may cause an app wall to be shown at unexpected or undersireable times due to network connectivity.
 
 ### Methods
