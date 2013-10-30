@@ -9,6 +9,9 @@
 #### Q. Can credits be converted into money?
 **A.** Credits cannot be converted into money nor do they have any connection.
 
+#### Q. How do I get paid with Tap for Tap?
+**A.** You must request payment from the "Billing Details" section of your account page. We pay via PayPal on monthly net 7 basis.
+
 #### Q. If I request a withdrawal how long until I receive the funds? is there a minimum? 
 **A.** We pay on a net7 monthly basis, which means if you request payment at any time in the month of October, you will be paid on the 7th of November. The mimimum withdrawl amount is $25.
 #### Q. Why am I seeing clicks generated through monetization but no money?
