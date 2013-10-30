@@ -10,7 +10,7 @@
 **A.** Credits cannot be converted into money nor do they have any connection.
 
 #### Q. If I request a withdrawal how long until I receive the funds? is there a minimum? 
-**A.** We pay on a net7 monthly basis, which means if you request payment at any time in the month of October, you will be paid on the 7th of November.
+**A.** We pay on a net7 monthly basis, which means if you request payment at any time in the month of October, you will be paid on the 7th of November. The mimimum withdrawl amount is $25.
 #### Q. Why am I seeing clicks generated through monetization but no money?
 **A.** This is because some of our monetization offers are cost per install, so you only get paid on a successful install. Tap for Tap records installs when a user opens the app, so occasionally these installs can be delayed.
 
