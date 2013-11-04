@@ -1,5 +1,6 @@
 ### 3.0.7 / 2013-11-04
   * Fix a bug where tapping a banner loads the incorrect app in Google Play
+  * Fix a crashing bug when no cache directory is found
 
 ### 3.0.6 / 2013-10-11
   * Bug fixes
