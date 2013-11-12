@@ -55,14 +55,13 @@ Import `TFTTapForTap.h` in your app delegate and call our initialize method.
 }
 ```
 
-##  Step 4: Display a Banner
+##  Step 4: Display Ads
 
-In the view controllers in wich you would like to display ads, in your `viewDidLoad` method create a `TFTBanner` and add it to your view.
+### Banners
 
-For banners your view controller needs to implement the `TFTBannerDelegate` protocol in the header file, e.g. @interface MyViewController <TFTBannerDelegate>
+In the view controllers in which you would like to display banners, in your `viewDidLoad` method create a `TFTBanner` and add it to your view. Your view controller needs to implement the `TFTBannerDelegate` protocol in the header file, e.g. @interface MyViewController <TFTBannerDelegate>
 
 ```objective-c
-// Be sure to import TFTTapForTap.h
 # import "TFTTapForTap.h"
 
 - (void) viewDidLoad
@@ -78,6 +77,29 @@ For banners your view controller needs to implement the `TFTBannerDelegate` prot
 	// [banner release];
 }
 ```
+
+### Interstitials
+
+In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method create a `TFTInterstitial`. We assume that your view controller has a property: `TFTInterstitial *interstitial`
+
+Your view controller can implement the `TFTInterstitialDelegate` protocol in the header file, e.g. @interface MyViewController <TFTInterstitialDelegate>
+
+```objective-c
+# import "TFTTapForTap.h"
+
+- (void) viewDidLoad
+{
+	[super viewDidLoad];
+
+	// Load an interstitial
+    self.interstitial = [TFTInterstitial interstitial];
+}
+```
+
+Then later you can show the interstitial with `[self.interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
+
+App walls work the same way as interstitials.
+
 
 ##  Step 5 - Send Optional Info About Your Users.
 

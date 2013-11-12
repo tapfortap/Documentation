@@ -118,7 +118,9 @@ To enable test mode add the following meta data tag to your AndroidManifest.xml.
 ```
 
 ## Step 6 - Display Ads
-Adding a banner to a `RelativeLayout`
+
+### Banners
+Adding a banner to a `RelativeLayout`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -135,6 +137,51 @@ Adding a banner to a `RelativeLayout`
     />
 </RelativeLayout>
 ```
+
+### Interstitials
+
+Showing an interstitial from an `Activity`:
+
+```java
+public class MyActivity extends Activity {
+
+    private Interstitial interstitial;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        interstitial = new Interstitial(this, new Interstitial.InterstitialListener() {
+            @Override
+            public void interstitialOnReceive(Interstitial ad) {
+                // your code here
+            }
+
+            @Override
+            public void interstitialOnFail(Interstitial ad, String message, Throwable throwable) {
+                // your code here
+            }
+
+            @Override
+            public void interstitialOnShow(Interstitial ad) {
+                // your code here
+            }
+
+            @Override
+            public void interstitialOnTap(Interstitial ad) {
+                // your code here
+            }
+
+            @Override
+            public void interstitialOnDismiss(Interstitial ad) {
+                // your code here
+            }
+        });
+    }
+}
+```
+
+Then later you can show the interstitial with `interstitial.show()` or `interstitial.showAndLoad()` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `interstitial.isReadyToShow()` if you want to be certain it's ready before showing it (recommended).
+
+App walls work the same way as interstitials.
 
 ## Step 7 - Send Optional Information About Your Users
 If you have information about your users that your privacy policy allows you to share with us,
