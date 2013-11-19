@@ -15,7 +15,7 @@ The Titanium Module was build and tested against Titanium 3.0.0GA. If you don't 
 - 2.2.0 and up
 
 #### iPhone
-- And OSX machine running at least Lion (10.7)
+- And OS X machine running at least Lion (10.7)
 - iOS 6.0 SDK
 
 ## Integration
@@ -26,9 +26,9 @@ Watch a [video](https://www.youtube.com/watch?v=soczKbhJFh0&feature=youtu.be) th
 ## API Documentation
 The JavaScript API lets you:
  - create and place Tap for Tap adViews
- - show interstitials 
- - show app walls and 
- - provide various optional information about your users to help with ad targetting. 
+ - show interstitials
+ - show app walls and
+ - provide various optional information about your users to help with ad targetting.
 
 Please make sure your privacy policy allows this before providing any personal information.
 
@@ -210,7 +210,7 @@ interstitial.addEventListener("fail", function(d) {
 
 #### The AppWall Proxy
 
-The AppWall proxy allows you to show app wall ads. 
+The AppWall proxy allows you to show app wall ads.
 
 Usage:
 

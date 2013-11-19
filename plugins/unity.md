@@ -24,7 +24,7 @@ If you don't have the plugin yet then [download the Unity plugin here](https://g
 
 Installing the Tap for Tap Unity Plugin is easy. This isn't a Unity tutorial so we
 assume that you have a Unity project already set up and working. The first thing you
-need to do is import the TapForTap.unitypackage into your app 
+need to do is import the TapForTap.unitypackage into your app
 Then follow the steps below for configuring iOS and Android.
 
 ### Configuring Tap for Tap for iOS
@@ -43,19 +43,19 @@ In the project explorer on the left side of Xcode 4:
 A few additions need to be made to Unity's AndroidManifest.xml. If you do not
 have a custom manifest Unity recommends to create your own under the `Assets/Plugins/Android `folder ([Unity docs](http://docs.unity3d.com/Documentation/Manual/PluginsForAndroid.html)).
 Or you can edit the default manifest:
- - OSX: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/AndroidManifest.xml` 
- - Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`  
+ - OS X: `/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/AndroidManifest.xml`
+ - Windows: `C:\Program Files\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\AndroidManifest.xml`
 
-1. Add the following permissions to the AndroidManifest.xml  
-  `<uses-permission android:name="android.permission.INTERNET" />`  
-  `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`  
-  `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`  
-  `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`  
-  `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`  
-2. Include the TapForTap activity in the AndroidManifest.xml  
+1. Add the following permissions to the AndroidManifest.xml
+  `<uses-permission android:name="android.permission.INTERNET" />`
+  `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`
+  `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
+  `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`
+  `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`
+2. Include the TapForTap activity in the AndroidManifest.xml
   `<activity android:name="com.tapfortap.TapForTapActivity"/>`
 3. Change the following line in the AndroidManifest.xml, setting the value to true. This makes it
-   so that you can click on the banner ads (otherwise Unity swallows the click event)  
+   so that you can click on the banner ads (otherwise Unity swallows the click event)
    `<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />`
 
 Congratulations, you are done. You should now be able to call into the Tap for Tap library
