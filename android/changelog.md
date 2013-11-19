@@ -1,3 +1,7 @@
+### 3.0.8 / 2013-11-19
+  * Avoid empty black banner views (use WRAP_CONTENT instead of MATCH_PARENT for banners)
+  * Only check AndroidManifest.xml for FullScreenAdActivity if interstitials or app walls are used
+
 ### 3.0.7 / 2013-11-04
   * Fix a bug where tapping a banner loads the incorrect app in Google Play
   * Fix a crashing bug when no cache directory is found
