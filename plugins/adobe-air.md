@@ -68,7 +68,7 @@ on a machine running at least OS X Lion 10.7)
   - `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`
   - `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`
 10. Include the TapForTap activity in the `app.xml`
-  - `<activity android:name="com.tapfortap.TapForTapActivity"/>`
+  - `<activity android:name="com.tapfortap.FullScreenAdActivity"/>`
 
 ### Setup building with the Command Line or Ant
 1. Add the option `-extDir` givint it the path to the folder to where `tapfortap.ane` is located.

@@ -29,7 +29,7 @@ AddApplicationText (
 )
 'End TapForTap Permissions
 ```
-3. Add the `TapForTapActivity` to `AndroidManifest.xml`
+3. Add the `FullScreenAdActivity` to `AndroidManifest.xml`
 
 ```vbnet
   'TapForTap
@@ -39,7 +39,7 @@ AddApplicationText (
   'End of TapForTap
 ```
 
-That's it! Now you're ready to use Tap for Tap in your app.  
+That's it! Now you're ready to use Tap for Tap in your app.
 
 ##  Usage
 
@@ -62,8 +62,8 @@ Sub Activity_Create(FirstTime As Boolean)
   'Calculate the x and y coordinate to center the AdView
   Dim adHeight = 50dip
   'Maintain the correct aspect ratio so ads look good
-  Dim adWidth As Int = adHeight * 320/50 
-  Dim left As Int = (GetDeviceLayoutValues.Width - adWidth) / 2 
+  Dim adWidth As Int = adHeight * 320/50
+  Dim left As Int = (GetDeviceLayoutValues.Width - adWidth) / 2
 
   'Add the AdView to the actvities layout
   Activity.AddView(adview, left, 100%y - 50dip, adWidth, adHeight)
@@ -76,12 +76,12 @@ End Sub
   Sub AdViewEventHandler_ReceiveAd
   Log("AdViewEventHandler_ReceiveAd")
   End Sub
-  
+
   'Event to handle when a new ad fails to download
   Sub AdViewEventHandler_FailedToReceiveAd (Reason As String)
   Log("AdViewEventHandler_FailedToReceiveAd" + Reason)
   End Sub
-  
+
   'Event to handle when an ad is tapped
   Sub AdViewEventHandler_TapAd
   Log("AdViewEventHandler_TapAd")
@@ -134,7 +134,7 @@ Sets the gender of the user. This is sent along with ad requests and helps with 
 
 Usage:
 
-```vbnet 
+```vbnet
   'Set the gender to male
   tft.setGender(0)
 ```
@@ -144,7 +144,7 @@ Sets the year of birth of the user. This is sent along with ad requests and help
 
 Usage:
 
-```vbnet 
+```vbnet
   'Set the year of birth to 1984
   tft.setYearOfBirth(1984)
 ```
@@ -221,18 +221,18 @@ Usage:
   'Set the adView's event handler
   adview.setEventHandler("AdViewEventHandler")
   ...
-  
+
   ...
   'Event to hande when a new ad is received
   Sub AdViewEventHandler_ReceiveAd
     Log("AdViewEventHandler_ReceiveAd")
   End Sub
-  
+
   'Event to handle when an ad fails to download
   Sub AdViewEventHandler_FailedToReceiveAd (Reason As String)
   	Log("AdViewEventHandler_FailedToReceiveAd: " + Reason)
   End Sub
-  
+
   'Event to handle when an ad is tapped
   Sub AdViewEventHandler_TapAd
   	Log("AdViewEventHandler_TapAd")
@@ -318,7 +318,7 @@ Usage:
   'Set the event handler
   interstital.setEventHandler("InterstitialEventHandler")
   ...
-  
+
   ...
   'Event to handle when the interstitial is dismissed
   Sub InterstitialEventHandler_Dismissed
@@ -407,7 +407,7 @@ Usage:
   'Set the event handler
   appwall.setEventHandler("AppWallEventHandler")
   ...
-  
+
   ...
   'Event to handle when the app wall is dismissed
   Sub AppWallEventHandler_Dismissed

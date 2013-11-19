@@ -30,7 +30,7 @@ This isn't a PhoneGap tutorial so we assume that you have a PhoneGap project
 3. Add the following activiry to `AndroidManifest.xml`
 
 ```xml
-  <activity android:name="com.tapfortap.TapForTapActivity"/>
+  <activity android:name="com.tapfortap.FullScreenAdActivity"/>
 ```
 
 4. Put `tapfortap.js` in the `assets/www` folder alongside `cordova-2.x.x.js`.

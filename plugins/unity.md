@@ -53,7 +53,7 @@ Or you can edit the default manifest:
   `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />`
   `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />`
 2. Include the TapForTap activity in the AndroidManifest.xml
-  `<activity android:name="com.tapfortap.TapForTapActivity"/>`
+  `<activity android:name="com.tapfortap.FullScreenAdActivity"/>`
 3. Change the following line in the AndroidManifest.xml, setting the value to true. This makes it
    so that you can click on the banner ads (otherwise Unity swallows the click event)
    `<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />`
