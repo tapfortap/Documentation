@@ -1,3 +1,6 @@
+### 3.0.8 / 2013-12-09
+  * Fix a bug calling banner delegate methods (tftBannerWasTapped)
+
 ### 3.0.7 / 2013-10-29
   * Fix interstitial and app wall not covering bottom of screen on iOS 7
 
