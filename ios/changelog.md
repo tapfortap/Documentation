@@ -1,3 +1,6 @@
+### 3.0.9 / 2014-01-05
+  * Fix a crashing bug when user's country is unavailable
+
 ### 3.0.8 / 2013-12-09
   * Fix a bug calling banner delegate methods (tftBannerWasTapped)
 

@@ -1,3 +1,9 @@
+### 3.0.10 / 2014-02-14
+  * Try to catch a mysterious NullPointerException that occurs on some devices
+
+### 3.0.9 / 2014-01-05
+  * Fix banner sizing on devices with xhdpi displays
+
 ### 3.0.8 / 2013-11-19
   * Avoid empty black banner views (use WRAP_CONTENT instead of MATCH_PARENT for banners)
   * Only check AndroidManifest.xml for FullScreenAdActivity if interstitials or app walls are used
