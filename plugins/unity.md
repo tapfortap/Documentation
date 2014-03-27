@@ -7,7 +7,7 @@ Help make this plugin better. Head to https://github.com/tapfortap/Unity, fork t
 Help make this documentation better. Head to https://github.com/tapfortap/Documentation fork the repo and update Unity.md
 
 ##  Preamble
-This Unity plugin was built and tested against Unity 3.5 and tested againts 4.0.
+This Unity plugin was built and tested against Unity 3.5 and tested against 4.0.
 
 ### Minimum Requirements
 
