@@ -1,17 +1,86 @@
-body{background:#dfdfdf;}
-#left{background-color:#eee;border:1px solid #ddd;border-left:0px;}
-#left .title{font-size:95%;font-weight:bold;margin-top:10px;padding-left:6px;color:#005378;}
-#left a{font-size:85%;color:#103f4d;}
-.btn{font-family:'Lato',sans-serif,arial;}
-#download-sdk{position:absolute;right:10px;top:10px;}
-.page{border:1px solid #ccc;background-color:white;}
-a{color:63b3d6;}
-h1{font-size:200%;color:#103f4d;}
-h2{font-size:170%;color:#005378;}
-h3{font-size:140%;color:#555;}
-h4{font-size:110%;}
-h1,h2,h3,h4{margin-top:20px;}
-.nav-list>.active>a{background-color:rgba(0,115,166,.5)}
+body{
+	background:#fff;
+}
+a {
+	color: #5298A5;
+	text-decoration: none;
+}
+h1{
+	font-size: 2.5em;
+	color: #587C84;
+	font-weight: 300;
+}
+h2{
+	font-size: 1.5em;
+	color: #818C8E;
+	font-weight: 300;
+}
+h3{
+	font-size: 1.2em;
+	color: #2a2b24;
+	font-weight: 300;
+}
+h4{
+	font-size:110%;
+}
+h1,h2,h3,h4{
+	margin-top:30px;
+	font-weight: 300;
+}
+
+/* HEADER NAV */
+.navbar-inner {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 0;
+	background: #3A3D3F;
+	text-transform: uppercase;
+ }
+ .navbar-inverse .nav .active>a, .navbar-inverse .nav .active>a:hover, .navbar-inverse .nav .active>a:focus {
+  color: #fff;
+  background-color: #242728;
+  border-radius: 6px;
+}
+.navbar-inverse .nav > li > a {
+  font-size: 14px;
+}
+.header-button {
+  color: #fff;
+  background-color: #5298A9;
+  border-radius: 6px;
+}
+
+/* SIDEBAR NAV */
+#left{
+  margin-top: 10px;
+  padding-left: 20px;
+  max-width: 250px;
+}
+#left .title {
+  font-size: 95%;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  padding-left: 6px;
+  color: #587C84;
+}
+#left a {
+	font-size: 85%;
+	color: #657079;
+	border-radius: 4px;
+	max-width: 250px;
+}
+.nav-list {
+  padding-left: 20px;
+}
+.nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus {
+	background-color: rgba(225, 239, 242, 1);
+}
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #F5F5F5;
+}
+
 
 
 .hll { background-color: #ffffcc }
