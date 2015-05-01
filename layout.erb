@@ -16,13 +16,18 @@
         <div class="container-fluid">
           <a href="/" class="brand" style="padding:5px 25px;"><img src="/images/logo-whitex30.png" alt="Tap for Tap"></a>
           <ul class="nav">
-            <li class="active"><a href="<%= site.root %>">Documentation</a></li>
+            <li class="active"><a href="<%= site.root %>">Docs</a></li>
             <li class="hidden-phone"><a href="<%= site.root %>/getting-started">Get Started</a></li>
-            <li><a href="/sdk2/doc">SDK 2.x Documentation</a></li>
+            <li><a href="/sdk2/doc">SDK 2.x Docs</a></li>
           </ul>
           <ul class="nav pull-right">
-            <li><a href="/">Tap for Tap</a></li>
-            <li class="hidden-phone"><a href="/manage">Developer Site</a></li>
+            <li class="hidden-phone"><a href="/login">Log in</a></li>
+            <li class="hidden-phone"><a href="/signup">Sign up</a></li>
+            <li>
+              <a href="https://github.com/tapfortap/SDK/archive/master.zip" class="header-button">
+                <i class="icon-download-alt icon-white"></i> Download SDK
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -40,7 +45,7 @@
               <% next if _ == 'title' %>
               <li <%== page.url == item.url ? 'class="active"' : '' %>>
                 <% if item.url %>
-                  <a href="<%= item.url %>"><i class="icon-chevron-right"></i> <%= item.title %></a>
+                  <a href="<%= item.url %>"><%= item.title %></a>
                 <% else %>
                   <%= item.title %>
                 <% end %>
@@ -79,15 +84,13 @@
               <a href="/">Home</a> &nbsp;&nbsp;
               <a href="/terms">Terms</a> &nbsp;&nbsp;
               <a href="/privacy">Privacy</a> &nbsp;&nbsp;
-              <a href="http://tapfortap.zendesk.com">Contact</a> &nbsp;&nbsp;
+              <a href="/contact">Contact</a> &nbsp;&nbsp;
             </div>
           </td>
         </tr>
       </table>
     </div>
-    <div class="center">
-      <div id="legal">&copy; 2013 Tap for Tap Promotions Inc.</div>
-    </div>
+    <div id="legal center">&copy; <%= DateTime.now.year %> Tap for Tap Promotions Inc.</div>
     <br>
     <br>
   </div>
