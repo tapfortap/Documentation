@@ -10,7 +10,7 @@ In order to earn revenue from our monetization network you will need to:
 
 ## Ad Inventory
 
-To find out the types of ads we support check out our Ad Overview [Guide](doc/make-money/ad-overview). You can also take [steps](/doc/make-money/dos-donts) to improve the performance of your ads by ensuring proper placement and visibility.
+To find out the types of ads we support check out our [ad overview guide](doc/make-money/ad-overview). You can also take [steps](/doc/make-money/dos-donts) to improve the performance of your ads by ensuring proper placement and visibility.
 
 
 ## Performance
