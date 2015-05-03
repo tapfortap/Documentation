@@ -156,7 +156,7 @@ In the callback you can show the interstitial with `[interstitial showWithViewCo
 
 ### Achievement and Rescue Interstitials
 
-Achievement and Rescue interstitials work similarly to Break interstials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
+Achievement and Rescue interstitials work similarly to Break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
 
 In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method (or another appropriate handler), call `[ TFTInterstitial loadRescueInterstitial... ]`.
 

@@ -1,61 +1,79 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**3.0.10** - [See Changelog](/doc/android/changelog)
+**4.0.0** - [See Changelog](/doc/android/changelog)
 
-Supports Android 2.2 and up (API level 8)
+Supports Android 4.0 and up (API level 14)
 
 ##  General Information ##
 
-Integrating Tap for Tap into your app is usually really easy. Follow the steps below to get started.
+Integrating Tap for Tap into your app is really easy! Follow the steps below to get started.
 
-# Instructions #
+# Instructions (Android Studio) #
 
-##  Step 1 - Add TapForTap.jar to your project ##
+##  Step 1: Add Tap for Tap to Your Project.
 
-If your project doesn't have a libs folder create one and copy TapForTap.jar into it.
+- Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip).
 
-##  Step 1 using Eclipse ##
+- Unzip the SDK archive and add the following files to your project:
+    - `TapForTap.aar`
 
-In Eclipse, right-click on your project in the Package Explorer then click `Properties`.
+- If your project doesn't have a libs folder create one and copy TapForTap.aar into it.
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/eclipse-01.png)
+- Add the TapForTap library to your project's build:
+    - Go to File -> New Module
 
-In the properties window click `Java Build Path` on the left then click `Add JARs...` on the right.
+    - Select the "Import .JAR or .AAR Package" option from the list under "More Modules", click "Next"
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/eclipse-02.png)
+    - Use the file menu to select `TapForTap.aar`, Android Studio should fill in both text fields.
 
-Navigate to the `TapForTap.jar` file you copied into your project earlier then click `OK`.
+- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library, the latest Google Play Services library, and the TapForTap library. Sync Gradle files.
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/eclipse-03.png)
+```
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.google.android.gms:play-services:7.0.0'
+    compile project(':TapForTap')
+}
+```
 
-Make sure that the checkbox to export the library is checked on the `Order and Export` tab
+## Permissions
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/eclipse-04.png)
+- **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
 
-Click `OK` to leave the properties window.
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />                
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" /> 
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>    
+<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.CALL_PHONE" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+<uses-permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" />
+```
 
+Depending on your project is set up, you may see the following compile error:
 
-##  Step 1 using IntelliJ IDEA ##
+`Execution failed for task ':app:packageDebug' > Duplicate files copied in APK [some meta file]`
 
-In IDEA open your Project Structure via the File menu, File ? Project Structure.
+To resolve this, add the following to the same `build.gradle` file you modified earlier:
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/idea-01.png)
-
-Select `Libraries` under `Project Settings` on the left. Add a new Java library by clicking the plus icon up top, selecting Java, and then selecting `TapForTap.jar` in your `lib` or `libs` folder.
-
-![](https://raw.github.com/tapfortap/Documentation/master/images/idea-02.png)
-
-![](https://raw.github.com/tapfortap/Documentation/master/images/idea-03.png)
-
-IDEA will ask you to select which module to add it to and in most cases you can click OK to add it to the module selected by default.
-
-![](https://raw.github.com/tapfortap/Documentation/master/images/idea-04.png)
-
-Then click `OK` to leave the properties window.
-
-![](https://raw.github.com/tapfortap/Documentation/master/images/idea-05.png)
-
+```
+packagingOptions {
+    exclude "META-INF/LICENSE.txt"
+    exclude "META-INF/NOTICE.txt"
+}
+```
 
 ## Step 2 - Add Your API Key to Your AndroidManifest.xml
 
@@ -63,63 +81,24 @@ Add the following meta data tag to the `<activity>` tag in your AndroidManifest.
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
 ```xml
-    <meta-data
-        android:name="com.tapfortap.API_KEY"
-        android:value="MY_API_KEY"/>
+<meta-data
+    android:name="com.tapfortap.API_KEY"
+    android:value="MY_API_KEY"/>
 ```
 
-## Step 3 - Add Permissions to Your AndroidManifest.xml
 
-Add the following permissions to the `<application>` tag in your AndroidManifest.xml:
+## Step 3 - Initialize the SDK
 
-```xml
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+In the `onCreate` method of your main Activity, add the following code, substituting your API key from the Tap for Tap web interface:
+
+```
+TapForTap.initialize(this, "YOUR_API_KEY");
 ```
 
-### Why TapForTap Requires the Permissions It Does
-
-- _INTERNET_: Required to download ads.
-- _READ_PHONE_STATE_: Required to do conversion tracking and work with monetization partners.
-- _ACCESS_NETWORK_STATE_: Required to check network status in order to help the SDK be smarter about network requests.
-- _ACCESS_WIFI_STATE_: Required to check network status in order to help the SDK be smarter about network
-requests and to help with conversion tracking.
-- _WRITE_EXTERNAL_STORAGE_: Required to cache ads locally on the phone. This greatly improves
-performance and reduces network traffic and radio usage. TapForTap is capped at 10MB of disk space.
-
-## Step 4 - Add the FullScreenAdActivity to Your AndroidManifest.xml
-
-Add the following activity to your AndroidManifest.xml. This enables showing full screen ads.
-
-```xml
-    <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-```
-
-If your app hides the status bar add `.FullScreen` to the end.
-
-```xml
-    <activity android:name="com.tapfortap.FullScreenAdActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.FullScreen"/>
-```
-
-## Step 5 - Enable Test Mode
-
-Test mode stops your app from spending real impressions. This is useful while you are developing your app.
-Make sure to disable test mode before submitting your app to the play store.
-
-To enable test mode add the following meta data tag to your AndroidManifest.xml.
-
-```xml
-    <meta-data
-        android:name="com.tapfortap.TEST_MODE"
-        android:value="true"/>
-```
-
-## Step 6 - Display Ads
+## Step 4 - Display Ads
 
 ### Banners
+
 Adding a banner to a `RelativeLayout`:
 
 ```xml
@@ -128,7 +107,7 @@ Adding a banner to a `RelativeLayout`:
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.tapfortap.Banner
+    <com.tapfortap.sdk.Banner
         android:id="@+id/banner"
         android:layout_width="320dip"
         android:layout_height="50dip"
@@ -138,54 +117,92 @@ Adding a banner to a `RelativeLayout`:
 </RelativeLayout>
 ```
 
-### Interstitials
+### Break Interstitials
 
 Showing an interstitial from an `Activity`:
 
+- First create an InterstitialListener to receive callbacks when interstitials are loaded:
+
 ```java
+import com.tapfortap.sdk.Interstitial;
+import com.tapfortap.sdk.TapForTap;
+
 public class MyActivity extends Activity {
 
     private Interstitial interstitial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        interstitial = new Interstitial(this, new Interstitial.InterstitialListener() {
+        // Create an InterstitialListener
+        Interstitial.InterstitialListener interstitialListener = new Interstitial.InterstitialListener() {
             @Override
-            public void interstitialOnReceive(Interstitial ad) {
-                // your code here
+            public void interstitialDidReceiveAd(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialDidReceiveAd");
+                interstitial.show();
             }
 
             @Override
-            public void interstitialOnFail(Interstitial ad, String message, Throwable throwable) {
-                // your code here
+            public void interstitialDidFail(Interstitial interstitial, String reason, Throwable throwable) {
+                Log.i("MyActivity", "interstitialDidFail because: " + reason);
             }
 
             @Override
-            public void interstitialOnShow(Interstitial ad) {
-                // your code here
+            public void interstitialDidShow(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialDidShow");
             }
 
             @Override
-            public void interstitialOnTap(Interstitial ad) {
-                // your code here
+            public void interstitialWasTapped(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialWasTapped");
             }
 
             @Override
-            public void interstitialOnDismiss(Interstitial ad) {
-                // your code here
+            public void interstitialWasDismissed(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialWasDismissed");
             }
-        });
+
+            @Override
+            public void interstitialAdWasRewarded(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialAdWasRewarded");
+            }
+        };
     }
 }
 ```
 
-Then later you can show the interstitial with `interstitial.show()` or `interstitial.showAndLoad()` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `interstitial.isReadyToShow()` if you want to be certain it's ready before showing it (recommended).
+- Then call `loadBreakInterstitial` to start loading:
 
-App walls work the same way as interstitials.
+```java
+// Start loading a break interstitial
+Interstitial.loadBreakInterstitial(this, interstitialListener);
+```
+
+Then later you can show the interstitial with `interstitial.show()`. You can make sure the interstitial is loaded with `interstitial.isReadyToShow()` if you want to be certain it's ready before showing it (recommended).
+
+
+### Achievement and Rescue Interstitials
+
+Achievement and Rescue interstitials work similarly to Break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
+
+- Create an InterstitialListener (as above)
+
+- Call `loadAchievementInterstitial` or `loadRescueInterstitial`:
+
+```java
+// Start loading an achievement interstitial
+// The extra arguments (achievementDescription, achievementRewardDescription, achievementRewardIconUrl) can be used for customizing the copy in the ads shown
+Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
+```
+
+```java
+// Start loading a rescue interstitial
+// The extra arguments (rescueTitle, rescueBranding, rescueEnticement, rescueRewardDescription, rescueRewardIconUrl, rescueOptInText) can be used for customizing the copy in the ads shown
+Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener); 
+```
 
 ## Step 7 - Send Optional Information About Your Users
 If you have information about your users that your privacy policy allows you to share with us,
-you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.TapForTap`.
+you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.sdk.TapForTap`.
 We accept year of birth, gender, location, and the account ID of user's on your system.
 
 ```java
