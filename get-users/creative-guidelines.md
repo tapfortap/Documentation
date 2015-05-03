@@ -34,3 +34,7 @@ The price of your app will automatically be placed in the creative for you.
 If you have custom promotional creatives for your application you can upload them to use instead. Custom creatives tend to perform better as they give a better representation of what the app experience is like. A well designed cretaive can radically improve your overall performance. Just be sure to show your app’s icon somewhere on the creative.
 
 ## Ad Placement
+
+Check out our [Do's and Don'ts](doc/make-money/dos-donts) guide to learn how to place effective ad units.
+
+
