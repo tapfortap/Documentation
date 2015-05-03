@@ -15,9 +15,10 @@ Integrating Tap for Tap into your app is really easy! Follow the steps below to 
 
 - Download the [Tap for Tap iOS SDK](https://github.com/tapfortap/iOS/archive/master.zip).
 
-- Unzip the SDK archive and copy the following files into your project:
+- Unzip the SDK archive and add the following files to your project:
     - `TapForTap.framework`
     - `TapForTapResources.bundle`
+    - `MediaBrix.bundle`
 
 You can add them by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
 
@@ -27,7 +28,6 @@ You can add them by dragging and dropping it into Xcode, or selecting File ? Add
 
 You will need to link to the following frameworks:
 
-- `TapForTap.framework`
 - `SystemConfiguration.framework`
 - `Social.framework`
 - `MediaPlayer.framework`
@@ -57,12 +57,6 @@ To link to a framework, open the project explorer on the left side of Xcode:
 
 ![](/images/doc/xcode-02a.png)
 
-For `TapForTap.framework`:
-
-- Click "Add Other..."
-- Select `TapForTap.framework` from where you added it to your project.
-- Click the "Open" button.
-
 For the other system frameworks:
 
 - Select the framework from the list (e.g. `SystemConfiguration.framework`)
@@ -71,6 +65,7 @@ For the other system frameworks:
 ![](/images/doc/xcode-02b.png)
 
 Repeat the above steps for any other frameworks you're missing in the list above.
+
 
 ##  Step 3: Initialize Tap for Tap When Your App Launches.
 
