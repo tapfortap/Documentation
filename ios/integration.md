@@ -67,7 +67,21 @@ For the other system frameworks:
 Repeat the above steps for any other frameworks you're missing in the list above.
 
 
-##  Step 3: Initialize Tap for Tap When Your App Launches.
+##  Step 3: Add configuration to `Info.plist`.
+
+You'll need to add the following keys:
+
+- `NSLocationWhenInUseUsageDescription`: Text describing the reason for accessing the user's location information. Recommended to improve targeting of location-based advertising.
+
+How to add a key to `Info.plist`:
+
+- Open `Info.plist` from the Project Navigator, under `<Project Name>/<App Name>/Supporting Files/`.
+- Add a new key by clicking on the "+" at the top
+- Enter the key name (e.g. `NSLocationWhenInUseUsageDescription`)
+- Press tab and enter the value name (e.g. "We'd like to use your location to give you targeted offers.")
+
+
+##  Step 4: Initialize Tap for Tap When Your App Launches.
 
 Import `TFTTapForTap.h` in your app delegate and call our initialize method.
 
@@ -84,7 +98,7 @@ Import `TFTTapForTap.h` in your app delegate and call our initialize method.
 }
 ```
 
-##  Step 4: Display Ads
+##  Step 5: Display Ads
 
 ### Banners
 
@@ -192,7 +206,7 @@ In the view controllers in which you would like to display interstitials, in you
 
 In the callback you can show the interstitial with `[interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
 
-##  Step 5 - Send Optional Info About Your Users.
+##  Step 6 - Send Optional Info About Your Users.
 
 If you have information about your users that your privacy policy allows you to share with us, you can help us better target ads by passing it along. Just set the info on `TFTTapForTap`. We accept year of birth, gender, location, and user account IDs on your system.
 
