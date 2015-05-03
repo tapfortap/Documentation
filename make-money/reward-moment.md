@@ -2,11 +2,6 @@
 
 Rewards are congratulatory brand messages that gift a player with a reward after a moment of achievement. Rewards are NOT value exchange ads. They are implemented after an achievement moment, like getting a high-score or completing a goal. Examples of past Reward offers include: $5 off Fanatics, free travel size Sexy Hair products, and a free month box subscription to Thrive Market.
 
-## When to display the ad?
-
-Display the ad to congratulate the user after an achievement moment. 
-
-To be effective, achievement moments must be contextually relevant to each user. Pick multiple achievement events to appeal to users of all levels and to capitalize on the reward unit inventory.
 
 ## Achievement Moment Examples
 
@@ -36,7 +31,7 @@ To be effective, achievement moments must be contextually relevant to each user.
 
 Rewards should have an element of scarcity and randomness. If a reward appears after each level-up they will lose their appeal. For this reason you must strategically place reward units and cap the number of rewards a user receives each session. 
 
-A best practice is to place a reward early, then increase the difficulty to reach the next achievement incrementally after  each reward.   
+To be effective, achievement moments must be contextually relevant to each user. A best practice is to place a reward early, then increase the difficulty to reach the next achievement incrementally after  each reward. Pick multiple achievement events to appeal to users of all levels and to capitalize on the reward unit inventory. 
 
 ## Moment Messaging
 
