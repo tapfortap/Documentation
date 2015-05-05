@@ -43,4 +43,4 @@ If you choose you can notify a user why they are receiving a reward. This provid
 * running your fastest 10k.
 * unlocking a new receipe.
 
-How to implement Rewards for iOS or Android
+How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
