@@ -22,7 +22,7 @@ Rescue saves a user in a moment of need through brand sponsored value exchange a
 
 Rescue moments should have an element of scarcity and randomness. If you rescue a player after each failure they will feel over montetized and it will take away from natural gameflow. For this reason, you must ensure you are strategically placing rescue units and limiting the number of rescue units per each session.  
 
-In order to be effective, Rescue moments must be contextually relevant to each user. This is dependant on the difficulty of your game and session depth. We are always willing to [consult](doc/support) with you to find the right those right moments for your application.
+In order to be effective, Rescue moments must be contextually relevant to each user. This is dependant on the difficulty of your game and session depth. We are always willing to [consult](/doc/support) with you to find the right those right moments for your application.
 
 ## Moment Messaging
 
@@ -35,6 +35,6 @@ The following message string is presented to your user directly within each Resc
 * Text on the opt-in button that acts as a call to action (eg, "Click for your free time!")
 
 
-How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
+How to implement Rewards for [iOS](/doc/ios/integration) or [Android](/doc/android/integration)
 
 ![Example Rescue Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-rescue.jpg)

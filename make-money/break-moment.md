@@ -24,6 +24,6 @@ Break moments occur during natural pauses in your application, therefore you do 
 Break moments should be contextually relevant to the user. Ensure each impression is receiving the most targeted ads by supplying information about your app demographics upon integration. 
 
 
-How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
+How to implement Rewards for [iOS](/doc/ios/integration) or [Android](/doc/android/integration)
 
 ![Example Break Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-break.jpg)

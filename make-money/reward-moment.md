@@ -44,6 +44,6 @@ If you choose you can notify a user why they are receiving a reward. This provid
 * unlocking a new receipe.
 
 
-How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
+How to implement Rewards for [iOS](/doc/ios/integration) or [Android](/doc/android/integration)
 
 ![Example Reward Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-reward.jpg)

@@ -4,13 +4,13 @@ Tap for Tap has combined some big time advertisers, technologies and other devel
 
 In order to earn revenue from our monetization network you will need to:
 
-1. Download our [SDK](doc/getting-started)
-2. Have your [Revenue Preference Slider](doc/how-it-works) set to Make Money > 0%
-3. Place [ad units](doc/make-money/ad-placement-overview) in your application
+1. Download our [SDK](/doc/getting-started)
+2. Have your [Revenue Preference Slider](/doc/how-it-works) set to Make Money > 0%
+3. Place [ad units](/doc/make-money/ad-placement-overview) in your application
 
 ## Ad Inventory
 
-To find out the types of ads we support check out our [ad overview guide](doc/make-money/ad-overview). You can also take [steps](/doc/make-money/dos-donts) to improve the performance of your ads by ensuring proper placement and visibility.
+To find out the types of ads we support check out our [ad overview guide](/doc/make-money/ad-overview). You can also take [steps](/doc/make-money/dos-donts) to improve the performance of your ads by ensuring proper placement and visibility.
 
 
 ## Performance

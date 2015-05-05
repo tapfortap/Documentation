@@ -3,7 +3,7 @@
 
 ## Ad Units
 
-Promotional creatives can be banners or full screen interstitials. To learn more about what types of ads we support, and how they are displayed, check out our [ad units](doc/make-money/ad-overview) documentation.
+Promotional creatives can be banners or full screen interstitials. To learn more about what types of ads we support, and how they are displayed, check out our [ad units](/doc/make-money/ad-overview) documentation.
 
 ## Performance
 
@@ -35,6 +35,6 @@ If you have custom promotional creatives for your application you can upload the
 
 ## Ad Placement
 
-Check out our [Do's and Don'ts](doc/make-money/dos-donts) guide to learn how to place effective ad units.
+Check out our [Do's and Don'ts](/doc/make-money/dos-donts) guide to learn how to place effective ad units.
 
 

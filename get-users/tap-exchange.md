@@ -18,7 +18,7 @@ The amount of tap credits you receive on a tap is directly related to the countr
 
 ## Geo Targeting
 
-You can control which countries your application is promoted on. There is an extra cost for targeting, to promote a balance on the network. You can find more details about targeting and tiering in [this guide](docs/country-tiers).
+You can control which countries your application is promoted on. There is an extra cost for targeting, to promote a balance on the network. You can find more details about targeting and tiering in [this guide](/docs/country-tiers).
 
 ## Matching System
 

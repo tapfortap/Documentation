@@ -6,7 +6,7 @@ In order to cross promote you will need to:
 
 1. Download our [SDK](/doc/getting-started)
 2. Set your Get Users traffic to Self Promotion > 0% 
-3. Upload promotional [creatives](doc/get-users/creatives-guidelines) for your applications
+3. Upload promotional [creatives](/doc/get-users/creative-guidelines) for your applications
 
 
 ## Self vs. External Preference

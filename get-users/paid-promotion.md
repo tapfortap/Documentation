@@ -6,7 +6,7 @@ In order to use our paid promotion network, you will need to:
 
 1. Download our [SDK](/doc/getting-started).
 2. Opt-in to the paid promotion program under your accounts page
-3. Upload [promotional creatives](doc/get-users/creative-guidelines)
+3. Upload [promotional creatives](/doc/get-users/creative-guidelines)
 
 
 ## Bid System
