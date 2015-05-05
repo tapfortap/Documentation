@@ -16,7 +16,7 @@ Once you’ve chosen how much traffic you want to go to the Tap Exchange, you ca
 
 ## Earning Credits
 
-When using the tap exchange to cross promote your own network, you do not earn and spend credits. Cross promotion is simply a free way to leverage your ad inventory to promote yourself. If you have an app that you would like to promote more than others, you can control this by adjusting the spend priority under your accounts page. 
+When using the Tap Exchange to cross promote your own network, you do not earn and spend credits. Cross promotion is simply a free way to leverage your ad inventory to promote yourself. If you have an app that you would like to promote more than others, you can control this by adjusting the spend priority under your accounts page. 
 
 ## Reporting
 
