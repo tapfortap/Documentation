@@ -7,11 +7,11 @@ Promotional creatives can be banners or full screen interstitials. To learn more
 
 ## Performance
 
-You want to optimize your creatives for top performance. If you achieve a higher TTR (tap through rate) and CR (conversion rate) your creative will waste less valuable impressions.  This will result in better ads being displayed on your app, with you earning more tap credits. 
+You want to optimize your creatives for top performance. The goal is to achieve high  TTR (tap through rate) and CR (conversion rate) by picking impression placements with the most value.  This will result in better ads being displayed on your app, with you earning more tap credits. 
 
 ## Generating Creatives
 
-Our creative generation system makes uploading promotional creatives easy! All you need to do is provide some basic information about your application. Our system will then generate creatives based on that information and screen shots of your application from the app store. Please,  no profanities allowed! 
+Our creative generation system makes uploading promotional creatives easy! All you need to do is provide some basic information about your application. Our system will then generate creatives based on that information and screen shots of your application from the app store. Profanity is not allowed! 
 
 ### Theme
 
@@ -31,7 +31,7 @@ The price of your app will automatically be placed in the creative for you.
 
 ## Custom Banners
 
-If you have custom promotional creatives for your application you can upload them to use instead. Custom creatives tend to perform better as they give a better representation of what the app experience is like. A well designed cretaive can radically improve your overall performance. Just be sure to show your app’s icon somewhere on the creative.
+If you have custom promotional creatives for your application you can upload them to use instead. Custom creatives tend to perform better as they give a better representation of what the app experience is like. A well designed creative can radically improve your overall performance. Just be sure to show your apps icon somewhere on the creative.
 
 ## Ad Placement
 
