@@ -39,8 +39,8 @@ Customizing your messaging can optimize your application’s redemption rates. T
 
 If you choose you can notify a user why they are receiving a reward. This provides a more seamless user experience. If you choose to do this the reward units will have the following string: “Congratulations, here is a reward for [moment name]”. For this reason it is best to name moments beginning with a verb, such as: 
 
-* "saving Princess Peach."
-* "running your fastest 10k."
-* "unlocking a new receipe."
+* saving Princess Peach.
+* running your fastest 10k.
+* unlocking a new receipe.
 
 How to implement Rewards for iOS or Android
