@@ -1,6 +1,6 @@
 # What's New
 
-Version 4.0 of Tap for Tap SDK has arrived! We’ve packed a bunch of new features into this update that we know you’ll enjoy. SDKv4.0 is all about taking your monetization efforts to the next level with better ads, smarter placements, and new advertising partners!  Here is a look inside:
+Version 4.0 of Tap for Tap SDK has arrived! We’ve packed a bunch of new features into this update that we know you’ll enjoy. SDK V4.0 is all about taking your monetization efforts to the next level with better ads, smarter placements, and new advertising partners!  Here is a look inside:
 
 * Support for MRAID & VAST Compliant Interstitials and Banners
   * _Video. Dynamic. Static. You can have it all!_
