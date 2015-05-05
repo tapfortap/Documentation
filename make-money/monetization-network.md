@@ -27,12 +27,12 @@ Providing user information will increase your revenue potential as it allows for
 
 ## Optimization
 
-Over time Tap for Tap rotates numerous apps and ads on your monetization traffic to find the best performing solution.  Overtime you can expect greater performance.
+Over time Tap for Tap rotates numerous apps and ads on your monetization traffic to find the best performing solution.  Over time you can expect greater performance.
 
 ## Fraudulent Traffic
 
-Tap for Tap takes protecting its developers and advertisers seriously. We have a zero tolerance policy for fraud.  We have seen everything from generating fake impressions and taps, to installing apps from ads to increase revenue. If you are found to generate fraudulent traffic payments will be withheld and legal action might be pursued.
+Tap for Tap takes protecting its developers and advertisers seriously. We have a zero tolerance policy for fraud. Fraudulent actions include generating fake impressions, generating fake taps, and installing apps from ads to increase revenue. If you are found to be generating fraudulent traffic, payments will be withheld and legal action may be pursued.
 
 ## Reporting
 
-Monetization reports show you how many impressions of ads you've shown, how many taps you've generated, how many installs you have generate, and how much revenue you've earned from your traffic. You can find your monetization reports in your accounts page.
+Monetization reports show you how many impressions of ads you've shown, how many taps you've generated, how many installs you have generated, and how much revenue you've earned from your traffic. You can find your monetization reports in your accounts page.
