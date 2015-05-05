@@ -31,9 +31,9 @@ Integrating Tap for Tap into your app is really easy! Follow the steps below to 
 
 ```
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.0.0'
-    compile 'com.google.android.gms:play-services:7.0.0'
-    compile project(':TapForTap')
+    compile "com.android.support:appcompat-v7:22.0.0"
+    compile "com.google.android.gms:play-services:7.0.0"
+    compile project(":TapForTap")
 }
 ```
 

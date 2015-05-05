@@ -1,3 +1,16 @@
+### **4.0.0 / 2015-05-04**
+  * Rework of the interstitial API to explictly request Break, Achievement, and Rescue interstitials
+  * New rich media interstitials
+  * Support for MRAID and video interstitials
+  * Support for mediation with MediaBrix and Kiip interstitials
+  * New banner sizes, expandable banners
+  * Support for Advertising ID
+  * Interstitials now time out if they're cached for too long
+  * Deprecate App Walls
+  * Support for Android Studio
+  * Switch to .aar format to reduce configuration required in integration
+  * Many bug fixes
+
 ### 3.0.10 / 2014-02-14
   * Try to catch a mysterious NullPointerException that occurs on some devices
 

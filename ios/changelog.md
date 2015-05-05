@@ -1,3 +1,14 @@
+### **4.0.0 / 2015-05-04**
+  * Rework of the interstitial API to explictly request Break, Achievement, and Rescue interstitials
+  * New rich media interstitials
+  * Support for MRAID and video interstitials
+  * Support for mediation with MediaBrix and Kiip interstitials
+  * New banner sizes, expandable banners
+  * Interstitials now time out if they're cached for too long
+  * Deprecate App Walls
+  * Switch to using TapForTap.framework
+  * Many bug fixes
+
 ### 3.0.9 / 2014-01-05
   * Fix a crashing bug when user's country is unavailable
 
