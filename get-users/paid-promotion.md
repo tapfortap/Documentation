@@ -5,7 +5,7 @@ Paid promotion allows you to buy traffic for your app to get more users quickly.
 In order to use our paid promotion network, you will need to:
 
 1. Download our [SDK](/doc/getting-started).
-2. Set your Get Users traffic to Self Promotion > 0% and opt-in to the paid promotion program under your accounts page
+2. Opt-in to the paid promotion program under your accounts page
 3. Upload [promotional creatives](doc/get-users/creative-guidelines)
 
 
@@ -25,11 +25,11 @@ Tap for Tap uses a competitive bid system; the more you pay, the more traffic yo
 
 ## Country Targeting
 
-Targeting allows you to choose what countries your app is promoted in. The minimum cost of targeting varys based on the [tier](/doc/get-users/geo-targeting) each country is in. This is to ensure developers are earning revenue proportional to the quality and paid promotion competitiveness of the traffic their app provides. If you choose not to target, your minimum bid will be lower, but you will receive traffic from all countries on the network.
+Targeting allows you to choose what countries your app is promoted in. The minimum cost of targeting varies based on the [tier](/doc/get-users/geo-targeting) each country is in. This is to ensure developers are earning revenue proportional to the quality and paid promotion competitiveness of the traffic their app provides. If you choose not to target, your minimum bid will be lower, but you will receive traffic from all countries on the network.
 
 ## Spend Limit
 
-Setting daily spend limites will ensure you do not spend all of your account balance at once. The minimum daily spend limit for our program is ($10). If you leave this option blank it will not use a spend limit.
+Setting daily spend limits will ensure you do not spend all of your account balance at once. The minimum daily spend limit for our program is ($10). If you leave this option blank it will not use a spend limit.
 
 ![Daily Spend Limit](https://raw.github.com/tapfortap/Documentation/master/images/daily-limit.png)
 
