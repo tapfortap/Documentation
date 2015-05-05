@@ -12,7 +12,7 @@ In order to be active on the Tap Exchange you will need to:
 
 ## Tap Credits
 
-Tap credits are the currency of the Tap Exchange.  By showing tap exchange ads on your app, you are promoting other developers. Every time one of your apps’ users taps an exchange ad, you earn tap credits. You can then spend those credits by promoting your applications creatives on other developers ads.
+Tap credits are the currency of the Tap Exchange. By showing tap exchange ads on your app, you are promoting other developers. Every time one of your apps’ users taps an exchange ad, you earn tap credits. You can then spend those credits by promoting your applications creatives on other developers ads.
 
 The amount of tap credits you receive on a tap is directly related to the country the user that tapped on the ad is from. The countries are grouped into [tiers](/doc/country-tiers), and the tap value is assigned to that tier.
 
