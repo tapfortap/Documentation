@@ -35,5 +35,6 @@ The following message string is presented to your user directly within each Resc
 * Text on the opt-in button that acts as a call to action (eg, "Click for your free time!")
 
 
-
 How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
+
+![Example Rescue Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-rescue.jpg)
