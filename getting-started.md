@@ -4,7 +4,7 @@ This guide will walk you through the process of integrating the Tap for Tap SDK 
 
 ##  Account Setup 
 
-First sign up for Tap for Tap and grab your API key from the top of your account page.
+First [sign up](https://tapfortap.com/signup) for Tap for Tap and grab your API key from the top of your account page.
 
 ##  SDK Integration
 
@@ -36,17 +36,10 @@ To promote your application, you will need to upload creatives. Use our simple c
 
 Once properly configured, you will be able to earn tap credits on the [Tap Exchange](/doc/get-users/tap-exchange) by promoting community apps.  Your tap credits will automatically spend the same value as you earn for seamless app promotion.  If you have multiple apps, you can prioritize how much promotion each app spends by adjusting the “spend priority” setting under each app.
 
+##  Grow your User Base Faster with Paid Promotion 
+
+You can add money to your account balance or earn money with our [Monetization Program](/doc/monetization) to buy more promotion for your app with CPC campaigns.  [Paid Promotion](/doc/get-users/paid-promotion) allows you to grow your app's userbase much faster.
+
 ##  Make Money 
 
 Make money by displaying revenue generating ads on our monetization network. Prioritize the percentage of your ad inventory you use to make money in your account dashboard. When making money with our [Monetization Program](/doc/monetization), we will update your balance when your application earns revenue. Every month you will have the opportunity to cash out, or you can use that money for [Paid Promotion Program](/doc/get-users/paid-promotion).
-
-##  Grow your User Base Faster with Paid Promotion 
-
-You can add money to your account balance or earn money with our [Monetization Program](/doc/monetization) to buy more promotion for your app.  You have three ways to buy traffic based on what is important to you:
-
-1. Creative Impression
-2. Creative Tap
-3. App User Installation
-
-[Paid Promotion](/doc/get-users/paid-promotion) allows you to grow your app's userbase much faster.
-
