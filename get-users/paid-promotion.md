@@ -5,13 +5,13 @@ Paid promotion allows you to buy traffic for your app to get more users quickly.
 In order to use our paid promotion network, you will need to:
 
 1. Download our [SDK](/doc/getting-started).
-2. Upload [promotional creatives](doc/get-users/creative-guidelines)
-3. Opt-in to the paid promotion program under your [accounts page](doc/how-it-works)
+2. Opt-in to the paid promotion program under your accounts page
+3. Upload [promotional creatives](doc/get-users/creative-guidelines)
 
 
 ## Bid System
 
-Tap for Tap uses a competitive bid system; the more you pay, the more traffic you receive. The performance of your app (TTR/CR*) and the quality of your app (user ratings/Tap exchange participation) are other factors that determine how much traffic you will receive.
+Tap for Tap uses a competitive bid system; the more you pay, the more traffic you receive. The performance of your app (TTR/CR*) and the quality of your app (user ratings/Tap Exchange participation) are other factors that determine how much traffic you will receive.
 
 ![Example Bid Interface](https://raw.github.com/tapfortap/Documentation/master/images/bid-example.png)
 
