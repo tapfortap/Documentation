@@ -25,3 +25,5 @@ Break moments should be contextually relevant to the user. Ensure each impressio
 
 
 How to implement Rewards for [iOS](doc/ios/integration) or [Android](doc/android/integretion)
+
+![Example Break Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-break.jpg)
