@@ -5,7 +5,7 @@ Paid promotion allows you to buy traffic for your app to get more users quickly.
 In order to use our paid promotion network, you will need to:
 
 1. Download our [SDK](/doc/getting-started).
-2. Opt-in to the paid promotion program under your accounts page
+2. Set your Get Users traffic to Self Promotion > 0% and opt-in to the paid promotion program under your accounts page
 3. Upload [promotional creatives](doc/get-users/creative-guidelines)
 
 
