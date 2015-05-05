@@ -31,7 +31,7 @@ Rewards are congratulatory brand messages that gift a player with a reward after
 
 Rewards should have an element of scarcity and randomness. If a reward appears after each level-up they will lose their appeal. For this reason you must strategically place reward units and cap the number of rewards a user receives each session. 
 
-To be effective, achievement moments must be contextually relevant to each user. A best practice is to place a reward early, then increase the difficulty to reach the next achievement incrementally after  each reward. Pick multiple achievement events to appeal to users of all levels and to capitalize on the reward unit inventory. 
+To be effective, achievement moments must be contextually relevant to each user. A best practice is to place a reward early, then increase the difficulty to reach the next achievement incrementally after each reward. Pick multiple achievement events to appeal to users of all levels and to capitalize on the reward unit inventory. 
 
 ## Moment Messaging
 
