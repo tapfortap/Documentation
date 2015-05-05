@@ -32,24 +32,62 @@ title = "New to Tap for Tap?"
   title = "Getting Started Guide"
   url = "getting-started"
 
-[nav.tft-programs]
-title = "Tap for Tap Programs"
+  [nav.new-to-tft.whats-new]
+  title = "What's New in SDK4?"
+  url = "whats-new"
 
-  [nav.tft-programs.tapx]
+
+[nav.get-users]
+title = "Get Users"
+
+  [nav.get-users.tap-exchange]
   title = "Tap Exchange"
   url = "tap-exchange"
 
-  [nav.tft-programs.paidpromo]
+  [nav.get-users.paid-promotion]
   title = "Paid Promotion"
-  url = "paid-promotion"
+  url = "get-users/paid-promotion"
 
-  [nav.tft-programs.monetization]
-  title = "Monetization"
-  url = "monetization"
+  [nav.get-users.cross-promotion]
+  title = "Cross Promotion"
+  url = "get-users/cross-promotion"
 
-  [nav.tft-programs.selfpromo]
-  title = "Self Promotion"
-  url = "self-promotion"
+  [nav.get-users.creative-guidelines]
+  title = "Creative Guidelines"
+  url = "get-users/creative-guidelines"
+
+  [nav.get-users.geo-targeting]
+  title = "Geo-Targeting"
+  url = "get-users/geo-targeting"
+
+
+[nav.make-money]
+title = "Make Money"
+
+  [nav.make-money.ad-overview]
+  title = "Ad Overview"
+  url = "make-money/ad-overview"
+
+  [nav.make-money.reward-moment]
+  title = "Reward Moment"
+  url = "make-money/reward-moment"
+
+  [nav.make-money.rescue-moment]
+  title = "Rescue Moment"
+  url = "make-money/rescue-moment"
+
+  [nav.make-money.break-moment]
+  title = "Break Moment"
+  url = "make-money/break-moment"
+
+  [nav.make-money.dos-donts]
+  title = "Placement Do's & Don'ts"
+  url = "make-money/dos-donts"
+
+  [nav.make-money.monetization-network]
+  title = "Monetization Network"
+  url = "make-money/monetization-network"
+
 
 [nav.android]
 title = "Android"
@@ -66,9 +104,10 @@ title = "Android"
   title = "SDK Changelog"
   url = "android/changelog"
 
-  [nav.android.migration]
-  title = "SDK Migration Guide"
-  url = "android/migration"
+# TODO: restore this when we have a 3.x to 4.x migration guide
+#  [nav.android.migration]
+#  title = "SDK Migration Guide"
+#  url = "android/migration"
 
 [nav.ios]
 title = "iOS"
@@ -85,92 +124,24 @@ title = "iOS"
   title = "SDK Changelog"
   url = "ios/changelog"
 
-  [nav.ios.migration]
-  title = "SDK Migration Guide"
-  url = "ios/migration"
+# TODO: restore this when we have a 3.x to 4.x migration guide
+#  [nav.ios.migration]
+#  title = "SDK Migration Guide"
+#  url = "ios/migration"
 
-[nav.plugins]
-title = "Plugins"
-
-  [nav.plugins.adobe-air]
-  title = "Adobe Air"
-  url = "plugins/adobe-air"
-
-  [nav.plugins.titanium]
-  title = "Appcelerator Titanium"
-  url = "plugins/titanium"
-
-  [nav.plugins.basic-4-android]
-  title = "Basic4Android"
-  url = "plugins/basic4android"
-
-  [nav.plugins.corona]
-  title = "Corona SDK"
-  url = "plugins/corona"
-
-  [nav.plugins.unity]
-  title = "Unity 3D"
-  url = "plugins/unity"
-
-[nav.mediation]
-title = "Mediation Layers"
-
-  [nav.mediation.admob]
-  title = "AdMob"
-  url = "mediation/admob"
-
-  [nav.mediation.mopub]
-  title = "MoPub"
-  url = "mediation/mopub"
-
-[nav.performance]
-title = "Improving Performance"
-
-  [nav.performance.creatives]
-  title = "Creative Guidelines"
-  url = "performance/creatives"
-
-  [nav.performance.placement]
-  title = "Ad Placement Guide"
-  url = "performance/placement"
-
-[nav.inside-tft]
-title = "Inside Tap for Tap"
-
-  [nav.inside-tft.ad-units]
-  title = "Ad Units"
-  url = "ad-units"
-
-  [nav.inside-tft.country-tiers]
-  title = "Country Tiers"
-  url = "country-tiers"
-
-[nav.faqs]
-title = "Frequently Asked Questions"
-
-  [nav.faqs.faq]
-  title = "General FAQ"
-  url = "help/faq"
-  
-  [nav.faqs.account-faq]
-  title = "Account FAQ"
-  url = "help/account-faq"
-  
-  [nav.faqs.plugin-faq]
-  title = "Plugins FAQ"
-  url = "help/plugin-faq"
-  
-  [nav.faqs.sdk-faq]
-  title = "SDK FAQ"
-  url = "help/sdk-faq"
 
 [nav.help]
 title = "More Help"
 
-  [nav.help.videos]
-  title = "Instructional Videos"
-  url = "help/videos"
+# TODO: new integration videos?
+#  [nav.help.videos]
+#  title = "Instructional Videos"
+#  url = "help/videos"
 
   [nav.help.glossary]
   title = "Glossary"
   url = "help/glossary"
+
+  [nav.help.support]
+  title = "Support"
+  url = "help/support"

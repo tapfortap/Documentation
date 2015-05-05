@@ -1,49 +1,92 @@
 # iOS - SDK Implementation
 
 ##  Current Version
-**3.0.9** - [See Changelog](/doc/ios/changelog)
+**4.0.0** - [See Changelog](/doc/ios/changelog)
 
 Supports iOS 5.0 and up.
 
 ##  General Information
 
-Integrating Tap for Tap into your app is usually really easy. Follow the steps below to get started.
+Integrating Tap for Tap into your app is really easy! Follow the steps below to get started.
 
 # Instructions
 
 ##  Step 1: Add Tap for Tap to Your Project.
 
-Add the `TapForTap` folder to your project by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
+- Download the [Tap for Tap iOS SDK](https://github.com/tapfortap/iOS/archive/master.zip).
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/xcode-01.png)
+- Unzip the SDK archive and add the following files to your project:
+    - `TapForTap.framework`
+    - `TapForTapResources.bundle`
+    - `MediaBrix.bundle`
+
+You can add them by dragging and dropping it into Xcode, or selecting File ? Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
+
+![](/images/doc/xcode-01.png)
 
 ##  Step 2: Add Required Frameworks
 
-You will need to link to the SystemConfiguration.framework and AdSupport.framework.
+You will need to link to the following frameworks:
 
-To link to a framework, open the project explorer on the left side of Xcode 4:
+- `SystemConfiguration.framework`
+- `Social.framework`
+- `MediaPlayer.framework`
+- `Accounts.framework`
+- `StoreKit.framework`
+- `EventKit.framework`
+- `EventKitUI.framework`
+- `CoreTelephony.framework`
+- `AVFoundation.framework`
+- `AudioToolbox.framework`
+- `AdSupport.framework`
+- `MobileCoreServices.framework`
+- `CoreMotion.framework`
+- `PassKit.framework`
+- `CoreMedia.framework`
+- `libsqlite3.dylib`
+- `libxml2.dylib`
+- `libz.dylib`
 
-- Select your project from the very top.
-- Select your app's target.
-- Select the Build Phases tab.
-- Expand Link Binaries With Libraries.
-- Click the + button.
+To link to a framework, open the project explorer on the left side of Xcode:
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/xcode-02a.png)
+1. Select your project from the very top.
+1. Select your app's target.
+1. Select the Build Phases tab.
+1. Expand Link Binary With Libraries.
+1. Click the + button.
 
-- Select SystemConfiguration.framework.
+![](/images/doc/xcode-02a.png)
+
+For the other system frameworks:
+
+- Select the framework from the list (e.g. `SystemConfiguration.framework`)
 - Click the Add button.
 
-![](https://raw.github.com/tapfortap/Documentation/master/images/xcode-02b.png)
+![](/images/doc/xcode-02b.png)
 
-Repeat the above steps for AdSupport.framework.
+Repeat the above steps for any other frameworks you're missing in the list above.
 
-##  Step 3: Initialize Tap for Tap When Your App Launches.
+
+##  Step 3: Add configuration to `Info.plist`.
+
+You'll need to add the following keys:
+
+- `NSLocationWhenInUseUsageDescription`: Text describing the reason for accessing the user's location information. Recommended to improve targeting of location-based advertising.
+
+How to add a key to `Info.plist`:
+
+- Open `Info.plist` from the Project Navigator, under `<Project Name>/<App Name>/Supporting Files/`.
+- Add a new key by clicking on the "+" at the top
+- Enter the key name (e.g. `NSLocationWhenInUseUsageDescription`)
+- Press tab and enter the value name (e.g. "We'd like to use your location to give you targeted offers.")
+
+
+##  Step 4: Initialize Tap for Tap When Your App Launches.
 
 Import `TFTTapForTap.h` in your app delegate and call our initialize method.
 
 ```objective-c
-# import "TFTTapForTap.h"
+#import <TapForTap/TFTTapForTap.h>
 
 - (void) application: (UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *)launchOptions
 {
@@ -55,14 +98,14 @@ Import `TFTTapForTap.h` in your app delegate and call our initialize method.
 }
 ```
 
-##  Step 4: Display Ads
+##  Step 5: Display Ads
 
 ### Banners
 
 In the view controllers in which you would like to display banners, in your `viewDidLoad` method create a `TFTBanner` and add it to your view. Your view controller needs to implement the `TFTBannerDelegate` protocol in the header file, e.g. @interface MyViewController <TFTBannerDelegate>
 
 ```objective-c
-# import "TFTTapForTap.h"
+#import <TapForTap/TFTTapForTap.h>
 
 - (void) viewDidLoad
 {
@@ -78,30 +121,92 @@ In the view controllers in which you would like to display banners, in your `vie
 }
 ```
 
-### Interstitials
 
-In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method create a `TFTInterstitial`. We assume that your view controller has a property: `TFTInterstitial *interstitial`
+### Break Interstitials
 
-Your view controller can implement the `TFTInterstitialDelegate` protocol in the header file, e.g. @interface MyViewController <TFTInterstitialDelegate>
+In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method call either `[ TFTInterstitial loadBreakInterstitialWithCallbackOnReceivedAd... ]` or `[ TFTInterstitial loadBreakInterstitialWithDelegate... ]`.
+
+For the second method, your view controller can implement the `TFTInterstitialDelegate` protocol in the header file (i.e. `MyViewController.h`).
 
 ```objective-c
-# import "TFTTapForTap.h"
+#import <TapForTap/TFTTapForTap.h>
 
 - (void) viewDidLoad
 {
 	[super viewDidLoad];
 
-	// Load an interstitial
-    self.interstitial = [TFTInterstitial interstitial];
+	// Load an interstitial with a callback
+    [TFTInterstitial loadBreakInterstitialWithCallbackOnReceivedAd:^(TFTInterstitial *interstitial) {
+
+        // The interstitial has loaded, so we can show it now
+        [interstitial showWithViewController:self];
+
+    } onAdDidFail:^(TFTInterstitial *interstitial, NSString *reason) {
+
+        // The interstitial failed to load, log an error
+        NSLog(@"Ad failed: %@", reason);
+
+    } onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
+    
 }
 ```
 
-Then later you can show the interstitial with `[self.interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
-
-App walls work the same way as interstitials.
+In the callback you can show the interstitial with `[interstitial showWithViewController: self]`. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
 
 
-##  Step 5 - Send Optional Info About Your Users.
+### Achievement and Rescue Interstitials
+
+Achievement and Rescue interstitials work similarly to Break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
+
+In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method (or another appropriate handler), call `[ TFTInterstitial loadRescueInterstitial... ]`.
+
+```objective-c
+#import <TapForTap/TFTTapForTap.h>
+
+- (void) viewDidLoad
+{
+	[super viewDidLoad];
+
+	// Load a Rescue interstitial with a callback
+    [TFTInterstitial loadRescueInterstitialWithTitle:@"Need a Boost?"
+                                        brandingText:@"My App"
+                                      enticementText:@"Watch a short message"
+                                   rewardDescription:@"Free boost"
+                                          rewardIcon:[NSURL URLWithString:@"http://yourdomain.com/app_logo.png"]
+                                     optInButtonText:@"Tap for your free boost!"
+                                        onReceivedAd:^(TFTInterstitial *interstitial) {
+
+                                            // The interstitial has loaded, so we can show it now
+                                            [interstitial showWithViewController:self];
+
+                                        } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
+}
+```
+
+```objective-c
+#import <TapForTap/TFTTapForTap.h>
+
+- (void) viewDidLoad
+{
+	[super viewDidLoad];
+
+	// Load an Achievement interstitial with a callback
+    [TFTInterstitial loadAchievementInterstitialWithDescription:@"You beat the level!"
+                                              rewardDescription:@"a free gift!"
+                                                     rewardIcon:[NSURL URLWithString:@"http://yourdomain.com/app_logo.png"]
+                                                   onReceivedAd:^(TFTInterstitial *interstitial) {
+
+                                                       // The interstitial has loaded, so we can show it now
+                                                       [interstitial showWithViewController:self];
+
+                                                   } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
+    
+}
+```
+
+In the callback you can show the interstitial with `[interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
+
+##  Step 6 - Send Optional Info About Your Users.
 
 If you have information about your users that your privacy policy allows you to share with us, you can help us better target ads by passing it along. Just set the info on `TFTTapForTap`. We accept year of birth, gender, location, and user account IDs on your system.
 

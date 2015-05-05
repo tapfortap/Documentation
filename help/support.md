@@ -1,0 +1,8 @@
+# Support
+
+## Get Help
+
+If you need help integrating any of the new features into your application, a member of the Tap for Tap support team would be happy to help!
+
+
+Send over a quick email to [support@tapfortap.com](mailto:support@tapfortap.com) and someone will get back to you shortly.
