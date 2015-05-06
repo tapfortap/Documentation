@@ -42,7 +42,7 @@ title = "Get Users"
 
   [nav.get-users.tap-exchange]
   title = "Tap Exchange"
-  url = "tap-exchange"
+  url = "get-users/tap-exchange"
 
   [nav.get-users.paid-promotion]
   title = "Paid Promotion"
