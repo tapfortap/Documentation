@@ -36,6 +36,10 @@ title = "New to Tap for Tap?"
   title = "What's New in SDK4?"
   url = "whats-new"
 
+  [nav.new-to-tft.download]
+  title = "Download SDK4"
+  url = "download"
+
 
 [nav.get-users]
 title = "Get Users"
