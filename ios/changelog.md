@@ -1,3 +1,8 @@
+### 4.0.1 / 2015-05-06
+  * Fixes a build issue that caused warnings when linking against SDK
+  * Remove internal define kReachabilityChangedNotification that conflicted with Reachability
+  * Interstitial readyToShow is not deprecated anymore
+
 ### **4.0.0 / 2015-05-04**
   * Rework of the interstitial API to explictly request Break, Achievement, and Rescue interstitials
   * New rich media interstitials
