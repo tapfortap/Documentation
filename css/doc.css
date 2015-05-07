@@ -125,6 +125,13 @@ li > p {
   .margin-50 {margin:50px auto}
 
 
+/* TEXT */
+
+	.text-gray {
+		color: #888;
+	}
+
+
 /* HEADER NAV */
 
 	.navbar-inverse .navbar-inner {
