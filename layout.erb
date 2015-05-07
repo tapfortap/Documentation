@@ -83,14 +83,39 @@
         </tr>
       </table>
     </div>
-    <div id="legal" class="center top-10 text-gray">&copy; <%= DateTime.now.year %> Tap for Tap Promotions Inc.</div>
-    <br>
-    <br>
+    <div id="legal" class="center top-10 text-gray bottom-20">&copy; <%= DateTime.now.year %> Tap for Tap Promotions Inc.</div>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="/js/libs/jquery-1.8.2.min.js"%3E%3C/script%3E'))</script>
   <%== site.scripts %>
+
+  <script type="text/javascript">
+    // AdRoll Retargeting Pixel
+    adroll_adv_id = "OXTF7RD7OBBU5NAQIMYJE5";
+    adroll_pix_id = "HZN7LOE7P5FNDH7KGKJOXQ";
+    (function () {
+    var oldonload = window.onload;
+    window.onload = function(){
+      __adroll_loaded=true;
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      ((document.getElementsByTagName('head') || [null])[0] ||
+       document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      if(oldonload){oldonload()}};
+    }());
+  </script>
+
+  <script type="text/javascript">
+    // Segment analytics
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+      analytics.load("LkwewUIjgcMmkQyJHODw9QXq1PbxB6M4");
+      analytics.page();
+    }}();
+  </script>
 
 </body>
 </html>
