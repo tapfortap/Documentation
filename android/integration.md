@@ -77,7 +77,7 @@ packagingOptions {
 
 ## Step 2 - Add Your API Key to Your AndroidManifest.xml
 
-Add the following meta data tag to the `<activity>` tag in your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap
+Add the following meta data tag to the `<application>` tag in your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap
 API key which can be found on the [account](https://tapfortap.com/manage/account) page
 
 ```xml

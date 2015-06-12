@@ -8,9 +8,8 @@ First [sign up](https://tapfortap.com/signup) for Tap for Tap and grab your API 
 
 ##  SDK Integration
 
-Once you have your account-wide API key, you need to  [download our SDK](https://github.com/tapfortap/SDK/archive/master.zip) and integrate it into each of your applications. Follow our documentation step-by-step for native [Android](/doc/android/integration) or [iOS](/doc/ios/integration) integration. For additional help, watch out SDK implementation videos for native [Android](http://www.youtube.com/watch?v=xDj16PJ5WQk&hd=1), native [iOS](http://www.youtube.com/watch?v=LS7DEvITf7Y&hd=1), and other non-native plugins as they become available.
+Once you have your account-wide API key, you need to  [download our SDK](https://github.com/tapfortap/SDK/archive/master.zip) and integrate it into each of your applications. Follow our documentation step-by-step for native [Android](/doc/android/integration) or [iOS](/doc/ios/integration) integration. Follow this step-by-step guide for [Unity](/doc/unity/integration).
 
-If you are using one of our supported plugins (Unity 3D, Phonegap, etc.), [download the SDK package for the corresponding plugin](/doc). If you are using one of our supported plugins, please follow the documentation for that specific plugin. 
 
 ##  Trigger Initialize
 
