@@ -137,7 +137,7 @@ Causes a new ad to be downloaded and shown aproximately every 60 seconds.
 
 ---
 
-#### public void disbleAutoRollover()
+#### public void disableAutoRollover()
 
 Stops a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowinAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
 

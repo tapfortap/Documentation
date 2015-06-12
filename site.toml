@@ -133,6 +133,12 @@ title = "iOS"
 #  title = "SDK Migration Guide"
 #  url = "ios/migration"
 
+[nav.unity]
+title = "Unity"
+
+[nav.unity.integration]
+title = "Integration Guide"
+url = "unity/integration"
 
 [nav.help]
 title = "More Help"
