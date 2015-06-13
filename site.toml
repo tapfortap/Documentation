@@ -136,9 +136,13 @@ title = "iOS"
 [nav.unity]
 title = "Unity"
 
-[nav.unity.integration]
-title = "Integration Guide"
-url = "unity/integration"
+    [nav.unity.integration]
+    title = "Integration Guide"
+    url = "unity/integration"
+
+    [nav.unity.integration]
+    title = "API Reference"
+    url = "unity/api"
 
 [nav.help]
 title = "More Help"

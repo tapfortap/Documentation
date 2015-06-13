@@ -42,7 +42,29 @@ TapForTap.initialize("YOUR_API_KEY");
 
 ### Banners
 
-Banners are not yet supported.
+For Unity there's two enums that help you with the placement on the screen.
+
+- **BannerVerticalAlignment** has the following values : TOP, CENTER, BOTTOM.
+- **BannerHorizontalAlignment**  has the following values : LEFT, CENTER, RIGHT.
+
+By combining a vertical and horizontal alignment you can place an advertisement in
+one of 9 places. A `*` denotes a location where an ad can be placed on the screen.
+
+<pre>
+-----------
+|*   *   *|
+|         |
+|*   *   *|
+|         |
+|*   *   *|
+-----------
+</pre>
+
+To place a banner, just call `Banner.create(BannerHorizontalAlignment horizontalAlignment, BannerVerticalAlignment verticalAlignment, int desiredWidth, int desiredHeight)`. The following call creates a banner at the buttom center of the screen, with width of 420dp and a height of 50dp.
+
+```c#
+Banner.create(BannerHorizontalAlignment.CENTER, BannerVerticalAlignment.BOTTOM, 420, 50);
+```
 
 ### Break Interstitials
 
@@ -52,13 +74,13 @@ Showing an break interstitial is easy.
 
 - Call `Interstitial.loadBreakInterstitial()` to create a new Break Interstitial. The method returns an Interstitial - make sure to store it as you will need it later to show the Interstitial once it has loaded.
 
-```csharp
+```c#
 		var interstitial = Interstitial.loadBreakInterstitial();
 ```
 
 - Subscribe to the `interstitialDidReceiveAdd` event from the InterstitialListener. Because of JNI limitaions there is currently only one default Listener, which can be accessed by calling `TapForTap.getInterstitialListener()`.
 
-```csharp
+```c#
 		TapForTap.getInterstitialListener().interstitialDidReceiveAd += () => {
 			Debug.Log ("Interstitial is ready!");
 			interstitial.show(); 
@@ -72,12 +94,12 @@ Achievement and Rescue interstitials work similarly to Break interstitials. You 
 
 Call `loadAchievementInterstitial` or `loadRescueInterstitial`:
 
-```csharp
+```c#
     interstitial = Interstitial.loadRescueInterstitial ("Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!");
 
 ```
 
-```csharp
+```c#
     interstitial = Interstitial.loadAchievementInterstitial ("You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png");
 ```
 
@@ -86,7 +108,7 @@ If you have information about your users that your privacy policy allows you to 
 you can improve performance and revenue by passing it along.
 We accept year of birth, gender, location, and the account ID of user's on your system.
 
-```csharp
+```c#
 TapForTap.setGender(<MALE or FEMALE>);
 TapForTap.setYearOfBirth(<year>);
 TapForTap.setLocation(<location>);

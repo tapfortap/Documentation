@@ -33,7 +33,7 @@ Please update your permissions to ensure that these are all included:
 
 ## Banner
 
-The AdView class has been change to Banner to better reflect what the class is. A Banner can still be
+The AdView class has been changed to Banner to better reflect what the class is. A Banner can still be
 declared in a layout file using `com.tapfortap.Banner'. The listener is now called BannerListener and has similar
 callbacks but they have been renamed.
 
