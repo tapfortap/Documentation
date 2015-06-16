@@ -140,7 +140,7 @@ title = "Unity"
     title = "Integration Guide"
     url = "unity/integration"
 
-    [nav.unity.integration]
+    [nav.unity.api]
     title = "API Reference"
     url = "unity/api"
 
