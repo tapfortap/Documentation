@@ -1,5 +1,5 @@
 ### **4.0.0 / 2015-05-04**
-  * Rework of the interstitial API to explictly request Break, Achievement, and Rescue interstitials
+  * Rework of the interstitial API to explicitly request Break, Achievement, and Rescue interstitials
   * New rich media interstitials
   * Support for MRAID and video interstitials
   * Support for mediation with MediaBrix and Kiip interstitials
@@ -43,9 +43,9 @@
 ### 3.0.2 / 2013-09-03
   * Rework of the API. Minor semantic changes from 2.x. The most notable being that AppWall/Interstitial are no longer accessed via static methods.
   * Introduced new Interstitial and App Wall assets
-    * Both are now anmiated
+    * Both are now animated
     * Both have transparent backgrounds
-  * Added a new event to App Wall / Interstial
+  * Added a new event to App Wall / Interstitial
     * onTap
 
 ### 2.3.2 / 2013-07-24

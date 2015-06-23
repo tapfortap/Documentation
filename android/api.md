@@ -139,13 +139,13 @@ Causes a new ad to be downloaded and shown aproximately every 60 seconds.
 
 #### public void disableAutoRollover()
 
-Stops a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowinAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
+Stops a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowingAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
 
 ## BannerListener
 
 ### Overview
 
-This interface provides callback methods into the current lifecylce of the banner.
+This interface provides callback methods into the current lifecyclce of the banner.
 
 ### Methods
 
