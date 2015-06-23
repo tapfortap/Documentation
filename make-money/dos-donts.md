@@ -1,8 +1,6 @@
 # Do's & Don'ts
 
-These are some do’s and don’ts for implementing the Tap for Tap SDK and handling the ads.  While Banners work on their own, request as well as display ads independently as soon as they are placed, Interstitials need extra attention. When you create a new Interstitial an ad will be requested, but not shown as soon as it is ready. You have to either wait for the callback or event, or check if an Interstitial can be shown by calling the __isReadyToShow()__ method and then show the Interstitial by calling __show()__. 
-
-
+These are some do’s and don’ts for implementing the Tap for Tap SDK and handling the ads.
 Below are some helpful tips to improve user experience, reduce ad call waste, and increase impressions in your game.
 
 * __DO__ load the SDK immediately on app load.​

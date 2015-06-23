@@ -122,7 +122,7 @@ Causes ads to stop being downloaded and shown.
 
 #### @property autoRollover
 
-If set to YES, a new ad to be downloaded and shown aproximately every 60 seconds. If set to NO, only a call to startShowinAds will cause a new ad to be downloaded and show.
+If set to YES, a new ad will be downloaded and shown approximately every 60 seconds. If set to NO, only a call to startShowingAds will cause a new ad to be downloaded and shown.
 
 ---
 
@@ -162,7 +162,7 @@ Called when a user taps on the banner.
 **Parameters**
 
   - _banner_ - The TFTBanner that was tapped.
-  
+
 ## TFTInterstitial
 
 ### Overview
@@ -172,12 +172,16 @@ This class is responsible for downloading and showing interstitials.
 ### Special Considerations
 
 Always be sure that an interstitial is ready to be shown by either using the delegate methods
-or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or 
-undersireable times due to network connectivity.
+or by using the isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or
+undesirable times due to network connectivity.
 
 ### Methods
 
-#### + (TFTInterstitial *)loadBreakInterstitialWithDelegate: (id<TFTInterstitialDelegate>)delegate;
+#### + (TFTInterstitial *)loadBreakInterstitialWithDelegate
+
+```objective-c
++ (TFTInterstitial *)loadBreakInterstitialWithDelegate:(id<TFTInterstitialDelegate>)delegate;
+```
 
 Creates an instance of TFTInterstitial and starts loading a Break interstitial with the provided delegate.
 
@@ -201,11 +205,8 @@ Creates an instance of TFTInterstitial and starts loading a Break interstitial w
   onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock;
 ```
 
-Creates an instance of TFTInterstitial and starts loading a Break interstitial with the provided delegate.
+Creates an instance of TFTInterstitial and starts loading a Break interstitial with the provided blocks.
 
-**Parameters**
-
-  - _delegate_ - A delegate.
 
 **Return Value**
 
@@ -225,7 +226,53 @@ Creates an instance of TFTInterstitial and starts loading a Break interstitial w
            delegate: (id<TFTInterstitialDelegate>)delegate;
 ```
 
-Creates an instance of TFTInterstitial and starts loading a Break interstitial with the provided delegate.
+Creates an instance of TFTInterstitial and starts loading a Rescue interstitial with the provided delegate.
+
+**Parameters**
+
+  - _delegate_ - A delegate.
+
+**Return Value**
+
+  - _TFTInterstitial_ - A new instance of TFTInterstitial.
+
+---
+
+#### + (TFTInterstitial *)loadRescueInterstitialWithTitle
+
+```objective-c
++ (TFTInterstitial *)loadRescueInterstitialWithTitle: (NSString *)title
+                                        brandingText: (NSString *)branding
+                                      enticementText: (NSString *)enticement
+                                   rewardDescription: (NSString *)rewardDescription
+                                          rewardIcon: (NSURL *)iconURL
+                                     optInButtonText: (NSString *)optInText
+                                        onReceivedAd: (void (^)(TFTInterstitial *interstitial))receivedAdBlock
+                                         onAdDidFail: (void (^)(TFTInterstitial *interstitial, NSString *reason))failedAdBlock
+                                         onAdDidShow: (void (^)(TFTInterstitial *interstitial))shownAdBlock
+                                       onAdWasTapped: (void (^)(TFTInterstitial *interstitial))tappedAdBlock
+                                    onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock;
+```
+
+Creates an instance of TFTInterstitial and starts loading a Rescue interstitial with the provided blocks.
+
+**Return Value**
+
+  - _TFTInterstitial_ - A new instance of TFTInterstitial.
+
+---
+
+
+#### + (TFTInterstitial *)loadAchievementInterstitialWithDescription
+
+```objective-c
++ (TFTInterstitial *)loadAchievementInterstitialWithDescription: (NSString *)description
+                                              rewardDescription: (NSString *)rewardDescription
+                                                     rewardIcon: (NSURL *)iconURL
+                                                       delegate:(id<TFTInterstitialDelegate>)delegate;
+```
+
+Creates an instance of TFTInterstitial and starts loading an Achievement interstitial with the provided delegate.
 
 **Parameters**
 
@@ -241,20 +288,16 @@ Creates an instance of TFTInterstitial and starts loading a Break interstitial w
 
 ```objective-c
 + (TFTInterstitial *)loadAchievementInterstitialWithDescription: (NSString *)description
-  rewardDescription: (NSString *)rewardDescription
-         rewardIcon: (NSURL *)iconURL
-       onReceivedAd: (void (^)(TFTInterstitial *interstitial))receivedAdBlock
-        onAdDidFail: (void (^)(TFTInterstitial *interstitial, NSString *reason))failedAdBlock
-        onAdDidShow: (void (^)(TFTInterstitial *interstitial))shownAdBlock
-      onAdWasTapped: (void (^)(TFTInterstitial *interstitial))tappedAdBlock
-   onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock;
+                                        rewardDescription: (NSString *)rewardDescription
+                                               rewardIcon: (NSURL *)iconURL
+                                             onReceivedAd: (void (^)(TFTInterstitial *interstitial))receivedAdBlock
+                                              onAdDidFail: (void (^)(TFTInterstitial *interstitial, NSString *reason))failedAdBlock
+                                              onAdDidShow: (void (^)(TFTInterstitial *interstitial))shownAdBlock
+                                            onAdWasTapped: (void (^)(TFTInterstitial *interstitial))tappedAdBlock
+                                         onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock;
 ```
 
-Creates an instance of TFTInterstitial and starts loading a Break interstitial with the provided delegate.
-
-**Parameters**
-
-  - _delegate_ - A delegate.
+Creates an instance of TFTInterstitial and starts loading an Achievement interstitial with the provided blocks.
 
 **Return Value**
 
@@ -270,7 +313,7 @@ Causes an interstitial ad to be shown. This will push a new view controller onto
 
 #### - (void)showAndLoadWithViewController:(UIViewController *)viewController
 
-Causes an interstitial to be shown and a new interstitial to be loaded. This will push a view controller 
+Causes an interstitial to be shown and a new interstitial to be loaded. This will push a view controller
 new ontop of the current one to show the Ad.
 
 ---

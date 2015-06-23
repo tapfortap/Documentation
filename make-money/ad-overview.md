@@ -3,7 +3,7 @@
 ## Interstitials
 
 
-Interstitials are full screen ads that are displayed in your application. Tap for Tap's interstials are MRAID and VAST compliant, with smart pre-caching for no lag time. The interstital sizes are 640x960 (Portrait) and 960x640 (landscape).
+Interstitials are full screen ads that are displayed in your application. Tap for Tap's Interstitials are MRAID and VAST compliant, with smart pre-caching for no lag time. The interstitial sizes are 640x960 (Portrait) and 960x640 (Landscape).
 
 ### Moments Based Interstitials
 
