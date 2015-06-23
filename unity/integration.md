@@ -88,7 +88,7 @@ Where gender is either `Gender.male` or `Gender.female`, `age` is a positive int
 **Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
 
 
-## Step 5 - Building the Project for Android and isReadyToShow
+## Step 5 - Building the Project for Android and iOS
 
 ### Android
 
