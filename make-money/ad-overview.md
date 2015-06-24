@@ -18,4 +18,4 @@ You must get approval from a member of the Tap for Tap [support](/doc/help/suppo
 
 ## Banners
 
-Banners are the most basic type of ad. They can be placed at either the top or bottom of any screen within your application. If you have the real estate on your app, show banners to earn maximum tap credits.  Tap for Tap banners are MRAID compliant, can show static or dynamic images, and are sized 320x50.
+Banners are the most basic type of ad. They can be placed at either the top or bottom of any screen within your application. If you have the real estate on your app, show banners to earn maximum tap credits.  Tap for Tap banners are MRAID compliant, can show static or dynamic images, and are sized 640x100.
