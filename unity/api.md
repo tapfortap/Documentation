@@ -9,10 +9,6 @@ This is the SDK's main class. It provides methods to:
   - Initialize Tap For Tap so ads can begin to be served
   - Set meta data about users to better ads can be served
 
-### Special Considerations
-
-If the Tap for Tap API key is set in the `AndroidManifest.xml` there is no need to call any of the initialize
-methods as Tap for Tap will initialize itself.
 
 ### Methods
 
@@ -35,7 +31,7 @@ paid version of your app that removes ads.
 
 #### public static void enableTapForTap()
 
-Allows Tap for Tap to download and show ads. See [disableTapForTap](#public-static-void-disabletapfortap) for more details.
+Allows Tap for Tap to download and show ads.
 
 ---
 
@@ -46,7 +42,7 @@ the best ad for this user.
 
 ---
 
-#### public static void setGender(TapForTapGender gender)
+#### public static void setGender(Gender gender)
 
 Sets the user's gender to be passed along when requesting an ad. This helps Tap for Tap to provide
 the best ad for this user.
@@ -73,37 +69,18 @@ developer can assign to your users. This helps Tap for Tap to provide the best a
 
 This class is responsible for showing banners.
 
-### Special Considerations
-
-Do not use any of the public constructors as doing so may cause crashes. They are only available in order to allow the banners to be declared inside layout files. Only use the provided constructor methods when instantiating a banner programmatically.
-
-The banner will stop downloading and showing new ads if the view is not visible or the screen is off.
 
 ### Methods
 
-#### 	public static Banner create(BannerHorizontalAlignment horizontalAlignment, BannerVerticalAlignment verticalAlignment, int desiredWidth, int desiredHeight)
+#### 	public static Banner create (AdSize adSize, AdPosition position)
 
 
 Creates and places a new banner and begins downloading and showing ads.
-By combining a vertical and horizontal alignment you can place an advertisement in
-one of 9 places. A `*` denotes a location where an ad can be placed on the screen.
-
-<pre>
------------
-|*   *   *|
-|         |
-|*   *   *|
-|         |
-|*   *   *|
------------
-</pre>
 
 **Parameters**
 
-  - _horizontalAlignment_ - An BannerHorizontalAlignment enum.
-  - _verticalAlignment_ - An BannerVerticalAlignment enum.
-  - _desiredWidth_ - The desired width in device independent pixels.
-  - _desiredHeight_ - The desired height in device independent pixels.
+  - _adSize_ - An instance of AdSize specifying the size of the Banner.
+  - _adPosition_ - An AdPosition enum specifying the position of the Banner on the screen.
 
 **Return Value**
 
@@ -126,61 +103,37 @@ Causes ads to stop being downloaded and shown.
 
 #### public void enableAutoRollover()
 
-Causes a new ad to be downloaded and shown aproximately every 60 seconds.
+Causes a new ad to be downloaded and shown approximately every 60 seconds.
 
 ---
 
 #### public void disableAutoRollover()
 
-Stops a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowinAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
+Stops a new ad from being downloaded and shown approximately every 60 seconds. Only a call to startShowingAds will cause a new ad to be downloaded and shown.
 
 ---
-
-#### public static InterstitialListener getInterstitialListener()
-
-This is the default InterstitialListener, which has events that you can subscribe to.
-
-**Return Value**
-
-  - _InterstitialListener_ - A reference to the InterstitialListener.
-  
----
-
-#### public static BannerListener getBannerListener()
-
-This is the default BannerListener, which has events that you can subscribe to.
-
-**Return Value**
-
-  - _InterstitialListener_ - A reference to the BannerListener.
-
-## BannerListener
-
-### Overview
-
-This class provides events for the lifecycle of all banners in the application. The one default BannerListener can accessed by calling `TapForTap.getBannerListener()`.
 
 ### Events
 
-#### bannerOnReceive
+There are a number of events you can subscribe to.
 
-Raised when the banner receives a new ad.
+#### ReceivedAd(Banner, EventArgs.Empty)
 
----
-
-#### bannerOnFail(string reason)
-
-Raised when the banner fails to download or show a new ad.
-
-**Parameters**
-
-  - _reason_ - The reason for the failure.
+This event is raised when the Banner received an ad.
 
 ---
 
-#### bannerOnTap
+#### FailedToLoad(Banner, AdFailedToLoadEventArgs)
 
-Raised when a user taps on a banner.
+This even is raised when the Banner failed to load an ad.
+
+---
+
+#### WasTapped(Banner, EventArgs.Empty)
+
+This event is raised when the Banner was tapped.
+
+---
 
 
 ## Interstitial
@@ -192,7 +145,7 @@ This class is responsible for downloading and showing interstitials.
 ### Special Considerations
 
 Always be sure that an interstitial is ready to be shown by either using the events or by using the
-isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undersireable times
+isReadyToShow method. Failure to do so may cause an ad to be shown at unexpected or undesirable times
 due to network connectivity.
 
 ### Methods
@@ -210,7 +163,7 @@ Creates and starts loading a Break interstitial.
 #### public static Interstitial loadRescueInterstitial(string rescueTitle, string rescueBranding, string rescueEnticement, string rescueRewardDescription, string rescueRewardIconUrl, string rescueOptInText)
 
 
-Creates and starts loading a Rescue interstitial..
+Creates and starts loading a Rescue interstitial.
 
 **Parameters**
 
@@ -229,7 +182,7 @@ Creates and starts loading a Rescue interstitial..
 #### public static Interstitial loadAchievementInterstitial(string achievementDescription, string achievementRewardDescription, string achievementRewardIconUrl)
 
 
-Creates and starts loading an Achievement interstitial with the provided listener.
+Creates and starts loading an Achievement interstitial.
 
 **Parameters**
 
@@ -245,13 +198,7 @@ Creates and starts loading an Achievement interstitial with the provided listene
 
 #### public void show()
 
-Causes an interstitial ad to be shown. This will launch a new [FullScreenAdActivity]().
-
----
-
-#### public void load()
-
-Causes a new interstitial to be loaded.
+Causes an interstitial ad to be shown. This will launch a new FullScreenAdActivity.
 
 ---
 
@@ -263,50 +210,40 @@ Returns whether or not an interstitial is ready to show.
 
   - _boolean_ - `true` if an interstitial is ready to show. `false` if an interstitial ad is not ready to show.
 
-## InterstitialListener
-
-### Overview
-
-This class provides events for the lifecycle of all Interstitials in the application. The one default InterstitialListener can accessed by calling `TapForTap.getInterstitialListener()`.
-
 ### Events
 
-#### interstitialDidReceiveAd
+The Interstitial class provides a couple of events that are necessary for the lifecycle of the Interstitial.
 
-Called when a new ad is received and is ready to be shown.
+#### Loaded(Interstitial, EventArgs.Empty)
 
----
-
-#### interstitialDidFail(string reason)
-
-Called when an interstitial fails to load or show an ad. An explicit call to load is required to get the next ad.
-
-**Parameters**
-
-  - _reason_ - The reason for the failure.
+This event is raised when the Interstitial has loaded.
 
 ---
 
-#### interstitialDidShow
+#### FailedToLoad(Interstitial, AdFailedToLoadEventArgs)
 
-Called when the interstitial was shown to the user.
-
-
----
-
-#### interstitialWasTapped
-
-Called when the user taps on the interstitial.
-
+This event is raised when the interstitial failed to load.
 
 ---
 
-#### interstitialWasDismissed
+#### WasShown(Interstitial, EventArgs.Empty)
 
-Called when the user dismisses the interstitial.
+This event is raised when the Interstitial was shown.
 
 ---
 
-#### interstitialAdWasRewarded
+#### WasTapped(Interstitial, EventArgs.Empty)
 
-Called when the Ad was rewarded.
+This event is raised when the Interstitial was tapped.
+
+---
+
+#### WasDismissed(Interstitial, EventArgs.Empty)
+
+This event is raised when the Interstitial was dismissed.
+
+---
+
+#### WasRewarded(Interstitial, EventArgs.Empty)
+
+This event is raised when the Interstitial was rewarded.

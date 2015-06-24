@@ -19,9 +19,9 @@ Breaks provide custom brand messages during natural pauses in application use.  
 
 ## Moment Messaging
 
-Break moments occur during natural pauses in your application, therefore you do not need to explain why a user is seeing an ad. The goal is to allow players to quickly interact with a break ad unit so they can get back into the action as soon as possible. 
+Break moments occur during natural pauses in your application, therefore you do not need to explain why a user is seeing an ad. The goal is to allow players to quickly interact with a break ad unit so they can get back into the action as soon as possible.
 
-Break moments should be contextually relevant to the user. Ensure each impression is receiving the most targeted ads by supplying information about your app demographics upon integration. 
+Break moments should be contextually relevant to the user. Ensure each impression is receiving the most targeted ads by supplying information about your app demographics upon integration.
 
 
 How to implement Rewards for [iOS](/doc/ios/integration) or [Android](/doc/android/integration)

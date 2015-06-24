@@ -1,8 +1,6 @@
 # Do's & Don'ts
 
-These are some do’s and don’ts for implementing the Tap for Tap SDK and handling the ads.  Note that the Tap for Tap SDK provides both a __Load Ad__ and __Show Ad__ call. __Load__ calls make an ad request. __Show__ calls are used to display the ad.  It is important to know the difference so you know when to request an ad vs. display the ad. 
-
-
+These are some do’s and don’ts for implementing the Tap for Tap SDK and handling the ads.
 Below are some helpful tips to improve user experience, reduce ad call waste, and increase impressions in your game.
 
 * __DO__ load the SDK immediately on app load.​

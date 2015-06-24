@@ -1,3 +1,12 @@
+### 4.0.4 2015-06-24
+  * Added properties to support the Unity plugin
+
+### 4.0.3
+  * Fixed issue with validations for App Store Submissions
+
+### 4.0.2
+  * Fixed a couple of warnings when compiling.
+
 ### 4.0.1 / 2015-05-06
   * Fixes a build issue that caused warnings when linking against SDK
   * Remove internal define kReachabilityChangedNotification that conflicted with Reachability

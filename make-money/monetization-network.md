@@ -15,7 +15,7 @@ To find out the types of ads we support check out our [ad overview guide](/doc/m
 
 ## Performance
 
-One of the main factors that determines how well your ads perform is where your audience is located. Tap for Tap has grouped each country into [tiers](/doc/country-tiers)  based on perceived performace. Tier 1 countries generally make a lot more revenue than tier 4. 
+One of the main factors that determines how well your ads perform is where your audience is located. Tap for Tap has grouped each country into [tiers](/doc/country-tiers)  based on perceived performance. Tier 1 countries generally make a lot more revenue than tier 4. 
 
 ## 100% Fill Rate
 

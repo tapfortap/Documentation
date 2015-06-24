@@ -42,15 +42,15 @@ dependencies {
 - **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
 
 ```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />                
-<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" /> 
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.GET_TASKS" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>    
+<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
 <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
 <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -130,11 +130,12 @@ import com.tapfortap.sdk.TapForTap;
 public class MyActivity extends Activity {
 
     private Interstitial interstitial;
+    private Interstitial.interstitialListener interstitialListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Create an InterstitialListener
-        Interstitial.InterstitialListener interstitialListener = new Interstitial.InterstitialListener() {
+        interstitialListener = new Interstitial.InterstitialListener() {
             @Override
             public void interstitialDidReceiveAd(Interstitial interstitial) {
                 Log.i("MyActivity", "interstitialDidReceiveAd");
@@ -174,7 +175,7 @@ public class MyActivity extends Activity {
 
 ```java
 // Start loading a break interstitial
-Interstitial.loadBreakInterstitial(this, interstitialListener);
+interstitial = Interstitial.loadBreakInterstitial(this, interstitialListener);
 ```
 
 Then later you can show the interstitial with `interstitial.show()`. You can make sure the interstitial is loaded with `interstitial.isReadyToShow()` if you want to be certain it's ready before showing it (recommended).
@@ -191,13 +192,13 @@ Achievement and Rescue interstitials work similarly to Break interstitials. You 
 ```java
 // Start loading an achievement interstitial
 // The extra arguments (achievementDescription, achievementRewardDescription, achievementRewardIconUrl) can be used for customizing the copy in the ads shown
-Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
+interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
 ```
 
 ```java
 // Start loading a rescue interstitial
 // The extra arguments (rescueTitle, rescueBranding, rescueEnticement, rescueRewardDescription, rescueRewardIconUrl, rescueOptInText) can be used for customizing the copy in the ads shown
-Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener); 
+interstitial = Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener);
 ```
 
 ## Step 7 - Send Optional Information About Your Users
