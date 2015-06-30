@@ -1,7 +1,7 @@
-### 4.0.5 2015-06-30
+### 4.0.5 / 2015-06-30
   * Added support for html banners and interstitials
 
-### 4.0.4 2015-06-24
+### 4.0.4 / 2015-06-24
   * Added properties to support the Unity plugin
 
 ### 4.0.3

@@ -1,4 +1,4 @@
-### 4.0.1 2015-06-30
+### 4.0.1 / 2015-06-30
   * Added support for html banners and interstitials
 
 ### **4.0.0 / 2015-05-04**
