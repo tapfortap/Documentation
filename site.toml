@@ -144,6 +144,10 @@ title = "Unity"
     title = "API Reference"
     url = "unity/api"
 
+    [nav.unity.changelog]
+    title = "SDK Changelog"
+    url = "unity/changelog"
+
 [nav.help]
 title = "More Help"
 
