@@ -23,7 +23,7 @@ Integrating Tap for Tap into your Unity Project is really easy! Follow the steps
 To initialize TapForTap, call the following code and replace `YOUR_API_KEY` with your personal API Key.
 
 ```c#
-TapForTap.initialize("YOUR_API_KEY");
+TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 ```
 
 ## Step 3 - Display Ads
