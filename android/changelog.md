@@ -1,3 +1,6 @@
+### 4.0.2 / 2015-07-06
+  * Removed some permissions that were no longer needed
+  
 ### 4.0.1 / 2015-06-30
   * Added support for html banners and interstitials
 
