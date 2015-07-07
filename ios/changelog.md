@@ -1,3 +1,6 @@
+### 4.0.6 / 2015-07-07
+  * Improved MRAID Support
+
 ### 4.0.5 / 2015-06-30
   * Added support for html banners and interstitials
 
