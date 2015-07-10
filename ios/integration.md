@@ -1,7 +1,7 @@
 # iOS - SDK Implementation
 
 ##  Current Version
-**4.0.0** - [See Changelog](/doc/ios/changelog)
+**4.0.6** - [See Changelog](/doc/ios/changelog)
 
 Supports iOS 5.0 and up.
 
@@ -147,7 +147,7 @@ For the second method, your view controller can implement the `TFTInterstitialDe
         NSLog(@"Ad failed: %@", reason);
 
     } onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
-    
+
 }
 ```
 
@@ -200,7 +200,7 @@ In the view controllers in which you would like to display interstitials, in you
                                                        [interstitial showWithViewController:self];
 
                                                    } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
-    
+
 }
 ```
 

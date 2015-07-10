@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**4.0.0** - [See Changelog](/doc/android/changelog)
+**4.0.3** - [See Changelog](/doc/android/changelog)
 
 Supports Android 4.0 and up (API level 14)
 
