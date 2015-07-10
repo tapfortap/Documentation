@@ -28,6 +28,9 @@ TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 
 ## Step 3 - Display Ads
 
+To use any of the following classes, you need to import the TapForTap API namespace.
+Simply add ```using TapForTap.API;``` at the top of your script.
+
 ### Banners
 
 To place a banner, just call `Banner.create (AdSize adSize, AdPosition position)`. The following call creates a banner at the bottom center of the screen, with the default device independent dimensions of 320x50.
