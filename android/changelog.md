@@ -1,3 +1,9 @@
+### 4.0.5 / 2015-07-15
+  * Fixed a bug that caused an app without an internet connection to crash.
+
+### 4.0.4 / 2015-07-15
+  * Fixed a bug that caused an app to crash when it couldn't access files.
+
 ### 4.0.3 / 2015-07-10
   * Updated MediaBrix SDK and some minor bugfixes.
 

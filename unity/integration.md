@@ -54,7 +54,7 @@ Showing an break interstitial is easy.
 - Subscribe to the `Loaded` event.
 
 ```c#
-		interstitial.Loaded += () => {
+		interstitial.Loaded += (s,e) => {
 			interstitial.show();
 		};
 ```
@@ -64,12 +64,23 @@ Showing an break interstitial is easy.
 Achievement and Rescue interstitials work similarly to break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
 
 
-Call `loadAchievementInterstitial` or `loadRescueInterstitial`:
+Calling `loadRescueInterstitial`:
 
 ```c#
     var interstitial = Interstitial.loadRescueInterstitial ("Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!");
 
 ```
+
+The "WasRewarded" event will fire when the user has interacted with the ad and should now receive his rescue (e.g. extra lives).
+
+```c#
+interstitial.WasRewarded += (s,e) => {
+  //Give the player an extra live
+  lives++;
+};
+```
+
+Calling 'loadAchievementInterstitial':
 
 ```c#
     var interstitial = Interstitial.loadAchievementInterstitial ("You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png");

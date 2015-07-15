@@ -1,7 +1,7 @@
 # Android - SDK Implementation #
 
 ##  Current Version ##
-**4.0.3** - [See Changelog](/doc/android/changelog)
+**4.0.5** - [See Changelog](/doc/android/changelog)
 
 Supports Android 4.0 and up (API level 14)
 
@@ -42,24 +42,19 @@ dependencies {
 - **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
 
 ```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.GET_TASKS" />
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
-<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.CALL_PHONE" />
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 <permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 <uses-permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 ```
 
 Depending on your project is set up, you may see the following compile error:
