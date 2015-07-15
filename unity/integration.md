@@ -75,8 +75,8 @@ The "WasRewarded" event will fire when the user has interacted with the ad and s
 
 ```c#
 interstitial.WasRewarded += (s,e) => {
-  //Give the player an extra live
-  lives++;
+  //Give the player a couple of extra lives
+  lives = lives + 5;
 };
 ```
 
