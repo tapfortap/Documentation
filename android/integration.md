@@ -210,3 +210,20 @@ TapForTap.setUserAccountId(<accountId>);
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
 **Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+
+## MediaBrix Integration (Optional)
+
+Please ask us for credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
+
+1. Set `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
+
+```xml
+<meta-data android:name="mediabrixAppID" android:value="qXDpTFlISq"/>
+```
+
+2. Set `mediabrixProperty` in your AndroidManifest.xml to the MediaBrix property that was provided to you
+
+```xml
+<meta-data android:name="mediabrixProperty" android:value="pretio_pretioqa_mobile"/>
+```
+
