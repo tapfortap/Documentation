@@ -27,12 +27,12 @@ Integrating Tap for Tap into your app is really easy! Follow the steps below to 
 
     - Use the file menu to select `TapForTap.aar`, Android Studio should fill in both text fields.
 
-- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library, the latest Google Play Services library, and the TapForTap library. Sync Gradle files.
+- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library and the TapForTap library. Sync Gradle files.
 
 ```
 dependencies {
-    compile "com.android.support:appcompat-v7:22.0.0"
-    compile "com.google.android.gms:play-services:7.0.0"
+    [...]
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile project(":TapForTap")
 }
 ```
@@ -226,4 +226,3 @@ Please ask us for credentials to use MediaBrix with Tap for Tap. The integration
 ```xml
 <meta-data android:name="mediabrixProperty" android:value="pretio_pretioqa_mobile"/>
 ```
-

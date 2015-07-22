@@ -1,3 +1,9 @@
+### 4.1.0 / 2015-07-22
+  * Rewrite of banner and interstitial code to be fully MRAID-compliant
+  * Implemented the ability to hide and show banners
+  * Reduced the SDK size significantly
+  * Bunch of bugfixes
+
 ### 4.0.5 / 2015-07-15
   * Fixed a bug that caused an app without an internet connection to crash.
 

@@ -121,31 +121,39 @@ method [createAndShow(context, bannerListener)](public-static-Banner-createAndSh
 
 #### public void startShowingAds()
 
-Causes ads to start being downloaded and shown.
+Causes ads to be downloaded and a new ad to be shown every 60 seconds.
 
 ---
 
 #### public void stopShowingAds()
 
-Causes ads to stop being downloaded and shown.
+Stops showing *new* ads.
+This can be used with showNewAd() to manually show new ads at a different interval.
 
 ---
 
-#### public void enableAutoRollover()
+#### public void hide()
 
-Causes a new ad to be downloaded and shown aproximately every 60 seconds.
+Hides the banner and stops loading new ads.
 
 ---
 
-#### public void disableAutoRollover()
+#### public void show()
 
-Stops a new ad from being downloaded and show approximately every 60 seconds. Only a call to [startShowingAds](public-void-startShowingAds) will cause a new ad to be downloaded and show.
+Shows the banner again, and starts downloading and showing ads every 60 seconds.
+
+---
+
+#### public void showNewAd()
+
+This can be used to manually show a new ad.
+
 
 ## BannerListener
 
 ### Overview
 
-This interface provides callback methods into the current lifecyclce of the banner.
+This interface provides callback methods into the current lifecycle of the banner.
 
 ### Methods
 
