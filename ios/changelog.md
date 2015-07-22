@@ -1,3 +1,6 @@
+### 4.0.7 / 2015-07-22
+  * Fixes to the supporting code for Unity, as well as adding the onAdWasRewarded method block to the rescue interstitial
+
 ### 4.0.6 / 2015-07-07
   * Improved MRAID Support
 

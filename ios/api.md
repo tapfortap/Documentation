@@ -251,7 +251,8 @@ Creates an instance of TFTInterstitial and starts loading a Rescue interstitial 
                                          onAdDidFail: (void (^)(TFTInterstitial *interstitial, NSString *reason))failedAdBlock
                                          onAdDidShow: (void (^)(TFTInterstitial *interstitial))shownAdBlock
                                        onAdWasTapped: (void (^)(TFTInterstitial *interstitial))tappedAdBlock
-                                    onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock;
+                                    onAdWasDismissed: (void (^)(TFTInterstitial *interstitial))dismissedAdBlock
+                                    onAdWasRewarded: (void (^)(TFTInterstitial *interstitial))rewardedAdBlock
 ```
 
 Creates an instance of TFTInterstitial and starts loading a Rescue interstitial with the provided blocks.

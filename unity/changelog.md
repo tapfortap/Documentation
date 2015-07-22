@@ -1,3 +1,5 @@
+### 1.0.3 / 2015-07-22
+  * Couple of bugfixes
 ### 1.0.2 / 2015-07-15
   * Updated to include latest android sdk.
 ### 1.0.2 / 2015-07-10
