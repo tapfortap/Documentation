@@ -97,7 +97,8 @@ Causes ads to start being downloaded and shown.
 
 #### public void stopShowingAds()
 
-Causes ads to stop being downloaded and shown.
+Stops showing *new* ads.
+This can be used with showNewAd() to manually show new ads at a different interval.
 
 ---
 
@@ -112,6 +113,9 @@ This hides the banner, and stops it from loading any new ads.
 Shows the banner again, and starts downloading and showing ads every 60 seconds.
 
 ---
+#### public void showNewAd()
+
+This can be used to manually show a new ad.
 
 ### Events
 
