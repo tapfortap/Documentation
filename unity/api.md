@@ -101,15 +101,15 @@ Causes ads to stop being downloaded and shown.
 
 ---
 
-#### public void enableAutoRollover()
+#### public void hide()
 
-Causes a new ad to be downloaded and shown approximately every 60 seconds.
+This hides the banner, and stops it from loading any new ads.
 
 ---
 
-#### public void disableAutoRollover()
+#### public void show()
 
-Stops a new ad from being downloaded and shown approximately every 60 seconds. Only a call to startShowingAds will cause a new ad to be downloaded and shown.
+Shows the banner again, and starts downloading and showing ads every 60 seconds.
 
 ---
 

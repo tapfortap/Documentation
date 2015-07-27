@@ -42,9 +42,6 @@ dependencies {
 - **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
 
 ```xml
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-<uses-permission android:name="com.tapfortap.sdk.permission.C2D_MESSAGE" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

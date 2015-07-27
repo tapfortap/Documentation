@@ -119,6 +119,17 @@ Causes ads to start being downloaded and shown.
 Causes ads to stop being downloaded and shown.
 
 ---
+#### public void hideBanner()
+
+This hides the banner, and stops it from loading any new ads.
+
+---
+
+#### public void showBanner()
+
+Shows the banner again, and starts downloading and showing ads every 60 seconds.
+
+---
 
 #### @property autoRollover
 

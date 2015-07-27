@@ -1,3 +1,6 @@
+### 1.1.0 / 2015-07-27
+  * Update includes new Android SDK 4.1.0
+  * New ability to hide and show banners
 ### 1.0.3 / 2015-07-22
   * Couple of bugfixes
 ### 1.0.2 / 2015-07-15
