@@ -220,3 +220,20 @@ If you have information about your users that your privacy policy allows you to 
 Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
 
 **Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+
+## MediaBrix Integration (Optional)
+
+Please ask us for credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your Info.plist and we approve your account.
+
+1. Set `mediabrixAppID` in your Info.plist to the MediaBrix app ID that was provided to you:
+
+```
+mediabrixAppID = qXDpTFlISq
+```
+
+2. Set `mediabrixProperty` in your Info.plist to the MediaBrix property that was provided to you
+
+```
+mediabrixProperty = pretio_pretioqa_mobile
+```
+
