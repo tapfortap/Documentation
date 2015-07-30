@@ -1,12 +1,6 @@
 # Unity - SDK Implementation #
 
-##  General Information ##
-
-Integrating Tap for Tap into your Unity Project is really easy! Follow the steps below to get started.
-
-# Instructions (Unity) #
-
-##  Step 1: Add Tap for Tap to Your Project.
+##  Step 1: Add Tap for Tap to Your Project
 
 - Download the [Tap for Tap Unity Plugin](https://github.com/tapfortap/Unity/archive/master.zip).
 
@@ -20,7 +14,7 @@ Integrating Tap for Tap into your Unity Project is really easy! Follow the steps
 
 ## Step 2 - Initialize the SDK
 
-To initialize TapForTap, call the following code and replace `YOUR_API_KEY` with your personal API Key.
+To initialize TapForTap, call the following code and replace `YOUR_API_KEY` with your personal API Key, which can be found on the [account](https://tapfortap.com/manage/account) page.
 
 ```c#
 TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
@@ -31,7 +25,13 @@ TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 To use any of the following classes, you need to import the TapForTap API namespace.
 Simply add ```using TapForTap.API;``` at the top of your script.
 
+For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
+
 ### Banners
+
+![Example banner](/images/doc/banner.png)
+
+Banners are the most basic type of ad. They are sized 640x100 and can be placed at either the top or bottom of any screen within your application. If you have the real estate on your app, show banners to earn maximum tap credits. Tap for Tap banners are MRAID compliant, and can show static or dynamic images.
 
 To place a banner, just call `Banner.create (AdSize adSize, AdPosition position)`. The following call creates a banner at the bottom center of the screen, with the default device independent dimensions of 320x50.
 
@@ -41,28 +41,41 @@ Banner.create(AdSize.Banner, AdPosition.BottomCenter);
 
 ### Break Interstitials
 
-Showing an break interstitial is easy.
+![Example Break Unit](/images/doc/user-flow-break.jpg)
 
-- First make sure you have initialized the TapForTap SDK as described in step 3.
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+- First make sure you have initialized the TapForTap SDK as described in step 2.
 
 - Call `Interstitial.loadBreakInterstitial()` to create a new Break Interstitial. The method returns an Interstitial - make sure to store it! You will need it later to show the Interstitial once it has loaded.
 
 ```c#
-		var interstitial = Interstitial.loadBreakInterstitial();
+    var interstitial = Interstitial.loadBreakInterstitial();
 ```
 
 - Subscribe to the `Loaded` event.
 
 ```c#
-		interstitial.Loaded += (s,e) => {
-			interstitial.show();
-		};
+    interstitial.Loaded += (s,e) => {
+      interstitial.show();
+    };
 ```
 
 ### Achievement and Rescue Interstitials
 
-Achievement and Rescue interstitials work similarly to break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
+**Important**: MediaBrix must be integrated to enable these two ad types. [Contact our support](mailto:support@tapfortap.com) and we will give you credentials and instructions to do this.
 
+#### Achievement
+![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
+
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+#### Rescue
+![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
+
+[View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
+
+Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
 
 Calling `loadRescueInterstitial`:
 
@@ -86,9 +99,9 @@ Calling 'loadAchievementInterstitial':
     var interstitial = Interstitial.loadAchievementInterstitial ("You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png");
 ```
 
-## Step 4 - Send Optional Information About Your Users
-If you have information about your users that your privacy policy allows you to share with us,
-you can improve performance and revenue by passing it along.
+## Step 4 - Send Information About Your Users (Optional)
+
+If you have information about your users that your privacy policy allows you to share with us, you can improve performance and revenue by passing it along.
 We accept year of birth, gender, location, and the account ID of users on your system.
 
 ```c#
@@ -99,7 +112,7 @@ TapForTap.setUserAccountId(<accountId>);
 ```
 Where gender is either `Gender.male` or `Gender.female`, `age` is a positive integer, `location` is two doubles (double latitude, double longitude), and user `account ID`s are strings.
 
-**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization network](/doc/make-money/monetization-network), passing this information can greatly increase your revenue.
 
 
 ## Step 5 - Building the Project for Android and iOS
@@ -110,8 +123,7 @@ Android doesn't require any extra setup, just click Build & Run and connect your
 
 ### iOS
 
-iOS Integration is a bit more difficult and requires a couple steps. But don't worry, just follow the steps and you will be up and running in no time!
-Build & Run for iOS is currently broken (Unity 5.1.0p2 and XCode 6.3.2).
+iOS Integration requires a couple more steps than Android. Build & Run for iOS is currently broken (Unity 5.1.0p2 and XCode 6.3.2).
 
 #### Step 1
 
@@ -120,7 +132,7 @@ Open the Project by clicking on `Unity-iPhone.xcodeproj`.
 
 #### Step 2
 
-Follow the instructions up to step 4 [here](/doc/ios/integration). After that should should be able to build and run!
+Follow the instructions up to step 4 [here](/doc/ios/integration). After that you should be able to build and run!
 
 #### Remarks
 

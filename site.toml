@@ -41,6 +41,64 @@ title = "New to Tap for Tap?"
   url = "download"
 
 
+[nav.android]
+title = "Android"
+
+  [nav.android.integration]
+  title = "Integration Guide"
+  url = "android/integration"
+
+  [nav.android.api]
+  title = "API Reference"
+  url = "android/api"
+
+  [nav.android.changelog]
+  title = "SDK Changelog"
+  url = "android/changelog"
+
+# TODO: restore this when we have a 3.x to 4.x migration guide
+#  [nav.android.migration]
+#  title = "SDK Migration Guide"
+#  url = "android/migration"
+
+
+[nav.ios]
+title = "iOS"
+
+  [nav.ios.integration]
+  title = "Integration Guide"
+  url = "ios/integration"
+
+  [nav.ios.api]
+  title = "API Reference"
+  url = "ios/api"
+
+  [nav.ios.changelog]
+  title = "SDK Changelog"
+  url = "ios/changelog"
+
+# TODO: restore this when we have a 3.x to 4.x migration guide
+#  [nav.ios.migration]
+#  title = "SDK Migration Guide"
+#  url = "ios/migration"
+
+
+[nav.unity]
+title = "Unity"
+
+  [nav.unity.integration]
+  title = "Integration Guide"
+  url = "unity/integration"
+
+  [nav.unity.api]
+  title = "API Reference"
+  url = "unity/api"
+
+  [nav.unity.changelog]
+  title = "SDK Changelog"
+  url = "unity/changelog"
+
+
 [nav.get-users]
 title = "Get Users"
 
@@ -72,9 +130,9 @@ title = "Make Money"
   title = "Ad Overview"
   url = "make-money/ad-overview"
 
-  [nav.make-money.reward-moment]
-  title = "Reward Moment"
-  url = "make-money/reward-moment"
+  [nav.make-money.achievement-moment]
+  title = "Achievement Moment"
+  url = "make-money/achievement-moment"
 
   [nav.make-money.rescue-moment]
   title = "Rescue Moment"
@@ -92,61 +150,6 @@ title = "Make Money"
   title = "Monetization Network"
   url = "make-money/monetization-network"
 
-
-[nav.android]
-title = "Android"
-
-  [nav.android.integration]
-  title = "Integration Guide"
-  url = "android/integration"
-
-  [nav.android.api]
-  title = "API Reference"
-  url = "android/api"
-
-  [nav.android.changelog]
-  title = "SDK Changelog"
-  url = "android/changelog"
-
-# TODO: restore this when we have a 3.x to 4.x migration guide
-#  [nav.android.migration]
-#  title = "SDK Migration Guide"
-#  url = "android/migration"
-
-[nav.ios]
-title = "iOS"
-
-  [nav.ios.integration]
-  title = "Integration Guide"
-  url = "ios/integration"
-
-  [nav.ios.api]
-  title = "API Reference"
-  url = "ios/api"
-
-  [nav.ios.changelog]
-  title = "SDK Changelog"
-  url = "ios/changelog"
-
-# TODO: restore this when we have a 3.x to 4.x migration guide
-#  [nav.ios.migration]
-#  title = "SDK Migration Guide"
-#  url = "ios/migration"
-
-[nav.unity]
-title = "Unity"
-
-    [nav.unity.integration]
-    title = "Integration Guide"
-    url = "unity/integration"
-
-    [nav.unity.api]
-    title = "API Reference"
-    url = "unity/api"
-
-    [nav.unity.changelog]
-    title = "SDK Changelog"
-    url = "unity/changelog"
 
 [nav.help]
 title = "More Help"

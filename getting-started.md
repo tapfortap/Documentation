@@ -1,6 +1,6 @@
-# Introduction #
+# Getting started
 
-This guide will walk you through the process of integrating the Tap for Tap SDK into your application.
+Let's walk you through the process of integrating the Tap for Tap SDK into your application.
 
 ##  1. Sign Up & Grab Your API Key
 
@@ -8,7 +8,7 @@ If you haven't done so already, first [sign up](https://tapfortap.com/signup) fo
 
 ##  2. Integrate the SDK
 
-You need to  [download our SDK](https://github.com/tapfortap/SDK/archive/master.zip) and integrate it into each of your applications. Follow our step-by-step guides depending on what you'd like to integrate on:
+You need to download our SDK ( [All Platforms](https://github.com/tapfortap/SDK/archive/master.zip) / [Android](https://github.com/tapfortap/Android/archive/master.zip) / [iOS](https://github.com/tapfortap/iOS/archive/master.zip) / [Unity Plugin](https://github.com/tapfortap/Unity/archive/master.zip) ) and integrate it into each of your applications. Follow our step-by-step guides depending on what platform you'd like to integrate on:
 
 - [Android](/doc/android/integration)
 - [iOS](/doc/ios/integration) 
@@ -16,7 +16,7 @@ You need to  [download our SDK](https://github.com/tapfortap/SDK/archive/master.
 
 ##  3. Verify Connection With Tap for Tap
 
-Once the Tap for Tap SDK is correctly installed, open your app. The first time your app checks in with Tap for Tap (by the *initialize* call in your code), you will get an alert message notifying you that your SDK installation was successful and that your app has been created on Tap for Tap. This alert will only appear the first time you open your app.
+Once the Tap for Tap SDK is correctly installed, open your app. The first time your app checks in with Tap for Tap, you will get an alert message notifying you that your SDK installation was successful and that your app has been created on Tap for Tap. This alert will only appear the first time you open your app.
 
 ##  4. Take App Live on Market
 
@@ -26,13 +26,17 @@ Your app *must* be live and on the corresponding app market (Google Play / Apple
 ---
 
 
-##  You're all set up!
+#  Great! You're all set up.
 
-#### Now take these steps to get the most out of Tap for Tap:
+#### Now visit your dashboard and adjust these settings to get the most out of Tap for Tap:
 
 ##  Placing Ad Units in Your App to Earn Credits / Make Money
 
-To earn credits on the Tap Exchange (to exchange impressions with other Tap for Tap developers), or make money on the monetization network, you need to place ad units in your app. This will happen if you have set your Earning Preferences slider on your [account page](/manage/account) to 'Make Money' (partially or fully). This step is not required if you only wish to promote your app using paid promotion.
+To earn credits on the Tap Exchange (to exchange impressions with other Tap for Tap developers), or make money on the monetization network, you need to place ad units in your app. This will happen if you have set your Earning Preferences slider on your [account page](/manage/account) to 'Make Money' (partially or fully).
+
+![](/images/doc/slider-balance.png)
+
+This step is not required if you only wish to promote your app using paid promotion.
 
 ##  Upload Creatives
 

@@ -1,17 +1,6 @@
-# Android - SDK Implementation #
+# Android - SDK Integration
 
-##  Current Version ##
-**4.0.5** - [See Changelog](/doc/android/changelog)
-
-Supports Android 4.0 and up (API level 14)
-
-##  General Information ##
-
-Integrating Tap for Tap into your app is really easy! Follow the steps below to get started.
-
-# Instructions (Android Studio) #
-
-##  Step 1: Add Tap for Tap to Your Project.
+##  Step 1: Add Tap for Tap to Your Project in Android Studio
 
 - Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip).
 
@@ -37,7 +26,7 @@ dependencies {
 }
 ```
 
-## Permissions
+### Permissions
 
 - **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
 
@@ -89,7 +78,13 @@ TapForTap.initialize(this, "YOUR_API_KEY");
 
 ## Step 4 - Display Ads
 
+For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
+
 ### Banners
+
+![Example banner](/images/doc/banner.png)
+
+Banners are the most basic type of ad. They are sized 640x100 and can be placed at either the top or bottom of any screen within your application. If you have the real estate on your app, show banners to earn maximum tap credits. Tap for Tap banners are MRAID compliant, and can show static or dynamic images.
 
 Adding a banner to a `RelativeLayout`:
 
@@ -110,6 +105,10 @@ Adding a banner to a `RelativeLayout`:
 ```
 
 ### Break Interstitials
+
+![Example Break Unit](/images/doc/user-flow-break.jpg)
+
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
 
 Showing an interstitial from an `Activity`:
 
@@ -174,10 +173,21 @@ Then later you can show the interstitial with `interstitial.show()`. You can mak
 
 
 ### Achievement and Rescue Interstitials
+**Important**: MediaBrix must be integrated to enable these two ad types. View Step 5 below for instructions.
 
-Achievement and Rescue interstitials work similarly to Break interstitials. You should use these at points in your application where you'd like to reward the user, or to allow them to continue playing by watching an advertisement.
+#### Achievement
+![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
 
-- Create an InterstitialListener (as above)
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+#### Rescue
+![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
+
+[View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
+
+Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
+
+- Create an InterstitialListener (as above with the Break interstitial)
 
 - Call `loadAchievementInterstitial` or `loadRescueInterstitial`:
 
@@ -193,7 +203,22 @@ interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the leve
 interstitial = Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener);
 ```
 
-## Step 7 - Send Optional Information About Your Users
+## Step 5 - MediaBrix Integration (Optional)
+
+Please [contact our support](mailto:support@tapfortap.com) and request credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
+
+1) Set the value for `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
+```xml
+<meta-data android:name="mediabrixAppID" android:value="YOUR_APP_ID_HERE"/>
+```
+
+2) Set `mediabrixProperty` in your AndroidManifest.xml to the MediaBrix property that was provided to you
+
+```xml
+<meta-data android:name="mediabrixProperty" android:value="YOUR_PROPERTY_HERE"/>
+```
+
+## Step 6 - Send Information About Your Users (Optional)
 If you have information about your users that your privacy policy allows you to share with us,
 you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.sdk.TapForTap`.
 We accept year of birth, gender, location, and the account ID of user's on your system.
@@ -204,22 +229,8 @@ TapForTap.setYearOfBirth(<year>);
 TapForTap.setLocation(<location>);
 TapForTap.setUserAccountId(<accountId>);
 ```
-Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID`s are strings.
+Where gender is `either` `MALE` or `FEMALE`, `age` is a positive integer, `location` is an `android.location.Location` object, and user `account ID` is a string.
 
-**Note:** If you are using Tap for Tap's [monetization](/doc/monetization) program passing this information can greatly increase your revenue.
+**Note:** If you are using Tap for Tap's [monetization network](/doc/make-money/monetization-network), passing this information can greatly increase your revenue.
 
-## MediaBrix Integration (Optional)
-
-Please ask us for credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
-
-1. Set `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
-
-```xml
-<meta-data android:name="mediabrixAppID" android:value="qXDpTFlISq"/>
-```
-
-2. Set `mediabrixProperty` in your AndroidManifest.xml to the MediaBrix property that was provided to you
-
-```xml
-<meta-data android:name="mediabrixProperty" android:value="pretio_pretioqa_mobile"/>
-```
+## Now [return to the Getting Started Guide](/doc/getting-started) to finish integrating
