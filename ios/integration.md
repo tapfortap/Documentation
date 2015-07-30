@@ -155,8 +155,6 @@ In the callback you can show the interstitial with `[interstitial showWithViewCo
 
 ### Achievement and Rescue Interstitials
 
-**Important**: MediaBrix must be integrated to enable these two ad types. View Step 6 below for instructions.
-
 #### Achievement
 ![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
 
@@ -166,6 +164,8 @@ In the callback you can show the interstitial with `[interstitial showWithViewCo
 ![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
 
 [View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
+
+**Important**: By default, you will only see a sample rescue interstitial. MediaBrix must be integrated to properly use rescue interstitials. View Step 5 below for instructions.
 
 Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
 
