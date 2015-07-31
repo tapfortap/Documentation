@@ -6,26 +6,26 @@ The Tap Exchange allows you to grow your application's user base for free, by ex
 In order to be active on the Tap Exchange you will need to:
 
 1. Integrate our [SDK](/doc/getting-started)
-2. Have you Revenue [Preference Slider](/doc/how-it-works) set to Get Users > 0%
-3. Upload promotional [creatives](/doc/creative-guidelines) for your application
+2. Have your Revenue Preference Slider set to Get Users > 0%
+3. Upload promotional [creatives](/doc/get-users/creative-guidelines) for your application
 
 
 ## Tap Credits
 
 Tap credits are the currency of the Tap Exchange. By showing tap exchange ads on your app, you are promoting other developers. Every time one of your apps’ users taps an exchange ad, you earn tap credits. You can then spend those credits by promoting your applications creatives on other developers ads.
 
-The amount of tap credits you receive on a tap is directly related to the country the user that tapped on the ad is from. The countries are grouped into [tiers](/doc/country-tiers), and the tap value is assigned to that tier.
+The amount of tap credits you receive on a tap is directly related to the country the user that tapped on the ad is from. The countries are grouped into [tiers](/docs/get-users/geo-targeting), and the tap value is assigned to that tier.
 
-## Geo Targeting
+## Geo-Targeting
 
-You can control which countries your application is promoted on. There is an extra cost for targeting, to promote a balance on the network. You can find more details about targeting and tiering in [this guide](/docs/country-tiers).
+You can control which countries your application is promoted on. There is an extra cost for targeting, to promote a balance on the network. You can find more details about targeting and tiering in [this guide](/docs/get-users/geo-targeting).
 
 ## Matching System
 
 Our goal is to ensure developers receive the same value taps they send to other community members. We examine a number of factors to determine the value of a tap including:
 
 - User demographics (language and location)
-- [Ad unit](/doc/ad-units) type and placement
+- Ad unit type and placement
 - Information about the app (quality rating and category)
 - Overall performance of the users seeing and tapping on ads displayed in your app
 

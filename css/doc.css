@@ -9,12 +9,12 @@ a {
 	text-decoration: none;
 }
 h1 {
-	font-size: 2.5em;
+	font-size: 2.8em;
 	color: #587C84;
 	font-weight: 300;
 }
 h2 {
-	font-size: 1.7em;
+	font-size: 2em;
 	color: #818C8E;
 	font-weight: 300;
 }
@@ -24,7 +24,9 @@ h3 {
 	font-weight: 300;
 }
 h4 {
-	font-size: 1.3em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
 }
 h5 {
 	font-size: 1.1em;
@@ -46,6 +48,10 @@ p {
 
 li > p {
   margin: 10px 0 10px;
+}
+
+hr {
+	margin: 60px 0;
 }
 
 /* MARGINS AND PADDING */
@@ -157,6 +163,10 @@ li > p {
 	.nav>li>a.header-button:hover {
 	  color: #D5F2F9;
 	  background-color: #5C9FB0;
+	}
+
+	.navbar .container {
+	  max-width: 1130px;
 	}
 
 

@@ -1,21 +1,21 @@
-# Geo Targeting #
+# Geo-Targeting
 
 Tap for Tap allows you to target which countries your app is promoted in. When you target a specific country, you'll be charged the credit value of that country's tier, plus a targeting fee that is specific to the country. Targeting puts stress on a free exchange, which is why there is a premium fee. 
 
-# Country Tiers #
+## Country Tiers
 
 Tiers determine the value of taps for each country. This ensures the value you get out of the Tap Exchange™ will equal the value you put in. 
 
-# Country Tier Map #
+## Country Tier Map
 
 ![Country Tier Map](https://raw.github.com/tapfortap/Documentation/master/images/target-map.png)
 
-# Tier #1 #
+## Tier #1
 
 ### Tier Credits: 40 ###
-### Tier Targetting Cost: 20 ###
+### Tier Targeting Cost: 20 ###
 
-- AU  Australia
+- AU	Australia
 - CA	Canada
 - DE	Germany
 - DK	Denmark
@@ -25,10 +25,10 @@ Tiers determine the value of taps for each country. This ensures the value you g
 - UK	United Kingdom
 
 
-# Tier #2 #
+## Tier #2
 
 ### Tier Credits: 30 ###
-### Tier Targetting Cost: 15 ###
+### Tier Targeting Cost: 15 ###
 
 - AE	United Arab Emirates
 - AT	Austria
@@ -55,10 +55,10 @@ Tiers determine the value of taps for each country. This ensures the value you g
 - ZA	South Africa
 
 
-# Tier #3 #
+## Tier #3
 
 ### Tier Credits: 20 ###
-### Tier Targetting Cost: 10 ###
+### Tier Targeting Cost: 10 ###
 
 - BD	Bangladesh
 - BE	Belgium
@@ -119,10 +119,10 @@ Tiers determine the value of taps for each country. This ensures the value you g
 - VN	Vietnam
 
 
-# Tier #4 #
+## Tier #4
 
 ### Tier Credits: 10 ###
-### Tier Targetting Cost: 5 ###
+### Tier Targeting Cost: 5 ###
 
 - AD	Andorra
 - AF	Afghanistan

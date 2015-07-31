@@ -15,9 +15,9 @@ Of course, you will still be able to tap into a steady stream of virtually free 
 
 Here’s a little more detail about  the moments in your apps that you can now capitalize on:
 
-[__Reward__](/doc/make-money/reward-moment): Surprise users with congratulatory brand sponsored rewards after moments of achievement. 
+[__Achievement__](/doc/make-money/achievement-moment): Surprise users with congratulatory brand-sponsored rewards after moments of achievement. 
 
-![Example Reward Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-reward.jpg)
+![Example Achievement Unit](https://raw.github.com/tapfortap/Documentation/master/images/user-flow-achievement.jpg)
 
 [__Rescue__](/doc/make-money/rescue-moment): Save users in a moment of need through brand-sponsored value exchange ads.
 
