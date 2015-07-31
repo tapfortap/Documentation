@@ -108,7 +108,7 @@ Adding a banner to a `RelativeLayout`:
 
 ![Example Break Unit](/images/doc/user-flow-break.jpg)
 
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+[View more info on the break moment, and best practices on placement](/doc/make-money/break-moment)
 
 Showing an interstitial from an `Activity`:
 
@@ -121,7 +121,7 @@ import com.tapfortap.sdk.TapForTap;
 public class MyActivity extends Activity {
 
     private Interstitial interstitial;
-    private Interstitial.interstitialListener interstitialListener;
+    private Interstitial.InterstitialListener interstitialListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,7 +169,8 @@ public class MyActivity extends Activity {
 interstitial = Interstitial.loadBreakInterstitial(this, interstitialListener);
 ```
 
-Then later you can show the interstitial with `interstitial.show()`. You can make sure the interstitial is loaded with `interstitial.isReadyToShow()` if you want to be certain it's ready before showing it (recommended).
+Depending on your application you can show the interstitial as soon as `interstitialDidReceiveAd` gets called with `interstitial.show()` or
+if you don't want to show the interstitial as soon as it's loaded, you can always check if the interstitial is loaded with `interstitial.isReadyToShow()` and then show it.
 
 
 ### Achievement and Rescue Interstitials
