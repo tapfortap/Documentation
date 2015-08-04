@@ -1,3 +1,6 @@
+### 4.1.1 / 2015-08-04
+  * Minor bugfixes
+
 ### 4.1.0 / 2015-07-22
   * Rewrite of banner and interstitial code to be fully MRAID-compliant
   * Implemented the ability to hide and show banners

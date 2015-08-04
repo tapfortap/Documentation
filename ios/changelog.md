@@ -1,3 +1,9 @@
+### 4.1.1 / 2015-08-04
+  * Fixed a rotation issue with interstitials
+
+### 4.1.0 / 2015-07-26
+  * added Unity support to hide banners
+
 ### 4.0.7 / 2015-07-22
   * Fixes to the supporting code for Unity, as well as adding the onAdWasRewarded method block to the rescue interstitial
 
