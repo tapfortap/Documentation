@@ -1,3 +1,7 @@
+### 1.1.1 / 2015-08-04
+  * Update android sdk to 4.1.1
+  * This includes all required dependencies as .jar for supporting android 4.0 and lower
+  * Minor bugfix to hide and show methods
 ### 1.1.0 / 2015-07-27
   * Update includes new Android SDK 4.1.0
   * New ability to hide and show banners
