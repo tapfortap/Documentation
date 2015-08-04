@@ -35,6 +35,7 @@ You will need to link to the following frameworks:
 - `libsqlite3.dylib`
 - `libxml2.dylib`
 - `libz.dylib`
+- `Security.framework`
 
 To link to a framework, open the project explorer on the left side of Xcode:
 
