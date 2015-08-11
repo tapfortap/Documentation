@@ -13,7 +13,7 @@
 
 ### Permissions
 
-- Importing the Tap for Tap Plugin into your project will automatically add the following permissions with the supplied AndroidManifest.xml in '/Assets/Android/AndroidManifest.xml':
+- Importing the Tap for Tap Plugin into your project will automatically add the following permissions:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -23,6 +23,7 @@
 ```
 
 - **Allthough optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
+To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/Android/AndroidManifest.xml'.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
