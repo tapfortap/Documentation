@@ -22,7 +22,7 @@
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
 ```
 
-- **Allthough optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
+- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
 To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/Android/AndroidManifest.xml'.
 
 ```xml

@@ -37,7 +37,7 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
 ```
 
-- **Allthough optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
+- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,7 +47,7 @@ dependencies {
 
 ### First build
 
-- Depending on your project is set up, you may see the following compile error on your fist build:
+- Depending on how your project is set up, you may see the following compile errors on your first build:
 
 `Execution failed for task ':app:packageDebug' > Duplicate files copied in APK [some meta file]`
 
