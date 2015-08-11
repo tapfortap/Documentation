@@ -11,6 +11,25 @@
 
     - Leave all files selected and click `Import`
 
+### Permissions
+
+- Importing the Tap for Tap Plugin into your project will automatically add the following permissions with the supplied AndroidManifest.xml in '/Assets/Android/AndroidManifest.xml':
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
+```
+
+- **Allthough optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
 
 ## Step 2 - Initialize the SDK
 

@@ -1,3 +1,5 @@
+### 1.1.2 / 2015-08-11
+  * Update android sdk to 4.1.3 
 ### 1.1.1 / 2015-08-04
   * Update android sdk to 4.1.1
   * This includes all required dependencies as .jar for supporting android 4.0 and lower

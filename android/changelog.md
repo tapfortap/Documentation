@@ -1,3 +1,10 @@
+### 4.1.3 / 2015-08-04
+  * Fixes to MRAID handling
+  * permissions overhauled
+
+### 4.1.2 / 2015-08-09
+  * Minor bugfixes
+
 ### 4.1.1 / 2015-08-04
   * Minor bugfixes
 

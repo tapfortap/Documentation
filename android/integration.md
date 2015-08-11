@@ -28,22 +28,26 @@ dependencies {
 
 ### Permissions
 
-- **No extra permissions are necessary**, but building the .aar file into your project will automatically add the following permissions:
+- Building the .aar file into your project will automatically add the following permissions:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
 ```
 
-Depending on your project is set up, you may see the following compile error:
+- **Allthough optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+### First build
+
+- Depending on your project is set up, you may see the following compile error on your fist build:
 
 `Execution failed for task ':app:packageDebug' > Duplicate files copied in APK [some meta file]`
 
