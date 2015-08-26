@@ -56,6 +56,10 @@ title = "Android"
   title = "SDK Changelog"
   url = "android/changelog"
 
+  [nav.android.plugins]
+  title = "Plugins"
+  url = "android/plugins"
+
 # TODO: restore this when we have a 3.x to 4.x migration guide
 #  [nav.android.migration]
 #  title = "SDK Migration Guide"
