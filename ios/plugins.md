@@ -9,6 +9,8 @@ When you download the newest [SDK](https://github.com/tapfortap/iOS/archive/mast
 
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
 
+**Important**: By default, you will only see a sample rescue interstitial.
+
 Please ask us for credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your Info.plist and we approve your account.
 
 1. Set `mediabrixAppID` in your Info.plist to the MediaBrix app ID that was provided to you:

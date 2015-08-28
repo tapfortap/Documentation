@@ -28,7 +28,7 @@ dependencies {
 }
 ```
 
-- If you want to use any of your plugins, refer to the guide [here](https://tapfortap.com/doc/android/plugins) on how to use integrate those plugins.
+- If you want to use any of our plugins, refer to the guide [here](https://tapfortap.com/doc/android/plugins) on how to use integrate those plugins.
 
 ### Permissions
 

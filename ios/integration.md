@@ -13,6 +13,8 @@ You can add it by dragging and dropping it into Xcode, or selecting File ? Add F
 
 ![](/images/doc/xcode-01.png)
 
+- If you want to use any of our plugins, refer to the guide [here](https://tapfortap.com/doc/ios/plugins) on how to use integrate those plugins.
+
 ##  Step 2: Add Required Frameworks
 
 You will need to link to the following frameworks:
@@ -141,8 +143,6 @@ In the callback you can show the interstitial with `[interstitial showWithViewCo
 
 ### Achievement and Rescue Interstitials
 
-*Achievement and Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/ios/plugins). If your app calls `loadAchievementInterstitial` and `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.*
-
 #### Achievement
 ![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
 
@@ -153,7 +153,7 @@ In the callback you can show the interstitial with `[interstitial showWithViewCo
 
 [View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
 
-**Important**: By default, you will only see a sample rescue interstitial. MediaBrix must be integrated to properly use rescue interstitials. View Step 5 below for instructions.
+**Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/android/plugins). If your app calls `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.**
 
 Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
 

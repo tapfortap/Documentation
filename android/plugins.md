@@ -9,6 +9,8 @@ When you download the newest [SDK](https://github.com/tapfortap/Android/archive/
 
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
 
+**Important**: By default, you will only see a sample rescue interstitial.
+
 Please [contact our support](mailto:support@tapfortap.com) and request credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
 
 1) Set the value for `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
