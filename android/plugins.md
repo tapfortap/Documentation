@@ -7,6 +7,8 @@ When you download the newest [SDK](https://github.com/tapfortap/Android/archive/
 ## MediaBrix
 `Extra Permissions: none` `Class: MediaBrixAdProvider.class`
 
+**The MediaBrix plugin is not supported on Android M at the moment**
+
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
 
 **Important**: By default, you will only see a sample rescue interstitial.
