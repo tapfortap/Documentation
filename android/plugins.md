@@ -8,7 +8,20 @@ When you download the newest [SDK](https://github.com/tapfortap/Android/archive/
 `Extra Permissions: none` `Class: MediaBrixAdProvider.class`
 
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
-(More Description)
+
+Please [contact our support](mailto:support@tapfortap.com) and request credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
+
+1) Set the value for `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
+
+```xml
+<meta-data android:name="mediabrixAppID" android:value="YOUR_APP_ID_HERE"/>
+```
+
+2) Set `mediabrixProperty` in your AndroidManifest.xml to the MediaBrix property that was provided to you
+
+```xml
+<meta-data android:name="mediabrixProperty" android:value="YOUR_PROPERTY_HERE"/>
+```
 
 
 ## Tutela Analytics
@@ -19,10 +32,10 @@ The Tutela plugin provides two fundamental uses for better ad targeting:
 1. More reliable geolocation data
 2. Connection quality data, which enables us to serve the best ad for the users connection
 
+<!---
 ## Kiip
 `Extra Permissions: none` `Class: KiipAdProvider.class`
-
-(Description for Keep)
+--->
 
 # How to add a plugin
 
@@ -39,12 +52,14 @@ The Tutela plugin provides two fundamental uses for better ad targeting:
     }
  ```
 
-- Add the appropriate class file (e.g. `MediaBrixAdProvier.class`) to the with the TapForTap.initialize call.
+- Add the appropriate class file(s) to the with the TapForTap.initialize call.
 ```java
   //Initialize the TapForTap SDK
   TapForTap.initialize(this, "API-KEY", MediaBrixAdProvider.class);
 ```
 
+
+<!---
 # How to build your own plugin
 
 A simple plugin that runs when you initialize TapForTap.
@@ -68,6 +83,10 @@ public class SimpleExamplePlugin extends Plugin {
         return "simple_example";
     }
 
+    @Override
+    public String getVersion() {
+        return "1.0";
+    }
 }
 ```
 
@@ -111,8 +130,14 @@ public class ExampleAdProvider extends AdProvider {
 
     @Override
     public String getPluginName() {
-        return "mediabrix";
+        return "example_adprovider";
+    }
+
+    @Override
+    public String getVersion() {
+        return "1.0";
     }
 
 }
 ```
+--->

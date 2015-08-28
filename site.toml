@@ -81,6 +81,10 @@ title = "iOS"
   title = "SDK Changelog"
   url = "ios/changelog"
 
+  [nav.ios.plugins]
+  title = "Plugins"
+  url = "ios/plugins"
+
 # TODO: restore this when we have a 3.x to 4.x migration guide
 #  [nav.ios.migration]
 #  title = "SDK Migration Guide"
