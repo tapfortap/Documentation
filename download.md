@@ -4,14 +4,10 @@ Version 4 of Tap for Tap SDK has arrived! We’ve packed a bunch of new features
 
 SDK V4 is all about taking your monetization efforts to the next level with better ads, smarter placements, and new advertising partners! -  [Read more about what's new](/doc/whats-new)
 
-**[All platforms SDK (zip)](https://github.com/tapfortap/SDK/archive/master.zip)   **
+**[All platforms SDK (zip)](https://github.com/tapfortap/SDK/archive/master.zip)**
 
-**[Android SDK (zip)](https://github.com/tapfortap/Android/archive/master.zip) **
-**Current version: 4.0.5** - [See Changelog](/doc/android/changelog)
-Supports Android 4.0 and up (API level 14)
+**[Android SDK (zip)](https://github.com/tapfortap/Android/archive/master.zip)** - [See Changelog](/doc/android/changelog)
 
-**[iOS SDK (zip)](https://github.com/tapfortap/iOS/archive/master.zip)**
-**Current version: 4.0.6** - [See Changelog](/doc/ios/changelog)
-Supports iOS 5.0 and up.
+**[iOS SDK (zip)](https://github.com/tapfortap/iOS/archive/master.zip)** - [See Changelog](/doc/ios/changelog)
 
-**[Unity SDK (zip)](https://github.com/tapfortap/Unity/archive/master.zip)**
+**[Unity SDK (zip)](https://github.com/tapfortap/Unity/archive/master.zip)** - [See Changelog](/doc/unity/changelog)
