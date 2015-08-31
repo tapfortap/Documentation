@@ -61,10 +61,8 @@ How to add a key to `Info.plist`:
 #import <tutela_plugin/TutelaAnalytics.h>
 [...]
 
-//Create an array with the Plugins you want to use
-NSMutableArray *pluginArray = [NSMutableArray arrayWithObjects:[[MediaBrixAdProvider alloc]init], [[TutelaAnalytics alloc] init], nil];
+[TFTTapForTap initializeWithAPIKey: @"YOUR_API_KEY" andPlugins:[MediaBrixAdProvider class], [TutelaAnalytics class], nil];
 
-[TFTTapForTap initializeWithAPIKey: @"API-KEY" andPlugins:pluginArray];
 ```
 <!---
 # How to build your own plugin

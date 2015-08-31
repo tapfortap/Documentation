@@ -12,7 +12,7 @@ This is the SDK's main class. It provides methods to:
 
 ### Methods
 
-#### + (void)initializeWithAPIKey:(NSString \*)apiKey andPlugins:(NSMutableArray \*)plugins
+#### + (void)initializeWithAPIKey:(NSString \*)apiKey andPlugins:(Class)firstPlugin, ... NS_REQUIRES_NIL_TERMINATION
 
 Initializes Tap for Tap with the provided API key and array of plugins. See [here](https://tapfortap.com/doc/ios/plugins) for instructions on how to use plugins.
 
