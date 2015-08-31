@@ -60,7 +60,7 @@ Repeat the above steps for any other frameworks you're missing in the list above
 
 ##  Step 3: Initialize Tap for Tap When Your App Launches.
 
-Import `TFTTapForTap.h` in your app delegate and call our initialize method. If you want to use plugins, follow the intstructions [](http)
+Import `TFTTapForTap.h` in your app delegate and call our initialize method. If you want to use plugins, follow the instructions [](http)
 
 ```objective-c
 #import <TapForTap/TFTTapForTap.h>
