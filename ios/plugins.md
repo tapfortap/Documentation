@@ -51,9 +51,9 @@ How to add a key to `Info.plist`:
 
 # How to add a plugin
 
-- Add and link the required frameworks and bundles for each plugin to your XCode app project.
+- If required, add and link the required bundles for each plugin to your XCode app project.
 
-- Import and add the appropriate class file (e.g. `MediaBrixAdProvier`) to the the TapForTap.initialize call.
+- Import the appropriate header file (e.g. `MediaBrixAdProvider.h`) and call TapForTap.initialize with the desired plugin classes.
 
 ```objective-c
 [...]
