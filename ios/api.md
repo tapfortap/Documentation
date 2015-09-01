@@ -6,12 +6,24 @@
 
 This is the SDK's main class. It provides methods to:
 
-  - Initialize Tap For Tap so ads can begin to be served
-  - Set meta data about users to better ads can be served
+- Register plugins
+- Initialize Tap For Tap so ads can begin to be served and registered plugins will be initialized
+- Set meta data about users to better serve ads
 
 ### Methods
 
-#### + (void)initializeWithApiKey:(NSString *) *)apiKey
+#### + (void)initializeWithAPIKey:(NSString \*)apiKey andPlugins:(Class)firstPlugin, ... NS_REQUIRES_NIL_TERMINATION
+
+Initializes Tap for Tap with the provided API key and array of plugins. See [here](https://tapfortap.com/doc/ios/plugins) for instructions on how to use plugins.
+
+**Parameters**
+
+  - _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
+  - _plugins_ - An array of the plugins you want to use.
+
+---
+
+#### + (void)initializeWithApiKey:(NSString \*) \*)apiKey
 
 Initializes Tap for Tap with the provided API key.
 
@@ -21,7 +33,7 @@ Initializes Tap for Tap with the provided API key.
 
 ---
 
-### + (void)initializeWithAPIKey:(NSString *)apiKey completion:(TFTInitializationRequestHandler)handler;
+### + (void)initializeWithAPIKey:(NSString \*)apiKey completion:(TFTInitializationRequestHandler)handler;
 
 Initializes Tap for Tap with the provided API key and block.
 
@@ -59,14 +71,14 @@ the best ad for this user.
 
 ---
 
-#### + (void)setLocation:(CLLocation *)location;
+#### + (void)setLocation:(CLLocation \*)location;
 
 Sets the user's location to be passed along when requesting an ad. This helps Tap for Tap to provide
 the best ad for this user.
 
 ---
 
-#### + (void)setUserAccountId:(NSString *)userAccountId;
+#### + (void)setUserAccountId:(NSString \*)userAccountId;
 
 Sets the user's user account ID to be passed along when requesting an ad. This is an ID that you the developer
 can assign to your users. This helps Tap for Tap to provide the best ad for this user.
@@ -81,7 +93,7 @@ The banner will stop downloading and showing new ads if the view is not visible 
 
 ### Methods
 
-#### + (TFTBanner *)bannerWithFrame:(CGRect)frame;
+#### + (TFTBanner \*)bannerWithFrame:(CGRect)frame;
 
 Creates a new Banner and begins downloading and showing ads.
 
@@ -95,7 +107,7 @@ Creates a new Banner and begins downloading and showing ads.
 
 ---
 
-#### + (TFTBanner *)bannerWithFrame:(CGRect)frame delegate:(id<TFTBannerDelegate>)delegate;
+#### + (TFTBanner \*)bannerWithFrame:(CGRect)frame delegate:(id<TFTBannerDelegate>)delegate;
 
 Creates a new Banner and begins downloading and showing ads with the provided delegate.
 
@@ -151,7 +163,7 @@ This interface provides delegate methods that are called during the lifecycle of
 
 ### Methods
 
-#### - (void)tftBannerDidReceiveAd:(TFTBanner *)banner;
+#### - (void)tftBannerDidReceiveAd:(TFTBanner \*)banner;
 
 Called when the banner receives a new ad.
 
@@ -161,7 +173,7 @@ Called when the banner receives a new ad.
 
 ---
 
-#### - (void)tftBanner:(TFTBanner *)banner didFail:(NSString *)reason;
+#### - (void)tftBanner:(TFTBanner \*)banner didFail:(NSString \*)reason;
 
 Called when the banner fails to download or show a new ad.
 
@@ -172,7 +184,7 @@ Called when the banner fails to download or show a new ad.
 
 ---
 
-#### - (void)tftBannerWasTapped:(TFTBanner *)banner;
+#### - (void)tftBannerWasTapped:(TFTBanner \*)banner;
 
 Called when a user taps on the banner.
 
@@ -194,7 +206,7 @@ undesirable times due to network connectivity.
 
 ### Methods
 
-#### + (TFTInterstitial *)loadBreakInterstitialWithDelegate
+#### + (TFTInterstitial \*)loadBreakInterstitialWithDelegate
 
 ```objective-c
 + (TFTInterstitial *)loadBreakInterstitialWithDelegate:(id<TFTInterstitialDelegate>)delegate;
@@ -212,9 +224,9 @@ Creates an instance of TFTInterstitial and starts loading a Break interstitial w
 
 ---
 
-#### + (TFTInterstitial *)loadBreakInterstitialWithCallbackOnReceivedAd
+#### + (TFTInterstitial \*)loadBreakInterstitialWithCallbackOnReceivedAd
 
-```objective-c
+```objc
 + (TFTInterstitial *)loadBreakInterstitialWithCallbackOnReceivedAd: (void (^)(TFTInterstitial *interstitial))receivedAdBlock
        onAdDidFail: (void (^)(TFTInterstitial *interstitial, NSString *reason))failedAdBlock
        onAdDidShow: (void (^)(TFTInterstitial *interstitial))shownAdBlock
@@ -231,9 +243,9 @@ Creates an instance of TFTInterstitial and starts loading a Break interstitial w
 
 ---
 
-#### + (TFTInterstitial *)loadRescueInterstitialWithTitle
+#### + (TFTInterstitial \*)loadRescueInterstitialWithTitle
 
-```objective-c
+```objc
 + (TFTInterstitial *)loadRescueInterstitialWithTitle: (NSString *)title
        brandingText: (NSString *)branding
      enticementText: (NSString *)enticement
@@ -255,9 +267,9 @@ Creates an instance of TFTInterstitial and starts loading a Rescue interstitial 
 
 ---
 
-#### + (TFTInterstitial *)loadRescueInterstitialWithTitle
+#### + (TFTInterstitial \*)loadRescueInterstitialWithTitle
 
-```objective-c
+```objc
 + (TFTInterstitial *)loadRescueInterstitialWithTitle: (NSString *)title
                                         brandingText: (NSString *)branding
                                       enticementText: (NSString *)enticement
@@ -281,9 +293,9 @@ Creates an instance of TFTInterstitial and starts loading a Rescue interstitial 
 ---
 
 
-#### + (TFTInterstitial *)loadAchievementInterstitialWithDescription
+#### + (TFTInterstitial \*)loadAchievementInterstitialWithDescription
 
-```objective-c
+```objc
 + (TFTInterstitial *)loadAchievementInterstitialWithDescription: (NSString *)description
                                               rewardDescription: (NSString *)rewardDescription
                                                      rewardIcon: (NSURL *)iconURL
@@ -302,7 +314,7 @@ Creates an instance of TFTInterstitial and starts loading an Achievement interst
 
 ---
 
-#### + (TFTInterstitial *)loadAchievementInterstitialWithDescription
+#### + (TFTInterstitial \*)loadAchievementInterstitialWithDescription
 
 ```objective-c
 + (TFTInterstitial *)loadAchievementInterstitialWithDescription: (NSString *)description
@@ -323,13 +335,13 @@ Creates an instance of TFTInterstitial and starts loading an Achievement interst
 
 ---
 
-#### - (void)showWithViewController:(UIViewController *)viewController
+#### - (void)showWithViewController:(UIViewController \*)viewController
 
 Causes an interstitial ad to be shown. This will push a new view controller ontop of the current one to show the ad.
 
 ---
 
-#### - (void)showAndLoadWithViewController:(UIViewController *)viewController
+#### - (void)showAndLoadWithViewController:(UIViewController \*)viewController
 
 Causes an interstitial to be shown and a new interstitial to be loaded. This will push a view controller
 new ontop of the current one to show the Ad.
@@ -354,7 +366,7 @@ This protocol provides delegate methods that are called during the lifecycle of 
 
 ### Methods
 
-#### - (void)tftInterstitialDidReceive:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialDidReceive:(TFTInterstitial \*)interstitial;
 
 Called when the interstitial receives a new ad and is ready to be shown.
 
@@ -364,7 +376,7 @@ Called when the interstitial receives a new ad and is ready to be shown.
 
 ---
 
-#### - (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason;
+#### - (void)tftInterstitial:(TFTInterstitial \*)interstitial didFail:(NSString *)reason;
 
 Called when the interstitial fails to load or show an ad. An explicit call to load is required to get the next ad.
 
@@ -375,7 +387,7 @@ Called when the interstitial fails to load or show an ad. An explicit call to lo
 
 ---
 
-#### - (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialDidShow:(TFTInterstitial \*)interstitial;
 
 Called when the interstitial sucessfully shows an ad to the user.
 
@@ -385,7 +397,7 @@ Called when the interstitial sucessfully shows an ad to the user.
 
 ---
 
-#### - (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialWasTapped:(TFTInterstitial \*)interstitial;
 
 Called when the user taps the interstitial.
 
@@ -395,7 +407,7 @@ Called when the user taps the interstitial.
 
 ---
 
-#### - (void)tftInterstitialWasRewarded:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialWasRewarded:(TFTInterstitial \*)interstitial;
 
 Called when the user is rewarded by a Rescue interstitial.
 
@@ -405,7 +417,7 @@ Called when the user is rewarded by a Rescue interstitial.
 
 ---
 
-#### - (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial;
+#### - (void)tftInterstitialWasDismissed:(TFTInterstitial \*)interstitial;
 
 Called when the user dismissed the interstitial.
 

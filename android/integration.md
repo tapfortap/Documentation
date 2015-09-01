@@ -28,23 +28,15 @@ dependencies {
 }
 ```
 
+- If you want to use any of our plugins, refer to the guide [here](https://tapfortap.com/doc/android/plugins) on how to use integrate those plugins.
+
 ### Permissions
 
 - Building the .aar file into your project will automatically add the following permissions:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
-<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
-```
-
-- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- Required for identifying purposes  -->
 ```
 
 ### First build
@@ -62,27 +54,21 @@ packagingOptions {
 }
 ```
 
-## Step 2 - Add Your API Key to Your AndroidManifest.xml
+## Step 2 - Initialize the SDK
 
-Add the following meta data tag to the `<application>` tag in your AndroidManifest.xml, replacing `MY_API_KEY` with your Tap for Tap
-API key which can be found on the [account](https://tapfortap.com/manage/account) page
+In the `onCreate` method of your main Activity, add the following code, substituting your API key from the Tap for Tap web interface if you don't want to use any plugins:
 
-```xml
-<meta-data
-    android:name="com.tapfortap.API_KEY"
-    android:value="MY_API_KEY"/>
-```
-
-
-## Step 3 - Initialize the SDK
-
-In the `onCreate` method of your main Activity, add the following code, substituting your API key from the Tap for Tap web interface:
-
-```
+```java
 TapForTap.initialize(this, "YOUR_API_KEY");
 ```
 
-## Step 4 - Display Ads
+If you want to use plugins, your call might look something like this:
+```java
+  TapForTap.initialize(this, "YOUR_API_KEY", MediaBrixAdProvider.class, TutelaAnalytics.class);
+```
+*For more info on how to use plugins, read the instructions [here](https://tapfortap.com/doc/android/plugins).*
+
+## Step 3 - Display Ads
 
 For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
 
@@ -191,7 +177,7 @@ if you don't want to show the interstitial as soon as it's loaded, you can alway
 
 [View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
 
-**Important**: By default, you will only see a sample rescue interstitial. MediaBrix must be integrated to properly use rescue interstitials. View Step 5 below for instructions.
+**Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/android/plugins). If your app calls `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.**
 
 Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
 
@@ -211,22 +197,7 @@ interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the leve
 interstitial = Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener);
 ```
 
-## Step 5 - MediaBrix Integration (Optional)
-
-Please [contact our support](mailto:support@tapfortap.com) and request credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
-
-1) Set the value for `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
-```xml
-<meta-data android:name="mediabrixAppID" android:value="YOUR_APP_ID_HERE"/>
-```
-
-2) Set `mediabrixProperty` in your AndroidManifest.xml to the MediaBrix property that was provided to you
-
-```xml
-<meta-data android:name="mediabrixProperty" android:value="YOUR_PROPERTY_HERE"/>
-```
-
-## Step 6 - Send Information About Your Users (Optional)
+## Step 4 - Send Information About Your Users (Optional)
 If you have information about your users that your privacy policy allows you to share with us,
 you can improve performance and revenue by passing it along. Just set the info on `com.tapfortap.sdk.TapForTap`.
 We accept year of birth, gender, location, and the account ID of user's on your system.

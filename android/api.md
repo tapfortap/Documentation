@@ -6,15 +6,19 @@
 
 This is the SDK's main class. It provides methods to:
 
-  - Initialize Tap For Tap so ads can begin to be served
-  - Set meta data about users to better ads can be served
-
-### Special Considerations
-
-If the Tap for Tap API key is set in the `AndroidManifest.xml` there is no need to call any of the initialize
-methods as Tap for Tap will initialize itself.
+  - Register plugins
+  - Initialize Tap For Tap so ads can begin to be served and registered plugins will be initialized
+  - Set meta data about users to better serve ads
 
 ### Methods
+
+#### public static void initialize(Context context, String apiKey, Class... plugins)
+
+Initializes Tap for Tap with the provided API key and plugins. See [here](https://tapfortap.com/doc/android/plugins) for instructions on how to use plugins.
+
+- _context_ - An Android context, such as an Activity instance.
+- _apiKey_ - Your Tap for Tap API key. This can be found on your [account](https://tapfortap.com/manage/account) page.
+- _plugins_ - The plugins that you want to use.
 
 #### public static void initialize(Context context, String apiKey)
 
@@ -36,7 +40,7 @@ paid version of your app that removes ads.
 
 #### public static void enableTapForTap()
 
-Allows Tap for Tap to download and show ads. See [disableTapForTap](#public-static-void-disabletapfortap) for more details.
+Allows Tap for Tap to download and show ads again.
 
 ---
 

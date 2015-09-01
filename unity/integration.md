@@ -4,6 +4,7 @@
 
 ##  Step 1: Add Tap for Tap to Your Project
 
+- Make sure Unity is updated to the latest version and is running at least version 5.0
 - Download the [Tap for Tap Unity Plugin](https://github.com/tapfortap/Unity/archive/master.zip).
 
 - Unzip the archive.

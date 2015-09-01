@@ -1,3 +1,10 @@
+## 4.2.0 / 2015-08-28
+  * *All new modular plugin system* - [more info](https://tapfortap.com/doc/ios/plugins)
+  * iOS 9 support
+  * Improved ad-serving
+  * removed any references to the mac address
+  * minor bug fixes
+
 ### 4.1.1 / 2015-08-04
   * Fixed a rotation issue with interstitials
 
