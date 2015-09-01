@@ -5,7 +5,7 @@ This gives you *full control* over the desired feature set, required permissions
 When you download the newest [SDK](https://github.com/tapfortap/iOS/archive/master.zip) you will find a `/plugins` directory which includes the following plugins.
 
 ## MediaBrix
-`Class: MediaBrixAdProvider` `Required Files: mediabrix_plugin.framework, MediaBrix.bundle`
+`Class: MediaBrixAdProvider` `Required Files: MediaBrix.bundle`
 
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
 
@@ -27,7 +27,7 @@ mediabrixProperty = pretio_pretioqa_mobile
 
 
 ## Tutela Analytics
-`Class: TutelaAnalytics` `Required Files: tutela_plugin.framework, iOS_Tutela_SDK.framework`
+`Class: TutelaAnalytics`
 
 The Tutela plugin provides two fundamental uses for better ad targeting:
 1. More reliable geolocation data
@@ -51,7 +51,7 @@ How to add a key to `Info.plist`:
 
 # How to add a plugin
 
-- If required, add and link the required bundles for each plugin to your XCode app project.
+- If required, add and link the required framework and files for each plugin to your XCode app project.
 
 - Import the appropriate header file (e.g. `MediaBrixAdProvider.h`) and call TapForTap.initialize with the desired plugin classes.
 
