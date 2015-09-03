@@ -8,8 +8,7 @@
 
 - Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip).
 
-- Unzip the SDK archive and add the following files to your project:
-    - `TapForTap.aar`
+- Unzip the SDK archive
 
 - If your project doesn't have a libs folder create one and copy TapForTap.aar into it.
 
@@ -20,12 +19,13 @@
 
     - Use the file menu to select `TapForTap.aar`, Android Studio should fill in both text fields.
 
-- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library and the TapForTap library. Sync Gradle files.
+- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library, OkHttp and the TapForTap library. Sync Gradle files.
 
 ```
 dependencies {
     [...]
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile project(":TapForTap")
 }
 ```
