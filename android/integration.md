@@ -4,6 +4,8 @@
 
 ##  Step 1: Add Tap for Tap to Your Project in Android Studio
 
+**Make sure your JDK is at least version 7 before continuing**
+
 - Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip).
 
 - Unzip the SDK archive and add the following files to your project:
