@@ -1,11 +1,11 @@
 # TapForTap Plugins
 Plugins add functionality to the TapForTap SDK on demand.
-This gives you *full control* over the desired feature set, required permissions, required libraries and total file size of the SDK.
+This gives you **full control** over the desired feature set, required permissions, required libraries and total file size of the SDK.
 
-When you download the newest [SDK](https://github.com/tapfortap/Android/archive/master.zip) you will find a `/plugins` directory which includes file for the following plugins.
+The following plugins are currently included in the SDK:
 
 ## MediaBrix
-`Class: Plugin.MediaBrixAdProvier` `Required Files: MediaBrix.bundle`
+`Class: Plugin.MediaBrixAdProvier` `Required Files on iOS: MediaBrix.bundle`
 
 **The MediaBrix plugin is not supported on Android M at the moment**
 
@@ -15,6 +15,8 @@ The MediaBrix plugin provides video and branded interstitials for the *Rescue* a
 
 Please [contact our support](mailto:support@tapfortap.com) and request credentials to use MediaBrix with Tap for Tap. The integration will be enabled automatically once you've added the following two elements to your AndroidManifest.xml and we approve your account.
 
+
+### Instructions for Android
 1) Set the value for `mediabrixAppID` in your AndroidManifest.xml to the MediaBrix app ID that was provided to you:
 
 ```xml
@@ -25,6 +27,18 @@ Please [contact our support](mailto:support@tapfortap.com) and request credentia
 
 ```xml
 <meta-data android:name="mediabrixProperty" android:value="YOUR_PROPERTY_HERE"/>
+```
+### Instructions for iOS
+1. Set `mediabrixAppID` in your Info.plist to the MediaBrix app ID that was provided to you:
+
+```
+mediabrixAppID = qXDpTFlISq
+```
+
+2. Set `mediabrixProperty` in your Info.plist to the MediaBrix property that was provided to you
+
+```
+mediabrixProperty = pretio_pretioqa_mobile
 ```
 
 
@@ -38,20 +52,21 @@ The Tutela plugin provides two fundamental uses for better ad targeting:
 
 
 # How to add a plugin
-
-- Import the desired .unitypackage from the /plugins folder:
-    - Go to Assets -> Import Package -> Custom Package...
-
-    - Leave all files selected and click `Import`
-
-- Add the desired Plugins you want to the the TapForTap.initialize call.
+Simply add the desired Plugins to the the TapForTap.initialize call like this:
 ```java
   	TapForTap.API.TapForTap.initialize ("YOUR_API_KEY", Plugin.MediaBrixAdProvider, Plugin.TutelaAnalytics);
 ```
 
+## Extra Instructions for Android
+- Import the desired .unitypackage from the /android-plugins folder:
+    - Go to Assets -> Import Package -> Custom Package...
+
+    - Leave all files selected and click `Import`
+
 ## Extra Instructions for iOS
 
-iOS Integration requires a couple more steps than Android. Build & Run for iOS is currently broken (Unity 5.1.0p2 and XCode 6.3.2).
+iOS Integration requires a couple more steps than Android.
+Build & Run for iOS is currently broken (Unity 5.1.0p2 and XCode 6.3.2).
 
 ### Step 1
 
@@ -64,8 +79,7 @@ Follow the instructions up to step 4 [here](/doc/ios/integration).
 
 ### Step 3
 
-Import the plugin framework and bundles for each plugin found in `/plugins`
-
+Import the plugin framework and bundles for each plugin found in the iOS SDK `/plugins` folder.
 ### Step 4
 
 Import the plugins you want to use by uncommenting them at the top of TFTTapForTapUnity.mm located at /Libraries/Plugins/iOS/ in your XCode Project. Example:
