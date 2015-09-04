@@ -106,6 +106,10 @@ title = "Unity"
   title = "SDK Changelog"
   url = "unity/changelog"
 
+  [nav.unity.plugins]
+  title = "Plugins"
+  url = "unity/plugins"
+
 
 [nav.get-users]
 title = "Get Users"
