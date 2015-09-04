@@ -79,7 +79,7 @@ Follow the instructions up to step 4 [here](/doc/ios/integration).
 
 ### Step 3
 
-Import the plugin framework and bundles for each plugin found in the iOS SDK `/plugins` folder.
+Import the plugin framework and bundles for each plugin found in the `/ios-plugins` folder.
 ### Step 4
 
 Import the plugins you want to use by uncommenting them at the top of TFTTapForTapUnity.mm located at /Libraries/Plugins/iOS/ in your XCode Project. Example:
