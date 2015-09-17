@@ -178,7 +178,7 @@ In the view controllers in which you would like to display interstitials, in you
                                             // The interstitial has loaded, so we can show it now
                                             [interstitial showWithViewController:self];
 
-                                        } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
+                                        } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil onAdWasRewarded:nil];
 }
 ```
 
