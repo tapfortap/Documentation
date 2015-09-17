@@ -1,6 +1,6 @@
 # Unity - SDK Implementation
 
-## [Watch our Unity integration video ►](https://www.youtube.com/watch?v=sf1w2YTbXq4)
+[![Watch our Unity integration video](/images/doc/unity-integration-video.jpg)](https://www.youtube.com/watch?v=sf1w2YTbXq4)
 
 ##  Step 1: Add Tap for Tap to Your Project
 

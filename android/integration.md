@@ -1,6 +1,6 @@
 # Android - SDK Integration
 
-## [Watch our Android integration video ►](https://www.youtube.com/watch?v=jBfO1_pUKb8)
+[![Watch our Android integration video](/images/doc/android-integration-video.jpg)](https://www.youtube.com/watch?v=jBfO1_pUKb8)
 
 ##  Step 1: Add Tap for Tap to Your Project in Android Studio
 

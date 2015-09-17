@@ -1,6 +1,6 @@
 # iOS - SDK Integration
 
-## [Watch our iOS integration video ►](https://www.youtube.com/watch?v=5ADw0oMGYl0)
+[![Watch our iOS integration video](/images/doc/ios-integration-video.jpg)](https://www.youtube.com/watch?v=5ADw0oMGYl0)
 
 ##  Step 1: Add Tap for Tap to Your Project
 
