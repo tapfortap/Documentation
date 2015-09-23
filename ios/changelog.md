@@ -1,3 +1,9 @@
+### 4.2.2 / 2015-09-22
+  * Fix banner loading and refreshing issues with MoPub
+
+### 4.2.1 / 2015-09-01
+  * Compatibility changes for Unity SDK
+
 ## 4.2.0 / 2015-08-28
   * *All new modular plugin system* - [more info](https://tapfortap.com/doc/ios/plugins)
   * iOS 9 support
