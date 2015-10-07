@@ -14,24 +14,15 @@
 
     - Leave all files selected and click `Import`
 
+- If you want to use any of our plugins, refer to the guide [here](https://tapfortap.com/doc/unity/plugins) on how to use integrate those plugins.
+
 ### Permissions
 
 - Importing the Tap for Tap Plugin into your project will automatically add the following permissions:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
-<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
-```
-
-- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
-To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/Android/AndroidManifest.xml'.
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- Required for identifying purposes  -->
 ```
 
 
@@ -42,6 +33,13 @@ To initialize TapForTap, call the following code and replace `YOUR_API_KEY` with
 ```c#
 TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 ```
+
+If you want to use plugins, your call might look something like this:
+```c#
+  	TapForTap.API.TapForTap.initialize ("YOUR_API_KEY", Plugin.MediaBrixAdProvider, Plugin.TutelaAnalytics);
+```
+
+*For more info on how to use plugins, read the instructions [here](https://tapfortap.com/doc/unity/plugins).*
 
 ## Step 3 - Display Ads
 
@@ -96,7 +94,7 @@ Banner.create(AdSize.Banner, AdPosition.BottomCenter);
 
 [View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
 
-**Important**: By default, you will only see a sample rescue interstitial. MediaBrix must be integrated to properly use rescue interstitials. View Step 5 below for instructions.
+**Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/unity/plugins). If your app calls `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.**
 
 Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
 

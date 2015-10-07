@@ -53,7 +53,7 @@ The Tutela plugin provides two fundamental uses for better ad targeting:
 
 # How to add a plugin
 Simply add the desired Plugins to the the TapForTap.initialize call like this:
-```java
+```c#
   	TapForTap.API.TapForTap.initialize ("YOUR_API_KEY", Plugin.MediaBrixAdProvider, Plugin.TutelaAnalytics);
 ```
 
