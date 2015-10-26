@@ -4,24 +4,16 @@
 
 ##  Step 1: Add Tap for Tap to Your Project in Eclipse
 
-**Make sure your JDK is at least version 7 before continuing**
+- Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip) for eclipse.
 
-//Should we include the .jar of our SDK or make them extract it themselves?
+- Unzip the SDK archive and go to `eclipsesdk` directory.
 
-- Download the [Tap for Tap Android SDK](https://github.com/tapfortap/Android/archive/master.zip).
-
-- Download the [latest jar of OkHttp and Okio](http://square.github.io/okhttp/).
-
-//Not sure if it's Zip or not
-
-- Unzip the SDK archive
-
-- If your project doesn't have a libs folder create one and copy TapForTap.jar, Okio.jar, Okhttp.jar into it.
+- If your project doesn't have a `libs` folder create one and copy `TapForTap.jar, Okio-1.6.0.jar, and Okhttp-2.5.0.jar` from the `eclipsesdk` directory into your project's `libs` folder.
 
 - Add the libraries to your project's build:
     - Go to Project -> Properties -> Java Build Path
 
-    - In the Libraries tab, click on Add JARs and select the downloaded JARs and click OK and click OK again.
+    - In the Libraries tab, click on Add JARs -> select the downloaded JARs -> OK -> OK.
 
 - In your app's AndroidManifest.xml file add the following lines for showing Interstitial Ads.
 
