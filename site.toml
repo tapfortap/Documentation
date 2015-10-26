@@ -47,7 +47,11 @@ title = "Android"
   [nav.android.integration]
   title = "Integration Guide"
   url = "android/integration"
-
+  
+  [nav.android.eclipse-integration]
+  title = "Eclipse Integration"
+  url = "android/eclipse-integration"
+  
   [nav.android.api]
   title = "API Reference"
   url = "android/api"

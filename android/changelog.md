@@ -1,9 +1,11 @@
+## 4.3.0 / 2015-10-26
+  * minor bug fixes
+
 ## 4.2.0 / 2015-08-28
   * *All new modular plugin system* - [more info](https://tapfortap.com/doc/android/plugins)
   * Android M support
   * Improved ad-serving
   * minor bug fixes
-
 
 ### 4.1.3 / 2015-08-11
   * Fixes to MRAID handling
