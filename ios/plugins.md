@@ -7,6 +7,7 @@ When you download the newest [SDK](https://github.com/tapfortap/iOS/archive/mast
 ## MediaBrix
 `Class: MediaBrixAdProvider` `Required Files: MediaBrix.bundle`
 
+**MediaBrix is not yet supported on iOS 9**
 The MediaBrix plugin provides video and branded interstitials for the *Rescue* and *Achievement* moment.
 
 **Important**: By default, you will only see a sample rescue interstitial.
