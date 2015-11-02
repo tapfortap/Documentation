@@ -1,3 +1,6 @@
+### 4.2.3 / 2015-11-02
+  * Fixed an issue with logging that caused crashes on iOS 9
+
 ### 4.2.2 / 2015-09-22
   * Fix banner loading and refreshing issues with MoPub
 

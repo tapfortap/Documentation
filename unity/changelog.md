@@ -1,3 +1,8 @@
+### 1.2.0 / 2015-11-02
+  * Update android sdk to 4.2.1
+  * Update iOS SDK to 4.2.3
+  * Preparing support for plugins
+
 ### 1.1.2 / 2015-08-11
   * Update android sdk to 4.1.3
 
@@ -21,6 +26,6 @@
 
 ### 1.0.1 / 2015-06-30
   * Added support for html banners and interstitials
-  
+
 ### 1.0.0
   * Initial Release with support for Android and iOS
