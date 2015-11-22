@@ -37,6 +37,9 @@ To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/And
 
 ## Step 2 - Initialize the SDK
 
+To use any of the following classes, you need to import the TapForTap API namespace.
+Simply add ```using TapForTap.API;``` at the top of your script.
+
 To initialize TapForTap, call the following code and replace `YOUR_API_KEY` with your personal API Key, which can be found on the [account](https://tapfortap.com/manage/account) page.
 
 ```c#
@@ -44,9 +47,6 @@ TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 ```
 
 ## Step 3 - Display Ads
-
-To use any of the following classes, you need to import the TapForTap API namespace.
-Simply add ```using TapForTap.API;``` at the top of your script.
 
 For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
 
