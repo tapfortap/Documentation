@@ -64,15 +64,29 @@ In the `onCreate` method of your main Activity, add the following code, substitu
 TapForTap.initialize(this, "YOUR_API_KEY");
 ```
 
-If you want to use plugins, your call might look something like this:
-```java
-  TapForTap.initialize(this, "YOUR_API_KEY", MediaBrixAdProvider.class, TutelaAnalytics.class);
-```
-*For more info on how to use plugins, read the instructions [here](https://tapfortap.com/doc/android/plugins).*
-
 ## Step 3 - Display Ads
 
 For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
+
+### Achievement Interstitials
+
+![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
+
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+You should use Achievement Interstitials at points in your application where you'd like to reward the user.
+
+- Create an InterstitialListener (as above with the Break interstitial)
+
+- Call `loadAchievementInterstitial`:
+
+```java
+// Start loading an achievement interstitial
+// The extra arguments (achievementDescription, achievementRewardDescription, achievementRewardIconUrl) can be used for customizing the copy in the ads shown
+interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
+```
+
+*To find more information on how to use Break and Rescue interstitials, please contact us at: <chris.lefebvre@tapfortap.com>*
 
 ### Banners
 
@@ -98,106 +112,6 @@ Adding a banner to a `RelativeLayout`:
 </RelativeLayout>
 ```
 
-### Break Interstitials
-
-![Example Break Unit](/images/doc/user-flow-break.jpg)
-
-[View more info on the break moment, and best practices on placement](/doc/make-money/break-moment)
-
-Showing an interstitial from an `Activity`:
-
-- First create an InterstitialListener to receive callbacks when interstitials are loaded:
-
-```java
-import com.tapfortap.sdk.Interstitial;
-import com.tapfortap.sdk.TapForTap;
-
-public class MyActivity extends Activity {
-
-    private Interstitial interstitial;
-    private Interstitial.InterstitialListener interstitialListener;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        // Create an InterstitialListener
-        interstitialListener = new Interstitial.InterstitialListener() {
-            @Override
-            public void interstitialDidReceiveAd(Interstitial interstitial) {
-                Log.i("MyActivity", "interstitialDidReceiveAd");
-                interstitial.show();
-            }
-
-            @Override
-            public void interstitialDidFail(Interstitial interstitial, String reason, Throwable throwable) {
-                Log.i("MyActivity", "interstitialDidFail because: " + reason);
-            }
-
-            @Override
-            public void interstitialDidShow(Interstitial interstitial) {
-                Log.i("MyActivity", "interstitialDidShow");
-            }
-
-            @Override
-            public void interstitialWasTapped(Interstitial interstitial) {
-                Log.i("MyActivity", "interstitialWasTapped");
-            }
-
-            @Override
-            public void interstitialWasDismissed(Interstitial interstitial) {
-                Log.i("MyActivity", "interstitialWasDismissed");
-            }
-
-            @Override
-            public void interstitialAdWasRewarded(Interstitial interstitial) {
-                Log.i("MyActivity", "interstitialAdWasRewarded");
-            }
-        };
-    }
-}
-```
-
-- Then call `loadBreakInterstitial` to start loading:
-
-```java
-// Start loading a break interstitial
-interstitial = Interstitial.loadBreakInterstitial(this, interstitialListener);
-```
-
-Depending on your application you can show the interstitial as soon as `interstitialDidReceiveAd` gets called with `interstitial.show()` or
-if you don't want to show the interstitial as soon as it's loaded, you can always check if the interstitial is loaded with `interstitial.isReadyToShow()` and then show it.
-
-
-### Achievement and Rescue Interstitials
-
-#### Achievement
-![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
-
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
-
-#### Rescue
-![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
-
-[View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
-
-**Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/android/plugins). If your app calls `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.**
-
-Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
-
-- Create an InterstitialListener (as above with the Break interstitial)
-
-- Call `loadAchievementInterstitial` or `loadRescueInterstitial`:
-
-```java
-// Start loading an achievement interstitial
-// The extra arguments (achievementDescription, achievementRewardDescription, achievementRewardIconUrl) can be used for customizing the copy in the ads shown
-interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
-```
-
-```java
-// Start loading a rescue interstitial
-// The extra arguments (rescueTitle, rescueBranding, rescueEnticement, rescueRewardDescription, rescueRewardIconUrl, rescueOptInText) can be used for customizing the copy in the ads shown
-interstitial = Interstitial.loadRescueInterstitial(this, "Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!", interstitialListener);
-```
 
 ## Step 4 - Send Information About Your Users (Optional)
 If you have information about your users that your privacy policy allows you to share with us,

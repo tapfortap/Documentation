@@ -19,25 +19,25 @@ You can add it by dragging and dropping it into Xcode, or selecting File ? Add F
 
 You will need to link to the following frameworks:
 
-- `SystemConfiguration.framework`
-- `Social.framework`
-- `MediaPlayer.framework`
+- `AVFoundation.framework`
 - `Accounts.framework`
-- `StoreKit.framework`
+- `AdSupport.framework`
+- `AudioToolbox.framework`
+- `CoreMedia.framework`
+- `CoreMotion.framework`
+- `CoreTelephony.framework`
 - `EventKit.framework`
 - `EventKitUI.framework`
-- `CoreTelephony.framework`
-- `AVFoundation.framework`
-- `AudioToolbox.framework`
-- `AdSupport.framework`
+- `MediaPlayer.framework`
 - `MobileCoreServices.framework`
-- `CoreMotion.framework`
 - `PassKit.framework`
-- `CoreMedia.framework`
+- `Security.framework`
+- `Social.framework`
+- `StoreKit.framework`
+- `SystemConfiguration.framework`
 - `libsqlite3.dylib`
 - `libxml2.dylib`
 - `libz.dylib`
-- `Security.framework`
 
 To link to a framework, open the project explorer on the left side of Xcode:
 
@@ -79,6 +79,42 @@ Import `TFTTapForTap.h` in your app delegate and call our initialize method. If 
 
 For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
 
+### Achievement Interstitials
+
+![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
+
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+You should show Achievement interstitials at points in your application where you'd like to reward the user.
+
+In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method (or another appropriate handler), call `[ TFTInterstitial loadAchievementInterstitial... ]`.
+
+
+```objective-c
+#import <TapForTap/TFTTapForTap.h>
+
+- (void) viewDidLoad
+{
+  [super viewDidLoad];
+
+  // Load an Achievement interstitial with a callback
+    [TFTInterstitial loadAchievementInterstitialWithDescription:@"You beat the level!"
+                                              rewardDescription:@"a free gift!"
+                                                     rewardIcon:[NSURL URLWithString:@"http://yourdomain.com/app_logo.png"]
+                                                   onReceivedAd:^(TFTInterstitial *interstitial) {
+
+                                                       // The interstitial has loaded, so we can show it now
+                                                       [interstitial showWithViewController:self];
+
+                                                   } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
+
+}
+```
+
+In the callback you can show the interstitial with `[interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
+
+*To find more information on how to use Break and Rescue interstitials, please contact us at: <chris.lefebvre@tapfortap.com>*
+
 ### Banners
 
 ![Example banner](/images/doc/banner.png)
@@ -103,107 +139,6 @@ In the view controllers in which you would like to display banners, in your `vie
   // [banner release];
 }
 ```
-
-
-### Break Interstitials
-
-![Example Break Unit](/images/doc/user-flow-break.jpg)
-
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
-
-In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method call either `[ TFTInterstitial loadBreakInterstitialWithCallbackOnReceivedAd... ]` or `[ TFTInterstitial loadBreakInterstitialWithDelegate... ]`.
-
-For the second method, your view controller can implement the `TFTInterstitialDelegate` protocol in the header file (i.e. `MyViewController.h`).
-
-```objective-c
-#import <TapForTap/TFTTapForTap.h>
-
-- (void) viewDidLoad
-{
-  [super viewDidLoad];
-
-  // Load an interstitial with a callback
-    [TFTInterstitial loadBreakInterstitialWithCallbackOnReceivedAd:^(TFTInterstitial *interstitial) {
-
-        // The interstitial has loaded, so we can show it now
-        [interstitial showWithViewController:self];
-
-    } onAdDidFail:^(TFTInterstitial *interstitial, NSString *reason) {
-
-        // The interstitial failed to load, log an error
-        NSLog(@"Ad failed: %@", reason);
-
-    } onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
-
-}
-```
-
-In the callback you can show the interstitial with `[interstitial showWithViewController: self]`. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
-
-
-### Achievement and Rescue Interstitials
-
-#### Achievement
-![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
-
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
-
-#### Rescue
-![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
-
-[View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
-
-**Rescue Interstitials require the MediaBrix Plugin. For instructions on how to include the MediaBrix Plugin, please refer to the [plugin guide](https://tapfortap.com/doc/android/plugins). If your app calls `loadRescueInterstitial` without the MediaBrix plugin, a break interstitial will be shown instead.**
-
-Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
-
-In the view controllers in which you would like to display interstitials, in your `viewDidLoad` method (or another appropriate handler), call `[ TFTInterstitial loadRescueInterstitial... ]`.
-
-```objective-c
-#import <TapForTap/TFTTapForTap.h>
-
-- (void) viewDidLoad
-{
-  [super viewDidLoad];
-
-  // Load a Rescue interstitial with a callback
-    [TFTInterstitial loadRescueInterstitialWithTitle:@"Need a Boost?"
-                                        brandingText:@"My App"
-                                      enticementText:@"Watch a short message"
-                                   rewardDescription:@"Free boost"
-                                          rewardIcon:[NSURL URLWithString:@"http://yourdomain.com/app_logo.png"]
-                                     optInButtonText:@"Tap for your free boost!"
-                                        onReceivedAd:^(TFTInterstitial *interstitial) {
-
-                                            // The interstitial has loaded, so we can show it now
-                                            [interstitial showWithViewController:self];
-
-                                        } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil onAdWasRewarded:nil];
-}
-```
-
-```objective-c
-#import <TapForTap/TFTTapForTap.h>
-
-- (void) viewDidLoad
-{
-  [super viewDidLoad];
-
-  // Load an Achievement interstitial with a callback
-    [TFTInterstitial loadAchievementInterstitialWithDescription:@"You beat the level!"
-                                              rewardDescription:@"a free gift!"
-                                                     rewardIcon:[NSURL URLWithString:@"http://yourdomain.com/app_logo.png"]
-                                                   onReceivedAd:^(TFTInterstitial *interstitial) {
-
-                                                       // The interstitial has loaded, so we can show it now
-                                                       [interstitial showWithViewController:self];
-
-                                                   } onAdDidFail:nil onAdDidShow:nil onAdWasTapped:nil onAdWasDismissed:nil];
-
-}
-```
-
-In the callback you can show the interstitial with `[interstitial showWithViewController: self]` or `[self.interstitial showAndLoadWithViewController: self]` if you want to queue up the next one immediately. You can make sure the interstitial is loaded with `[self.interstitial readyToShow]` if you want to be certain it's ready before showing it (recommended).
 
 ##  Step 5 - Send Info About Your Users (Optional)
 
