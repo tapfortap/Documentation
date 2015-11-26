@@ -76,7 +76,57 @@ For the best performance with display ads, take a look at our [placement do's an
 
 You should use Achievement Interstitials at points in your application where you'd like to reward the user.
 
-- Create an InterstitialListener (as above with the Break interstitial)
+Showing an interstitial from an `Activity`:
+
+- First create an InterstitialListener to receive callbacks when interstitials are loaded:
+
+```java
+import com.tapfortap.sdk.Interstitial;
+import com.tapfortap.sdk.TapForTap;
+
+public class MyActivity extends Activity {
+
+    private Interstitial interstitial;
+    private Interstitial.InterstitialListener interstitialListener;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        // Create an InterstitialListener
+        interstitialListener = new Interstitial.InterstitialListener() {
+            @Override
+            public void interstitialDidReceiveAd(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialDidReceiveAd");
+                interstitial.show();
+            }
+
+            @Override
+            public void interstitialDidFail(Interstitial interstitial, String reason, Throwable throwable) {
+                Log.i("MyActivity", "interstitialDidFail because: " + reason);
+            }
+
+            @Override
+            public void interstitialDidShow(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialDidShow");
+            }
+
+            @Override
+            public void interstitialWasTapped(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialWasTapped");
+            }
+
+            @Override
+            public void interstitialWasDismissed(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialWasDismissed");
+            }
+
+            @Override
+            public void interstitialAdWasRewarded(Interstitial interstitial) {
+                Log.i("MyActivity", "interstitialAdWasRewarded");
+            }
+        };
+    }
+}
+```
 
 - Call `loadAchievementInterstitial`:
 
