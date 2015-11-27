@@ -20,18 +20,7 @@
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
-<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
-```
-
-- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
-To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/Android/AndroidManifest.xml'.
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- Required for identifying purposes  -->
 ```
 
 
@@ -50,6 +39,24 @@ TapForTap.API.TapForTap.initialize("YOUR_API_KEY");
 
 For the best performance with display ads, take a look at our [placement do's and don'ts](/doc/make-money/dos-donts)
 
+
+### Achievement Interstitials
+
+![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
+
+[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
+
+
+You should use Achievement Interstitial at points in your application where you'd like to reward the user.
+
+Calling 'loadAchievementInterstitial':
+
+```c#
+    var interstitial = Interstitial.loadAchievementInterstitial ("You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png");
+```
+
+*To find more information on how to use Break and Rescue interstitials, please contact us at: <chris.lefebvre@tapfortap.com>*
+
 ### Banners
 
 ![Example banner](/images/doc/banner.png)
@@ -60,66 +67,6 @@ To place a banner, just call `Banner.create (AdSize adSize, AdPosition position)
 
 ```c#
 Banner.create(AdSize.Banner, AdPosition.BottomCenter);
-```
-
-### Break Interstitials
-
-![Example Break Unit](/images/doc/user-flow-break.jpg)
-
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
-
-- First make sure you have initialized the TapForTap SDK as described in step 2.
-
-- Call `Interstitial.loadBreakInterstitial()` to create a new Break Interstitial. The method returns an Interstitial - make sure to store it! You will need it later to show the Interstitial once it has loaded.
-
-```c#
-    var interstitial = Interstitial.loadBreakInterstitial();
-```
-
-- Subscribe to the `Loaded` event.
-
-```c#
-    interstitial.Loaded += (s,e) => {
-      interstitial.show();
-    };
-```
-
-### Achievement and Rescue Interstitials
-
-#### Achievement
-![Example Achievement Unit](/images/doc/user-flow-achievement.jpg)
-
-[View more info on the achievement moment, and best practices on placement](/doc/make-money/achievement-moment)
-
-#### Rescue
-![Example Achievement Unit](/images/doc/user-flow-rescue.jpg)
-
-[View more info on the rescue moment, and best practices on placement](/doc/make-money/rescue-moment)
-
-**Important**: By default, you will only see a sample rescue interstitial. MediaBrix must be integrated to properly use rescue interstitials. View Step 5 below for instructions.
-
-Achievement and Rescue interstitials work similarly to Break interstitials. For Achievement, you should use it at points in your application where you'd like to reward the user, and for Rescue, points where you'd allow them to continue playing by watching an advertisement.
-
-Calling `loadRescueInterstitial`:
-
-```c#
-    var interstitial = Interstitial.loadRescueInterstitial ("Need a Boost?", "My App", "Watch a short message", "Free boost", "http://yourdomain.com/app_logo.png", "Tap for your free boost!");
-
-```
-
-The "WasRewarded" event will fire when the user has interacted with the ad and should now receive his rescue (e.g. extra lives).
-
-```c#
-interstitial.WasRewarded += (s,e) => {
-  //Give the player a couple of extra lives
-  lives = lives + 5;
-};
-```
-
-Calling 'loadAchievementInterstitial':
-
-```c#
-    var interstitial = Interstitial.loadAchievementInterstitial ("You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png");
 ```
 
 ## Step 4 - Send Information About Your Users (Optional)
