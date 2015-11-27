@@ -1,3 +1,8 @@
+## 4.2.2 / 2015-11-27
+* Improved stability
+* Improved ad serving
+
+
 ## 4.2.1 / 2015-11-02
   * Little bugfixes
 
