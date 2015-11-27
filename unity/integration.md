@@ -20,18 +20,7 @@
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Required for caching image-based ads -->
-<uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Required for identifying purposes -->
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for identifying purposes  -->
-```
-
-- **Although optional - to ensure the TapForTap SDK functions optimally we highly recommend adding these extra permissions**
-To add these permissions, modify the 'AndroidManifest.xml' found in '/Assets/Android/AndroidManifest.xml'.
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- Required for identifying purposes  -->
 ```
 
 

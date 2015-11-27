@@ -2,6 +2,11 @@
   * Update included android sdk to 4.2.2
   * Update included iOS SDK to 4.3.0
   * Improved stability
+  * Android M support
+  * iOS 9 support
+  * Improved ad-serving
+  * minor bug fixes
+  * removed any references to the mac address for iOS
 
 ### 1.1.2 / 2015-08-11
   * Update android sdk to 4.1.3
