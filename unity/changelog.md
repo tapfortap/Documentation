@@ -1,3 +1,11 @@
+## 1.2.0 / 2015-09-4
+  * *All new modular plugin system* - [more info](https://tapfortap.com/doc/unity/plugins)
+  * Android M support
+  * iOS 9 support
+  * Improved ad-serving
+  * minor bug fixes
+  * removed any references to the mac address for iOS
+
 ### 1.1.2 / 2015-08-11
   * Update android sdk to 4.1.3
 
