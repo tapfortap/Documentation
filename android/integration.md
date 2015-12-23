@@ -19,7 +19,7 @@
 
     - Use the file menu to select `TapForTap.aar`, Android Studio should fill in both text fields.
 
-- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library, OkHttp and the TapForTap library. Sync Gradle files.
+- In your app's build.gradle file (not the top-level project build.gradle, the application module's build.gradle), in the list of dependencies, add compile statements for the latest Android Support library, Google Play Services Library, OkHttp and the TapForTap library. Sync Gradle files.
 
 ```
 dependencies {
