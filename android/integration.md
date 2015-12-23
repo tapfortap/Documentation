@@ -25,6 +25,7 @@
 dependencies {
     [...]
     compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.google.android.gms:play-services:8.1.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile project(":TapForTap")
 }
