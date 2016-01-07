@@ -62,7 +62,14 @@ packagingOptions {
 In the `onCreate` method of your main Activity, add the following code, substituting your API key from the Tap for Tap web interface if you don't want to use any plugins:
 
 ```java
-TapForTap.initialize(this, "YOUR_API_KEY");
+import com.tapfortap.sdk.TapForTap;
+
+public class MyActivity extends Activity {
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        TapForTap.initialize(this, "YOUR_API_KEY");
+    }
+}
 ```
 
 ## Step 3 - Display Ads
@@ -92,6 +99,10 @@ public class MyActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+		//Initialize TapForTap
+		TapForTap.initialize(this, "YOUR_API_KEY");
+		
         // Create an InterstitialListener
         interstitialListener = new Interstitial.InterstitialListener() {
             @Override
@@ -129,12 +140,17 @@ public class MyActivity extends Activity {
 }
 ```
 
-- Call `loadAchievementInterstitial`:
+- Define a button for the interstitial and call `loadAchievementInterstitial` in your onClickListener method:
 
 ```java
-// Start loading an achievement interstitial
+// Start loading an achievement interstitial when the button is clicked
 // The extra arguments (achievementDescription, achievementRewardDescription, achievementRewardIconUrl) can be used for customizing the copy in the ads shown
-interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
+loadInterstitialButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                interstitial = Interstitial.loadAchievementInterstitial(this, "You beat the level!", "a free gift!", "http://yourdomain.com/app_logo.png", interstitialListener);
+            }
+        });
 ```
 
 *To find more information on how to use Break and Rescue interstitials, please contact us at: <chris.lefebvre@tapfortap.com>*
