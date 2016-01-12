@@ -92,6 +92,7 @@ In the view controllers in which you would like to display interstitials, in you
 
 ```objective-c
 #import <TapForTap/TFTTapForTap.h>
+#import <TapForTap/TFTInterstitial.h>
 
 - (void) viewDidLoad
 {
