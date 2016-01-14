@@ -19,25 +19,10 @@ You can add it by dragging and dropping it into Xcode, or selecting File ? Add F
 
 You will need to link to the following frameworks:
 
-- `AVFoundation.framework`
-- `Accounts.framework`
 - `AdSupport.framework`
-- `AudioToolbox.framework`
-- `CoreMedia.framework`
-- `CoreMotion.framework`
-- `CoreTelephony.framework`
 - `EventKit.framework`
 - `EventKitUI.framework`
 - `MediaPlayer.framework`
-- `MobileCoreServices.framework`
-- `PassKit.framework`
-- `Security.framework`
-- `Social.framework`
-- `StoreKit.framework`
-- `SystemConfiguration.framework`
-- `libsqlite3.dylib`
-- `libxml2.dylib`
-- `libz.dylib`
 
 To link to a framework, open the project explorer on the left side of Xcode:
 
